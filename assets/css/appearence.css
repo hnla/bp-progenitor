@@ -1,0 +1,23 @@
+/*
+* Progenitor visual appearence styles
+* This file provides the visual style, colours, backgrounds etc.
+* This file may be overriden in a child theme using the same name and
+* your own styles added.
+*/
+.site-header {
+	background: #fafafa;
+}
+
+.main-navigation {
+	background: #fff;
+}
+
+.meta-bar {
+	background: #333;
+	color: #fff;
+}
+
+.meta-bar {
+	text-align: center;
+	padding-right: 0.5em;
+}

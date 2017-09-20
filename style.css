@@ -1,0 +1,28 @@
+/*!
+Theme Name: BP Progenitor
+Theme URI: https://github.com/hnla/bp-progenitor
+Author: Hugo Ashmore & BP core members
+Author URI: https://github.com/hnla/bp-progenitor
+Description: Starter theme for BP stand alone themes using the next generation template packs
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bp-progenitor
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+BP Progenitor is based on a heavily customised version of Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+BP Progenitor runs a customised version of the next generation template packs for BuddyPress
+Created originally as bp-nouveau and incepted by imath and developed by imath & hnla
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+
+Progenitor uses fontawsome svg icons: Font Awesome by Dave Gandy - http://fontawesome.io".
+
+This file intentionaly empty see 'assets/css/' for main site style files.
+*/

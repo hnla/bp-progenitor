@@ -1,0 +1,10 @@
+// @todo review for respecting browser font setting for
+// serif/sans-serif font font-family.
+// i.e set to simply sans-serif to let the browser
+// choice make the font selection.
+
+$font__main: "open_sansregular", "gill sans", geneva, "helvetica nue", sans-serif;
+$font__code: monaco, consolas, "andale mono", "dejavu sans mono", monospace;
+$font__pre: "courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

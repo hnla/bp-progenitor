@@ -1,0 +1,28 @@
+/*
+* Progenitor visual appearence styles
+* This file provides the visual style, colours, backgrounds etc.
+* This file may be overriden in a child theme using the same name and
+* your own styles added.
+*/
+
+@import "_progenitor-variables";
+@import "variables-site/_variables-site";
+@import "_progenitor-mixins";
+
+.site-header {
+	background: $off-white;
+}
+
+.main-navigation {
+	background: $white;
+}
+
+.meta-bar {
+	background: $black;
+	color: $white;
+}
+
+.meta-bar {
+	text-align: center;
+	padding-right: 0.5em;
+}

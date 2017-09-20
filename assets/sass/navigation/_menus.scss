@@ -1,0 +1,155 @@
+/*----------------------------------------------------
+## Menus
+----------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		li {
+			border-radius: 0;
+			float: left;
+			margin-right: 1em;
+			position: relative;
+
+			a {
+				display: block;
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			background: #fff;
+			border: 1px solid $bp-border-dark;
+			box-shadow: 0 0 7px rgba($med-light-grey, 0.9);
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				margin-right: 0;
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				padding: $pad-sml 0 $pad-sml $pad-sml;
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+				background: #5087e5;
+				color: $white;
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+.site-nav-horizontal {
+
+	.nav-menu > li > a {
+
+		@include font-size(18);
+		padding: $pad-sml 0;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+/*
+Menu option vertical - element adjustments
+*/
+
+@include medium-up() {
+
+	.site-nav-vertical {
+
+		.main-navigation {
+
+			ul {
+
+				li {
+					margin: 0;
+					padding: $pad-sml 0 $pad-sml $pad-sml;
+
+					&:hover > ul,
+					&.focus > ul {
+						left: 96%;
+						top: 2px;
+					}
+
+					a {
+
+					}
+				}
+			}
+		}
+	}
+}
