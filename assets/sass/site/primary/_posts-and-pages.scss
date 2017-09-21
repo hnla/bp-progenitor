@@ -20,3 +20,20 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.post {
+
+	.entry-title {
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.entry-meta,
+	.entry-footer {
+
+		@include font-size(14);
+	}
+}
+

@@ -1,3 +1,23 @@
+/*--------------------------------------------------------------
+## Header elements
+Visual styles
+--------------------------------------------------------------*/
+h1.site-title {
+	font-family: $font__main;
+
+}
+
+.site-title {
+
+	@include font-size(32)
+	font-weight: 500;
+	margin: $marg-sml 0 $marg-med;
+
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+	}
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages

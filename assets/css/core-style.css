@@ -794,6 +794,26 @@ Menu option vertical - element adjustments
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+## Header elements
+Visual styles
+--------------------------------------------------------------*/
+h1.site-title {
+	font-family: "open_sansregular", "gill sans", geneva, "helvetica nue", sans-serif;
+}
+
+.site-title {
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 10px 0 15px;
+}
+
+.site-title a {
+	color: #404040;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
@@ -817,6 +837,16 @@ Menu option vertical - element adjustments
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.post .entry-title a {
+	text-decoration: none;
+}
+
+.post .entry-meta,
+.post .entry-footer {
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 /*--------------------------------------------------------------
