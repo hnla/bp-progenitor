@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-<code>this is a piece of text wrapped in code tags for font family checking.</code>
+
 		<?php
 		if ( have_posts() ) :
 
