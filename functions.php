@@ -2,8 +2,6 @@
 /**
  * BP Progenitor functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package BP_Progenitor
  *
  * @version 0.1.0 Pre-alpha

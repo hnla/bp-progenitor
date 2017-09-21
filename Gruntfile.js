@@ -194,7 +194,7 @@ module.exports = function(grunt) {
 					'community/sass/*.scss',
 					'assets/sass/*.scss',
 					'assets/sass/*/*.scss',
-					'assets/sass/*/*/.scss'
+					'assets/sass/*/*/*.scss'
 					],
 				tasks: 'sass'
 			}
