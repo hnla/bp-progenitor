@@ -814,17 +814,19 @@ function bp_progenitor_get_temporary_setting( $option = '', $retval = false ) {
  */
 function bp_progenitor_get_appearance_settings( $option = '' ) {
 	$default_args = array(
-		'main_site_menu'     => 'horizontal',
-		'avatar_style'       => 0,
-		'user_front_page'    => 1,
-		'user_front_bio'     => 0,
-		'user_nav_display'   => 0, // O is default (horizontally). 1 is vertically.
-		'user_nav_tabs'      => 0,
-		'user_subnav_tabs'   => 0,
-		'user_nav_order'     => array(),
-		'members_layout'     => 1,
-		'members_dir_tabs'   => 0,
-		'members_dir_layout' => 0,
+		'site_tagline'          => 0,
+		'header_img_background' => 0,
+		'main_site_menu'        => 'horizontal',
+		'avatar_style'          => 0,
+		'user_front_page'       => 1,
+		'user_front_bio'        => 0,
+		'user_nav_display'      => 0, // O is default (horizontally). 1 is vertically.
+		'user_nav_tabs'         => 0,
+		'user_subnav_tabs'      => 0,
+		'user_nav_order'        => array(),
+		'members_layout'        => 1,
+		'members_dir_tabs'      => 0,
+		'members_dir_layout'    => 0,
 	);
 
 	if ( bp_is_active( 'friends' ) ) {
