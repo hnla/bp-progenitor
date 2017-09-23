@@ -2,9 +2,9 @@
 /**
  * Sample implementation of the Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
+ * Set header background images or inline images.
  *
-	<?php the_header_image_tag(); ?>
+	* <?php the_header_image_tag(); ?>
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
@@ -18,11 +18,11 @@
  */
 function bp_progenitor_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bp_progenitor_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => get_template_directory_uri() . '/images/header/default-background.png',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'width'                  => 1400,
+		'height'                 => 350,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'bp_progenitor_header_style',
 	) ) );
 }
@@ -36,6 +36,12 @@ if ( ! function_exists( 'bp_progenitor_header_style' ) ) :
 	 */
 	function bp_progenitor_header_style() {
 		$header_text_color = get_header_textcolor();
+
+		if ( $header_image = get_header_image_tag() ) {
+
+
+
+		}
 
 		/*
 		 * If no custom options for text are set, let's bail.
@@ -70,3 +76,52 @@ if ( ! function_exists( 'bp_progenitor_header_style' ) ) :
 		<?php
 	}
 endif;
+
+/**
+* Set an image as background to header
+*
+* @version 0.1.0
+*/
+function set_logo_as_header_background() {
+	$options = bp_progenitor_get_appearance_settings();
+	$set_header_as_background = $options['header_img_background'];
+
+	if (	0 === $set_header_as_background || ! has_header_image() ) {
+		return;
+	}
+
+	$img_height = get_custom_header()->height;
+	$user_logo = '';
+
+	$get_directory = ( is_child_theme() )? get_stylesheet_directory_uri() : get_template_directory_uri();
+	$get_directory_path = ( is_child_theme() )? get_stylesheet_directory() : get_template_directory();
+
+//var_dump( has_header_image() );
+
+	if ( file_exists($get_directory_path . '/assets/images/site-logo/' . $user_logo) && $set_header_background ) : ?>
+
+	<style type="text/css">
+		#site-header {background: url(<?php echo $get_directory . '/assets/images/site-logo/' . $user_logo ?>) no-repeat 0 0 ; background-size:  100%;}
+	</style>
+
+	<?php
+	elseif( $set_header_as_background ) : ?>
+
+	<style type="text/css">
+		body:not(.site-nav-vertical) .site-header {
+			background: transparent;
+		}
+
+		body:not(.site-nav-vertical) .header-background {
+			background: url(<?php echo esc_url(header_image()); ?>) no-repeat 0 0 ;
+			background-size:  cover;
+			min-height: <?php echo $img_height; ?>px;
+		}
+	</style>
+
+	<?php
+	else:
+		return false;
+	endif;
+}
+add_action('wp_head', 'set_logo_as_header_background');
