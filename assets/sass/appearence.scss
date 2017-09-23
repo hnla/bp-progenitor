@@ -9,12 +9,13 @@
 @import "variables-site/_variables-site";
 @import "_progenitor-mixins";
 
+
+
+/*====================================================
+1. Header elements
+======================================================*/
 .site-header {
 	background: $off-white;
-}
-
-.main-navigation {
-	background: $white;
 }
 
 .meta-bar {
@@ -26,3 +27,60 @@
 	text-align: center;
 	padding-right: 0.5em;
 }
+
+/*====================================================
+2. Navigation - global & specific
+======================================================*/
+.main-navigation {
+
+	a {
+		color: $color__nav-text;
+		opacity: 0.8;
+
+		&:focus,
+		&:hover {
+			opacity: 1;
+		}
+
+		&:visited {
+			color: $color__main-nav-visted;
+		}
+	}
+}
+
+/*========================================
+2.1 static horizontal primary navigation
+==========================================*/
+.main-navigation {
+	background: $color__main-nav;
+
+	ul {
+
+		ul {
+
+			a:link,
+			a:visited {
+				color: $color__text-main;
+			}
+
+			li:focus,
+			li:hover {
+				background: $color__main-nav;
+
+				a {
+					color: $color__white;
+				}
+			}
+		}
+	}
+}
+
+/*========================================
+2.3 Floating horizontal primary navigation
+==========================================*/
+
+/*========================================
+2.3 Vertical primary navigation
+==========================================*/
+
+

@@ -4,12 +4,11 @@
 * This file may be overriden in a child theme using the same name and
 * your own styles added.
 */
+/*====================================================
+1. Header elements
+======================================================*/
 .site-header {
 	background: #fafafa;
-}
-
-.main-navigation {
-	background: #fff;
 }
 
 .meta-bar {
@@ -21,3 +20,48 @@
 	text-align: center;
 	padding-right: 0.5em;
 }
+
+/*====================================================
+2. Navigation - global & specific
+======================================================*/
+.main-navigation a {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.main-navigation a:focus, .main-navigation a:hover {
+	opacity: 1;
+}
+
+.main-navigation a:visited {
+	color: #fff;
+}
+
+/*========================================
+2.1 static horizontal primary navigation
+==========================================*/
+.main-navigation {
+	background: #4e7fce;
+}
+
+.main-navigation ul ul a:link,
+.main-navigation ul ul a:visited {
+	color: #404040;
+}
+
+.main-navigation ul ul li:focus,
+.main-navigation ul ul li:hover {
+	background: #4e7fce;
+}
+
+.main-navigation ul ul li:focus a,
+.main-navigation ul ul li:hover a {
+	color: #fff;
+}
+
+/*========================================
+2.3 Floating horizontal primary navigation
+==========================================*/
+/*========================================
+2.3 Vertical primary navigation
+==========================================*/

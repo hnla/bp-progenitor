@@ -596,6 +596,7 @@ a:hover, a:active {
 	position: absolute;
 	top: 100%;
 	left: -999em;
+	opacity: 0;
 	z-index: 99999;
 }
 
@@ -608,25 +609,28 @@ a:hover, a:active {
 	margin-right: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li:focus > ul,
+.main-navigation ul ul li:hover > ul
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
+	opacity: 1;
 }
 
 .main-navigation ul ul a {
 	padding: 0.5em 0 0.5em 0.5em;
 	width: 200px;
+	outline: none;
 }
 
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
-	background: #5087e5;
-	color: #fff;
+	opacity: 1;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	opacity: 1;
 }
 
 .site-nav-horizontal .nav-menu > li > a {
@@ -972,4 +976,11 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Animations & Transitions
+--------------------------------------------------------------*/
+.site-navs ul {
+	transition: opacity .4s ease-in-out .1s;
 }
