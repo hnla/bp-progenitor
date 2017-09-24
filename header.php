@@ -57,7 +57,7 @@
 				</div><!-- // .header-background -->
 				<?php endif; ?>
 
-				<nav id="site-navigation" class="main-navigation site-navs">
+				<nav id="site-navigation" class="main-navigation site-navs primary-color">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bp-progenitor' ); ?></button>
 					<?php
 						wp_nav_menu( array(

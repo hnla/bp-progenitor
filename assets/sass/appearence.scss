@@ -8,11 +8,20 @@
 @import "_progenitor-variables";
 @import "variables-site/_variables-site";
 @import "_progenitor-mixins";
-
+@import "mixins/_mixin-background-gradient";
 
 
 /*====================================================
-1. Header elements
+1. classed colours
+======================================================*/
+
+.primary-color {
+	@include background-gradient-3d($color: $color__main-nav);
+}
+
+
+/*====================================================
+2. Header elements
 ======================================================*/
 .site-header {
 	background: $off-white;
@@ -29,7 +38,7 @@
 }
 
 /*====================================================
-2. Navigation - global & specific
+3. Navigation - global & specific
 ======================================================*/
 .main-navigation {
 
@@ -49,38 +58,74 @@
 }
 
 /*========================================
-2.1 static horizontal primary navigation
+3.1 static horizontal primary navigation
 ==========================================*/
-.main-navigation {
-	background: $color__main-nav;
 
-	ul {
+.site-nav-horizontal {
+
+	.main-navigation {
+
+		.nav-menu	> li {
+			border-right: 1px solid darken($color__main-nav, 15%);
+			border-left: 1px solid lighten($color__main-nav, 5%);
+			margin-right: 0;
+			padding: 0 10px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:first-child {
+				border-left: 0;
+			}
+
+			&:last-child {
+				border-right: 0;
+			}
+		}
 
 		ul {
 
-			a:link,
-			a:visited {
-				color: $color__text-main;
-			}
+			ul {
 
-			li:focus,
-			li:hover {
-				background: $color__main-nav;
+				a:link,
+				a:visited {
+					color: $color__text-main;
+				}
 
-				a {
-					color: $color__white;
+				li:focus,
+				li:hover {
+
+					@include background-gradient-3d($color: $color__main-nav);
+
+					a {
+						color: $color__white;
+					}
 				}
 			}
 		}
 	}
 }
-
 /*========================================
-2.3 Floating horizontal primary navigation
+3.3 Floating horizontal primary navigation
 ==========================================*/
 
 /*========================================
-2.3 Vertical primary navigation
+3.4 Vertical primary navigation
 ==========================================*/
 
 
+/*========================================
+4. Footer
+==========================================*/
+
+footer, a {
+
+		color: $white;
+
+		a:visited,
+		a:hover,
+		a:focus {
+			color: $off-white;
+		}
+}

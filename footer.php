@@ -15,7 +15,7 @@
 		</div><!-- // #page -->
 	</div><!-- // #site-wrap -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer primary-color">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bp-progenitor' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
