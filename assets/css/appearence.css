@@ -12,7 +12,7 @@
 	background: -moz-linear-gradient(top, #4e7fce 0%, #3365b6 100%);
 	background: -webkit-linear-gradient(top, #4e7fce 0%, #3365b6 100%);
 	background: linear-gradient(to bottom, #4e7fce 0%, #3365b6 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$start}', endColorstr='{$finish}',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e7fce', endColorstr='#3365b6',GradientType=0 );
 }
 
 /*====================================================
@@ -74,7 +74,7 @@
 	background: -moz-linear-gradient(top, #3365b6 0%, #274f8f 100%);
 	background: -webkit-linear-gradient(top, #3365b6 0%, #274f8f 100%);
 	background: linear-gradient(to bottom, #3365b6 0%, #274f8f 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$start}', endColorstr='{$finish}',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3365b6', endColorstr='#274f8f',GradientType=0 );
 }
 
 .site-nav-horizontal .main-navigation .nav-menu > li > a {
@@ -92,7 +92,7 @@
 	background: -moz-linear-gradient(top, #4e7fce 0%, #3365b6 100%);
 	background: -webkit-linear-gradient(top, #4e7fce 0%, #3365b6 100%);
 	background: linear-gradient(to bottom, #4e7fce 0%, #3365b6 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$start}', endColorstr='{$finish}',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e7fce', endColorstr='#3365b6',GradientType=0 );
 }
 
 .site-nav-horizontal .main-navigation ul ul li:focus a,
