@@ -55,10 +55,9 @@
 	border-right: 1px solid #2d5aa3;
 	border-left: 1px solid #628dd4;
 	margin-right: 0;
-	padding: 0 10px;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li:first-child {
+.site-nav-horizontal .main-navigation .nav-menu > li:first-child a {
 	padding-left: 0;
 }
 
@@ -68,6 +67,18 @@
 
 .site-nav-horizontal .main-navigation .nav-menu > li:last-child {
 	border-right: 0;
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li.current-menu-item > a {
+	background: #3365b6;
+	background: -moz-linear-gradient(top, #3365b6 0%, #274f8f 100%);
+	background: -webkit-linear-gradient(top, #3365b6 0%, #274f8f 100%);
+	background: linear-gradient(to bottom, #3365b6 0%, #274f8f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$start}', endColorstr='{$finish}',GradientType=0 );
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li > a {
+	padding: 5px 10px;
 }
 
 .site-nav-horizontal .main-navigation ul ul a:link,
@@ -99,7 +110,11 @@
 4. Footer
 ==========================================*/
 footer, a {
-	color: #fff;
+	color: #fafafa;
+}
+
+footer a, a a {
+	opacity: 0.8;
 }
 
 footer a:visited,
@@ -108,4 +123,5 @@ footer a:focus, a a:visited,
 a a:hover,
 a a:focus {
 	color: #fafafa;
+	opacity: 1;
 }
