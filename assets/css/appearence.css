@@ -57,7 +57,7 @@
 	margin-right: 0;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li:first-child a {
+.site-nav-horizontal .main-navigation .nav-menu > li:first-child > a {
 	padding-left: 0;
 }
 

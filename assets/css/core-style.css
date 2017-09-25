@@ -619,7 +619,6 @@ a:hover, a:active {
 .main-navigation ul ul a {
 	padding: 0.5em 0 0.5em 0.5em;
 	width: 200px;
-	outline: none;
 }
 
 .main-navigation ul ul :hover > a,
