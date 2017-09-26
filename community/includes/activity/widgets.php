@@ -51,7 +51,7 @@ class BP_Latest_Activities extends WP_Widget {
 		$title      = __( 'Latest updates', 'buddypress' );
 		$type       = array( 'activity_update' );
 		$max        = 5;
-		$bp_nouveau = bp_nouveau();
+		$bp_progenitor = bp_progenitor();
 
 		// Check instance for a custom title
 		if ( ! empty( $instance['title'] ) ) {
