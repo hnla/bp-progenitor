@@ -71,10 +71,10 @@
 			<div id="content" class="site-content">
 
 				<div class="meta-bar">
-					<?php if( is_page() ) { ?>
+					<?php if( is_page() || is_single() ) { ?>
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<?php }elseif( is_single() ) { ?>
-							<p>post</p>
+							<p><?php echo the_title(); ?></p>
 					<?php } ?>
 				</div>
 
