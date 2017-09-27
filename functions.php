@@ -79,6 +79,14 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+			* Add custom images
+			*/
+		add_image_size('single-featured', '800', '200', true );
+		add_image_size('lists-featured-thumb', '1200', '300', true );
+		add_image_size('featured-sticky', '650', '400', true );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'bp_progenitor_setup' );
@@ -111,6 +119,52 @@ function bp_progenitor_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+// footer widgets
+register_sidebar(
+	array(
+		'name' => __('First Footer Widget', 'bp-progenitor'),
+  'id' =>   'first-footer-widget-area',
+  'description' => __('footer widget region', 'bp-progenitor'),
+		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h2 class="widgettitle">',
+  'after_title' => '</h2>'
+	)
+);
+register_sidebar(
+	array(
+		'name' => __('Second Footer Widget', 'bp-progenitor'),
+  'id' =>   'second-footer-widget-area',
+  'description' => __('footer widget region', 'bp-progenitor'),
+		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h2 class="widgettitle">',
+  'after_title' => '</h2>'
+	)
+);
+register_sidebar(
+	array(
+		'name' => __('third Footer Widget', 'bp-progenitor'),
+  'id' =>   'third-footer-widget-area',
+  'description' => __('footer widget region', 'bp-progenitor'),
+		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h2 class="widgettitle">',
+  'after_title' => '</h2>'
+	)
+);
+register_sidebar(
+	array(
+		'name' => __('Fourth Footer Widget', 'bp-progenitor'),
+  'id' =>   'fourth-footer-widget-area',
+  'description' => __('footer widget region', 'bp-progenitor'),
+		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h2 class="widgettitle">',
+  'after_title' => '</h2>'
+	)
+);
+
 add_action( 'widgets_init', 'bp_progenitor_widgets_init' );
 
 /**
@@ -199,6 +253,10 @@ function progenitor_body_classes( $classes ) {
 	else:
 		$bp_is_directory = false;
 	endif;
+
+	if ( progenitor_footer_widgets_active() ) {
+		$classes[] = 'footer-widgets-active';
+	}
 
 	if ( is_admin_bar_showing() ) {
 		$classes[] = 'adminbar-visible';
