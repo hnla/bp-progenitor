@@ -10,6 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) : ?>
+		<div class="featured-image"><?php the_post_thumbnail( 'lists-featured-thumb' ); ?></div>
+	<?php endif; ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -27,7 +32,13 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
+
+		<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) : ?>
+
+		<?php the_excerpt(); ?>
+
+		<?php else:
+
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -45,7 +56,9 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bp-progenitor' ),
 				'after'  => '</div>',
 			) );
-		?>
+
+	 endif; ?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
