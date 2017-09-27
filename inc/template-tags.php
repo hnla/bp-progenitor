@@ -1,11 +1,41 @@
 <?php
 /**
- * Custom template tags for this theme
+ * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package BP_Progenitor
  */
+
+
+/**
+* Set footer widgets class on parent wrapper
+* Builds a class for widget container to report number of widgets being used
+* enables styling based on the known number of active foot widgets.
+*
+* @return string
+* @since 0.1.0
+*/
+function progenitor_foot_widgets_count() {
+	echo progenitor_footer_widgets_active();
+}
+
+function progenitor_footer_widgets_active() {
+
+$our_active_foot_widgets = array();
+$our_active_foot_widgets['first']  =  is_active_sidebar( 'first-footer-widget-area' );
+$our_active_foot_widgets['second'] =  is_active_sidebar( 'second-footer-widget-area' );
+$our_active_foot_widgets['third']  =  is_active_sidebar( 'third-footer-widget-area' );
+$our_active_foot_widgets['fourth'] =  is_active_sidebar( 'fourth-footer-widget-area' );
+
+// Count how many keys are true to get our active widget count.
+$array_count_true = count( array_filter( $our_active_foot_widgets) );
+
+// Add class string to array to use on parent widget container.
+$the_active_foot_widgets = 'foot-widget-active-' . $array_count_true;
+
+return $the_active_foot_widgets;
+}
+
 
 if ( ! function_exists( 'bp_progenitor_posted_on' ) ) :
 	/**
