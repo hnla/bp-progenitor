@@ -12,6 +12,21 @@
 ?>
 
 			</div><!-- // #content -->
+
+		<?php if ( is_active_sidebar( 'first-footer-widget-area' )
+		           || is_active_sidebar( 'second-footer-widget-area' )
+		           || is_active_sidebar( 'third-footer-widget-area' )
+		           || is_active_sidebar( 'fourth-footer-widget-area' ) ) : ?>
+
+			<div id="container-widget-footer" class="footer-widgets-wrap" role="complementary">
+
+				<div id="footer-widgets" class="<?php  esc_attr( progenitor_foot_widgets_count() ); ?> widgets-parent">
+					<?php get_template_part( 'template-parts/footer-widgets') ?>
+				</div>
+
+			</div>
+		<?php endif; ?>
+
 		</div><!-- // #page -->
 	</div><!-- // #site-wrap -->
 
