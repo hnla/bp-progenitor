@@ -30,6 +30,23 @@ body {
 	margin: 0 -#{$pad-sml} 0;
 }
 
+//Padding for the regions directly adjacent
+//to the sticky footer to clear the neg drag back
+
+// If footer widgets are active pad them otherwise padd .site-content
+.site-content {
+	padding: 0 $pad-sml $size__footer-height;
+}
+body.footer-widgets-active {
+
+	.site-content {
+		padding: 0 $pad-sml $pad-sml;
+	}
+
+	.footer-widgets-wrap {
+		padding: $pad-sml $pad-sml $size__footer-height;
+	}
+}
 /*===============================================
 1.1.0 - Header
 
@@ -89,10 +106,6 @@ Header aka .site-banner includes primary nav
 1.4.0 - Content
 =================================================*/
 
-.site-content {
-	padding: 0 $pad-sml $size__footer-height;
-}
-
 .meta-bar {
 
 	h1 {
@@ -128,9 +141,16 @@ Header aka .site-banner includes primary nav
 
 }
 
+/*===============================================
+1.5.0 - Footer widget wrap
+=================================================*/
+
+.footer-widgets-wrap {
+	min-height: 10rem;
+}
 
 /*===============================================
-1.5.0 - Footer
+1.6.0 - Footer
 =================================================*/
 
 .site-footer {
@@ -142,6 +162,11 @@ Header aka .site-banner includes primary nav
 	position: relative;
 	width: auto;
 	z-index: 1000;
+}
+
+.site-info {
+
+	@include font-size(14);
 }
 
 @include medium-up() {
@@ -156,7 +181,7 @@ Header aka .site-banner includes primary nav
 }
 
 /*===============================================
-1.6.0 - user site layout options
+1.7.0 - user site layout options
 =================================================*/
 
 

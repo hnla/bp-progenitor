@@ -12,12 +12,15 @@ This file provides the main structuaral containers positioning.
 		2.0 - Nav
 		3.0 - Sidebar
 		4.0 - Content
-		5.0 - Footer
-		6.0 - User site layout options
+		5.0 - Footer widgets
+		6.0 - Footer
+		7.0 - User site layout options
 		7.0 - Block elements positioning by media query
 2.0 - Site Header elements
 3.0 - Main Content sections
-4.0 - Footer elements
+4.0 - Footer widget elements
+5.0 - Footer elements
+6.0 - Widgets - general
 =================================================================*/
 
 
@@ -41,7 +44,20 @@ Primary positiong of parent elements content, footer, sidebar etc
 
 @import "layout/_content-elements";
 
+
 /*==============================================================
 4.0 Footer elements
 ================================================================*/
+@import "layout/_footer-widget-elements";
+
+/*==============================================================
+5.0 Footer elements
+================================================================*/
 @import "layout/_footer-elements";
+
+/*==============================================================
+6.0 Widgets - general
+
+Internal widgets structural
+================================================================*/
+@import "layout/_widgets";

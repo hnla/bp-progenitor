@@ -12,13 +12,31 @@
 
 
 /*====================================================
-1. classed colours
+1. classed & grouped colours
 ======================================================*/
 
 .primary-color {
 	@include background-gradient-3d($color: $color__main-nav);
 }
 
+// links - dark backgrounds
+
+.footer-widgets-wrap {
+
+	a {
+		color: $color__link_darkbackground;
+
+		&:focus,
+		&:hover {
+			color: darken($color__link_darkbackground, 10%);
+		}
+
+		&:visted {
+			color: $color__link_darkbackground-visited;
+		}
+	}
+
+}
 
 /*====================================================
 2. Header elements
@@ -126,12 +144,38 @@
 3.4 Vertical primary navigation
 ==========================================*/
 
-
 /*========================================
-4. Footer
+4. Footer Widgets
 ==========================================*/
 
-footer, a {
+.footer-widgets-wrap {
+	@include background-gradient-3d($color: #555, $depth: high );
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333;
+
+	.widget-area {
+
+		@include background-gradient-3d($color: #666, $depth: high );
+		border: 1px solid $bp-border-dark;
+
+		.widget {
+
+			.widgettitle {
+				color: $light-grey;
+			}
+		}
+	}
+}
+
+/*========================================
+5. Site Footer
+==========================================*/
+
+.site-footer {
+	background: $black;
+}
+
+.site-footer {
 
 		color: $off-white;
 
