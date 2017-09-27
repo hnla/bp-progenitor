@@ -1,0 +1,36 @@
+// Footer widget elements
+
+.widgets-parent {
+		@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+
+	@include medium-up() {
+		@include flex-box-dir();
+	}
+
+	.widget-area {
+
+		@include flex-align();
+
+		@include box-item-size($grow: 1, $basis: 50%);
+		margin: $marg-sml;
+		padding: $pad-med;
+
+		.widget {
+
+			@include flex-align();
+		}
+
+		@include medium-up() {
+
+		}
+	}
+}
+
+.widget-parent {
+
+	@include medium-up() {
+		&.footwidget-active-2 {
+
+		}
+	}
+}
