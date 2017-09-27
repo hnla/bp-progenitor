@@ -33,11 +33,11 @@
 
 	<div class="entry-content">
 
-		<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) : ?>
+		<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) :
 
-		<?php the_excerpt(); ?>
+		the_excerpt();
 
-		<?php else:
+		else:
 
 			the_content( sprintf(
 				wp_kses(
