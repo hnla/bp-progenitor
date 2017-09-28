@@ -104,7 +104,7 @@ function bp_progenitor_content_width() {
 add_action( 'after_setup_theme', 'bp_progenitor_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -118,52 +118,62 @@ function bp_progenitor_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Posts', 'bp-progenitor' ),
+		'id'            => 'sidebar-posts',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	// footer widgets
+	register_sidebar(
+		array(
+			'name' => __('First Footer Widget', 'bp-progenitor'),
+	  'id' =>   'first-footer-widget-area',
+	  'description' => __('footer widget region', 'bp-progenitor'),
+			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h2 class="widgettitle">',
+	  'after_title' => '</h2>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => __('Second Footer Widget', 'bp-progenitor'),
+	  'id' =>   'second-footer-widget-area',
+	  'description' => __('footer widget region', 'bp-progenitor'),
+			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h2 class="widgettitle">',
+	  'after_title' => '</h2>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => __('third Footer Widget', 'bp-progenitor'),
+	  'id' =>   'third-footer-widget-area',
+	  'description' => __('footer widget region', 'bp-progenitor'),
+			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h2 class="widgettitle">',
+	  'after_title' => '</h2>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => __('Fourth Footer Widget', 'bp-progenitor'),
+	  'id' =>   'fourth-footer-widget-area',
+	  'description' => __('footer widget region', 'bp-progenitor'),
+			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h2 class="widgettitle">',
+	  'after_title' => '</h2>'
+		)
+	);
 }
-// footer widgets
-register_sidebar(
-	array(
-		'name' => __('First Footer Widget', 'bp-progenitor'),
-  'id' =>   'first-footer-widget-area',
-  'description' => __('footer widget region', 'bp-progenitor'),
-		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<h2 class="widgettitle">',
-  'after_title' => '</h2>'
-	)
-);
-register_sidebar(
-	array(
-		'name' => __('Second Footer Widget', 'bp-progenitor'),
-  'id' =>   'second-footer-widget-area',
-  'description' => __('footer widget region', 'bp-progenitor'),
-		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<h2 class="widgettitle">',
-  'after_title' => '</h2>'
-	)
-);
-register_sidebar(
-	array(
-		'name' => __('third Footer Widget', 'bp-progenitor'),
-  'id' =>   'third-footer-widget-area',
-  'description' => __('footer widget region', 'bp-progenitor'),
-		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<h2 class="widgettitle">',
-  'after_title' => '</h2>'
-	)
-);
-register_sidebar(
-	array(
-		'name' => __('Fourth Footer Widget', 'bp-progenitor'),
-  'id' =>   'fourth-footer-widget-area',
-  'description' => __('footer widget region', 'bp-progenitor'),
-		'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<h2 class="widgettitle">',
-  'after_title' => '</h2>'
-	)
-);
 
 add_action( 'widgets_init', 'bp_progenitor_widgets_init' );
 
@@ -254,6 +264,10 @@ function progenitor_body_classes( $classes ) {
 		$bp_is_directory = false;
 	endif;
 
+	if ( is_active_sidebar( 'sidebar-posts' ) && is_single() ) {
+		$classes[] = 'post-sbar-active';
+	}
+
 	if ( progenitor_footer_widgets_active() ) {
 		$classes[] = 'footer-widgets-active';
 	}
@@ -266,10 +280,8 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'logged-out';
 	}
 
-	if( is_active_sidebar('sidebar-1') ) {
+	if( is_active_sidebar('sidebar-1') && ! is_singular() && ! is_front_page() ) {
 		$classes[] = 'main-sidebar';
-	} else {
-		$classes[] = 'main-sidebar-none';
 	}
 
 	if( 'vertical' == $progenitor_options['main_site_menu'] ):

@@ -62,11 +62,11 @@ body {
 }
 
 .meta-bar {
-	margin: 0 -0.5em 0;
+	margin: 0 -0.5em 10px;
 }
 
 .site-content {
-	padding: 0 0.5em 3rem;
+	padding: 0 0.5em 4rem;
 }
 
 body.footer-widgets-active .site-content {
@@ -74,7 +74,7 @@ body.footer-widgets-active .site-content {
 }
 
 body.footer-widgets-active .footer-widgets-wrap {
-	padding: 0.5em 0.5em 3rem;
+	padding: 0.5em 0.5em 4rem;
 }
 
 /*===============================================
@@ -124,19 +124,22 @@ Header aka .site-banner includes primary nav
 @media screen and (min-width: 46.8em) {
 	.content-area {
 		margin: 0;
-		padding-left: 0.5em;
+		padding: 0 0.5em;
 		width: 100%;
 	}
 	.content-area .site-main {
 		margin: 0;
-		padding-right: 1em;
 	}
-	body.main-sidebar .content-area {
+	body.main-sidebar:not(.home-page) .content-area,
+	body.post-sbar-active .content-area {
 		float: left;
 		margin: 0 -25% 0 0;
+		padding: 0 0 0.5em 0.5em;
 	}
-	body.main-sidebar .content-area .site-main {
+	body.main-sidebar:not(.home-page) .content-area .site-main,
+	body.post-sbar-active .content-area .site-main {
 		margin: 0 25% 0 0;
+		padding-right: 1em;
 	}
 }
 
@@ -153,8 +156,8 @@ Header aka .site-banner includes primary nav
 .site-footer {
 	background: #fff;
 	border-top: 1px solid;
-	height: 3rem;
-	margin: -3rem auto 0;
+	height: 4rem;
+	margin: -4rem auto 0;
 	padding: 0 1em;
 	position: relative;
 	width: auto;

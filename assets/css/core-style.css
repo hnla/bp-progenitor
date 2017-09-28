@@ -848,8 +848,35 @@ h1.site-title {
 
 .post .entry-meta,
 .post .entry-footer {
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+.page-header {
+	text-align: left;
+}
+
+.page-header .page-title {
+	padding-left: 0.5em;
+}
+
+.page-header .archive-description {
+	padding-left: 1em;
+}
+
+.page-header .archive-description p {
+	margin: 0;
+	padding: 0.5em 0;
+}
+
+@media screen and (min-width: 75em) {
+	.page-header .page-title,
+	.page-header .archive-description {
+		display: inline-block;
+	}
+	.page-header .archive-description p {
+		padding: 0;
+	}
 }
 
 /*--------------------------------------------------------------

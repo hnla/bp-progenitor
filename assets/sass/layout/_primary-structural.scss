@@ -27,16 +27,17 @@ body {
 @include clearfix-element("#site-wrap");
 
 .meta-bar {
-	margin: 0 -#{$pad-sml} 0;
+	margin: 0 -#{$pad-sml} $marg-sml;
 }
 
 //Padding for the regions directly adjacent
 //to the sticky footer to clear the neg drag back
 
-// If footer widgets are active pad them otherwise padd .site-content
+// If footer widgets are active pad them otherwise pad .site-content
 .site-content {
 	padding: 0 $pad-sml $size__footer-height;
 }
+
 body.footer-widgets-active {
 
 	.site-content {
@@ -47,6 +48,7 @@ body.footer-widgets-active {
 		padding: $pad-sml $pad-sml $size__footer-height;
 	}
 }
+
 /*===============================================
 1.1.0 - Header
 
@@ -118,23 +120,25 @@ Header aka .site-banner includes primary nav
 	.content-area {
 
 		margin: 0;
-		padding-left: $pad-sml;
+		padding: 0 $pad-sml;
 		width: $size__site-main;
 
 		.site-main {
 			margin: 0;
-			padding-right: $pad-med;
 		}
 	}
 
-	body.main-sidebar {
+	body.main-sidebar:not(.home-page),
+	body.post-sbar-active {
 
 		.content-area {
 			float: left;
 			margin: 0 (-$size__site-sidebar) 0 0;
+			padding: 0 0 $pad-sml $pad-sml;
 
 			.site-main {
 				margin: 0 $size__site-sidebar 0 0;
+				padding-right: $pad-med;
 			}
 		}
 	}
