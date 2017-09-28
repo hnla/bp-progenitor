@@ -33,7 +33,37 @@
 	.entry-meta,
 	.entry-footer {
 
-		@include font-size(14);
+		@include font-size(12);
 	}
 }
 
+.page-header {
+	text-align: left;
+
+	.page-title {
+		padding-left: $pad-sml;
+	}
+
+	.archive-description {
+		padding-left: $pad-med;
+
+		p {
+			margin: 0;
+			padding: $pad-sml 0;
+		}
+	}
+
+	@include large-up() {
+
+		.page-title,
+		.archive-description {
+			display: inline-block;
+		}
+
+		.archive-description {
+			p {
+				padding: 0;
+			}
+		}
+	}
+}
