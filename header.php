@@ -73,13 +73,19 @@
 				<div class="meta-bar">
 					<?php if( is_page() || is_single() ) { ?>
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-						<?php }elseif( is_category() || is_archive() || is_tag() ) { ?>
+
+					<?php } elseif( is_category() || is_archive() || is_tag() ) { ?>
 							<header class="page-header">
 							<?php
 								the_archive_title( '<h1 class="page-title">', '</h1>' );
 								the_archive_description( '<div class="archive-description">', '</div>' );
 							?>
 							</header>
+
+					<?php } elseif ( is_search() ) { ?>
+						<header class="page-header">
+							<h1 class="page-title"><?php _e('Search', 'bp-progenitor'); ?></h1>
+						</header>
 					<?php } ?>
 				</div>
 
