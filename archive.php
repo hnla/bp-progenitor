@@ -15,7 +15,7 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-		<?php /* See hader.php for cat/archive title & description */ ?>
+		<?php /* See header.php for cat/archive title & description */ ?>
 
 			<?php
 			/* Start the Loop */
