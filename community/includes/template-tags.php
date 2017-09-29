@@ -1688,8 +1688,8 @@ function bp_progenitor_search_selector_name( $suffix = '', $sep = '_' ) {
 function bp_progenitor_search_default_text( $text = '', $is_attr = true ) {
 	$objects = bp_progenitor_get_search_objects();
 
-	if ( ! empty( $objects['secondary'] ) && ! $text ) {
-	echo	$text = bp_get_search_default_text( $objects['secondary'] );
+	if ( ! empty( $objects['secondary'] ) && empty( $text ) ) {
+		$text = bp_get_search_default_text( $objects['secondary'] );
 	}
 
 	if ( $is_attr ) {
