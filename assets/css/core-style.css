@@ -564,11 +564,11 @@ textarea {
 ## Links
 ----------------------------------------------------*/
 a {
-	color: #2c81f7;
+	color: #4470B5;
 }
 
 a:visited {
-	color: #8547c6;
+	color: #EC8E4E;
 }
 
 a:hover, a:focus, a:active {
@@ -872,6 +872,18 @@ h1.site-title {
 .post .entry-footer {
 	font-size: 12px;
 	font-size: 0.75rem;
+}
+
+.post blockquote,
+.page blockquote {
+	border-left: 1px solid #eaeaea;
+	background: #fafafa;
+	padding: 0.5em 1em;
+}
+
+.post blockquote p,
+.page blockquote p {
+	margin: 10px 0;
 }
 
 .page-header {

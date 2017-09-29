@@ -37,6 +37,20 @@
 	}
 }
 
+.post,
+.page {
+
+	blockquote {
+		border-left: 1px solid $light-grey;
+		background: $off-white;
+		padding: $pad-sml $pad-med;
+
+		p {
+			margin: $marg-sml 0;
+		}
+	}
+}
+
 .page-header {
 	text-align: left;
 

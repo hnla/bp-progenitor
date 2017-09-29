@@ -157,7 +157,7 @@
 	.widget-area {
 
 		@include background-gradient-3d($color: #666, $depth: high );
-		border: 1px solid $bp-border-dark;
+		border: 1px solid $color__black;
 
 		.widget {
 
@@ -177,7 +177,7 @@
 ==========================================*/
 
 .site-footer {
-	background: $black;
+	background: darken($color__black, 10%);
 }
 
 .site-footer {
@@ -185,13 +185,14 @@
 		color: $off-white;
 
 		a {
+			color: $color__link_darkbackground;
 			opacity: 0.8;
 		}
 
 		a:visited,
 		a:hover,
 		a:focus {
-			color: $off-white;
-			opacity: 1;
+
+			opacity: 0.9;
 		}
 }
