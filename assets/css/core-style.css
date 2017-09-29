@@ -535,6 +535,28 @@ textarea {
 	width: 100%;
 }
 
+.site-search .site-search-form {
+	border: 1px solid #d6d6d6;
+	display: inline-block;
+	line-height: 1;
+}
+
+.site-search input[type=search] {
+	border: 0;
+}
+
+.site-search button {
+	border-color: transparent;
+	border-radius: 0;
+	padding: 0.6em 1em;
+	vertical-align: middle;
+}
+
+.site-search button span.fa {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
