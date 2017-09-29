@@ -129,7 +129,8 @@ Header aka .site-banner includes primary nav
 	}
 
 	body.main-sidebar:not(.home-page),
-	body.post-sbar-active {
+	body.post-sbar-active,
+	body.page-sbar-active {
 
 		.content-area {
 			float: left;

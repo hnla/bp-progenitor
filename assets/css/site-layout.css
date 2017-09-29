@@ -131,13 +131,15 @@ Header aka .site-banner includes primary nav
 		margin: 0;
 	}
 	body.main-sidebar:not(.home-page) .content-area,
-	body.post-sbar-active .content-area {
+	body.post-sbar-active .content-area,
+	body.page-sbar-active .content-area {
 		float: left;
 		margin: 0 -25% 0 0;
 		padding: 0 0 0.5em 0.5em;
 	}
 	body.main-sidebar:not(.home-page) .content-area .site-main,
-	body.post-sbar-active .content-area .site-main {
+	body.post-sbar-active .content-area .site-main,
+	body.page-sbar-active .content-area .site-main {
 		margin: 0 25% 0 0;
 		padding-right: 1em;
 	}
@@ -333,10 +335,6 @@ Internal widgets structural
 	margin-left: 0;
 	padding-left: 0;
 	list-style-position: inside;
-}
-
-.widget ul li {
-	color: #fafafa;
 }
 
 .widget_bp_groups_widget ul {
