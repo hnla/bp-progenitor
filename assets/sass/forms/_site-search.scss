@@ -1,0 +1,29 @@
+
+// Site search form
+
+.site-search {
+
+	.site-search-form {
+		border: 1px solid $form-border-color;
+		display: inline-block;
+		line-height: 1;
+	}
+
+	label {
+
+	}
+	input[type=search] {
+		border: 0;
+	}
+
+	button {
+		border-color: transparent;
+		border-radius: 0;
+		padding: 0.6em 1em;
+		vertical-align: middle;
+
+		span.fa {
+			@include font-size(20)
+		}
+	}
+}
