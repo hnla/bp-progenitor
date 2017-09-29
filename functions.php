@@ -127,7 +127,15 @@ function bp_progenitor_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Pages', 'bp-progenitor' ),
+		'id'            => 'sidebar-pages',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 	// footer widgets
 	register_sidebar(
 		array(
@@ -266,6 +274,10 @@ function progenitor_body_classes( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar-posts' ) && is_single() ) {
 		$classes[] = 'post-sbar-active';
+	}
+
+	if ( is_active_sidebar( 'sidebar-pages' ) && is_page() ) {
+		$classes[] = 'page-sbar-active';
 	}
 
 	if ( progenitor_footer_widgets_active() ) {
