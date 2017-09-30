@@ -1,26 +1,31 @@
 // Widgets - general
 // Layout styles for general widget elements in footers/sidebars
 
-.widget {
+.widget-area {
+	.widget {
 
+		ul {
+			margin-left: 0;
+			padding-left: 0;
+			list-style-position: inside;
 
-	ul {
-		margin-left: 0;
-		padding-left: 0;
-		list-style-position: inside;
+		//		li {
 
-//		li {
-
-//		}
+		//		}
+		}
 	}
 }
 
 // Widget specific styles
 
-// BP groups
-.widget_bp_groups_widget {
+// BP Widgets
+.widget_bp_groups_widget,
+.widget_bp_blogs_widget {
+
+	@include font-size(13);
 
 	ul {
 		list-style: none;
+		padding: 0;
 	}
 }

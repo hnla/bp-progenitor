@@ -45,7 +45,9 @@
 	} // close .bp-messages
 
 	// user message screens handled seperately due to backbone templates
-	// & looped messages
+	// & looped messages.
+	// Border removed for act stream or lists message feedback
+	li.bp-messages,
 	.bp-messages.bp-user-messages-feedback {
 		border: 0;
 	}

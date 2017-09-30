@@ -331,12 +331,20 @@ Primary header/menu positioning
 
 Internal widgets structural
 ================================================================*/
-.widget ul {
+.widget-area .widget ul {
 	margin-left: 0;
 	padding-left: 0;
 	list-style-position: inside;
 }
 
-.widget_bp_groups_widget ul {
+.widget_bp_groups_widget,
+.widget_bp_blogs_widget {
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+.widget_bp_groups_widget ul,
+.widget_bp_blogs_widget ul {
 	list-style: none;
+	padding: 0;
 }
