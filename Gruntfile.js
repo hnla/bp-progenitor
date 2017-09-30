@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 				src: [
 					'sass/core-style.scss',
 					'sass/site-layout.scss',
-					'sass/appearence.scss',
+					'sass/appearance.scss',
 					'sass/font-awesome/font-awesome.scss'
 					],
 				dest: MAIN_WORKING_DIR + 'css/'

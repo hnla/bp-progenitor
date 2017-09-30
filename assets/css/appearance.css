@@ -1,0 +1,171 @@
+/*
+* Progenitor visual appearence styles
+* This file provides the visual style, colours, backgrounds etc.
+* This file may be overriden in a child theme using the same name and
+* your own styles added.
+*/
+/*====================================================
+1. classed & grouped colours
+======================================================*/
+.primary-color {
+	background: #3D629C;
+	background: -moz-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to bottom, #3D629C 0%, #2f4b77 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
+}
+
+.footer-widgets-wrap a {
+	color: #f6e7aa;
+}
+
+.footer-widgets-wrap a:focus, .footer-widgets-wrap a:hover {
+	color: #f1da7c;
+}
+
+.footer-widgets-wrap a:visted {
+	color: #ccc;
+}
+
+/*====================================================
+2. Header elements
+======================================================*/
+.site-header {
+	background: #fafafa;
+}
+
+.meta-bar {
+	background: #333;
+	color: #fff;
+}
+
+.meta-bar {
+	text-align: center;
+	padding-right: 0.5em;
+}
+
+/*====================================================
+3. Navigation - global & specific
+======================================================*/
+.main-navigation a {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.main-navigation a:focus, .main-navigation a:hover {
+	opacity: 1;
+}
+
+.main-navigation a:visited {
+	color: #fff;
+}
+
+/*========================================
+3.1 static horizontal primary navigation
+==========================================*/
+.site-nav-horizontal .main-navigation .nav-menu > li {
+	border-right: 1px solid #273f65;
+	border-left: 1px solid #446eae;
+	margin-right: 0;
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li:first-child > a {
+	padding-left: 0;
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li:first-child {
+	border-left: 0;
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li:last-child {
+	border-right: 0;
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li.current-menu-item > a {
+	background: #2f4b77;
+	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: linear-gradient(to bottom, #2f4b77 0%, #203453 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4b77', endColorstr='#203453',GradientType=0 );
+}
+
+.site-nav-horizontal .main-navigation .nav-menu > li > a {
+	padding: 5px 10px;
+}
+
+.site-nav-horizontal .main-navigation ul ul a:link,
+.site-nav-horizontal .main-navigation ul ul a:visited {
+	color: #404040;
+}
+
+.site-nav-horizontal .main-navigation ul ul li:focus,
+.site-nav-horizontal .main-navigation ul ul li:hover {
+	background: #3D629C;
+	background: -moz-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to bottom, #3D629C 0%, #2f4b77 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
+}
+
+.site-nav-horizontal .main-navigation ul ul li:focus a,
+.site-nav-horizontal .main-navigation ul ul li:hover a {
+	color: #fff;
+}
+
+/*========================================
+3.3 Floating horizontal primary navigation
+==========================================*/
+/*========================================
+3.4 Vertical primary navigation
+==========================================*/
+/*========================================
+4. Footer Widgets
+==========================================*/
+.footer-widgets-wrap {
+	background: #555;
+	background: -moz-linear-gradient(top, #555 0%, #222222 100%);
+	background: -webkit-linear-gradient(top, #555 0%, #222222 100%);
+	background: linear-gradient(to bottom, #555 0%, #222222 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555', endColorstr='#222222',GradientType=0 );
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333;
+}
+
+.footer-widgets-wrap .widget-area {
+	background: #666;
+	background: -moz-linear-gradient(top, #666 0%, #333333 100%);
+	background: -webkit-linear-gradient(top, #666 0%, #333333 100%);
+	background: linear-gradient(to bottom, #666 0%, #333333 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666', endColorstr='#333333',GradientType=0 );
+	border: 1px solid #333;
+}
+
+.footer-widgets-wrap .widget-area .widget .widgettitle {
+	color: #eaeaea;
+}
+
+.footer-widgets-wrap .widget-area .widget li {
+	color: #fafafa;
+}
+
+/*========================================
+5. Site Footer
+==========================================*/
+.site-footer {
+	background: #1a1919;
+}
+
+.site-footer {
+	color: #fafafa;
+}
+
+.site-footer a {
+	color: #f6e7aa;
+	opacity: 0.8;
+}
+
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:focus {
+	opacity: 0.9;
+}

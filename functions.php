@@ -92,6 +92,20 @@ endif;
 add_action( 'after_setup_theme', 'bp_progenitor_setup' );
 
 /**
+ * Provide site theme options early on
+ *
+ * @version 0.1.0
+ */
+
+function progenitor_opts( $option = '' ) {
+
+	$progenitor_opts = bp_progenitor_get_appearance_settings( $option );
+
+	return $progenitor_opts;
+}
+add_action('bp_after_setup_theme', 'progenitor_opts');
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -200,7 +214,7 @@ function bp_progenitor_styles() {
 	wp_enqueue_style( 'bp-progenitor-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome' . $ext, array() );
 	wp_enqueue_style( 'bp-progenitor-core-style',  get_template_directory_uri() . '/assets/css/core-style' . $rtl . $ext, array() );
 	wp_enqueue_style( 'bp-progenitor-site-layout', get_template_directory_uri() . '/assets/css/site-layout' . $rtl . $ext, array('bp-progenitor-style') );
-	wp_enqueue_style( 'bp-progenitor-appearence',  get_stylesheet_directory_uri() . '/assets/css/appearence' . $rtl . $ext, array('bp-progenitor-site-layout') );
+	wp_enqueue_style( 'bp-progenitor-appearance',  get_stylesheet_directory_uri() . '/assets/css/appearence' . $rtl . $ext, array('bp-progenitor-site-layout') );
 
 }
 add_action( 'wp_enqueue_scripts', 'bp_progenitor_styles' );
@@ -264,8 +278,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 */
 function progenitor_body_classes( $classes ) {
 
-	$progenitor_options = get_option( 'bp_progenitor_appearance' );
-
 	if( function_exists( 'bp_is_active' ) ) :
 		$bp_is_directory = bp_is_directory();
 	else:
@@ -296,9 +308,9 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'main-sidebar';
 	}
 
-	if( 'vertical' == $progenitor_options['main_site_menu'] ):
+	if( 'vertical' == progenitor_opts('main_site_menu') ):
 		$classes[] = 'site-nav-vertical';
-	elseif( 'horizontal' == $progenitor_options['main_site_menu'] ) :
+	elseif( 'horizontal' == progenitor_opts( 'main_site_menu' ) ) :
 		$classes[] = 'site-nav-horizontal';
 	endif;
 
