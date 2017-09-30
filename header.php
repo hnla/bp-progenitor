@@ -30,7 +30,7 @@
 
 			<header id="masthead" class="site-header">
 
-				<?php if( has_header_image() ) : ?>
+				<?php if( has_header_image() && 'horizontal' == progenitor_opts( 'main_site_menu' ) ) : ?>
 				<div class="header-background">
 				<?php endif; ?>
 
@@ -53,7 +53,7 @@
 						endif; ?>
 					</div><!-- .site-branding -->
 
-				<?php if( has_header_image() ) : ?>
+				<?php if( has_header_image() && 'horizontal' == progenitor_opts( 'main_site_menu' ) ) : ?>
 				</div><!-- // .header-background -->
 				<?php endif; ?>
 
