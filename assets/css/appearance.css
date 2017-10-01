@@ -60,6 +60,40 @@
 	color: #fff;
 }
 
+.site-nav-horizontal .buddypress-wrap .dir-navs {
+	margin-bottom: 0;
+}
+
+.site-nav-horizontal .buddypress-wrap .dir-navs li a {
+	color: #fff;
+	opacity: 0.9;
+}
+
+.site-nav-horizontal .buddypress-wrap .dir-navs li a:focus, .site-nav-horizontal .buddypress-wrap .dir-navs li a:hover {
+	background: #517abb;
+	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517abb', endColorstr='#3d629c',GradientType=0 );
+	color: #fff;
+	opacity: 1;
+}
+
+.site-nav-horizontal .buddypress-wrap .dir-navs li.selected a span,
+.site-nav-horizontal .buddypress-wrap .dir-navs li a span {
+	background: black;
+}
+
+.site-nav-horizontal .buddypress-wrap .dir-navs li.selected a {
+	background: #2f4b77;
+	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: linear-gradient(to bottom, #2f4b77 0%, #203453 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4b77', endColorstr='#203453',GradientType=0 );
+	color: #FF9F5E;
+	opacity: 1;
+}
+
 /*========================================
 3.1 static horizontal primary navigation
 ==========================================*/

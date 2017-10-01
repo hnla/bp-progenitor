@@ -6,7 +6,7 @@
  */
 ?>
 
-<nav class="<?php bp_progenitor_directory_type_navs_class(); ?>" role="navigation" aria-label="<?php esc_attr_e( 'Directory menu', 'buddypress' ); ?>">
+<nav class="<?php bp_progenitor_directory_type_navs_class(); ?> primary-color" role="navigation" aria-label="<?php esc_attr_e( 'Directory menu', 'buddypress' ); ?>">
 
 	<?php if ( bp_progenitor_has_nav( array( 'object' => 'directory' ) ) ) : ?>
 

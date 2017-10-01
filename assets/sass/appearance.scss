@@ -78,6 +78,49 @@
 	}
 }
 
+.site-nav-horizontal {
+
+	.buddypress-wrap {
+
+		.dir-navs {
+			margin-bottom: 0;
+			li {
+
+				a {
+					color: $white;
+					opacity: 0.9;
+
+					&:focus,
+					&:hover {
+
+						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+						color: $white;
+						opacity: 1;
+					}
+				}
+
+				&.selected a,
+				a {
+
+					span {
+						background: black;
+					}
+				}
+			}
+
+			li.selected {
+
+				a {
+
+					@include background-gradient-3d($color: darken( $color__main-nav, 10%) );
+					color: $color-secondary-2-1;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
 /*========================================
 3.1 static horizontal primary navigation
 ==========================================*/

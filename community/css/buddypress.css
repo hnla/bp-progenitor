@@ -997,7 +997,7 @@ body.buddypress article.page > .entry-header .entry-title {
 *-----------------------------------------------------
 */
 .activity-update-form {
-	padding: 10px 10px 0;
+	padding: 1em 0.5em 0;
 }
 
 .item-body .activity-update-form .activity-form {
