@@ -121,6 +121,7 @@
 		// The header elements: date stamp, author etc;
 		.activity-header {
 			margin: 0 auto;
+			text-align: center;
 			width: 80%;
 
 			// ensure elements are display inline, some themes setting avatars as block
@@ -138,7 +139,6 @@
 			.time-since {
 
 				@include font-size(14);
-				color: $light-text;
 				text-decoration: none;
 
 				&:hover {
@@ -298,6 +298,7 @@
 
 			.activity-header {
 				margin: 0 $marg-med 0 0;
+				text-align: left;
 				width: auto;
 			}
 
@@ -338,7 +339,6 @@
 				@include box-shadow(0 0 6px 0 $light-grey);
 			}
 		}
-
 	}
 }
 
@@ -414,10 +414,7 @@ body.activity-permalink {
 				margin-right: $marg-sml;
 
 				.activity-header {
-
-					p {
 						text-align: left;
-					}
 				}
 			}
 

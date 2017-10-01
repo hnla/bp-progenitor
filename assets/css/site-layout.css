@@ -157,7 +157,7 @@ Header aka .site-banner includes primary nav
 =================================================*/
 .site-footer {
 	background: #fff;
-	border-top: 1px solid;
+	border-top: 1px solid #333;
 	height: 4rem;
 	margin: -4rem auto 0;
 	padding: 0.5em 1em 0;

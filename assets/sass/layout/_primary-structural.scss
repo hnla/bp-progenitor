@@ -160,7 +160,7 @@ Header aka .site-banner includes primary nav
 
 .site-footer {
 	background: $white;
-	border-top: 1px solid;
+	border-top: 1px solid $black;
 	height: $size__footer-height;
 	margin: -$size__footer-height auto 0;
 	padding: $pad-sml $pad-med 0;

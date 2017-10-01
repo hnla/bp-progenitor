@@ -113,8 +113,27 @@
 				a {
 
 					@include background-gradient-3d($color: darken( $color__main-nav, 10%) );
-					color: $color-secondary-2-1;
+					color: $color-secondary-1-4;
 					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+// Small device menu styling.
+// Not vertical menu display.
+.buddypress-wrap:not(.bp-single-vert-nav) {
+
+	@include medium-max {
+
+		.bp-navs {
+
+			li {
+				border-bottom: 1px solid darken( $color__main-nav, 15%);
+
+				&:last-child {
+					border-bottom: 0;
 				}
 			}
 		}

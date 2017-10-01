@@ -387,7 +387,10 @@ body.buddypress article.page > .entry-header .entry-title {
 
 @media screen and (max-width: 46.8em) {
 	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
-		background: #eaeaea;
+		border-bottom: 1px solid #333;
+	}
+	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li:last-child {
+		border-bottom: 0;
 	}
 }
 
@@ -1239,6 +1242,7 @@ body.buddypress article.page > .entry-header .entry-title {
 
 .activity-list .activity-item .activity-header {
 	margin: 0 auto;
+	text-align: center;
 	width: 80%;
 }
 
@@ -1256,7 +1260,6 @@ body.buddypress article.page > .entry-header .entry-title {
 .activity-list .activity-item .activity-header .time-since {
 	font-size: 14px;
 	font-size: 0.875rem;
-	color: #767676;
 	text-decoration: none;
 }
 
@@ -1385,6 +1388,7 @@ body.buddypress article.page > .entry-header .entry-title {
 	}
 	.activity-list .activity-item .activity-header {
 		margin: 0 15px 0 0;
+		text-align: left;
 		width: auto;
 	}
 }
@@ -1485,7 +1489,7 @@ body.activity-permalink .activity-list .activity-comments {
 	body.activity-permalink .activity-list .activity-content {
 		margin-right: 10px;
 	}
-	body.activity-permalink .activity-list .activity-content .activity-header p {
+	body.activity-permalink .activity-list .activity-content .activity-header {
 		text-align: left;
 	}
 }

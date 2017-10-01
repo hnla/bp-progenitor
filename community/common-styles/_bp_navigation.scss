@@ -177,7 +177,11 @@
 		.bp-navs {
 
 			li {
-				background: $light-grey;
+				border-bottom: 1px solid $black;
+
+				&:last-child {
+					border-bottom: 0;
+				}
 			}
 		}
 	}

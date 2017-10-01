@@ -90,8 +90,17 @@
 	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
 	background: linear-gradient(to bottom, #2f4b77 0%, #203453 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4b77', endColorstr='#203453',GradientType=0 );
-	color: #FF9F5E;
+	color: #ECCD4E;
 	opacity: 1;
+}
+
+@media screen and (max-width: 46.8em) {
+	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
+		border-bottom: 1px solid #273f65;
+	}
+	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li:last-child {
+		border-bottom: 0;
+	}
 }
 
 /*========================================
