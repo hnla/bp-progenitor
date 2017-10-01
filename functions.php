@@ -211,10 +211,10 @@ function bp_progenitor_styles() {
 
 	$ext = '.css';
 	wp_enqueue_style( 'bp-progenitor-style',       get_stylesheet_uri() );
-	wp_enqueue_style( 'bp-progenitor-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome' . $ext, array() );
-	wp_enqueue_style( 'bp-progenitor-core-style',  get_template_directory_uri() . '/assets/css/core-style' . $rtl . $ext, array() );
-	wp_enqueue_style( 'bp-progenitor-site-layout', get_template_directory_uri() . '/assets/css/site-layout' . $rtl . $ext, array('bp-progenitor-style') );
-	wp_enqueue_style( 'bp-progenitor-appearance',  get_stylesheet_directory_uri() . '/assets/css/appearence' . $rtl . $ext, array('bp-progenitor-site-layout') );
+	wp_enqueue_style( 'bp-progenitor-fontawesome', get_template_directory_uri()   . '/assets/css/font-awesome' . $ext, array() );
+	wp_enqueue_style( 'bp-progenitor-core-style',  get_template_directory_uri()   . '/assets/css/core-style' . $rtl . $ext, array() );
+	wp_enqueue_style( 'bp-progenitor-site-layout', get_template_directory_uri()   . '/assets/css/site-layout' . $rtl . $ext, array('bp-progenitor-style') );
+	wp_enqueue_style( 'bp-progenitor-appearance',  get_stylesheet_directory_uri() . '/assets/css/appearance' . $rtl . $ext, array('bp-progenitor-site-layout') );
 
 }
 add_action( 'wp_enqueue_scripts', 'bp_progenitor_styles' );
