@@ -738,4 +738,3 @@ function bp_progenitor() {
  */
 bp_progenitor();
 
-//var_dump(bp_progenitor()->function_prefix);
