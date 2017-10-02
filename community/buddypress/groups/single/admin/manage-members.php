@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Group's manage members template.
+ * BP progenitor Group's manage members template.
  *
  * @since 1.0.0
  */
@@ -82,7 +82,7 @@
 
 			<?php if ( bp_group_member_needs_pagination() ) : ?>
 
-				<?php bp_nouveau_pagination( 'top' ) ; ?>
+				<?php bp_progenitor_pagination( 'top' ) ; ?>
 
 			<?php endif; ?>
 
@@ -97,7 +97,7 @@
 							<span class="banned warn"><?php if ( bp_get_group_member_is_banned() ) _e( '(banned)', 'buddypress' ); ?></span>
 						</p>
 
-						<?php bp_nouveau_groups_manage_members_buttons( array( 'container' => 'div', 'container_classes' => array( 'members-manage-buttons', 'text-links-list' ), 'parent_element' => '  ' ) ) ; ?>
+						<?php bp_progenitor_groups_manage_members_buttons( array( 'container' => 'div', 'container_classes' => array( 'members-manage-buttons', 'text-links-list' ), 'parent_element' => '  ' ) ) ; ?>
 
 					</li>
 
@@ -109,7 +109,7 @@
 
 	<?php else:
 
-		bp_nouveau_user_feedback( 'group-manage-members-none' );
+		bp_progenitor_user_feedback( 'group-manage-members-none' );
 
 	endif; ?>
 

@@ -13,8 +13,8 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-function bp_nouveau_notifications_filters() {
-	echo bp_nouveau_get_notifications_filters();
+function bp_progenitor_notifications_filters() {
+	echo bp_progenitor_get_notifications_filters();
 }
 
 	/**
@@ -24,9 +24,9 @@ function bp_nouveau_notifications_filters() {
 	 *
 	 * @return string HTML output.
 	 */
-	function bp_nouveau_get_notifications_filters() {
+	function bp_progenitor_get_notifications_filters() {
 		$output   = '';
-		$filters  = bp_nouveau_notifications_sort( bp_nouveau_notifications_get_filters() );
+		$filters  = bp_progenitor_notifications_sort( bp_progenitor_notifications_get_filters() );
 		$selected = 0;
 
 		if ( ! empty( $_REQUEST['type'] ) ) {
@@ -61,7 +61,7 @@ function bp_nouveau_notifications_filters() {
 		 * @param string $output  The options output.
 		 * @param array  $filters The sorted notifications filters.
 		 */
-		return apply_filters( 'bp_nouveau_get_notifications_filters', $output, $filters );
+		return apply_filters( 'bp_progenitor_get_notifications_filters', $output, $filters );
 	}
 
 /**
@@ -69,7 +69,7 @@ function bp_nouveau_notifications_filters() {
  *
  * @since 1.0.0
  */
-function bp_nouveau_notifications_sort_order_links() {
+function bp_progenitor_notifications_sort_order_links() {
 	if ( 'unread' === bp_current_action() ) {
 		$link = bp_get_notifications_unread_permalink( bp_displayed_user_id() );
 	} else {
@@ -93,7 +93,7 @@ function bp_nouveau_notifications_sort_order_links() {
  *
  * @since 1.0.0
  */
-function bp_nouveau_notifications_bulk_management_dropdown() {
+function bp_progenitor_notifications_bulk_management_dropdown() {
 ?>
 
 	<div class="select-wrap">

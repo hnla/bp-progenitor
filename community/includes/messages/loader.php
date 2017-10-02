@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Messages
+ * BP progenitor Messages
  *
  * @since 1.0.0
  */
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-class BP_Nouveau_Messages {
+class BP_progenitor_Messages {
 	/**
 	 * Constructor
 	 *
@@ -66,20 +66,20 @@ class BP_Nouveau_Messages {
 	 */
 	protected function setup_actions() {
 		// Notices
-		add_action( 'widgets_init', 'bp_nouveau_unregister_notices_widget' );
-		add_action( 'bp_init',      'bp_nouveau_push_sitewide_notices', 99 );
+		add_action( 'widgets_init', 'bp_progenitor_unregister_notices_widget' );
+		add_action( 'bp_init',      'bp_progenitor_push_sitewide_notices', 99 );
 
 		// Messages
-		add_action( 'bp_messages_setup_nav', 'bp_nouveau_messages_adjust_nav' );
+		add_action( 'bp_messages_setup_nav', 'bp_progenitor_messages_adjust_nav' );
 
 		// Remove deprecated scripts
 		remove_action( 'bp_enqueue_scripts', 'messages_add_autocomplete_js' );
 
 		// Enqueue the scripts for the new UI
-		add_action( 'bp_nouveau_enqueue_scripts', 'bp_nouveau_messages_enqueue_scripts' );
+		add_action( 'bp_progenitor_enqueue_scripts', 'bp_progenitor_messages_enqueue_scripts' );
 
 		// Register the Messages Notifications filters
-		add_action( 'bp_nouveau_notifications_init_filters', 'bp_nouveau_messages_notification_filters' );
+		add_action( 'bp_progenitor_notifications_init_filters', 'bp_progenitor_messages_notification_filters' );
 	}
 
 	/**
@@ -89,20 +89,20 @@ class BP_Nouveau_Messages {
 	 */
 	protected function setup_filters() {
 		// Enqueue specific styles
-		add_filter( 'bp_nouveau_enqueue_styles', 'bp_nouveau_messages_enqueue_styles', 10, 1 );
+		add_filter( 'bp_progenitor_enqueue_styles', 'bp_progenitor_messages_enqueue_styles', 10, 1 );
 
 		// Register messages scripts
-		add_filter( 'bp_nouveau_register_scripts', 'bp_nouveau_messages_register_scripts', 10, 1 );
+		add_filter( 'bp_progenitor_register_scripts', 'bp_progenitor_messages_register_scripts', 10, 1 );
 
 		// Localize Scripts
-		add_filter( 'bp_core_get_js_strings', 'bp_nouveau_messages_localize_scripts', 10, 1 );
+		add_filter( 'bp_core_get_js_strings', 'bp_progenitor_messages_localize_scripts', 10, 1 );
 
 		// Notices
-		add_filter( 'bp_messages_single_new_message_notification', 'bp_nouveau_format_notice_notification_for_user',  10, 1 );
-		add_filter( 'bp_notifications_get_all_notifications_for_user', 'bp_nouveau_add_notice_notification_for_user', 10, 2 );
+		add_filter( 'bp_messages_single_new_message_notification', 'bp_progenitor_format_notice_notification_for_user',  10, 1 );
+		add_filter( 'bp_notifications_get_all_notifications_for_user', 'bp_progenitor_add_notice_notification_for_user', 10, 2 );
 
 		// Messages
-		add_filter( 'bp_messages_admin_nav', 'bp_nouveau_messages_adjust_admin_nav', 10, 1 );
+		add_filter( 'bp_messages_admin_nav', 'bp_progenitor_messages_adjust_admin_nav', 10, 1 );
 
 		remove_filter( 'messages_notice_message_before_save',  'wp_filter_kses', 1 );
 		remove_filter( 'messages_message_content_before_save', 'wp_filter_kses', 1 );
@@ -126,11 +126,11 @@ class BP_Nouveau_Messages {
  *
  * @since 1.0.0
  */
-function bp_nouveau_messages( $bp_nouveau = null ) {
-	if ( is_null( $bp_nouveau ) ) {
+function bp_progenitor_messages( $bp_progenitor = null ) {
+	if ( is_null( $bp_progenitor ) ) {
 		return;
 	}
 
-	$bp_nouveau->messages = new BP_Nouveau_Messages();
+	$bp_progenitor->messages = new BP_progenitor_Messages();
 }
-add_action( 'bp_nouveau_includes', 'bp_nouveau_messages', 10, 1 );
+add_action( 'bp_progenitor_includes', 'bp_progenitor_messages', 10, 1 );

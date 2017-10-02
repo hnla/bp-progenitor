@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Notifications
+ * BP progenitor Notifications
  *
  * @since 1.0.0
  */
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-class BP_Nouveau_Notifications {
+class BP_Progenitor_Notifications {
 	/**
 	 * Constructor
 	 *
@@ -53,11 +53,11 @@ class BP_Nouveau_Notifications {
 	 * @since 1.0.0
 	 */
 	protected function setup_actions() {
-		add_action( 'bp_init', 'bp_nouveau_notifications_init_filters', 20 );
-		add_action( 'bp_nouveau_enqueue_scripts', 'bp_nouveau_notifications_enqueue_scripts' );
+		add_action( 'bp_init', 'bp_progenitor_notifications_init_filters', 20 );
+		add_action( 'bp_progenitor_enqueue_scripts', 'bp_progenitor_notifications_enqueue_scripts' );
 
 		$ajax_actions = array(
-			array( 'notifications_filter' => array( 'function' => 'bp_nouveau_ajax_object_template_loader', 'nopriv' => false ) ),
+			array( 'notifications_filter' => array( 'function' => 'bp_progenitor_ajax_object_template_loader', 'nopriv' => false ) ),
 		);
 
 		foreach ( $ajax_actions as $ajax_action ) {
@@ -77,10 +77,10 @@ class BP_Nouveau_Notifications {
 	 * @since 1.0.0
 	 */
 	protected function setup_filters() {
-		add_filter( 'bp_nouveau_register_scripts', 'bp_nouveau_notifications_register_scripts', 10, 1 );
-		add_filter( 'bp_get_the_notification_mark_unread_link', 'bp_nouveau_notifications_mark_unread_link', 10, 1 );
-		add_filter( 'bp_get_the_notification_mark_read_link',   'bp_nouveau_notifications_mark_read_link'  , 10, 1 );
-		add_filter( 'bp_get_the_notification_delete_link',      'bp_nouveau_notifications_delete_link'     , 10, 1 );
+		add_filter( 'bp_progenitor_register_scripts', 'bp_progenitor_notifications_register_scripts', 10, 1 );
+		add_filter( 'bp_get_the_notification_mark_unread_link', 'bp_progenitor_notifications_mark_unread_link', 10, 1 );
+		add_filter( 'bp_get_the_notification_mark_read_link',   'bp_progenitor_notifications_mark_read_link'  , 10, 1 );
+		add_filter( 'bp_get_the_notification_delete_link',      'bp_progenitor_notifications_delete_link'     , 10, 1 );
 	}
 }
 
@@ -89,11 +89,11 @@ class BP_Nouveau_Notifications {
  *
  * @since 1.0.0
  */
-function bp_nouveau_notifications( $bp_nouveau = null ) {
-	if ( is_null( $bp_nouveau ) ) {
+function bp_progenitor_notifications( $bp_progenitor = null ) {
+	if ( is_null( $bp_progenitor ) ) {
 		return;
 	}
 
-	$bp_nouveau->notifications = new BP_Nouveau_Notifications();
+	$bp_progenitor->notifications = new BP_Progenitor_Notifications();
 }
-add_action( 'bp_nouveau_includes', 'bp_nouveau_notifications', 10, 1 );
+add_action( 'bp_progenitor_includes', 'bp_progenitor_notifications', 10, 1 );

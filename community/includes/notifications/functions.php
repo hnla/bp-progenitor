@@ -16,16 +16,16 @@ defined( 'ABSPATH' ) || exit;
  * @param  array  $scripts  The array of scripts to register
  * @return array  The same array with the specific notifications scripts.
  */
-function bp_nouveau_notifications_register_scripts( $scripts = array() ) {
+function bp_progenitor_notifications_register_scripts( $scripts = array() ) {
 
-	if ( ! isset( $scripts['bp-nouveau'] ) ) {
+	if ( ! isset( $scripts['bp-progenitor'] ) ) {
 		return $scripts;
 	}
 
 	return array_merge( $scripts, array(
-		'bp-nouveau-notifications' => array(
+		'bp-progenitor-notifications' => array(
 			'file'         => 'js/buddypress-notifications%s.js',
-			'dependencies' => array( 'bp-nouveau' ),
+			'dependencies' => array( 'bp-progenitor' ),
 			'footer'       => true,
 		),
 	) );
@@ -36,13 +36,13 @@ function bp_nouveau_notifications_register_scripts( $scripts = array() ) {
  *
  * @since 1.0.0
  */
-function bp_nouveau_notifications_enqueue_scripts() {
+function bp_progenitor_notifications_enqueue_scripts() {
 
 	if ( ! bp_is_user_notifications() ) {
 		return;
 	}
 
-	wp_enqueue_script( 'bp-nouveau-notifications' );
+	wp_enqueue_script( 'bp-progenitor-notifications' );
 }
 
 /**
@@ -51,19 +51,19 @@ function bp_nouveau_notifications_enqueue_scripts() {
  *
  * @since 1.0.O
  */
-function bp_nouveau_notifications_init_filters() {
+function bp_progenitor_notifications_init_filters() {
 	if ( ! bp_is_user_notifications() ) {
 		return;
 	}
 
-	bp_nouveau()->notifications->filters = array();
+	bp_progenitor()->notifications->filters = array();
 
 	/**
 	 * Hook here to register your custom notification filters
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'bp_nouveau_notifications_init_filters' );
+	do_action( 'bp_progenitor_notifications_init_filters' );
 }
 
 /**
@@ -80,8 +80,8 @@ function bp_nouveau_notifications_init_filters() {
  * }
  * @return bool True if the filter has been successfully registered. False otherwise.
  */
-function bp_nouveau_notifications_register_filter( $args = array() ) {
-	$bp_nouveau = bp_nouveau();
+function bp_progenitor_notifications_register_filter( $args = array() ) {
+	$bp_progenitor = bp_progenitor();
 
 	$r = wp_parse_args( $args, array(
 		'id'       => '',
@@ -93,11 +93,11 @@ function bp_nouveau_notifications_register_filter( $args = array() ) {
 		return false;
 	}
 
-	if ( isset( $bp_nouveau->notifications->filters[ $r['id'] ] ) ) {
+	if ( isset( $bp_progenitor->notifications->filters[ $r['id'] ] ) ) {
 		return false;
 	}
 
-	$bp_nouveau->notifications->filters[ $r['id'] ] = $r;
+	$bp_progenitor->notifications->filters[ $r['id'] ] = $r;
 	return true;
 }
 
@@ -110,16 +110,16 @@ function bp_nouveau_notifications_register_filter( $args = array() ) {
  *                     Leave empty to get all notifications filters.
  * @return array|false All or a specific notifications parameters. False if no match are found.
  */
-function bp_nouveau_notifications_get_filters( $id = '' ) {
-	$bp_nouveau = bp_nouveau();
+function bp_progenitor_notifications_get_filters( $id = '' ) {
+	$bp_progenitor = bp_progenitor();
 
 	// Get all filters
 	if ( empty( $id ) ) {
-		return $bp_nouveau->notifications->filters;
+		return $bp_progenitor->notifications->filters;
 
 	// Get a specific filter
-	} elseif ( ! empty( $id ) && isset( $bp_nouveau->notifications->filters[ $id ] ) ) {
-		return $bp_nouveau->notifications->filters[ $id ];
+	} elseif ( ! empty( $id ) && isset( $bp_progenitor->notifications->filters[ $id ] ) ) {
+		return $bp_progenitor->notifications->filters[ $id ];
 
 	// Oops nothing found!
 	} else {
@@ -135,7 +135,7 @@ function bp_nouveau_notifications_get_filters( $id = '' ) {
  * @param  array  $filters The notifications filters to order.
  * @return array  The sorted filters.
  */
-function bp_nouveau_notifications_sort( $filters = array() ) {
+function bp_progenitor_notifications_sort( $filters = array() ) {
 	$sorted = array();
 
 	if ( empty( $filters ) || ! is_array( $filters ) ) {
@@ -177,7 +177,7 @@ function bp_nouveau_notifications_sort( $filters = array() ) {
  * @param  string $dashicon    The dashicon class.
  * @return string              Link Output.
  */
-function bp_nouveau_notifications_dashiconified_link( $link = '', $bp_tooltip = '', $dashicon = '' ) {
+function bp_progenitor_notifications_dashiconified_link( $link = '', $bp_tooltip = '', $dashicon = '' ) {
 	preg_match( '/<a\s[^>]*>(.*)<\/a>/siU', $link, $match );
 
 	if ( ! empty( $match[0] ) && ! empty( $match[1] ) && ! empty( $dashicon ) && ! empty( $bp_tooltip ) ) {
@@ -204,8 +204,8 @@ function bp_nouveau_notifications_dashiconified_link( $link = '', $bp_tooltip = 
  * @param  string $link The Mark Unread action link.
  * @return string       Link Output.
  */
-function bp_nouveau_notifications_mark_unread_link( $link = '' ) {
-	return bp_nouveau_notifications_dashiconified_link( $link, __( 'Mark Unread', 'buddypress' ), 'dashicons-hidden' );
+function bp_progenitor_notifications_mark_unread_link( $link = '' ) {
+	return bp_progenitor_notifications_dashiconified_link( $link, __( 'Mark Unread', 'buddypress' ), 'dashicons-hidden' );
 }
 
 /**
@@ -216,8 +216,8 @@ function bp_nouveau_notifications_mark_unread_link( $link = '' ) {
  * @param  string $link The Mark Read action link.
  * @return string       Link Output.
  */
-function bp_nouveau_notifications_mark_read_link( $link = '' ) {
-	return bp_nouveau_notifications_dashiconified_link( $link, __( 'Mark Read', 'buddypress' ), 'dashicons-visibility' );
+function bp_progenitor_notifications_mark_read_link( $link = '' ) {
+	return bp_progenitor_notifications_dashiconified_link( $link, __( 'Mark Read', 'buddypress' ), 'dashicons-visibility' );
 }
 
 /**
@@ -228,6 +228,6 @@ function bp_nouveau_notifications_mark_read_link( $link = '' ) {
  * @param  string $link The Delete action link.
  * @return string       Link Output.
  */
-function bp_nouveau_notifications_delete_link( $link = '' ) {
-	return bp_nouveau_notifications_dashiconified_link( $link, __( 'Delete', 'buddypress' ), 'dashicons-dismiss' );
+function bp_progenitor_notifications_delete_link( $link = '' ) {
+	return bp_progenitor_notifications_dashiconified_link( $link, __( 'Delete', 'buddypress' ), 'dashicons-dismiss' );
 }

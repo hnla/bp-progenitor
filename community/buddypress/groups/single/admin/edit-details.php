@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Group's edit details template.
+ * BP progenitor Group's edit details template.
  *
  * @since 1.0.0
  */

@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( is_admin() && current_user_can( 'activate_plugins' ) ) :
 
-	class BP_Nouveau_Notices_List_Table extends WP_List_Table {
+	class BP_Progenitor_Notices_List_Table extends WP_List_Table {
 		public function __construct( $args = array() ) {
 			parent::__construct( array(
 				'plural' => 'notices',
@@ -26,7 +26,7 @@ if ( is_admin() && current_user_can( 'activate_plugins' ) ) :
 
 		public function prepare_items() {
 			$page     = $this->get_pagenum();
-			$per_page = $this->get_items_per_page( 'bp_nouveau_notices_per_page' );
+			$per_page = $this->get_items_per_page( 'bp_progenitor_notices_per_page' );
 
 			$this->items = BP_Messages_Notice::get_notices( array(
 				'pag_num'  => $per_page,
@@ -40,7 +40,7 @@ if ( is_admin() && current_user_can( 'activate_plugins' ) ) :
 		}
 
 		public function get_columns() {
-			return apply_filters( 'bp_nouveau_notices_list_table_get_columns', array(
+			return apply_filters( 'bp_progenitor_notices_list_table_get_columns', array(
 				'subject'   => _x( 'Subject', 'Admin Notices column header', 'buddypress' ),
 				'message'   => _x( 'Content', 'Admin Notices column header', 'buddypress' ),
 				'date_sent' => _x( 'Created', 'Admin Notices column header', 'buddypress' ),
@@ -92,7 +92,7 @@ if ( is_admin() && current_user_can( 'activate_plugins' ) ) :
 endif;
 
 
-class BP_Nouveau_Admin_Notices {
+class BP_Progenitor_Admin_Notices {
 
 	public static function register_notices_admin() {
 		if ( ! is_admin() || ! bp_is_active( 'messages' ) ) {
@@ -163,7 +163,7 @@ class BP_Nouveau_Admin_Notices {
 			exit();
 		}
 
-		$this->list_table = new BP_Nouveau_Notices_List_Table( array( 'screen' => get_current_screen()->id ) );
+		$this->list_table = new BP_Progenitor_Notices_List_Table( array( 'screen' => get_current_screen()->id ) );
 	}
 
 	public function admin_index() {
@@ -218,4 +218,4 @@ class BP_Nouveau_Admin_Notices {
 		<?php
 	}
 }
-add_action( 'bp_init', array( 'BP_Nouveau_Admin_Notices', 'register_notices_admin' ) );
+add_action( 'bp_init', array( 'BP_progenitor_Admin_Notices', 'register_notices_admin' ) );

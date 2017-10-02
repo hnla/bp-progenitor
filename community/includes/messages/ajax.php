@@ -13,24 +13,24 @@ defined( 'ABSPATH' ) || exit;
  *
  * @todo this funciton CANNOT be run when the file is included (like it is now). Move to a function and hook to something.
  */
-bp_nouveau_register_ajax_actions( array(
-	array( 'messages_send_message'             => array( 'function' => 'bp_nouveau_ajax_messages_send_message',      'nopriv' => false ) ),
-	array( 'messages_send_reply'               => array( 'function' => 'bp_nouveau_ajax_messages_send_reply',        'nopriv' => false ) ),
-	array( 'messages_get_user_message_threads' => array( 'function' => 'bp_nouveau_ajax_get_user_message_threads',   'nopriv' => false ) ),
-	array( 'messages_thread_read'              => array( 'function' => 'bp_nouveau_ajax_messages_thread_read',       'nopriv' => false ) ),
-	array( 'messages_get_thread_messages'      => array( 'function' => 'bp_nouveau_ajax_get_thread_messages',        'nopriv' => false ) ),
-	array( 'messages_delete'                   => array( 'function' => 'bp_nouveau_ajax_delete_thread_messages',     'nopriv' => false ) ),
-	array( 'messages_unstar'                   => array( 'function' => 'bp_nouveau_ajax_star_thread_messages',       'nopriv' => false ) ),
-	array( 'messages_star'                     => array( 'function' => 'bp_nouveau_ajax_star_thread_messages',       'nopriv' => false ) ),
-	array( 'messages_unread'                   => array( 'function' => 'bp_nouveau_ajax_readunread_thread_messages', 'nopriv' => false ) ),
-	array( 'messages_read'                     => array( 'function' => 'bp_nouveau_ajax_readunread_thread_messages', 'nopriv' => false ) ),
-	array( 'messages_dismiss_sitewide_notice'  => array( 'function' => 'bp_nouveau_ajax_dismiss_sitewide_notice',    'nopriv' => false ) ),
+bp_progenitor_register_ajax_actions( array(
+	array( 'messages_send_message'             => array( 'function' => 'bp_progenitor_ajax_messages_send_message',      'nopriv' => false ) ),
+	array( 'messages_send_reply'               => array( 'function' => 'bp_progenitor_ajax_messages_send_reply',        'nopriv' => false ) ),
+	array( 'messages_get_user_message_threads' => array( 'function' => 'bp_progenitor_ajax_get_user_message_threads',   'nopriv' => false ) ),
+	array( 'messages_thread_read'              => array( 'function' => 'bp_progenitor_ajax_messages_thread_read',       'nopriv' => false ) ),
+	array( 'messages_get_thread_messages'      => array( 'function' => 'bp_progenitor_ajax_get_thread_messages',        'nopriv' => false ) ),
+	array( 'messages_delete'                   => array( 'function' => 'bp_progenitor_ajax_delete_thread_messages',     'nopriv' => false ) ),
+	array( 'messages_unstar'                   => array( 'function' => 'bp_progenitor_ajax_star_thread_messages',       'nopriv' => false ) ),
+	array( 'messages_star'                     => array( 'function' => 'bp_progenitor_ajax_star_thread_messages',       'nopriv' => false ) ),
+	array( 'messages_unread'                   => array( 'function' => 'bp_progenitor_ajax_readunread_thread_messages', 'nopriv' => false ) ),
+	array( 'messages_read'                     => array( 'function' => 'bp_progenitor_ajax_readunread_thread_messages', 'nopriv' => false ) ),
+	array( 'messages_dismiss_sitewide_notice'  => array( 'function' => 'bp_progenitor_ajax_dismiss_sitewide_notice',    'nopriv' => false ) ),
 ) );
 
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_messages_send_message() {
+function bp_progenitor_ajax_messages_send_message() {
 	$response = array(
 		'feedback' => __( 'Your message could not be sent, please try again.', 'buddypress' ),
 		'type'     => 'error',
@@ -88,7 +88,7 @@ function bp_nouveau_ajax_messages_send_message() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_messages_send_reply() {
+function bp_progenitor_ajax_messages_send_reply() {
 	$response = array(
 		'feedback' => __( 'There was a problem sending your reply. Please try again.', 'buddypress' ),
 		'type'     => 'error',
@@ -177,10 +177,10 @@ function bp_nouveau_ajax_messages_send_reply() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_get_user_message_threads() {
+function bp_progenitor_ajax_get_user_message_threads() {
 	global $messages_template;
 
-	if ( empty( $_POST['nonce'] ) ||  !wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+	if ( empty( $_POST['nonce'] ) ||  !wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error( array(
 			'feedback' => '<div class="bp-feedback error"><span class="bp-icon" aria-hidden="true"></span><p>' . __( 'Unauthorized request.', 'buddypress' ) . '</p></div>',
 			'type'     => 'error'
@@ -236,7 +236,7 @@ function bp_nouveau_ajax_get_user_message_threads() {
 			) ) ),
 			'count'         => bp_get_message_thread_total_count(),
 			'date'          => strtotime( bp_get_message_thread_last_post_date_raw() ) * 1000,
-			'display_date'  => bp_nouveau_get_message_date( bp_get_message_thread_last_post_date_raw() ),
+			'display_date'  => bp_progenitor_get_message_date( bp_get_message_thread_last_post_date_raw() ),
 		);
 
 		if ( is_array( $messages_template->thread->recipients ) ) {
@@ -289,8 +289,8 @@ function bp_nouveau_ajax_get_user_message_threads() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_messages_thread_read() {
-	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+function bp_progenitor_ajax_messages_thread_read() {
+	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error();
 	}
 
@@ -319,10 +319,10 @@ function bp_nouveau_ajax_messages_thread_read() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_get_thread_messages() {
+function bp_progenitor_ajax_get_thread_messages() {
 	global $thread_template;
 
-	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error( array(
 			'feedback' => '<div class="bp-feedback error"><span class="bp-icon" aria-hidden="true"></span><p>' . __( 'Unauthorized request.', 'buddypress' ) . '</p></div>',
 			'type'     => 'error'
@@ -415,13 +415,13 @@ function bp_nouveau_ajax_get_thread_messages() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_delete_thread_messages() {
+function bp_progenitor_ajax_delete_thread_messages() {
 	$response = array(
 		'feedback' => '<div class="bp-feedback error"><span class="bp-icon" aria-hidden="true"></span><p>' . __( 'There was a problem deleting your message(s). Please try again.', 'buddypress' ) . '</p></div>',
 		'type'     => 'error',
 	);
 
-	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error( $response );
 	}
 
@@ -448,7 +448,7 @@ function bp_nouveau_ajax_delete_thread_messages() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_star_thread_messages() {
+function bp_progenitor_ajax_star_thread_messages() {
 	if ( empty( $_POST['action'] ) ) {
 		wp_send_json_error();
 	}
@@ -474,7 +474,7 @@ function bp_nouveau_ajax_star_thread_messages() {
 
 	// Use global nonce for bulk actions involving more than one id
 	if ( 1 !== count( $ids ) ) {
-		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 			wp_send_json_error( $response );
 		}
 
@@ -535,7 +535,7 @@ function bp_nouveau_ajax_star_thread_messages() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_readunread_thread_messages() {
+function bp_progenitor_ajax_readunread_thread_messages() {
 	if ( empty( $_POST['action'] ) ) {
 		wp_send_json_error();
 	}
@@ -554,7 +554,7 @@ function bp_nouveau_ajax_readunread_thread_messages() {
 		);
 	}
 
-	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error( $response );
 	}
 
@@ -598,7 +598,7 @@ function bp_nouveau_ajax_readunread_thread_messages() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_ajax_dismiss_sitewide_notice() {
+function bp_progenitor_ajax_dismiss_sitewide_notice() {
 	if ( empty( $_POST['action'] ) ) {
 		wp_send_json_error();
 	}
@@ -612,7 +612,7 @@ function bp_nouveau_ajax_dismiss_sitewide_notice() {
 		wp_send_json_error( $response );
 	}
 
-	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_nouveau_messages' ) ) {
+	if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bp_progenitor_messages' ) ) {
 		wp_send_json_error( $response );
 	}
 

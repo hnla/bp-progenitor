@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * @param string $when   Optional. Either 'before' or 'after'.
  * @param string $suffix Optional. Use it to add terms at the end of the hook name.
  */
-function bp_nouveau_messages_hook( $when = '', $suffix = '' ) {
+function bp_progenitor_messages_hook( $when = '', $suffix = '' ) {
 	$hook = array( 'bp' );
 
 	if ( $when ) {
@@ -34,7 +34,7 @@ function bp_nouveau_messages_hook( $when = '', $suffix = '' ) {
 		$hook[] = $suffix;
 	}
 
-	bp_nouveau_hook( $hook );
+	bp_progenitor_hook( $hook );
 }
 
 /**
@@ -42,7 +42,7 @@ function bp_nouveau_messages_hook( $when = '', $suffix = '' ) {
  *
  * @since 1.0.0
  */
-function bp_nouveau_messages_member_interface() {
+function bp_progenitor_messages_member_interface() {
 	/**
 	 * Fires before the member messages content.
 	 *

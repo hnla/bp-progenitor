@@ -17,15 +17,15 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array The same array with the specific messages styles.
  */
-function bp_nouveau_messages_enqueue_styles( $styles = array() ) {
+function bp_progenitor_messages_enqueue_styles( $styles = array() ) {
 	if ( ! bp_is_user_messages() ) {
 		return $styles;
 	}
 
 	return array_merge( $styles, array(
-		'bp-nouveau-messages-at' => array(
+		'bp-progenitor-messages-at' => array(
 			'file'         => buddypress()->plugin_url . 'bp-activity/css/mentions%1$s%2$s.css',
-			'dependencies' => array( 'bp-nouveau' ),
+			'dependencies' => array( 'bp-progenitor' ),
 			'version'      => bp_get_version(),
 		),
 	) );
@@ -40,21 +40,21 @@ function bp_nouveau_messages_enqueue_styles( $styles = array() ) {
  *
  * @return array The same array with the specific messages scripts.
  */
-function bp_nouveau_messages_register_scripts( $scripts = array() ) {
-	if ( ! isset( $scripts['bp-nouveau'] ) ) {
+function bp_progenitor_messages_register_scripts( $scripts = array() ) {
+	if ( ! isset( $scripts['bp-progenitor'] ) ) {
 		return $scripts;
 	}
 
 	return array_merge( $scripts, array(
-		'bp-nouveau-messages-at' => array(
+		'bp-progenitor-messages-at' => array(
 			'file'         => buddypress()->plugin_url . 'bp-activity/js/mentions%s.js',
-			'dependencies' => array( 'bp-nouveau', 'jquery', 'jquery-atwho' ),
+			'dependencies' => array( 'bp-progenitor', 'jquery', 'jquery-atwho' ),
 			'version'      => bp_get_version(),
 			'footer'       => true,
 		),
-		'bp-nouveau-messages' => array(
+		'bp-progenitor-messages' => array(
 			'file'         => 'js/buddypress-messages%s.js',
-			'dependencies' => array( 'bp-nouveau', 'json2', 'wp-backbone', 'bp-nouveau-messages-at' ),
+			'dependencies' => array( 'bp-progenitor', 'json2', 'wp-backbone', 'bp-progenitor-messages-at' ),
 			'footer'       => true,
 		),
 	) );
@@ -65,15 +65,15 @@ function bp_nouveau_messages_register_scripts( $scripts = array() ) {
  *
  * @since 1.0.0
  */
-function bp_nouveau_messages_enqueue_scripts() {
+function bp_progenitor_messages_enqueue_scripts() {
 	if ( ! bp_is_user_messages() ) {
 		return;
 	}
 
-	wp_enqueue_script( 'bp-nouveau-messages' );
+	wp_enqueue_script( 'bp-progenitor-messages' );
 
 	// Add The tiny MCE init specific function.
-	add_filter( 'tiny_mce_before_init', 'bp_nouveau_messages_at_on_tinymce_init', 10, 2 );
+	add_filter( 'tiny_mce_before_init', 'bp_progenitor_messages_at_on_tinymce_init', 10, 2 );
 }
 
 /**
@@ -84,7 +84,7 @@ function bp_nouveau_messages_enqueue_scripts() {
  * @param  array $params Associative array containing the JS Strings needed by scripts
  * @return array         The same array with specific strings for the messages UI if needed.
  */
-function bp_nouveau_messages_localize_scripts( $params = array() ) {
+function bp_progenitor_messages_localize_scripts( $params = array() ) {
 	if ( ! bp_is_user_messages() ) {
 		return $params;
 	}
@@ -99,7 +99,7 @@ function bp_nouveau_messages_localize_scripts( $params = array() ) {
 			'send' => wp_create_nonce( 'messages_send_message' ),
 		),
 		'loading' => '<div class="bp-feedback info"><span class="bp-icon"></span><p>' . __( 'Loading messages, please wait.', 'buddypress' ) . '</p></div>',
-		'bulk_actions' => bp_nouveau_messages_get_bulk_actions(),
+		'bulk_actions' => bp_progenitor_messages_get_bulk_actions(),
 	);
 
 	// Star private messages.
@@ -125,7 +125,7 @@ function bp_nouveau_messages_localize_scripts( $params = array() ) {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_message_search_form() {
+function bp_progenitor_message_search_form() {
 	$query_arg = bp_core_get_component_search_query_arg( 'messages' );
 	$placeholder = bp_get_search_default_text( 'messages' );
 
@@ -141,14 +141,14 @@ function bp_nouveau_message_search_form() {
 	 *
 	 * @param string $search_form_html HTML markup for the message search form.
 	 */
-	echo apply_filters( 'bp_nouveau_message_search_form', $search_form_html );
+	echo apply_filters( 'bp_progenitor_message_search_form', $search_form_html );
 }
-add_filter( 'bp_message_search_form', 'bp_nouveau_message_search_form', 10, 1 );
+add_filter( 'bp_message_search_form', 'bp_progenitor_message_search_form', 10, 1 );
 
 /**
  * @since 1.0.0
  */
-function bp_nouveau_messages_adjust_nav() {
+function bp_progenitor_messages_adjust_nav() {
 	$bp = buddypress();
 
 	$secondary_nav_items = $bp->members->nav->get_secondary( array( 'parent_slug' => bp_get_messages_slug() ), false );
@@ -180,7 +180,7 @@ function bp_nouveau_messages_adjust_nav() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_messages_adjust_admin_nav( $admin_nav ) {
+function bp_progenitor_messages_adjust_admin_nav( $admin_nav ) {
 	if ( empty( $admin_nav ) ) {
 		return $admin_nav;
 	}
@@ -205,7 +205,7 @@ function bp_nouveau_messages_adjust_admin_nav( $admin_nav ) {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_add_notice_notification_for_user( $notifications, $user_id ) {
+function bp_progenitor_add_notice_notification_for_user( $notifications, $user_id ) {
 	if ( ! bp_is_active( 'messages' ) || ! doing_action( 'admin_bar_menu' ) ) {
 		return $notifications;
 	}
@@ -240,7 +240,7 @@ function bp_nouveau_add_notice_notification_for_user( $notifications, $user_id )
 /**
  * @since 1.0.0
  */
-function bp_nouveau_format_notice_notification_for_user( $array ) {
+function bp_progenitor_format_notice_notification_for_user( $array ) {
 	if ( ! empty( $array['text'] ) || ! doing_action( 'admin_bar_menu' ) ) {
 		return $array;
 	}
@@ -254,7 +254,7 @@ function bp_nouveau_format_notice_notification_for_user( $array ) {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_unregister_notices_widget() {
+function bp_progenitor_unregister_notices_widget() {
 	unregister_widget( 'BP_Messages_Sitewide_Notices_Widget' );
 }
 
@@ -263,7 +263,7 @@ function bp_nouveau_unregister_notices_widget() {
  *
  * @since 1.0.0
  */
-function bp_nouveau_push_sitewide_notices() {
+function bp_progenitor_push_sitewide_notices() {
 	// Do not show notices if user is not logged in.
 	if ( ! is_user_logged_in() || ! bp_is_my_profile() ) {
 		return;
@@ -300,7 +300,7 @@ function bp_nouveau_push_sitewide_notices() {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_mce_buttons( $buttons = array() ) {
+function bp_progenitor_mce_buttons( $buttons = array() ) {
 	$remove_buttons = array(
 		'wp_more',
 		'spellchecker',
@@ -320,10 +320,10 @@ function bp_nouveau_mce_buttons( $buttons = array() ) {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_messages_at_on_tinymce_init( $settings, $editor_id ) {
+function bp_progenitor_messages_at_on_tinymce_init( $settings, $editor_id ) {
 	// We only apply the mentions init to the visual post editor in the WP dashboard.
 	if ( 'message_content' === $editor_id ) {
-		$settings['init_instance_callback'] = 'window.bp.Nouveau.Messages.tinyMCEinit';
+		$settings['init_instance_callback'] = 'window.bp.progenitor.Messages.tinyMCEinit';
 	}
 
 	return $settings;
@@ -332,7 +332,7 @@ function bp_nouveau_messages_at_on_tinymce_init( $settings, $editor_id ) {
 /**
  * @since 1.0.0
  */
-function bp_nouveau_get_message_date( $date ) {
+function bp_progenitor_get_message_date( $date ) {
 	$now = bp_core_current_time( true, 'timestamp' );
 	$date = strtotime( $date );
 
@@ -363,13 +363,13 @@ function bp_nouveau_get_message_date( $date ) {
 		$date_format = 'M j';
 	}
 
-	return apply_filters( 'bp_nouveau_get_message_date', date_i18n( $date_format, $calculated_time, true ), $calculated_time, $date, $date_format );
+	return apply_filters( 'bp_progenitor_get_message_date', date_i18n( $date_format, $calculated_time, true ), $calculated_time, $date, $date_format );
 }
 
 /**
  * @since 1.0.0
  */
-function bp_nouveau_messages_get_bulk_actions() {
+function bp_progenitor_messages_get_bulk_actions() {
 	ob_start();
 	bp_messages_bulk_management_dropdown();
 
@@ -398,8 +398,8 @@ function bp_nouveau_messages_get_bulk_actions() {
  *
  * @since 1.0.0
  */
-function bp_nouveau_messages_notification_filters() {
-	bp_nouveau_notifications_register_filter( array(
+function bp_progenitor_messages_notification_filters() {
+	bp_progenitor_notifications_register_filter( array(
 		'id'       => 'new_message',
 		'label'    => __( 'New private messages', 'buddypress' ),
 		'position' => 115,
