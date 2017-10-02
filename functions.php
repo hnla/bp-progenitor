@@ -288,7 +288,7 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'post-sbar-active';
 	}
 
-	if ( is_active_sidebar( 'sidebar-pages' ) && is_page() ) {
+	if ( is_active_sidebar( 'sidebar-pages' ) && is_page() && ! bp_is_user() && ! bp_is_group() ) {
 		$classes[] = 'page-sbar-active';
 	}
 
