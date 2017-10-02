@@ -21,3 +21,27 @@ background: -webkit-linear-gradient(top, $start 0%, $finish 100%);
 background: linear-gradient(to bottom, $start 0%, $finish 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$finish}',GradientType=0 );
 }
+
+// As above but running the gradient horizontally
+
+@mixin background-gradient-3d-hori($color: $white, $depth: null) {
+
+$start: $color;
+
+$finish: darken($color, 10%);
+
+@if $depth == low {
+$finish: darken($color, 5%);
+}
+
+@if  $depth == high {
+	$finish: darken($color, 20%);
+}
+
+
+background: $color;
+background: -moz-linear-gradient(left, $start 0%, $finish 100%);
+background: -webkit-linear-gradient(left, $start 0%, $finish 100%);
+background: linear-gradient(to right, $start 0%, $finish 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$finish}',GradientType=1 );
+}

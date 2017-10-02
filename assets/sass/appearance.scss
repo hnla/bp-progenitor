@@ -129,13 +129,33 @@
 				}
 			}
 		}
+
 		.bp-navs.single-screen-navs,
 		.bp-subnavs {
 
 			> ul > li:first-child {
 				a {padding-left: $pad-sml; }
 			}
+
+			// BP user & group navs set as verticle while main site menu
+			// as horizontal.
 		}
+
+		.bp-navs.vertical {
+			ul {
+
+				li {
+					border: 0;
+					border-bottom: 1px solid $black;
+					a {
+
+						@include background-gradient-3d-hori($color: $color__main-nav )
+						opacity: 0.9;
+					}
+				}
+			}
+		}
+
 	}
 }
 

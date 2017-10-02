@@ -112,6 +112,20 @@
 	padding-left: 0.5em;
 }
 
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
+	border: 0;
+	border-bottom: 1px solid #333;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li a {
+	background: #3D629C;
+	background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3D629C 0%, #2f4b77 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
+	opacity: 0.9;
+}
+
 @media screen and (max-width: 46.8em) {
 	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
 		border-bottom: 1px solid #273f65;
