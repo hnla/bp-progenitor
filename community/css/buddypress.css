@@ -649,6 +649,7 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 .buddypress-wrap .subnav-filters.bp-messages-filters ul {
+	margin: 10px 0 0;
 	width: 100%;
 }
 
@@ -4124,7 +4125,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .buddypress-wrap #group-create-body .bp-cover-image-status p.warning {
-	background: #38a;
+	background: #4E80CE;
 	border: 0;
 	-webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
@@ -4244,7 +4245,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .bp-feedback.info .bp-icon,
 .buddypress-wrap .bp-feedback.help .bp-icon {
-	background-color: #38a;
+	background-color: #4E80CE;
 }
 
 .buddypress-wrap .bp-feedback.info .bp-icon:before,

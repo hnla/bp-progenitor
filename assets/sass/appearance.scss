@@ -15,7 +15,8 @@
 1. classed & grouped colours
 ======================================================*/
 
-.primary-color {
+.primary-color,
+.bp-navs {
 
 	@include background-gradient-3d($color: $color__main-nav);
 }
@@ -82,11 +83,12 @@
 
 	.buddypress-wrap {
 
-		.dir-navs {
+		.bp-navs {
 			margin-bottom: 0;
+
 			li {
 
-				a {
+				a:not(#compose) {
 					color: $white;
 					opacity: 0.9;
 
@@ -103,8 +105,17 @@
 				a {
 
 					span {
-						background: black;
+						background: darken( $color__main-nav, 20%);
+						border: none;
+						color: lighten( $color__main-nav, 50%);
 					}
+				}
+
+				a#compose {
+
+					@include background-gradient-3d($color: $color__main-nav);
+					border: none;
+					color: $color-secondary-2-0;
 				}
 			}
 
@@ -116,6 +127,13 @@
 					color: $color-secondary-1-4;
 					opacity: 1;
 				}
+			}
+		}
+		.bp-navs.single-screen-navs,
+		.bp-subnavs {
+
+			> ul > li:first-child {
+				a {padding-left: $pad-sml; }
 			}
 		}
 	}
@@ -145,6 +163,29 @@
 ==========================================*/
 
 .site-nav-horizontal {
+
+	.bp-navs {
+
+		> ul > li {
+
+			border-right: 1px solid darken($color__main-nav, 15%);
+			border-left: 1px solid lighten($color__main-nav, 5%);
+			margin-right: 0;
+
+
+			&:first-child > a {
+//				padding-left: 0;
+			}
+
+			&:first-child {
+				border-left: 0;
+			}
+
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
 
 	.main-navigation {
 
@@ -196,6 +237,16 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.users-nav {
+
+	#compose-personal-li {
+
+		a {
+			color: $black;
 		}
 	}
 }
