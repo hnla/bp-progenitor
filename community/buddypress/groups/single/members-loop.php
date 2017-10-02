@@ -8,13 +8,13 @@
 
 <?php if ( bp_group_has_members( bp_ajax_querystring( 'group_members' ) ) ) : ?>
 
-	<?php bp_nouveau_group_hook( 'before', 'members_content' ); ?>
+	<?php bp_progenitor_group_hook( 'before', 'members_content' ); ?>
 
-	<?php bp_nouveau_pagination( 'top' ) ; ?>
+	<?php bp_progenitor_pagination( 'top' ) ; ?>
 
-	<?php bp_nouveau_group_hook( 'before', 'members_list' ); ?>
+	<?php bp_progenitor_group_hook( 'before', 'members_list' ); ?>
 
-	<ul id="members-list" class="<?php bp_nouveau_loop_classes(); ?>">
+	<ul id="members-list" class="<?php bp_progenitor_loop_classes(); ?>">
 
 		<?php while ( bp_group_members() ) : bp_group_the_member(); ?>
 
@@ -37,9 +37,9 @@
 								<?php bp_group_member_joined_since(); ?>
 							</p>
 
-							<?php bp_nouveau_group_hook( '', 'members_list_item' ); ?>
+							<?php bp_progenitor_group_hook( '', 'members_list_item' ); ?>
 
-							<?php bp_nouveau_members_loop_buttons(); ?>
+							<?php bp_progenitor_members_loop_buttons(); ?>
 						</div>
 
 					</div>
@@ -52,14 +52,14 @@
 
 	</ul>
 
-	<?php bp_nouveau_group_hook( 'after', 'members_list' ); ?>
+	<?php bp_progenitor_group_hook( 'after', 'members_list' ); ?>
 
-	<?php bp_nouveau_pagination( 'bottom' ) ; ?>
+	<?php bp_progenitor_pagination( 'bottom' ) ; ?>
 
-	<?php bp_nouveau_group_hook( 'after', 'members_content' ); ?>
+	<?php bp_progenitor_group_hook( 'after', 'members_content' ); ?>
 
 	<?php else:
 
-		bp_nouveau_user_feedback( 'group-members-none' );
+		bp_progenitor_user_feedback( 'group-members-none' );
 
 endif; ?>
