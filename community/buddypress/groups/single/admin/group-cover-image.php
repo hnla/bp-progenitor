@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Group's cover image template.
+ * BP progenitor Group's cover image template.
  *
  * @since 1.0.0
  */

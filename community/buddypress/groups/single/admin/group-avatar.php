@@ -1,6 +1,6 @@
 <?php
 /**
- * BP Nouveau Group's avatar template.
+ * BP progenitor Group's avatar template.
  *
  * @since 1.0.0
  */
