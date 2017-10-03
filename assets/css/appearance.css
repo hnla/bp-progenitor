@@ -5,7 +5,7 @@
 * your own styles added.
 */
 /*====================================================
-1. classed & grouped colours
+1. classed, grouped, & container colours
 ======================================================*/
 .primary-color,
 .bp-navs {
@@ -14,6 +14,16 @@
 	background: -webkit-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
 	background: linear-gradient(to bottom, #3D629C 0%, #2f4b77 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
+}
+
+@media screen and (min-width: 46.8em) {
+	.bp-single-vert-nav .bp-wrap {
+		background: #3D629C;
+		background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 25%);
+		background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 25%);
+		background: linear-gradient(to right, #3D629C 0%, #2f4b77 25% 25%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
+	}
 }
 
 .footer-widgets-wrap a {
@@ -59,80 +69,6 @@
 
 .main-navigation a:visited {
 	color: #fff;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs {
-	margin-bottom: 0;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs li a:not(#compose) {
-	color: #fff;
-	opacity: 0.9;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs li a:not(#compose):focus, .site-nav-horizontal .buddypress-wrap .bp-navs li a:not(#compose):hover {
-	background: #517abb;
-	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
-	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
-	background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517abb', endColorstr='#3d629c',GradientType=0 );
-	color: #fff;
-	opacity: 1;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs li.selected a span,
-.site-nav-horizontal .buddypress-wrap .bp-navs li a span {
-	background: #203453;
-	border: none;
-	color: #e4eaf4;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs li a#compose {
-	background: #3D629C;
-	background: -moz-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
-	background: -webkit-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
-	background: linear-gradient(to bottom, #3D629C 0%, #2f4b77 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
-	border: none;
-	color: #FF9751;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs li.selected a {
-	background: #2f4b77;
-	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
-	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
-	background: linear-gradient(to bottom, #2f4b77 0%, #203453 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4b77', endColorstr='#203453',GradientType=0 );
-	color: #ECCD4E;
-	opacity: 1;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
-.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a {
-	padding-left: 0.5em;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
-	border: 0;
-	border-bottom: 1px solid #333;
-}
-
-.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li a {
-	background: #3D629C;
-	background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
-	background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
-	background: linear-gradient(to right, #3D629C 0%, #2f4b77 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
-	opacity: 0.9;
-}
-
-@media screen and (max-width: 46.8em) {
-	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
-		border-bottom: 1px solid #273f65;
-	}
-	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li:last-child {
-		border-bottom: 0;
-	}
 }
 
 /*========================================
@@ -201,16 +137,152 @@
 	color: #fff;
 }
 
-.users-nav #compose-personal-li a {
-	color: #333;
-}
-
 /*========================================
 3.3 Floating horizontal primary navigation
 ==========================================*/
 /*========================================
 3.4 Vertical primary navigation
 ==========================================*/
+/*========================================
+3.5 BP navigation
+==========================================*/
+.buddypress-wrap .bp-navs li {
+	border-radius: 0;
+}
+
+@media screen and (max-width: 46.8em) {
+	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
+		border-bottom: 1px solid #273f65;
+	}
+	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li:last-child {
+		border-bottom: 0;
+	}
+}
+
+.users-nav #compose-personal-li a {
+	color: #333;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) {
+	margin-bottom: 0;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose) {
+	color: #fff;
+	opacity: 0.9;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):focus, .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):hover {
+	background: #517abb;
+	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517abb', endColorstr='#3d629c',GradientType=0 );
+	color: #fff;
+	opacity: 1;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a span,
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a span {
+	background: #203453;
+	border: none;
+	color: #e4eaf4;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a#compose {
+	background: #3D629C;
+	background: -moz-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(top, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to bottom, #3D629C 0%, #2f4b77 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
+	border: none;
+	color: #FF9751;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a {
+	background: #2f4b77;
+	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
+	background: linear-gradient(to bottom, #2f4b77 0%, #203453 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f4b77', endColorstr='#203453',GradientType=0 );
+	color: #ECCD4E;
+	opacity: 1;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
+.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a {
+	padding-left: 0.5em;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
+	border: 0;
+	border-bottom: 1px solid #4067a3;
+}
+
+@media screen and (min-width: 46.8em) {
+	.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
+		border-bottom: 1px solid #2f4b77;
+	}
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li a {
+	background: #3D629C;
+	background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3D629C 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
+	opacity: 0.9;
+}
+
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul .selected a {
+	background: #517abb;
+	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
+	background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517abb', endColorstr='#3d629c',GradientType=0 );
+}
+
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
+	background: #3D629C;
+	background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3D629C 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
+	margin-left: 0;
+}
+
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a {
+	color: #FF9751;
+}
+
+@media screen and (min-width: 46.8em) {
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) {
+		border: 0;
+	}
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) a {
+		color: #767676;
+	}
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li.selected a {
+		color: #333;
+	}
+}
+
+@media screen and (max-width: 46.8em) {
+	.site-nav-horizontal .buddypress-wrap #subnav li a {
+		color: #fff;
+		opacity: 0.9;
+	}
+	.site-nav-horizontal .buddypress-wrap #subnav li.selected a,
+	.site-nav-horizontal .buddypress-wrap #subnav li:focus a,
+	.site-nav-horizontal .buddypress-wrap #subnav li:hover a {
+		background: #517abb;
+		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
+		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
+		background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#517abb', endColorstr='#3d629c',GradientType=0 );
+	}
+}
+
 /*========================================
 4. Footer Widgets
 ==========================================*/

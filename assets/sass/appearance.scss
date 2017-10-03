@@ -12,13 +12,27 @@
 
 
 /*====================================================
-1. classed & grouped colours
+1. classed, grouped, & container colours
 ======================================================*/
 
 .primary-color,
 .bp-navs {
 
 	@include background-gradient-3d($color: $color__main-nav);
+}
+
+// Describe a gradient background for the user/group object nav
+// if its in vertical rendering to create column illusion.
+// Run on the background wrapper element & restricted to a equal width
+// of the nav, similar to old school faux columns.
+@include medium-up() {
+
+	.bp-single-vert-nav {
+		.bp-wrap {
+
+			@include background-gradient-3d-hori($color: $color__main-nav, $width: "25%");
+		}
+	}
 }
 
 // links - dark backgrounds
@@ -75,105 +89,6 @@
 
 		&:visited {
 			color: $color__main-nav-visted;
-		}
-	}
-}
-
-.site-nav-horizontal {
-
-	.buddypress-wrap {
-
-		.bp-navs {
-			margin-bottom: 0;
-
-			li {
-
-				a:not(#compose) {
-					color: $white;
-					opacity: 0.9;
-
-					&:focus,
-					&:hover {
-
-						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
-						color: $white;
-						opacity: 1;
-					}
-				}
-
-				&.selected a,
-				a {
-
-					span {
-						background: darken( $color__main-nav, 20%);
-						border: none;
-						color: lighten( $color__main-nav, 50%);
-					}
-				}
-
-				a#compose {
-
-					@include background-gradient-3d($color: $color__main-nav);
-					border: none;
-					color: $color-secondary-2-0;
-				}
-			}
-
-			li.selected {
-
-				a {
-
-					@include background-gradient-3d($color: darken( $color__main-nav, 10%) );
-					color: $color-secondary-1-4;
-					opacity: 1;
-				}
-			}
-		}
-
-		.bp-navs.single-screen-navs,
-		.bp-subnavs {
-
-			> ul > li:first-child {
-				a {padding-left: $pad-sml; }
-			}
-
-			// BP user & group navs set as verticle while main site menu
-			// as horizontal.
-		}
-
-		.bp-navs.vertical {
-			ul {
-
-				li {
-					border: 0;
-					border-bottom: 1px solid $black;
-					a {
-
-						@include background-gradient-3d-hori($color: $color__main-nav )
-						opacity: 0.9;
-					}
-				}
-			}
-		}
-
-	}
-}
-
-// Small device menu styling.
-// Not vertical menu display.
-.buddypress-wrap:not(.bp-single-vert-nav) {
-
-	@include medium-max {
-
-		.bp-navs {
-
-			li {
-				border-bottom: 1px solid darken( $color__main-nav, 15%);
-
-				&:last-child {
-					border-bottom: 0;
-				}
-			}
 		}
 	}
 }
@@ -261,6 +176,48 @@
 	}
 }
 
+/*========================================
+3.3 Floating horizontal primary navigation
+==========================================*/
+
+/*========================================
+3.4 Vertical primary navigation
+==========================================*/
+
+
+/*========================================
+3.5 BP navigation
+==========================================*/
+
+// Small device menu styling.
+// dir navs set as horizontal adjustments for
+// narrow widths.
+
+.buddypress-wrap {
+
+	.bp-navs {
+
+		li {border-radius: 0;}
+	}
+}
+
+.buddypress-wrap:not(.bp-single-vert-nav) {
+
+	@include medium-max {
+
+		.bp-navs {
+
+			li {
+				border-bottom: 1px solid darken( $color__main-nav, 15%);
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
 .users-nav {
 
 	#compose-personal-li {
@@ -270,13 +227,170 @@
 		}
 	}
 }
-/*========================================
-3.3 Floating horizontal primary navigation
-==========================================*/
 
-/*========================================
-3.4 Vertical primary navigation
-==========================================*/
+.site-nav-horizontal {
+
+	.buddypress-wrap {
+
+		.bp-navs:not(.tabbed-links) {
+			margin-bottom: 0;
+
+			li {
+
+				a:not(#compose) {
+					color: $white;
+					opacity: 0.9;
+
+					&:focus,
+					&:hover {
+
+						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+						color: $white;
+						opacity: 1;
+					}
+				} // close a
+
+				// Adjust span item numbers.
+				&.selected a,
+				a {
+
+					span {
+						background: darken( $color__main-nav, 20%);
+						border: none;
+						color: lighten( $color__main-nav, 50%);
+					}
+				}
+
+				a#compose {
+
+					@include background-gradient-3d($color: $color__main-nav);
+					border: none;
+					color: $color-secondary-2-0;
+				}
+			} // close li
+
+			li.selected {
+
+				a {
+
+					@include background-gradient-3d($color: darken( $color__main-nav, 10%) );
+					color: $color-secondary-1-4;
+					opacity: 1;
+				}
+			}
+		} // close .bp-navs:not(.tabbed-links)
+
+		.bp-navs.single-screen-navs,
+		.bp-subnavs {
+
+			> ul > li:first-child {
+				a {padding-left: $pad-sml; }
+			}
+		}
+
+		// BP user & group navs set as verticle while main site menu
+		// is horizontal - main user/group object navs.
+		.bp-navs.vertical {
+
+			ul {
+
+				li {
+					border: 0;
+					border-bottom: 1px solid lighten( $color__main-nav, 2%);
+
+					@include medium-up {
+						border-bottom: 1px solid darken( $color__main-nav, 10%);
+					}
+
+					a {
+
+						@include background-gradient-3d-hori($color: $color__main-nav )
+						opacity: 0.9;
+					}
+				}
+
+				.selected {
+
+					a {
+
+							@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+					}
+				}
+			}
+		} // close .bp-navs.vertical
+
+		// Single screens .bp-subnavs in a vertical bp main nav layout
+		// where tabbed effect not selected.
+		&.bp-single-vert-nav {
+
+			.item-body:not(#group-create-body) {
+
+				#subnav:not(.tabbed-links) {
+
+					@include background-gradient-3d-hori($color: $color__main-nav );
+					margin-left: 0;
+
+					li.selected {
+						a {
+							color: $color-secondary-2-0
+						}
+					}
+				}
+			}
+		}
+
+		// Remove the item link seperator & manage highlight
+		// styles for tabs.
+		@include medium-up {
+
+			#subnav.tabbed-links {
+
+				li:not(.selected) {
+					border: 0;
+
+					a {
+						color: $light-text;
+					}
+				}
+
+				li.selected {
+
+					a {
+						color: $black;
+					}
+				}
+			}
+		}
+
+		// style the screen subnav up to medium-max for highlight/selected
+		// tabbed effect style will override these more generic ones.
+		@include medium-max() {
+
+			#subnav {
+
+				li {
+					a {
+						color: $white;
+						opacity: 0.9;
+					}
+				}
+
+				li.selected,
+				li:focus,
+				li:hover {
+
+					a {
+
+						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+					}
+				}
+			}
+		}
+
+
+	} // close buddypress-wrap
+} // close site-nav-horizontal
+
 
 /*========================================
 4. Footer Widgets
