@@ -39,3 +39,5 @@ This is an aspect to be tackled later rather than hold up development.
 ![screenshot-2017-10-3 members bp template packs](https://user-images.githubusercontent.com/499419/31141148-71f94a7c-a86e-11e7-9c29-0af933202182.png)
 
 ![screenshot-2017-10-3 activity admin bp template packs](https://user-images.githubusercontent.com/499419/31142407-17248b8a-a872-11e7-9e74-d5278d3cb1de.png)
+
+![screenshot-2017-10-3 groups admin bp template packs](https://user-images.githubusercontent.com/499419/31142705-fd6268a6-a872-11e7-9d0c-fd8c90f44143.png)
