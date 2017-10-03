@@ -34,4 +34,6 @@ add_action( 'bp_register_theme_packages', function() {
 	
 This is an aspect to be tackled later rather than hold up development.
 	
-## Early view screenies
+## Early look screenies
+
+
