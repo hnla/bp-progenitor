@@ -81,7 +81,7 @@
 }
 
 /*========================================
-3.1 static horizontal primary navigation
+3.1 Static horizontal primary navigation
 ==========================================*/
 .site-nav-horizontal .bp-navs > ul > li {
 	border-right: 1px solid #273f65;
@@ -158,8 +158,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=0 );
 }
 
-.site-nav-horizontal .main-navigation ul ul li:focus a,
-.site-nav-horizontal .main-navigation ul ul li:hover a {
+.site-nav-horizontal .main-navigation ul ul li:focus > a,
+.site-nav-horizontal .main-navigation ul ul li:hover > a {
 	color: #fff;
 }
 

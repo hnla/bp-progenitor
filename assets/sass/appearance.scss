@@ -110,7 +110,7 @@
 
 
 /*========================================
-3.1 static horizontal primary navigation
+3.1 Static horizontal primary navigation
 ==========================================*/
 
 .site-nav-horizontal {
@@ -202,7 +202,7 @@
 
 					@include background-gradient-3d($color: $color__main-nav);
 
-					a {
+					> a {
 						color: $color__white;
 					}
 				}

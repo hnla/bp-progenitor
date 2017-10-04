@@ -667,7 +667,6 @@ a:hover, a:active {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
-	left: 100%;
 	opacity: 1;
 }
 
