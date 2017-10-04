@@ -66,6 +66,7 @@
 			jQuery( this ).parents('li').addClass('active');
 		}
 	}
+
 	/**
 	 * Sets or removes .focus class on an element.
 	 */

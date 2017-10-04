@@ -95,7 +95,20 @@
 	}
 }
 
-.main-navigation {}
+.main-navigation {
+
+	// Icon arrows for li items with child links (flyouts)
+	// See vert & hori blocks below for padding & content properties.
+	li.menu-item-has-children {
+
+		> a:after {
+
+			@include fa-icon();
+		}
+	}
+}
+
+
 /*========================================
 3.1 static horizontal primary navigation
 ==========================================*/
@@ -156,6 +169,25 @@
 
 		}
 
+		// Icon arrows positioning for flyout child link parents
+		li.menu-item-has-children {
+
+			> a:after {
+				content: " \f0d7";
+				padding-left: 4px;
+			}
+
+			> a:hover:after {
+				content: " \f0d8";
+			}
+		}
+
+		li.active.menu-item-has-children {
+			> a:after {
+				content: " \f0d8";
+			}
+		}
+
 		ul {
 
 			ul {
@@ -209,15 +241,21 @@
 			}
 		}
 
+		// Icon arrows positioning for flyout child link parents
 		li.menu-item-has-children {
 
 			> a:after {
-				@include fa-icon();
 				content: " \f0da";
 				padding-left: 10px;
 			}
 
 			> a:hover:after {
+				content: " \f0d7";
+			}
+		}
+
+		li.active.menu-item-has-children {
+			> a:after {
 				content: " \f0d7";
 			}
 		}
@@ -231,9 +269,8 @@
 		}
 
 		li:focus,
-		li:hover {
-
-
+		li:hover,
+		li.active.menu-item-has-children {
 
 			> a {
 				@include background-gradient-3d($color: lighten($color__main-nav, 5%));
