@@ -26,6 +26,14 @@
 	}
 }
 
+.widget {
+
+	.widgettitle {
+		margin-top: 0;
+	}
+}
+
+
 .widget-parent {
 
 	@include medium-up() {

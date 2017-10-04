@@ -22,7 +22,11 @@
 .widget_bp_groups_widget,
 .widget_bp_blogs_widget {
 
-	@include font-size(13);
+	.item-options,
+	.item-list {
+
+		@include font-size(13);
+	}
 
 	ul {
 		list-style: none;

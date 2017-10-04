@@ -71,6 +71,27 @@ Header aka .site-banner includes primary nav
 	}
 }
 
+.site-nav-vertical {
+
+	.site-header {
+
+		.site-branding {
+			background: #fff;
+
+			.site-title {
+				margin: 0;
+				padding: $pad-sml;
+				text-align: center;
+			}
+
+			.site-description {
+				margin: 0;
+				padding: $pad-sml;
+			}
+		}
+	}
+}
+
 /*===============================================
 1.2.0 - Nav
 =================================================*/

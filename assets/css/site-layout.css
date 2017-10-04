@@ -91,6 +91,21 @@ Header aka .site-banner includes primary nav
 	padding: 0 1em;
 }
 
+.site-nav-vertical .site-header .site-branding {
+	background: #fff;
+}
+
+.site-nav-vertical .site-header .site-branding .site-title {
+	margin: 0;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.site-nav-vertical .site-header .site-branding .site-description {
+	margin: 0;
+	padding: 0.5em;
+}
+
 /*===============================================
 1.2.0 - Nav
 =================================================*/
@@ -324,6 +339,10 @@ Primary header/menu positioning
 	align-items: stretch;
 }
 
+.widget .widgettitle {
+	margin-top: 0;
+}
+
 /*==============================================================
 5.0 Footer elements
 ================================================================*/
@@ -338,8 +357,10 @@ Internal widgets structural
 	list-style-position: inside;
 }
 
-.widget_bp_groups_widget,
-.widget_bp_blogs_widget {
+.widget_bp_groups_widget .item-options,
+.widget_bp_groups_widget .item-list,
+.widget_bp_blogs_widget .item-options,
+.widget_bp_blogs_widget .item-list {
 	font-size: 13px;
 	font-size: 0.8125rem;
 }
