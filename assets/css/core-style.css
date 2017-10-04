@@ -586,6 +586,16 @@ a:hover, a:active {
 /*----------------------------------------------------
 ## Menus
 ----------------------------------------------------*/
+.menu-main-menu-container {
+	border-radius: 0;
+}
+
+.menu-main-menu-container ul,
+.menu-main-menu-container li,
+.menu-main-menu-container a {
+	border-radius: 0;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -616,7 +626,7 @@ a:hover, a:active {
 	border: 1px solid #ccc;
 	box-shadow: 0 0 7px rgba(214, 214, 214, 0.9);
 	position: absolute;
-	top: 100%;
+	top: 0;
 	left: -999em;
 	opacity: 0;
 	z-index: 99999;
@@ -638,6 +648,12 @@ a:hover, a:active {
 	opacity: 1;
 }
 
+.main-navigation ul ul a,
+.main-navigation ul ul a:visited,
+.main-navigation ul ul a:active {
+	color: #404040;
+}
+
 .main-navigation ul ul a {
 	padding: 0.5em 0 0.5em 0.5em;
 	width: 200px;
@@ -651,16 +667,26 @@ a:hover, a:active {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	left: 100%;
 	opacity: 1;
 }
 
+/*
+ Main menu horizontal option - elements adjustments
+*/
 .site-nav-horizontal .nav-menu > li > a {
 	font-size: 18px;
 	font-size: 1.125rem;
 	padding: 0.5em 0;
 }
 
-/* Small menu. */
+.site-nav-horizontal .main-navigation ul ul {
+	top: 100%;
+}
+
+/*
+Small menu display.
+*/
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -698,11 +724,14 @@ a:hover, a:active {
 }
 
 /*
-Menu option vertical - element adjustments
+ Main menu vertical option - elements adjustments
 */
 @media screen and (min-width: 46.8em) {
 	.site-nav-vertical .main-navigation ul li {
 		margin: 0;
+		padding: 0;
+	}
+	.site-nav-vertical .main-navigation ul li a {
 		padding: 0.5em 0 0.5em 0.5em;
 	}
 	.site-nav-vertical .main-navigation ul li:hover > ul,

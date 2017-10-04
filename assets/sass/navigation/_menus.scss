@@ -1,6 +1,17 @@
 /*----------------------------------------------------
 ## Menus
 ----------------------------------------------------*/
+
+.menu-main-menu-container {
+	border-radius: 0;
+
+	ul,
+	li,
+	a {
+		border-radius: 0;
+	}
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -29,7 +40,7 @@
 			border: 1px solid $bp-border-dark;
 			box-shadow: 0 0 7px rgba($med-light-grey, 0.9);
 			position: absolute;
-			top: 100%;
+			top: 0;
 			left: -999em;
 			opacity: 0;
 			z-index: 99999;
@@ -50,6 +61,12 @@
 				}
 			}
 
+			a,
+			a:visited,
+			a:active {
+				color: $color__text-main;
+			}
+
 			a {
 				padding: $pad-sml 0 $pad-sml $pad-sml;
 				width: 200px;
@@ -67,7 +84,7 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			left: auto; left: 100%;
 			opacity: 1;
 		}
 	}
@@ -79,6 +96,9 @@
 	}
 }
 
+/*
+ Main menu horizontal option - elements adjustments
+*/
 .site-nav-horizontal {
 
 	.nav-menu > li > a {
@@ -86,9 +106,21 @@
 		@include font-size(18);
 		padding: $pad-sml 0;
 	}
+
+	.main-navigation {
+
+		ul {
+
+			ul {
+				top: 100%;
+			}
+		}
+	}
 }
 
-/* Small menu. */
+/*
+Small menu display.
+*/
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -127,7 +159,7 @@
 }
 
 /*
-Menu option vertical - element adjustments
+ Main menu vertical option - elements adjustments
 */
 
 @include medium-up() {
@@ -140,7 +172,11 @@ Menu option vertical - element adjustments
 
 				li {
 					margin: 0;
-					padding: $pad-sml 0 $pad-sml $pad-sml;
+					padding: 0;
+
+					a {
+						padding: $pad-sml 0 $pad-sml $pad-sml;
+					}
 
 					&:hover > ul,
 					&.focus > ul {

@@ -80,6 +80,10 @@
 	margin-right: 0;
 }
 
+.site-nav-horizontal .bp-navs > ul > li:first-child > a {
+	padding-left: 0;
+}
+
 .site-nav-horizontal .bp-navs > ul > li:first-child {
 	border-left: 0;
 }
@@ -143,6 +147,55 @@
 /*========================================
 3.4 Vertical primary navigation
 ==========================================*/
+.site-nav-vertical .main-navigation .nav-menu > li > a {
+	background: #3D629C;
+	background: -moz-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3D629C 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3D629C 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D629C', endColorstr='#2f4b77',GradientType=1 );
+}
+
+.site-nav-vertical .main-navigation li {
+	border-bottom: 1px solid #4067a3;
+}
+
+.site-nav-vertical .main-navigation li:last-child {
+	border-bottom: 0;
+}
+
+.site-nav-vertical .main-navigation li.menu-item-has-children > a:after {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: " \f0da";
+	padding-left: 10px;
+}
+
+.site-nav-vertical .main-navigation li.menu-item-has-children > a:hover:after {
+	content: " \f0d7";
+}
+
+.site-nav-vertical .main-navigation li.current_page_item > a {
+	background: #36568a;
+	background: -moz-linear-gradient(left, #36568a 0%, #192840 100%);
+	background: -webkit-linear-gradient(left, #36568a 0%, #192840 100%);
+	background: linear-gradient(to right, #36568a 0%, #192840 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36568a', endColorstr='#192840',GradientType=1 );
+}
+
+.site-nav-vertical .main-navigation li:focus > a,
+.site-nav-vertical .main-navigation li:hover > a {
+	background: #446eae;
+	background: -moz-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: -webkit-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: linear-gradient(to bottom, #446eae 0%, #36568a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#446eae', endColorstr='#36568a',GradientType=0 );
+	color: #fff;
+}
+
 /*========================================
 3.5 BP navigation
 ==========================================*/
