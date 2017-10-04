@@ -16,6 +16,13 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function bp_progenitor_setup() {
+
+		/**
+		 * @todo: Lets setup something for managing adminbar and users
+			*
+			*/
+		//add_filter('show_admin_bar', '__return_false');
+
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -317,3 +324,5 @@ function progenitor_body_classes( $classes ) {
 	return $classes;
 }
 add_filter('body_class', 'progenitor_body_classes', 15);
+
+
