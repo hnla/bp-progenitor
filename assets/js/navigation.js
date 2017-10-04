@@ -48,9 +48,24 @@
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
+		links[i].addEventListener( 'mouseover', activeAncestors, true );
+		links[i].addEventListener( 'focus', activeAncestors, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
+		links[i].addEventListener( 'mouseout', activeAncestors, true );
+		links[i].addEventListener( 'blur', activeAncestors, true );
 	}
 
+	/**
+	* Add an active class to parents of a hover/focussed menu link
+	*/
+	function activeAncestors() {
+
+		if ( jQuery( this ).parents('li').hasClass('active') ) {
+			jQuery( this).parents('li').removeClass('active');
+		} else {
+			jQuery( this ).parents('li').addClass('active');
+		}
+	}
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
