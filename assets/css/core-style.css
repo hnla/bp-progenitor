@@ -983,16 +983,7 @@ Site post lists layouts - as boxes
 
 @media screen and (min-width: 75em) {
 	.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		-webkit-flex-flow: row nowrap;
-		-moz-flex-flow: row nowrap;
-		-ms-flex-flow: row nowrap;
-		-o-flex-flow: row nowrap;
-		flex-flow: row nowrap;
+		justify-content: flex-start;
 	}
 }
 
@@ -1001,17 +992,32 @@ Site post lists layouts - as boxes
 	-webkit-align-items: stretch;
 	-webkit-box-align: stretch;
 	align-items: stretch;
-	-webkit-flex: 1 1 46%;
-	-moz-flex: 1 1 46%;
-	-ms-flex: 1 1 46%;
-	-o-flex: 1 1 46%;
-	flex: 1 1 46%;
+	-webkit-flex: 1 1 50%;
+	-moz-flex: 1 1 50%;
+	-ms-flex: 1 1 50%;
+	-o-flex: 1 1 50%;
+	flex: 1 1 50%;
+}
+
+@media screen and (min-width: 75em) {
+	.post-list-grid.archive main.site-main .box, .post-list-grid.category main.site-main .box, .post-list-grid.home-page main.site-main .box {
+		-webkit-flex: 0 1 20%;
+		-moz-flex: 0 1 20%;
+		-ms-flex: 0 1 20%;
+		-o-flex: 0 1 20%;
+		flex: 0 1 20%;
+	}
 }
 
 .post-list-grid.archive main.site-main .box article.post, .post-list-grid.category main.site-main .box article.post, .post-list-grid.home-page main.site-main .box article.post {
 	border: 1px solid #ccc;
 	margin: 0 0.5em 0.5em;
 	padding: 0.5em;
+}
+
+.post-list-grid.archive main.site-main .box article.post .featured-image img, .post-list-grid.category main.site-main .box article.post .featured-image img, .post-list-grid.home-page main.site-main .box article.post .featured-image img {
+	max-width: 100%;
+	width: 100%;
 }
 
 .post-list-grid.archive main.site-main article.post, .post-list-grid.category main.site-main article.post, .post-list-grid.home-page main.site-main article.post {

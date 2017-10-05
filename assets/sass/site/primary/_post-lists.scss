@@ -17,24 +17,38 @@ Site post lists layouts - as boxes
 				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
 			}
 
+			justify-content: space-between;
+
 			@include large-up() {
 
-				@include flex-box-dir();
+				justify-content: flex-start; // default to reset.
 			}
 
-			justify-content: space-between;
 			margin: 0 -#{$pad-sml};
 
 			.box {
 
 				@include flex-align();
 
-				@include box-item-size($grow: 1, $basis: 46%);
+				@include box-item-size($grow: 1, $basis: 50%);
+
+				@include large-up() {
+
+					@include box-item-size($grow: 0, $basis: 20%);
+				}
 
 				article.post {
 					border: 1px solid $bp-border-dark;
 					margin: 0 $pad-sml $pad-sml;
 					padding: $pad-sml;
+
+					.featured-image {
+
+						img {
+							max-width: 100%;
+							width: 100%;
+						}
+					}
 				}
 			}
 
