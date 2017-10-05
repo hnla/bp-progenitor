@@ -817,6 +817,7 @@ function bp_progenitor_get_appearance_settings( $option = '' ) {
 		'site_tagline'          => 0,
 		'header_img_background' => 0,
 		'main_site_menu'        => 'horizontal',
+		'post_loops_grid'      	=> 0,
 		'avatar_style'          => 0,
 		'user_front_page'       => 1,
 		'user_front_bio'        => 0,

@@ -914,6 +914,13 @@ h1.site-title {
 	margin: 10px 0;
 }
 
+@media screen and (min-width: 75em) {
+	article.post, article.page {
+		margin: 0 auto;
+		max-width: 56em;
+	}
+}
+
 .page-header {
 	text-align: left;
 }
@@ -939,6 +946,95 @@ h1.site-title {
 	.page-header .archive-description p {
 		padding: 0;
 	}
+}
+
+/*
+Site post lists layouts - as boxes
+*/
+.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	margin: 0 -0.5em;
+}
+
+@media screen and (min-width: 46.8em) {
+	.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row nowrap;
+		-moz-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
+		-o-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+	}
+}
+
+.post-list-grid.archive main.site-main .box, .post-list-grid.category main.site-main .box, .post-list-grid.home-page main.site-main .box {
+	-ms-flex-align: stretch;
+	-webkit-align-items: stretch;
+	-webkit-box-align: stretch;
+	align-items: stretch;
+	-webkit-flex: 1 1 46%;
+	-moz-flex: 1 1 46%;
+	-ms-flex: 1 1 46%;
+	-o-flex: 1 1 46%;
+	flex: 1 1 46%;
+}
+
+.post-list-grid.archive main.site-main .box article.post, .post-list-grid.category main.site-main .box article.post, .post-list-grid.home-page main.site-main .box article.post {
+	border: 1px solid #ccc;
+	margin: 0 0.5em 0.5em;
+	padding: 0.5em;
+}
+
+.post-list-grid.archive main.site-main article.post, .post-list-grid.category main.site-main article.post, .post-list-grid.home-page main.site-main article.post {
+	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
+	-moz-box-shadow: 0 0 5px 0 #eaeaea;
+	box-shadow: 0 0 5px 0 #eaeaea;
+}
+
+.post-list-grid.archive main.site-main article.post .entry-title, .post-list-grid.category main.site-main article.post .entry-title, .post-list-grid.home-page main.site-main article.post .entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+	margin-top: 0;
+}
+
+@media screen and (min-width: 75em) {
+	.post-list-grid.archive main.site-main article.post .entry-title, .post-list-grid.category main.site-main article.post .entry-title, .post-list-grid.home-page main.site-main article.post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+.post-list-grid.archive main.site-main article.post .entry-content, .post-list-grid.category main.site-main article.post .entry-content, .post-list-grid.home-page main.site-main article.post .entry-content {
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------

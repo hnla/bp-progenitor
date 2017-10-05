@@ -99,6 +99,13 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'transport'         => 'refresh',
 			'type'              => 'option',
 		),
+		'bp_progenitor_appearance[post_loops_grid]' => array(
+			'index'             => 'post_loops_grid',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
 		'bp_progenitor_appearance[avatar_style]' => array(
 			'index'             => 'avatar_style',
 			'capability'        => 'bp_moderate',
@@ -250,6 +257,12 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 					'horizontal' => __( 'Horizontal / Top' ),
 					'vertical'   => __( 'Vertical / Left' )
 				),
+		),
+		'post_loops_grid' => array(
+			'label'      => __( 'Display the post lists, archive, cats or index as grid boxes', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_settings',
+			'settings'   => 'bp_progenitor_appearance[post_loops_grid]',
+			'type'       => 'checkbox',
 		),
 		'site_tagline' => array(
 			'label'      => __( 'Display the sites tagline in header', 'buddypress' ),

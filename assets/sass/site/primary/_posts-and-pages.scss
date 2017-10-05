@@ -51,6 +51,17 @@
 	}
 }
 
+@include large-up() {
+
+	article {
+		&.post,
+		&.page {
+			margin: 0 auto;
+			max-width: 56em;
+		}
+	}
+}
+
 .page-header {
 	text-align: left;
 

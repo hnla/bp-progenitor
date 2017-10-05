@@ -1,0 +1,60 @@
+/*
+Site post lists layouts - as boxes
+*/
+
+.post-list-grid { // if grid is selected (body class)
+
+	&.archive,
+	&.category,
+	&.home-page {
+
+		main.site-main {
+
+			@include flex-box-dir($flex-dir: column);
+
+			@include medium-up() {
+
+				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+			}
+
+			@include large-up() {
+
+				@include flex-box-dir();
+			}
+
+			justify-content: space-between;
+			margin: 0 -#{$pad-sml};
+
+			.box {
+
+				@include flex-align();
+
+				@include box-item-size($grow: 1, $basis: 46%);
+
+				article.post {
+					border: 1px solid $bp-border-dark;
+					margin: 0 $pad-sml $pad-sml;
+					padding: $pad-sml;
+				}
+			}
+
+			article.post {
+				@include box-shadow(0 0 5px 0 $light-grey);
+
+				.entry-title {
+
+					@include font-size(24);
+
+					@include large-up() {
+						@include font-size(18);
+					}
+					margin-top: 0;
+				}
+
+				.entry-content {
+					margin-top: 0;
+				}
+			}
+		} // close main.site-main
+	}
+}

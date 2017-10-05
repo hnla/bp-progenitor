@@ -30,3 +30,19 @@ function bp_progenitor_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'bp_progenitor_pingback_header' );
+
+
+/**
+* Filter the default excerpt length for post loops
+*
+* @since 0.1.0
+*
+* @todo Add some checking for  page types & various excerpt lengths.
+*/
+function progenitor_post_excerpt_length( $length ) {
+
+	$length = 20;
+
+	return $length;
+}
+add_filter( 'excerpt_length', 'progenitor_post_excerpt_length' );

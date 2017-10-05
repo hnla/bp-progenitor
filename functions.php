@@ -321,6 +321,10 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'site-nav-horizontal';
 	endif;
 
+	if ( 1 === progenitor_opts('post_loops_grid') ) {
+		$classes[] = 'post-list-grid';
+	}
+
 	return $classes;
 }
 add_filter('body_class', 'progenitor_body_classes', 15);

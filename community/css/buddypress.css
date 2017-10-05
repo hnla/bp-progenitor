@@ -483,14 +483,14 @@ body.buddypress article.page > .entry-header .entry-title {
 .buddypress-wrap .bp-navs li.dynamic a span,
 .buddypress-wrap .bp-navs li.dynamic.selected a span,
 .buddypress-wrap .bp-navs li.dynamic.current a span {
-	background-color: #5087e5;
+	background-color: color-primary-0;
 	border: 0;
 	color: #fafafa;
 }
 
 .buddypress_object_nav .bp-navs li.dynamic a:hover span,
 .buddypress-wrap .bp-navs li.dynamic a:hover span {
-	background-color: #5087e5;
+	background-color: color-primary-0;
 	border: 0;
 	color: #fff;
 }
@@ -2924,7 +2924,7 @@ li#compose-personal-li a#compose:hover {
 }
 
 #message-threads li.selected .thread-subject .subject {
-	color: #5087e5;
+	color: color-primary-0;
 }
 
 #message-threads li .thread-content {
@@ -4900,7 +4900,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	.bp-dir-vert-nav .dir-navs ul li.selected a span {
 		background: #eaeaea;
 		border-color: #ccc;
-		color: #5087e5;
+		color: color-primary-0;
 	}
 	.bp-dir-vert-nav .dir-navs ul li a:hover,
 	.bp-dir-vert-nav .dir-navs ul li a:focus {
