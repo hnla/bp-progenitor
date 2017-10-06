@@ -53,13 +53,15 @@
 
 @include large-up() {
 
-	article {
+.wp-single:not(.buddypress) {
 
-		&.post,
-		&.page {
-			margin: 0 auto;
-			max-width: 56em;
-		}
+		article.post,
+		article.page,
+		.post-navigation,
+		.comments-area {
+				margin: 0 auto;
+				max-width: 56em;
+			}
 	}
 }
 

@@ -21,7 +21,7 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		 * @todo: Lets setup something for managing adminbar and users
 			*
 			*/
-		//add_filter('show_admin_bar', '__return_false');
+//		add_filter('show_admin_bar', '__return_false');
 
 		/*
 		 * Make theme available for translation.
@@ -323,6 +323,10 @@ function progenitor_body_classes( $classes ) {
 
 	if ( 1 === progenitor_opts('post_loops_grid') ) {
 		$classes[] = 'post-list-grid';
+	}
+
+	if ( is_singular() ) {
+		$classes[] = 'wp-single';
 	}
 
 	return $classes;

@@ -20,6 +20,19 @@ body {
 	height: 100%;
 }
 
+// Remove the default border-radius applied to divs where
+// element is a primary structural container.
+.site-wrap,
+.site,
+.site-content,
+.meta-bar,
+.content-area,
+.box-align,
+.footer-widgets-wrap,
+.widgets-parent {
+	border-radius: 0;
+}
+
 #site-wrap {
 	min-height: 100%;
 }
@@ -152,7 +165,7 @@ Header aka .site-banner includes primary nav
 
 	body.main-sidebar:not(.home-page),
 	body.post-sbar-active,
-	body.page-sbar-active {
+	body.page-sbar-active:not(.page-template-page-fullwidth) {
 
 		.content-area {
 			float: left;

@@ -47,6 +47,17 @@ body {
 	height: 100%;
 }
 
+.site-wrap,
+.site,
+.site-content,
+.meta-bar,
+.content-area,
+.box-align,
+.footer-widgets-wrap,
+.widgets-parent {
+	border-radius: 0;
+}
+
 #site-wrap {
 	min-height: 100%;
 }
@@ -148,14 +159,14 @@ Header aka .site-banner includes primary nav
 	}
 	body.main-sidebar:not(.home-page) .content-area,
 	body.post-sbar-active .content-area,
-	body.page-sbar-active .content-area {
+	body.page-sbar-active:not(.page-template-page-fullwidth) .content-area {
 		float: left;
 		margin: 0 -25% 0 0;
 		padding: 0 0 0.5em 0.5em;
 	}
 	body.main-sidebar:not(.home-page) .content-area .site-main,
 	body.post-sbar-active .content-area .site-main,
-	body.page-sbar-active .content-area .site-main {
+	body.page-sbar-active:not(.page-template-page-fullwidth) .content-area .site-main {
 		margin: 0 25% 0 0;
 		padding-right: 1em;
 	}
@@ -351,6 +362,10 @@ Primary header/menu positioning
 
 Internal widgets structural
 ================================================================*/
+.widget-area .widget .widget-title {
+	margin-top: 0;
+}
+
 .widget-area .widget ul {
 	margin-left: 0;
 	padding-left: 0;

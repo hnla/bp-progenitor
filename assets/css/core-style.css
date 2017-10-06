@@ -915,7 +915,10 @@ h1.site-title {
 }
 
 @media screen and (min-width: 75em) {
-	article.post, article.page {
+	.wp-single:not(.buddypress) article.post,
+	.wp-single:not(.buddypress) article.page,
+	.wp-single:not(.buddypress) .post-navigation,
+	.wp-single:not(.buddypress) .comments-area {
 		margin: 0 auto;
 		max-width: 56em;
 	}
