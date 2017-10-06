@@ -46,3 +46,6 @@ This is an aspect to be tackled later rather than hold up development.
 
 ### A grid style layout of post loops as box panels
 ![screenshot-2017-10-6 bp template packs just another wordpress site](https://user-images.githubusercontent.com/499419/31270382-1a3bf8c4-aa7c-11e7-95ba-4c4c197653d4.png)
+
+### Archive view with sidebar - grid boxes displaying in reduced area width, also as displayed for mediun width, tablet devices
+![screenshot-2017-10-6 uncategorised bp template packs](https://user-images.githubusercontent.com/499419/31270783-a46d6b30-aa7d-11e7-8eeb-3ac9986111c7.png)
