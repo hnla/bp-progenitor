@@ -17,6 +17,8 @@ get_header(); ?>
 
 		<?php /* See header.php for cat/archive title & description */ ?>
 
+			<div class="<?php post_loops_wrap_class(); ?>">
+
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -31,8 +33,11 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content-parts/content', get_post_format() ); ?>
 					</div>
 
-			<?php	endwhile;
+			<?php	endwhile; ?>
 
+			</div>
+
+			<?php
 			the_posts_navigation();
 
 		else :

@@ -8,7 +8,7 @@ Site post lists layouts - as boxes
 	&.category,
 	&.home-page {
 
-		main.site-main {
+		.box-align {
 
 			@include flex-box-dir($flex-dir: column);
 

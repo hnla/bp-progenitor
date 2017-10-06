@@ -951,7 +951,7 @@ h1.site-title {
 /*
 Site post lists layouts - as boxes
 */
-.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -967,7 +967,7 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 46.8em) {
-	.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -982,12 +982,12 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive main.site-main, .post-list-grid.category main.site-main, .post-list-grid.home-page main.site-main {
+	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
 		justify-content: flex-start;
 	}
 }
 
-.post-list-grid.archive main.site-main .box, .post-list-grid.category main.site-main .box, .post-list-grid.home-page main.site-main .box {
+.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.home-page .box-align .box {
 	-ms-flex-align: stretch;
 	-webkit-align-items: stretch;
 	-webkit-box-align: stretch;
@@ -1000,7 +1000,7 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive main.site-main .box, .post-list-grid.category main.site-main .box, .post-list-grid.home-page main.site-main .box {
+	.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.home-page .box-align .box {
 		-webkit-flex: 0 1 20%;
 		-moz-flex: 0 1 20%;
 		-ms-flex: 0 1 20%;
@@ -1009,37 +1009,37 @@ Site post lists layouts - as boxes
 	}
 }
 
-.post-list-grid.archive main.site-main .box article.post, .post-list-grid.category main.site-main .box article.post, .post-list-grid.home-page main.site-main .box article.post {
+.post-list-grid.archive .box-align .box article.post, .post-list-grid.category .box-align .box article.post, .post-list-grid.home-page .box-align .box article.post {
 	border: 1px solid #ccc;
 	margin: 0 0.5em 0.5em;
 	padding: 0.5em;
 }
 
-.post-list-grid.archive main.site-main .box article.post .featured-image img, .post-list-grid.category main.site-main .box article.post .featured-image img, .post-list-grid.home-page main.site-main .box article.post .featured-image img {
+.post-list-grid.archive .box-align .box article.post .featured-image img, .post-list-grid.category .box-align .box article.post .featured-image img, .post-list-grid.home-page .box-align .box article.post .featured-image img {
 	max-width: 100%;
 	width: 100%;
 }
 
-.post-list-grid.archive main.site-main article.post, .post-list-grid.category main.site-main article.post, .post-list-grid.home-page main.site-main article.post {
+.post-list-grid.archive .box-align article.post, .post-list-grid.category .box-align article.post, .post-list-grid.home-page .box-align article.post {
 	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
 	-moz-box-shadow: 0 0 5px 0 #eaeaea;
 	box-shadow: 0 0 5px 0 #eaeaea;
 }
 
-.post-list-grid.archive main.site-main article.post .entry-title, .post-list-grid.category main.site-main article.post .entry-title, .post-list-grid.home-page main.site-main article.post .entry-title {
+.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.home-page .box-align article.post .entry-title {
 	font-size: 24px;
 	font-size: 1.5rem;
 	margin-top: 0;
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive main.site-main article.post .entry-title, .post-list-grid.category main.site-main article.post .entry-title, .post-list-grid.home-page main.site-main article.post .entry-title {
+	.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.home-page .box-align article.post .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
 }
 
-.post-list-grid.archive main.site-main article.post .entry-content, .post-list-grid.category main.site-main article.post .entry-content, .post-list-grid.home-page main.site-main article.post .entry-content {
+.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.home-page .box-align article.post .entry-content {
 	margin-top: 0;
 }
 

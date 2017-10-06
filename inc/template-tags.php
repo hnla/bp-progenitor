@@ -8,6 +8,37 @@
 
 
 /**
+ * Check whether post loops are set as grid layout
+ *
+ * Use to add additional markup conditional of type of display.
+ *
+ * @return bool
+ * @since 0.1.0
+ */
+function post_loops_as_grid() {
+	return (bool) progenitor_opts('post_loops_grid');
+}
+
+/**
+ * Set a class for the post loop parent wrapper
+ *
+ * Swap out loop-wrap for 'box-align' if grid set.
+ *
+ * @return string
+ * @since 0.1.0
+ */
+function post_loops_wrap_class() {
+	$grid = (bool) progenitor_opts('post_loops_grid');
+
+	if( $grid ) {
+		$value =  esc_attr('box-align');
+	} else {
+		$value = esc_attr('loop-wrap');
+	}
+	echo $value;
+}
+
+/**
 * Set footer widgets class on parent wrapper
 * Builds a class for widget container to report number of widgets being used
 * enables styling based on the known number of active foot widgets.
@@ -15,6 +46,8 @@
 * @return string
 * @since 0.1.0
 */
+
+
 function progenitor_foot_widgets_count() {
 	echo progenitor_footer_widgets_active();
 }
