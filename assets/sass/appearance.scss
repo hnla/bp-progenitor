@@ -30,6 +30,7 @@
 @include medium-up() {
 
 	.bp-single-vert-nav {
+
 		.bp-wrap {
 
 			@include background-gradient-3d-hori($color: $color__main-nav, $width: "25%");
@@ -49,8 +50,8 @@
 			color: darken($color__link_darkbackground, 10%);
 		}
 
-		&:visted {
-			color: $color__link_darkbackground-visited;
+		&:visited {
+//			color: $color__link_darkbackground-visited;
 		}
 	}
 
@@ -140,7 +141,7 @@
 
 	.main-navigation {
 
-		.nav-menu	> li {
+		.nav-menu > li {
 			border-right: 1px solid darken($color__main-nav, 15%);
 			border-left: 1px solid lighten($color__main-nav, 5%);
 			margin-right: 0;
@@ -164,7 +165,7 @@
 			}
 
 			> a {
-					padding: 5px 10px;
+				padding: 5px 10px;
 			}
 
 		}
@@ -183,6 +184,7 @@
 		}
 
 		li.active.menu-item-has-children {
+
 			> a:after {
 				content: " \f0d8";
 			}
@@ -228,6 +230,7 @@
 			> li {
 
 				> a {
+
 					@include background-gradient-3d-hori($color: $color__main-nav);
 				}
 			}
@@ -255,6 +258,7 @@
 		}
 
 		li.active.menu-item-has-children {
+
 			> a:after {
 				content: " \f0d7";
 			}
@@ -273,6 +277,7 @@
 		li.active.menu-item-has-children {
 
 			> a {
+
 				@include background-gradient-3d($color: lighten($color__main-nav, 5%));
 				color: $color__white;
 			}
@@ -293,7 +298,9 @@
 
 	.bp-navs {
 
-		li {border-radius: 0;}
+		li {
+			border-radius: 0;
+		}
 	}
 }
 
@@ -304,7 +311,7 @@
 		.bp-navs {
 
 			li {
-				border-bottom: 1px solid darken( $color__main-nav, 15%);
+				border-bottom: 1px solid darken($color__main-nav, 15%);
 
 				&:last-child {
 					border-bottom: 0;
@@ -351,9 +358,9 @@
 				a {
 
 					span {
-						background: darken( $color__main-nav, 20%);
+						background: darken($color__main-nav, 20%);
 						border: none;
-						color: lighten( $color__main-nav, 50%);
+						color: lighten($color__main-nav, 50%);
 					}
 				}
 
@@ -380,7 +387,10 @@
 		.bp-subnavs {
 
 			> ul > li:first-child {
-				a {padding-left: $pad-sml; }
+
+				a {
+					padding-left: $pad-sml;
+				}
 			}
 		}
 
@@ -392,16 +402,16 @@
 
 				li {
 					border: 0;
-					border-bottom: 1px solid lighten( $color__main-nav, 2%);
+					border-bottom: 1px solid lighten($color__main-nav, 2%);
 
 					@include medium-up {
-						border-bottom: 1px solid darken( $color__main-nav, 10%);
+						border-bottom: 1px solid darken($color__main-nav, 10%);
 					}
 
 					a {
 
 						@include background-gradient-3d-hori($color: $color__main-nav )
-						opacity: 0.9;
+							opacity: 0.9;
 					}
 				}
 
@@ -409,7 +419,7 @@
 
 					a {
 
-							@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
 					}
 				}
 			}
@@ -427,8 +437,9 @@
 					margin-left: 0;
 
 					li.selected {
+
 						a {
-							color: $color-secondary-2-0
+							color: $color-secondary-2-0;
 						}
 					}
 				}
@@ -465,6 +476,7 @@
 			#subnav {
 
 				li {
+
 					a {
 						color: $white;
 						opacity: 0.9;
@@ -493,6 +505,7 @@
 ==========================================*/
 
 .footer-widgets-wrap {
+
 	@include background-gradient-3d($color: #555, $depth: high );
 	border-bottom: 1px solid #333;
 	border-top: 1px solid #333;
@@ -525,17 +538,17 @@
 
 .site-footer {
 
-		color: $off-white;
+	color: $off-white;
 
-		a {
-			color: $color__link_darkbackground;
-			opacity: 0.8;
-		}
+	a {
+		color: $color__link_darkbackground;
+		opacity: 0.8;
+	}
 
-		a:visited,
-		a:hover,
-		a:focus {
+	a:visited,
+	a:hover,
+	a:focus {
 
-			opacity: 0.9;
-		}
+		opacity: 0.9;
+	}
 }

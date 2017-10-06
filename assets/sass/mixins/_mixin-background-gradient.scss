@@ -2,49 +2,49 @@
 
 @mixin background-gradient-3d($color: $white, $depth: null) {
 
-$start: $color;
+	$start: $color;
 
-$finish: darken($color, 10%);
+	$finish: darken($color, 10%);
 
-@if $depth == low {
-$finish: darken($color, 5%);
-}
+	@if $depth == low {
+		$finish: darken($color, 5%);
+	}
 
-@if  $depth == high {
-	$finish: darken($color, 20%);
-}
+	@if $depth == high {
+		$finish: darken($color, 20%);
+	}
 
 
-background: $color;
-background: -moz-linear-gradient(top, $start 0%, $finish 100%);
-background: -webkit-linear-gradient(top, $start 0%, $finish 100%);
-background: linear-gradient(to bottom, $start 0%, $finish 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$finish}',GradientType=0 );
+	background: $color;
+	background: -moz-linear-gradient(top, $start 0%, $finish 100%);
+	background: -webkit-linear-gradient(top, $start 0%, $finish 100%);
+	background: linear-gradient(to bottom, $start 0%, $finish 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$start}", endColorstr="#{$finish}", GradientType=0);
 }
 
 // As above but running the gradient horizontally
 
 @mixin background-gradient-3d-hori($color: $white, $depth: null, $width: "100%") {
 
-$start: $color;
+	$start: $color;
 
-$finish: darken($color, 10%);
+	$finish: darken($color, 10%);
 
-@if $depth == low {
-$finish: darken($color, 5%);
-}
+	@if $depth == low {
+		$finish: darken($color, 5%);
+	}
 
-@if  $depth == high {
-	$finish: darken($color, 20%);
-}
+	@if $depth == high {
+		$finish: darken($color, 20%);
+	}
 
-@if  $depth == xhigh {
-	$finish: darken($color, 50%);
-}
+	@if $depth == xhigh {
+		$finish: darken($color, 50%);
+	}
 
-background: $color;
-background: -moz-linear-gradient(left, $start 0%, $finish unquote($width));
-background: -webkit-linear-gradient(left, $start 0%, $finish unquote($width));
-background: linear-gradient(to right, $start 0%, $finish unquote($width)unquote($width));
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$finish}',GradientType=1 );
+	background: $color;
+	background: -moz-linear-gradient(left, $start 0%, $finish unquote($width));
+	background: -webkit-linear-gradient(left, $start 0%, $finish unquote($width));
+	background: linear-gradient(to right, $start 0%, $finish unquote($width) unquote($width));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$start}", endColorstr="#{$finish}", GradientType=1);
 }

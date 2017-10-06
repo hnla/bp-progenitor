@@ -12,7 +12,8 @@
 	label {
 
 	}
-	input[type=search] {
+
+	input[type="search"] {
 		border: 0;
 	}
 
@@ -23,7 +24,8 @@
 		vertical-align: middle;
 
 		span.fa {
-			@include font-size(20)
+
+			@include font-size(20);
 		}
 	}
 }

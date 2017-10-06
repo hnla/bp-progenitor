@@ -541,7 +541,7 @@ textarea {
 	line-height: 1;
 }
 
-.site-search input[type=search] {
+.site-search input[type="search"] {
 	border: 0;
 }
 
@@ -564,11 +564,11 @@ textarea {
 ## Links
 ----------------------------------------------------*/
 a {
-	color: #4470B5;
+	color: #4470b5;
 }
 
 a:visited {
-	color: #EC8E4E;
+	color: #ec8e4e;
 }
 
 a:hover, a:focus, a:active {

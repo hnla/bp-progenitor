@@ -54,6 +54,7 @@
 @include large-up() {
 
 	article {
+
 		&.post,
 		&.page {
 			margin: 0 auto;
@@ -86,6 +87,7 @@
 		}
 
 		.archive-description {
+
 			p {
 				padding: 0;
 			}

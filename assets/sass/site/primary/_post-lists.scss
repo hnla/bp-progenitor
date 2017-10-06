@@ -29,7 +29,6 @@ Site post lists layouts - as boxes
 			.box {
 
 				@include flex-align();
-
 				@include box-item-size($grow: 1, $basis: 50%);
 
 				@include large-up() {
@@ -53,6 +52,7 @@ Site post lists layouts - as boxes
 			}
 
 			article.post {
+
 				@include box-shadow(0 0 5px 0 $light-grey);
 
 				.entry-title {
@@ -60,6 +60,7 @@ Site post lists layouts - as boxes
 					@include font-size(24);
 
 					@include large-up() {
+
 						@include font-size(18);
 					}
 					margin-top: 0;
