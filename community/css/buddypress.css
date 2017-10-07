@@ -3815,191 +3815,54 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	top: 0;
 }
 
-.buddypress .buddypress-wrap button,
-.buddypress .buddypress-wrap a.button,
-.buddypress .buddypress-wrap input[type="submit"],
-.buddypress .buddypress-wrap input[type="button"],
-.buddypress .buddypress-wrap input[type="reset"],
-.buddypress .buddypress-wrap ul.button-nav:not(.button-tabs) li a,
-.buddypress .buddypress-wrap .generic-button a,
-.buddypress .buddypress-wrap .comment-reply-link,
-.buddypress .buddypress-wrap a.bp-title-button,
-.buddypress .buddypress-wrap .activity-read-more a {
-	background: #fff;
-	/* Old browsers */
-	border-color: #ccc;
-	border-style: solid;
-	border-width: 1px;
-	color: #555;
-	cursor: pointer;
-	font-size: inherit;
-	font-weight: 400;
-	outline: none;
-	padding: 0.3em 0.5em;
-	text-align: center;
-	text-decoration: none;
-	width: auto;
-}
-
-.buddypress .buddypress-wrap li.last a#compose {
-	padding: 2px 8px;
-}
-
-.buddypress .buddypress-wrap .button-small[type="button"] {
-	padding: 0 8px 1px;
-}
-
-.buddypress .buddypress-wrap button:hover,
-.buddypress .buddypress-wrap button:focus,
-.buddypress .buddypress-wrap a.button:focus,
-.buddypress .buddypress-wrap a.button:hover,
-.buddypress .buddypress-wrap input[type="submit"]:focus,
-.buddypress .buddypress-wrap input[type="submit"]:hover,
-.buddypress .buddypress-wrap input[type="button"]:focus,
-.buddypress .buddypress-wrap input[type="button"]:hover,
-.buddypress .buddypress-wrap input[type="reset"]:focus,
-.buddypress .buddypress-wrap input[type="reset"]:hover,
-.buddypress .buddypress-wrap .button-nav li a:focus,
-.buddypress .buddypress-wrap .button-nav li a:hover,
-.buddypress .buddypress-wrap .button-nav li.current a,
-.buddypress .buddypress-wrap .generic-button a:focus,
-.buddypress .buddypress-wrap .generic-button a:hover,
-.buddypress .buddypress-wrap .comment-reply-link:focus,
-.buddypress .buddypress-wrap .comment-reply-link:hover,
-.buddypress .buddypress-wrap .activity-read-more a:focus,
-.buddypress .buddypress-wrap .activity-read-more a:hover {
-	background: #ededed;
-	border-color: #999999;
-	color: #333;
-	outline: none;
-	text-decoration: none;
-}
-
-.buddypress .buddypress-wrap input[type="submit"].pending,
-.buddypress .buddypress-wrap input[type="button"].pending,
-.buddypress .buddypress-wrap input[type="reset"].pending,
-.buddypress .buddypress-wrap input[type="button"].disabled,
-.buddypress .buddypress-wrap input[type="reset"].disabled,
-.buddypress .buddypress-wrap input[type="submit"][disabled="disabled"],
-.buddypress .buddypress-wrap button.pending,
-.buddypress .buddypress-wrap button.disabled,
-.buddypress .buddypress-wrap div.pending a,
-.buddypress .buddypress-wrap a.disabled {
-	border-color: #eee;
-	color: #767676;
-	cursor: default;
-}
-
-.buddypress .buddypress-wrap input[type="submit"]:hover.pending,
-.buddypress .buddypress-wrap input[type="button"]:hover.pending,
-.buddypress .buddypress-wrap input[type="reset"]:hover.pending,
-.buddypress .buddypress-wrap input[type="submit"]:hover.disabled,
-.buddypress .buddypress-wrap input[type="button"]:hover.disabled,
-.buddypress .buddypress-wrap input[type="reset"]:hover.disabled,
-.buddypress .buddypress-wrap button.pending:hover,
-.buddypress .buddypress-wrap button.disabled:hover,
-.buddypress .buddypress-wrap div.pending a:hover,
-.buddypress .buddypress-wrap a.disabled:hover {
-	border-color: #eee;
-	color: #767676;
-}
-
-.buddypress .buddypress-wrap button.text-button,
-.buddypress .buddypress-wrap input.text-button {
-	background: none;
-	border: 0;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	color: #767676;
-}
-
-.buddypress .buddypress-wrap button.text-button.small,
-.buddypress .buddypress-wrap input.text-button.small {
-	font-size: 13px;
-	font-size: 0.8125rem;
-}
-
-.buddypress .buddypress-wrap button.text-button:focus, .buddypress .buddypress-wrap button.text-button:hover,
-.buddypress .buddypress-wrap input.text-button:focus,
-.buddypress .buddypress-wrap input.text-button:hover {
-	background: none;
-	text-decoration: underline;
-}
-
-.buddypress .buddypress-wrap .activity-list a.button {
-	border: none;
-}
-
-.buddypress .buddypress-wrap .bp-invites-content ul.bp-list li a.invite-button:hover {
-	color: #1fb3dd;
-}
-
-.buddypress .buddypress-wrap .bp-invites-content ul.bp-list li.selected a.invite-button:hover,
-.buddypress .buddypress-wrap .bp-invites-content ul.bp-list li.selected a.group-remove-invite-button:hover,
-.buddypress .buddypress-wrap .bp-invites-content ul.bp-list li a.invite-button:hover,
-.buddypress .buddypress-wrap .bp-invites-content ul.bp-list li a.group-remove-invite-button:hover {
-	color: #a00;
-}
-
-.buddypress .buddypress-wrap #item-buttons:empty {
-	display: none;
-}
-
-.buddypress .buddypress-wrap input:disabled:hover, .buddypress .buddypress-wrap input:disabled:focus {
-	background: none;
-}
-
-.buddypress .buddypress-wrap .text-links-list a.button {
-	background: none;
-	border: none;
-	border-right: 1px solid #eee;
-	color: #767676;
-	display: inline-block;
-	padding: 0.3em 1em;
-}
-
-.buddypress .buddypress-wrap .text-links-list a.button:visited {
-	color: #d6d6d6;
-}
-
-.buddypress .buddypress-wrap .text-links-list a.button:focus, .buddypress .buddypress-wrap .text-links-list a.button:hover {
-	color: #5087e5;
-}
-
-.buddypress .buddypress-wrap .text-links-list a:first-child {
-	padding-left: 0;
-}
-
-.buddypress .buddypress-wrap .text-links-list a:last-child {
-	border-right: none;
-}
-
-.buddypress .buddypress-wrap .bp-list.grid .action a,
-.buddypress .buddypress-wrap .bp-list.grid .action button {
+.buddypress-wrap .bp-list.grid .action a,
+.buddypress-wrap .bp-list.grid .action button {
 	border: 1px solid #ccc;
 	display: block;
 	margin: 0;
 }
 
-.buddypress .buddypress-wrap .bp-list.grid .action a:focus, .buddypress .buddypress-wrap .bp-list.grid .action a:hover,
-.buddypress .buddypress-wrap .bp-list.grid .action button:focus,
-.buddypress .buddypress-wrap .bp-list.grid .action button:hover {
+.buddypress-wrap .bp-list.grid .action a:focus, .buddypress-wrap .bp-list.grid .action a:hover,
+.buddypress-wrap .bp-list.grid .action button:focus,
+.buddypress-wrap .bp-list.grid .action button:hover {
 	background: #ededed;
 }
 
-.buddypress #buddypress .create-button {
+.buddypress-wrap .activity-list a.button {
+	border: none;
+}
+
+.buddypress-wrap .bp-invites-content ul.bp-list li a.invite-button:hover {
+	color: #1fb3dd;
+}
+
+.buddypress-wrap .bp-invites-content ul.bp-list li.selected a.invite-button:hover,
+.buddypress-wrap .bp-invites-content ul.bp-list li.selected a.group-remove-invite-button:hover,
+.buddypress-wrap .bp-invites-content ul.bp-list li a.invite-button:hover,
+.buddypress-wrap .bp-invites-content ul.bp-list li a.group-remove-invite-button:hover {
+	color: #a00;
+}
+
+.buddypress-wrap #item-buttons:empty {
+	display: none;
+}
+
+.buddypress-wrap li.last a#compose {
+	padding: 2px 8px;
+}
+
+.buddypress-wrap .create-button {
 	background: none;
 	text-align: center;
 }
 
 @media screen and (min-width: 46.8em) {
-	.buddypress #buddypress .create-button {
+	.buddypress-wrap .create-button {
 		float: right;
 	}
 }
 
-.buddypress #buddypress .create-button a {
+.buddypress-wrap .create-button a {
 	border: 1px solid #ccc;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -4013,7 +3876,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	width: auto;
 }
 
-.buddypress #buddypress .create-button a:focus, .buddypress #buddypress .create-button a:hover {
+.buddypress-wrap .create-button a:focus, .buddypress-wrap .create-button a:hover {
 	background: none;
 	border-color: #ccc;
 	-webkit-box-shadow: inset 0 0 12px 0 #eaeaea;
@@ -4022,11 +3885,11 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 @media screen and (min-width: 46.8em) {
-	.buddypress #buddypress.bp-dir-vert-nav .create-button {
+	.buddypress-wrap.bp-dir-vert-nav .create-button {
 		float: none;
 		padding-top: 2em;
 	}
-	.buddypress #buddypress.bp-dir-vert-nav .create-button a {
+	.buddypress-wrap.bp-dir-vert-nav .create-button a {
 		margin-right: 0.5em;
 	}
 }

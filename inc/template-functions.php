@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions which enhance the theme by hooking into WordPress
+ * Hooks, filters & general WP site functions
  *
  * @package BP_Progenitor
  */
