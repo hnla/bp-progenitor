@@ -21,6 +21,15 @@
 	margin: 0 0 1.5em;
 }
 
+.meta-bar {
+
+	.entry-meta {
+
+		@include	font-size(12);
+		padding: $pad-sml 0;
+	}
+}
+
 .post {
 
 	.entry-title {
@@ -37,6 +46,7 @@
 	}
 }
 
+
 .post,
 .page {
 
@@ -49,6 +59,11 @@
 			margin: $marg-sml 0;
 		}
 	}
+
+	img {
+		margin-bottom: $marg-sml;
+	}
+
 }
 
 @include large-up() {

@@ -72,15 +72,25 @@
 
 				<div class="meta-bar">
 					<?php if( is_page() || is_single() ) { ?>
+
+						<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+						<?php if ( 'post' === get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php bp_progenitor_posted_on( $post ); ?>
+							</div><!-- .entry-meta -->
+						<?php	endif; ?>
+						</header>
+
 					<?php } elseif( is_category() || is_archive() || is_tag() ) { ?>
-							<header class="page-header">
-							<?php
-								the_archive_title( '<h1 class="page-title">', '</h1>' );
-								the_archive_description( '<div class="archive-description">', '</div>' );
-							?>
-							</header>
+
+						<header class="page-header">
+						<?php
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+						</header>
 
 					<?php } elseif ( is_search() ) { ?>
 						<header class="page-header">

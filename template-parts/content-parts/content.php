@@ -15,20 +15,17 @@
 		<div class="featured-image"><?php the_post_thumbnail( 'lists-featured-thumb' ); ?></div>
 	<?php endif; ?>
 
-	<header class="entry-header">
+
 		<?php
 		// Show title for archive/cat lists only: see header.php for post/page title markup
-		if ( ! is_singular() ) :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		// See header.php for post/page titles & meta
+		if ( ! is_singular() ) : ?>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php bp_progenitor_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<header class="entry-header">
+			<?php	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		</header><!-- .entry-header -->
+
+		<?php endif; ?>
 
 	<div class="entry-content">
 

@@ -105,6 +105,23 @@ Header aka .site-banner includes primary nav
 	}
 }
 
+.meta-bar {
+
+	padding: $pad-sml 0;
+
+	h1 {
+		margin: 0;
+	}
+
+	@include large-up() {
+
+		.entry-header {
+			max-width: 56em;
+			margin: 0 auto;
+		}
+	}
+}
+
 /*===============================================
 1.2.0 - Nav
 =================================================*/
@@ -142,13 +159,6 @@ Header aka .site-banner includes primary nav
 /*===============================================
 1.4.0 - Content
 =================================================*/
-
-.meta-bar {
-
-	h1 {
-		margin: 0;
-	}
-}
 
 @include medium-up() {
 

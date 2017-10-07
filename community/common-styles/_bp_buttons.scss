@@ -4,278 +4,116 @@
 // change that by adding a parent class ( on any close parent to
 // the element ) .text-link-list
 
-.buddypress {
+.buddypress-wrap {
 
-	// this doubling avoids issues applying styles from body class
-	// to general theme elements - changing body class would be better though.
-	.buddypress-wrap {
+	// In grids style the basic action button a little differently
 
-		button,
-		a.button,
-		input[type="submit"],
-		input[type="button"],
-		input[type="reset"],
-		ul.button-nav:not(.button-tabs) li a,
-		.generic-button a,
-		.comment-reply-link,
-		a.bp-title-button,
-		.activity-read-more a {
-			background: $white; /* Old browsers */
-			border-color: $bp-border-dark;
-			border-style: solid;
-			border-width: 1px;
-			color: $dark-grey;
-			cursor: pointer;
-			font-size: inherit;
-			font-weight: 400;
-			outline: none;
-			padding: $pad-xsml $pad-sml;
-			text-align: center;
-			text-decoration: none;
-			width: auto;
-		}
+	.bp-list.grid {
 
-		// Reduce padding for messages screens compose button
-		// to prevent border clipping in tab visual layout
-		li.last a#compose {
-			padding: 2px 8px;
-		}
+		.action {
 
-		// Re-instate the quick-tag padding to avoid the above ruleset
-		// causing styling issues.
-		.button-small[type="button"] {
-			padding: 0 8px 1px;
-		}
-
-		button:hover,
-		button:focus,
-		a.button:focus,
-		a.button:hover,
-		input[type="submit"]:focus,
-		input[type="submit"]:hover,
-		input[type="button"]:focus,
-		input[type="button"]:hover,
-		input[type="reset"]:focus,
-		input[type="reset"]:hover,
-		.button-nav li a:focus,
-		.button-nav li a:hover,
-		.button-nav li.current a,
-		.generic-button a:focus,
-		.generic-button a:hover,
-		.comment-reply-link:focus,
-		.comment-reply-link:hover,
-		.activity-read-more a:focus,
-		.activity-read-more a:hover {
-			background: $buttons-background;
-			border-color: darken($bp-border-dark, 20%);
-			color: $black;
-			outline: none;
-			text-decoration: none;
-		}
-
-		input[type="submit"].pending,
-		input[type="button"].pending,
-		input[type="reset"].pending,
-		input[type="button"].disabled,
-		input[type="reset"].disabled,
-		input[type="submit"][disabled="disabled"],
-		button.pending,
-		button.disabled,
-		div.pending a,
-		a.disabled {
-			border-color: $bp-border-color;
-			color: $light-text;
-			cursor: default;
-		}
-
-		input[type="submit"]:hover.pending,
-		input[type="button"]:hover.pending,
-		input[type="reset"]:hover.pending,
-		input[type="submit"]:hover.disabled,
-		input[type="button"]:hover.disabled,
-		input[type="reset"]:hover.disabled,
-		button.pending:hover,
-		button.disabled:hover,
-		div.pending a:hover,
-		a.disabled:hover {
-			border-color: $bp-border-color;
-			color: $light-text;
-		}
-
-		// provide a class to style elements as text only non button.
-		button.text-button,
-		input.text-button {
-			background: none;
-			border: 0;
-
-			@include box-shadow-none();
-			color: $light-text;
-
-			&.small {
-
-				@include font-size(13);
-			}
-
-			&:focus,
-			&:hover {
-				background: none;
-				text-decoration: underline;
-			}
-		}
-
-		.activity-list {
-
-			a.button {
-				border: none;
-			}
-		}
-
-		.bp-invites-content {
-
-			ul.bp-list {
-
-				li {
-
-					a.invite-button:hover {
-						color: #1fb3dd;
-					}
-				}
-
-				li.selected,
-				li {
-
-					a.invite-button:hover,
-					a.group-remove-invite-button:hover {
-						color: #a00;
-					}
-				}
-
-			}
-		}
-
-		#item-buttons:empty {
-			display: none;
-		}
-
-		input:disabled {
-
-			&:hover,
-			&:focus {
-				background: none;
-			}
-		}
-
-		// Style action links as text links
-		// .text-links-list would be stated for anchors parent wrapping element
-		// Example usage on group members manage screen.
-
-		.text-links-list {
-
-			a.button {
-				background: none;
-				border: none;
-				border-right: 1px solid $bp-border-color;
-				color: $light-text;
-				display: inline-block;
-				padding: $pad-xsml $pad-med;
-
-				&:visited {
-					color: $text-link-visited;
-				}
+			a,
+			button {
+				border: 1px solid $bp-border-dark;
+				display: block;
+				margin: 0;
 
 				&:focus,
 				&:hover {
-					color: $text-link-hover;
+					background: $buttons-background;
 				}
-
 			}
+		} // .action
+	}
 
-			a:first-child {
-				padding-left: 0;
-			}
+	.activity-list {
 
-			a:last-child {
-				border-right: none;
-			}
-
-		} // close text-links-list
-
-		// In grids style the basic action button a little differently
-
-		.bp-list.grid {
-
-			.action {
-
-				a,
-				button {
-					border: 1px solid $bp-border-dark;
-					display: block;
-					margin: 0;
-
-					&:focus,
-					&:hover {
-						background: $buttons-background;
-					}
-				}
-			} // .action
+		a.button {
+			border: none;
 		}
+	}
 
-	} // close .buddypress
+	.bp-invites-content {
+
+		ul.bp-list {
+
+			li {
+
+				a.invite-button:hover {
+					color: #1fb3dd;
+				}
+			}
+
+			li.selected,
+			li {
+
+				a.invite-button:hover,
+				a.group-remove-invite-button:hover {
+					color: #a00;
+				}
+			}
+		}
+	}
+
+	#item-buttons:empty {
+		display: none;
+	}
+
+	// Reduce padding for messages screens compose button
+	// to prevent border clipping in tab visual layout
+	li.last a#compose {
+		padding: 2px 8px;
+	}
 
 	// The group or site create link as either a button or plain link.
 	// @todo this will need further classes & styles depending on nav layouts?
 	// The class 'create-button' will be hardcoded for the moment on the li
 	// this could be a user selected choice to style as a button though?
 
-	#buddypress {
+	.create-button { // the parent, i.e li element.
+		background: none;
 
-		.create-button { // the parent, i.e li element.
-			background: none;
+		@include medium-up {
+			float: right;
+		}
+		//padding-top: $pad-med;
+		text-align: center;
 
-			@include medium-up {
-				float: right;
-			}
-			//padding-top: $pad-med;
-			text-align: center;
+		a {
+			border: 1px solid $bp-border-dark;
 
-			a {
-				border: 1px solid $bp-border-dark;
+			@include border-radius(5px);
+			@include box-shadow(inset 0 0 6px 0 $light-grey);
+			margin: 0.2em 0;
+			width: auto;
 
-				@include border-radius(5px);
-				@include box-shadow(inset 0 0 6px 0 $light-grey);
-				margin: 0.2em 0;
-				width: auto;
+			&:focus,
+			&:hover {
+				background: none;
+				border-color: $bp-border-dark;
 
-				&:focus,
-				&:hover {
-					background: none;
-					border-color: $bp-border-dark;
-
-					@include box-shadow(inset 0 0 12px 0 $light-grey );
-				}
-			}
-
-		} // .create-button
-
-		&.bp-dir-vert-nav {
-
-			@include medium-up {
-
-				.create-button {
-					float: none;
-					padding-top: $pad-lrg;
-
-
-					a {
-						margin-right: 0.5em;
-					}
-				}
+				@include box-shadow(inset 0 0 12px 0 $light-grey );
 			}
 		}
 
-	} // close #buddypress
+	} // .create-button
 
-} // close body class .buddypress @todo this should be removed in time
+	&.bp-dir-vert-nav {
+
+		@include medium-up {
+
+			.create-button {
+				float: none;
+				padding-top: $pad-lrg;
+
+
+				a {
+					margin-right: 0.5em;
+				}
+			}
+		}
+	}
+} // close  .buddypress-wrap @todo
 
 // ==== Icons ====
 

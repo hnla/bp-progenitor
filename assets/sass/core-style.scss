@@ -34,6 +34,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+	# Animations
+	# Buttons
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "_progenitor-variables";
@@ -105,3 +107,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Animations & Transitions
 --------------------------------------------------------------*/
 @import "modules/animations";
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+@import "modules/buttons";
+

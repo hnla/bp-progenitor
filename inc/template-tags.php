@@ -80,7 +80,26 @@ if ( ! function_exists( 'bp_progenitor_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function bp_progenitor_posted_on() {
+	function bp_progenitor_posted_on( $post ) {
+
+		// This function is used mainly outside of the direct loop so find the post id
+		$id = $post->ID;
+
+		// If BP active fetch the BP user domain url
+		// else we'll use the WP link to author posts loop.
+		if ( function_exists( 'bp_loaded' ) ) {
+			$author_url = bp_core_get_user_domain( $post->post_author );
+			// Simple bool var to set all posts link true
+			$show_all_posts = true;
+		} else {
+			$author_url = get_author_posts_url( get_the_author_meta( 'ID', $post->post_author ) );
+			// set false $author url directs to all posts
+			$show_all_posts = false;
+		}
+
+		$user_name  = get_the_author_meta( 'display_name', $post->post_author );
+
+//var_dump($post);
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -102,10 +121,20 @@ if ( ! function_exists( 'bp_progenitor_posted_on' ) ) :
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'bp-progenitor' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( $author_url ) . '">' . esc_html( $user_name ) . '</a></span>'
+		);
+
+		$all_author_posts = sprintf(
+			/* translators: %s: post author. */
+			esc_html_x( ' - All posts by %s', 'post author', 'bp-progenitor' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID', $post->post_author ) ) ) . '">' . esc_html( $user_name ) . '</a></span>'
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+		if ( $show_all_posts ) {
+			echo  '<span class="all-author-posts">' . $all_author_posts . '</span>';
+		}
 
 	}
 endif;

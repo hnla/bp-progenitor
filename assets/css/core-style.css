@@ -33,6 +33,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+	# Animations
+	# Buttons
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -892,6 +894,12 @@ h1.site-title {
 	margin: 0 0 1.5em;
 }
 
+.meta-bar .entry-meta {
+	font-size: 12px;
+	font-size: 0.75rem;
+	padding: 0.5em 0;
+}
+
 .post .entry-title a {
 	text-decoration: none;
 }
@@ -912,6 +920,11 @@ h1.site-title {
 .post blockquote p,
 .page blockquote p {
 	margin: 10px 0;
+}
+
+.post img,
+.page img {
+	margin-bottom: 10px;
 }
 
 @media screen and (min-width: 75em) {
@@ -1176,4 +1189,144 @@ object {
 --------------------------------------------------------------*/
 .site-navs ul {
 	transition: opacity .4s ease-in-out .1s;
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+button,
+a.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+ul.button-nav:not(.button-tabs) li a,
+.generic-button a,
+.comment-reply-link,
+a.bp-title-button,
+.activity-read-more a {
+	background: #fff;
+	/* Old browsers */
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: #555;
+	cursor: pointer;
+	font-size: inherit;
+	font-weight: 400;
+	outline: none;
+	padding: 0.3em 0.5em;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+}
+
+.button-small[type="button"] {
+	padding: 0 8px 1px;
+}
+
+button:hover,
+button:focus,
+a.button:focus,
+a.button:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+.button-nav li a:focus,
+.button-nav li a:hover,
+.button-nav li.current a,
+.generic-button a:focus,
+.generic-button a:hover,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+.activity-read-more a:focus,
+.activity-read-more a:hover {
+	background: #ededed;
+	border-color: #999999;
+	color: #333;
+	outline: none;
+	text-decoration: none;
+}
+
+input[type="submit"].pending,
+input[type="button"].pending,
+input[type="reset"].pending,
+input[type="button"].disabled,
+input[type="reset"].disabled,
+input[type="submit"][disabled="disabled"],
+button.pending,
+button.disabled,
+div.pending a,
+a.disabled {
+	border-color: #eee;
+	color: #767676;
+	cursor: default;
+}
+
+input[type="submit"]:hover.pending,
+input[type="button"]:hover.pending,
+input[type="reset"]:hover.pending,
+input[type="submit"]:hover.disabled,
+input[type="button"]:hover.disabled,
+input[type="reset"]:hover.disabled,
+button.pending:hover,
+button.disabled:hover,
+div.pending a:hover,
+a.disabled:hover {
+	border-color: #eee;
+	color: #767676;
+}
+
+button.text-button,
+input.text-button {
+	background: none;
+	border: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #767676;
+}
+
+button.text-button.small,
+input.text-button.small {
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+button.text-button:focus, button.text-button:hover,
+input.text-button:focus,
+input.text-button:hover {
+	background: none;
+	text-decoration: underline;
+}
+
+input:disabled:hover, input:disabled:focus {
+	background: none;
+}
+
+.text-links-list a.button {
+	background: none;
+	border: none;
+	border-right: 1px solid #eee;
+	color: #767676;
+	display: inline-block;
+	padding: 0.3em 1em;
+}
+
+.text-links-list a.button:visited {
+	color: #d6d6d6;
+}
+
+.text-links-list a.button:focus, .text-links-list a.button:hover {
+	color: #5087e5;
+}
+
+.text-links-list a:first-child {
+	padding-left: 0;
+}
+
+.text-links-list a:last-child {
+	border-right: none;
 }
