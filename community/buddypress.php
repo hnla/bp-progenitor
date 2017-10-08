@@ -33,7 +33,9 @@ get_header(); ?>
 
 if ( ! bp_is_user() ) {
 	if ( ! bp_is_group() ) {
-	get_sidebar('pages');
+		if ( bp_is_directory() && show_sbar_for_bp_dir() ) {
+			get_sidebar('pages');
+		}
 	}
 }
 

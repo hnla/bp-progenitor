@@ -295,7 +295,16 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'post-sbar-active';
 	}
 
-	if ( is_active_sidebar( 'sidebar-pages' ) && is_page() && ! bp_is_user() && ! bp_is_group() ) {
+	if ( is_active_sidebar( 'sidebar-pages' )
+		&& is_page() && ! bp_is_user()
+		 && ! bp_is_group()
+		  && ! bp_is_directory() ){
+		$classes[] = 'page-sbar-active';
+	}
+
+	if ( bp_is_directory() && 1 === progenitor_opts( 'bp_dir_sbar' ) ) {
+		// however if user option is show sidebars for BP dir pages
+		// then we'll ovverride the above & add the page sbar class
 		$classes[] = 'page-sbar-active';
 	}
 

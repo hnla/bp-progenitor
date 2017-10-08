@@ -39,6 +39,19 @@ function post_loops_wrap_class() {
 }
 
 /**
+ * Check if sidebars are set to be shown for BP directories
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function show_sbar_for_bp_dir() {
+
+return (bool) progenitor_opts('bp_dir_sbar');
+
+}
+
+/**
 * Set footer widgets class on parent wrapper
 * Builds a class for widget container to report number of widgets being used
 * enables styling based on the known number of active foot widgets.

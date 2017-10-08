@@ -99,6 +99,13 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'transport'         => 'refresh',
 			'type'              => 'option',
 		),
+		'bp_progenitor_appearance[bp_dir_sbar]' => array(
+			'index'             => 'bp_dir_sbar',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
 		'bp_progenitor_appearance[post_loops_grid]' => array(
 			'index'             => 'post_loops_grid',
 			'capability'        => 'bp_moderate',
@@ -262,6 +269,12 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'label'      => __( 'Display the post lists, archive, cats or index as grid boxes', 'buddypress' ),
 			'section'    => 'bp_progenitor_site_settings',
 			'settings'   => 'bp_progenitor_appearance[post_loops_grid]',
+			'type'       => 'checkbox',
+		),
+		'bp_dir_sbar' => array(
+			'label'      => __( 'Enable page sidebar for BP directory screens', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_settings',
+			'settings'   => 'bp_progenitor_appearance[bp_dir_sbar]',
 			'type'       => 'checkbox',
 		),
 		'site_tagline' => array(
