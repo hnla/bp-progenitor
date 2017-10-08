@@ -39,6 +39,24 @@ function post_loops_wrap_class() {
 }
 
 /**
+ * Set a class for WP entry-content element to denote bp-content
+ *
+ * @return string
+ * @since 0.1.0
+ */
+function entry_content_class() {
+	if ( ! function_exists( 'bp_loaded' ) ) {
+		return;
+	}
+
+	if ( bp_is_directory() || bp_is_user() || bp_is_group() ) {
+		return ' bp-entry-content';
+	} else {
+		return false;
+	}
+}
+
+/**
  * Check if sidebars are set to be shown for BP directories
  *
  * @since 0.1.0

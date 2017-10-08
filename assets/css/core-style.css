@@ -910,10 +910,18 @@ h1.site-title {
 	font-size: 0.75rem;
 }
 
+.post .entry-content:not(.bp-entry-content),
+.page .entry-content:not(.bp-entry-content) {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
 .post blockquote,
 .page blockquote {
 	border-left: 1px solid #eaeaea;
 	background: #fafafa;
+	font-size: 16px;
+	font-size: 1rem;
 	padding: 0.5em 1em;
 }
 

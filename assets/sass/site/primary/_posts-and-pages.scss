@@ -50,9 +50,15 @@
 .post,
 .page {
 
+	.entry-content:not(.bp-entry-content) {
+		@include font-size(18);
+	}
+
 	blockquote {
 		border-left: 1px solid $light-grey;
 		background: $off-white;
+
+		@include font-size(16);
 		padding: $pad-sml $pad-med;
 
 		p {
@@ -63,7 +69,6 @@
 	img {
 		margin-bottom: $marg-sml;
 	}
-
 }
 
 @include large-up() {
