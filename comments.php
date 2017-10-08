@@ -65,6 +65,7 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
+
 	$args = array(
 		'id_form'           => 'commentform',
 		'class_form'      => 'comment-form',
@@ -76,7 +77,7 @@ if ( post_password_required() ) {
 		'cancel_reply_link' => __( 'Cancel Reply' ),
 		'label_submit'      => __( 'Post Comment' ),
 		'format'            => 'xhtml',
-		);
+	);
 	comment_form( $args );
 	?>
 

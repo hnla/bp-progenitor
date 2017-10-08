@@ -15,29 +15,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
-	# Animations
-	# Buttons
+1. Normalize
+2 Typography
+3 Elements
+4 Forms
+5. Navigation
+5.1 Links
+5.2 Menus
+6. Accessibility
+7. Alignments
+8. Clearings
+9. Widgets
+10. Content
+10.1 Posts and pages
+10.2 Comments
+11. Infinite scroll
+12. Media
+12.1 Captions
+12.2 Galleries
+13. Animations
+14. Buttons
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Normalize
+1. Normalize
 --------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
@@ -251,7 +251,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-# Typography
+2. Typography
 --------------------------------------------------------------*/
 /* Embedded font face declarations */
 /*
@@ -369,7 +369,7 @@ big {
 }
 
 /*--------------------------------------------------------------
-# Elements
+3. Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
@@ -454,7 +454,7 @@ table {
 }
 
 /*--------------------------------------------------------------
-# Forms
+4. Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -560,7 +560,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Navigation
+5. Navigation
 --------------------------------------------------------------*/
 /*----------------------------------------------------
 ## Links
@@ -743,7 +743,7 @@ Small menu display.
 }
 
 /*--------------------------------------------------------------
-# Accessibility
+6. Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -783,7 +783,7 @@ Small menu display.
 }
 
 /*--------------------------------------------------------------
-# Alignments
+7. Alignments
 --------------------------------------------------------------*/
 .alignleft {
 	display: inline;
@@ -805,7 +805,7 @@ Small menu display.
 }
 
 /*--------------------------------------------------------------
-# Clearings
+8. Clearings
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
@@ -834,7 +834,7 @@ Small menu display.
 }
 
 /*--------------------------------------------------------------
-# Widgets
+9. Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
@@ -846,7 +846,7 @@ Small menu display.
 }
 
 /*--------------------------------------------------------------
-# Content
+10. Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Header elements
@@ -1071,7 +1071,7 @@ Site post lists layouts - as boxes
 }
 
 /*--------------------------------------------------------------
-# Infinite scroll
+11. Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
@@ -1089,7 +1089,7 @@ that were hidden (via .neverending) before.
 }
 
 /*--------------------------------------------------------------
-# Media
+12. Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1185,14 +1185,14 @@ object {
 }
 
 /*--------------------------------------------------------------
-# Animations & Transitions
+13. Animations & Transitions
 --------------------------------------------------------------*/
 .site-navs ul {
 	transition: opacity .4s ease-in-out .1s;
 }
 
 /*--------------------------------------------------------------
-# Buttons
+14. Buttons
 --------------------------------------------------------------*/
 button,
 a.button,

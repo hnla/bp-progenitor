@@ -16,26 +16,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
-	# Animations
-	# Buttons
+1. Normalize
+2 Typography
+3 Elements
+4 Forms
+5. Navigation
+5.1 Links
+5.2 Menus
+6. Accessibility
+7. Alignments
+8. Clearings
+9. Widgets
+10. Content
+10.1 Posts and pages
+10.2 Comments
+11. Infinite scroll
+12. Media
+12.1 Captions
+12.2 Galleries
+13. Animations
+14. Buttons
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "_progenitor-variables";
@@ -43,73 +43,73 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Normalize
+1. Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Typography
+2. Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
 
 /*--------------------------------------------------------------
-# Elements
+3. Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
 
 /*--------------------------------------------------------------
-# Forms
+4. Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
 
 /*--------------------------------------------------------------
-# Navigation
+5. Navigation
 --------------------------------------------------------------*/
 @import "navigation/links";
 @import "navigation/menus";
 
 /*--------------------------------------------------------------
-# Accessibility
+6. Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
 
 /*--------------------------------------------------------------
-# Alignments
+7. Alignments
 --------------------------------------------------------------*/
 @import "modules/alignments";
 
 /*--------------------------------------------------------------
-# Clearings
+8. Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
+9. Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
-# Content
+10. Content
 --------------------------------------------------------------*/
 @import "site/site";
 
 /*--------------------------------------------------------------
-# Infinite scroll
+11. Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
-# Media
+12. Media
 --------------------------------------------------------------*/
 @import "media/media";
 
 /*--------------------------------------------------------------
-# Animations & Transitions
+13. Animations & Transitions
 --------------------------------------------------------------*/
 @import "modules/animations";
 
 /*--------------------------------------------------------------
-# Buttons
+14. Buttons
 --------------------------------------------------------------*/
 @import "modules/buttons";
 
