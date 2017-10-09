@@ -334,7 +334,7 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'post-list-grid';
 	}
 
-	if ( is_singular() ) {
+	if ( is_singular() && ! is_buddypress() ) {
 		$classes[] = 'wp-single';
 	}
 

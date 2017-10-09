@@ -21,21 +21,22 @@
 	margin: 0 0 1.5em;
 }
 
-.meta-bar {
+.wp-single {
 
-	.entry-meta {
+	.meta-bar {
 
-		@include	font-size(12);
-		padding: $pad-sml 0;
-	}
-}
+		.entry-meta {
 
-.post {
+			@include	font-size(12);
+			padding: $pad-sml 0;
+		}
 
-	.entry-title {
+		.entry-title {
+			padding: $pad-sml 0;
 
-		a {
-			text-decoration: none;
+			a {
+				text-decoration: none;
+			}
 		}
 	}
 

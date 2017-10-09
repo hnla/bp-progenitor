@@ -929,23 +929,27 @@ h1.site-title {
 	margin: 0 0 1.5em;
 }
 
-.meta-bar .entry-meta {
+.wp-single .meta-bar .entry-meta {
 	font-size: 12px;
 	font-size: 0.75rem;
 	padding: 0.5em 0;
 }
 
-.post .entry-title a {
+.wp-single .meta-bar .entry-title {
+	padding: 0.5em 0;
+}
+
+.wp-single .meta-bar .entry-title a {
 	text-decoration: none;
 }
 
-.post .entry-meta,
-.post .entry-footer {
+.wp-single .entry-meta,
+.wp-single .entry-footer {
 	font-size: 12px;
 	font-size: 0.75rem;
 }
 
-.post .entry-footer {
+.wp-single .entry-footer {
 	margin-bottom: 15px;
 }
 
