@@ -13,7 +13,7 @@
  * Description:            A new template pack for BuddyPress!
  * Text Domain:            bp-progenitor
  * Domain Path:            ../languages/
- * Author:                 Hugo Ashmore - hnla
+ * Author:                 imath / Hugo Ashmore - hnla
  * Template Pack Link:     https://github.com/hnla/bp-progenitor
  * Template Pack Supports: activity, blogs, friends, groups, messages, notifications, settings, xprofile
  * }}
@@ -156,6 +156,17 @@ class BP_Progenitor extends BP_Theme_Compat {
 	 * @since 1.0.0
 	 */
 	protected function setup_support() {
+
+		/** Filter the default BP avatar sizes - larger is preferable
+		* to allow for better responsive use
+		* @todo Tie in the values to the Customizer, allow users to change values?
+		* @todo check whether we can filter rather than set defines.
+		*/
+		define( 'BP_AVATAR_FULL_WIDTH' ,  250 );
+		define( 'BP_AVATAR_FULL_HEIGHT',  250 );
+		define( 'BP_AVATAR_THUMB_WIDTH',  100 );
+		define( 'BP_AVATAR_THUMB_HEIGHT', 100 );
+
 		$width         = 1300;
 		$top_offset    = 150;
 		$avatar_height = apply_filters( 'bp_core_avatar_full_height', $top_offset );

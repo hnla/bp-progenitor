@@ -57,17 +57,25 @@ Site post lists layouts - as boxes
 
 				.entry-title {
 
-					@include font-size(24);
+					@include font-size(22);
 
 					@include large-up() {
 
 						@include font-size(18);
 					}
-					margin-top: 0;
+					margin: 0 0 $marg-sml;
+				}
+
+				.entry-content {
+					@include font-size(14);
 				}
 
 				.entry-content {
 					margin-top: 0;
+				}
+
+				.entry-content p {
+					margin: 0 0 $marg-sml;
 				}
 			}
 		} // close main.site-main

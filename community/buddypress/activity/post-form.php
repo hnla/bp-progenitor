@@ -12,7 +12,7 @@
  */
 bp_progenitor_before_activity_post_form(); ?>
 
-<div id="bp-progenitor-activity-form" class="activity-update-form"></div>
+<div id="bp-progenitor-activity-form" class="activity-update-form clearfix"></div>
 
 <?php
 /**
