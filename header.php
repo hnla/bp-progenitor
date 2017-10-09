@@ -80,6 +80,7 @@
 							<div class="entry-meta">
 								<?php bp_progenitor_posted_on( $post ); ?>
 							</div><!-- .entry-meta -->
+							<?php bp_progenitor_post_header_navigation( array( 'prev_text' => 'Prev post', 'next_text' => 'Next Post', 'icons' => true ) ); ?>
 						<?php	endif; ?>
 						</header>
 

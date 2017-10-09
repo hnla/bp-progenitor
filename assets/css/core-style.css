@@ -702,6 +702,19 @@ Small menu display.
 	}
 }
 
+/*
+Post next/prev nav & archives next page links
+*/
+.post-navigation:before,
+.post-navigation:after {
+	content: " ";
+	display: table;
+}
+
+.post-navigation:after {
+	clear: both;
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -724,8 +737,25 @@ Small menu display.
 	width: 50%;
 }
 
+.meta-bar .post-navigation {
+	padding: 0 0.5em;
+}
+
+@media screen and (min-width: 75em) {
+	.meta-bar .post-navigation {
+		padding: 0;
+	}
+}
+
+.meta-bar .post-navigation .nav-previous,
+.meta-bar .post-navigation .nav-next {
+	font-size: 14px;
+	font-size: 0.875rem;
+	width: auto;
+}
+
 /*
- Main menu vertical option - elements adjustments
+Main menu vertical option - elements adjustments
 */
 @media screen and (min-width: 46.8em) {
 	.site-nav-vertical .main-navigation ul li {
@@ -1051,9 +1081,9 @@ Site post lists layouts - as boxes
 }
 
 .post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.home-page .box-align article.post .entry-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-	margin-top: 0;
+	font-size: 22px;
+	font-size: 1.375rem;
+	margin: 0 0 10px;
 }
 
 @media screen and (min-width: 75em) {
@@ -1064,7 +1094,16 @@ Site post lists layouts - as boxes
 }
 
 .post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.home-page .box-align article.post .entry-content {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.home-page .box-align article.post .entry-content {
 	margin-top: 0;
+}
+
+.post-list-grid.archive .box-align article.post .entry-content p, .post-list-grid.category .box-align article.post .entry-content p, .post-list-grid.home-page .box-align article.post .entry-content p {
+	margin: 0 0 10px;
 }
 
 /*--------------------------------------------------------------

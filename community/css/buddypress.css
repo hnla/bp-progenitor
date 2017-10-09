@@ -1119,6 +1119,9 @@ body.buddypress article.page > .entry-header .entry-title {
 		margin: 0 10px 0 0;
 	}
 	.activity-update-form #whats-new-content,
+	.activity-update-form #whats-new-submit {
+		overflow: hidden;
+	}
 	.activity-update-form #whats-new-post-in-box,
 	.activity-update-form #whats-new-submit {
 		margin-left: 12%;

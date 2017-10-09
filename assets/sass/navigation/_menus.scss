@@ -137,6 +137,13 @@ Small menu display.
 	}
 }
 
+
+/*
+Post next/prev nav & archives next page links
+*/
+
+@include clearfix-element(".post-navigation");
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -158,8 +165,26 @@ Small menu display.
 	}
 }
 
+.meta-bar {
+
+	.post-navigation {
+
+		padding: 0 $pad-sml;
+
+		@include large-up() {
+			padding: 0;
+		}
+
+		.nav-previous,
+		.nav-next {
+			@include font-size(14)
+			width: auto;
+		}
+	}
+}
+
 /*
- Main menu vertical option - elements adjustments
+Main menu vertical option - elements adjustments
 */
 
 @include medium-up() {
