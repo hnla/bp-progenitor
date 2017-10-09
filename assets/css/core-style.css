@@ -672,6 +672,11 @@ a:hover, a:active {
 	opacity: 1;
 }
 
+.main-navigation ul li:hover > ul ul,
+.main-navigation ul li.focus > ul ul {
+	left: 10px;
+}
+
 /*
  Main menu horizontal option - elements adjustments
 */
@@ -938,6 +943,10 @@ h1.site-title {
 .post .entry-footer {
 	font-size: 12px;
 	font-size: 0.75rem;
+}
+
+.post .entry-footer {
+	margin-bottom: 15px;
 }
 
 .post .entry-content:not(.bp-entry-content),

@@ -46,7 +46,7 @@ get_header(); ?>
 
 			</div>
 
-		<?php	the_posts_navigation();
+		<?php bp_progenitor_post_navigation( array('prev_text' => 'Older posts', 'next_text' => 'Newer Posts', 'icons' => true) );
 
 		else :
 

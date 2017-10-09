@@ -86,6 +86,10 @@
 		li.focus > ul {
 			left: auto;
 			opacity: 1;
+
+			ul {
+				left: 10px;
+			}
 		}
 	}
 

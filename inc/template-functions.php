@@ -55,9 +55,9 @@ add_filter( 'excerpt_length', 'progenitor_post_excerpt_length' );
 *
 * @return string
 */
-function bp_progenitor_post_header_navigation( $args = array() ) {
+function bp_progenitor_post_navigation( $args = array() ) {
 
-	echo progenitor_get_post_header_navi( $args );
+	echo progenitor_get_post_navi( $args );
 
 	return;
 }
@@ -69,7 +69,7 @@ function bp_progenitor_post_header_navigation( $args = array() ) {
 * @since 0.1.0
 *
 */
-function progenitor_get_post_header_navi( $args ) {
+function progenitor_get_post_navi( $args ) {
 
 	$args = wp_parse_args( $args, array(
 		'prev_text'          => '%title',
