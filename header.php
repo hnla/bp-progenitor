@@ -97,6 +97,10 @@
 						<header class="page-header">
 							<h1 class="page-title"><?php _e('Search', 'bp-progenitor'); ?></h1>
 						</header>
-					<?php } ?>
+					<?php } elseif ( is_home() && ! is_front_page() ) { ?>
+				<header>
+					<h1 class="page-title"><?php  single_post_title() . _e(': Index', 'bp-progenitor'); ?></h1>
+				</header>
+			<?php }; ?>
 				</div>
 
