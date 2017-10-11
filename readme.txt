@@ -50,3 +50,8 @@ BP Progenitor includes support for Infinite Scroll in Jetpack.
 *
 * Progenitor uses fontawsome svg icons: Font Awesome by Dave Gandy - http://fontawesome.io".
 * Licence: http://opensource.org/licenses/mit-license.html
+*
+* Default images & videos:
+* Images & videos used for default layout example, headers etc sourced from https://pixabay.com licenced under a CCO
+* https://pixabay.com/en/service/terms/#usage
+* All images used are designated CCO - free for commercial use, no attribution required.
