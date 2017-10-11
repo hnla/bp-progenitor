@@ -4205,6 +4205,213 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	top: 30px;
 }
 
+.buddypress.widget .avatar-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	margin: 0 -2%;
+}
+
+@media screen and (min-width: 46.8em) {
+	.buddypress.widget .avatar-block {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+}
+
+.buddypress.widget .avatar-block .item-avatar {
+	-ms-flex-align: streatch;
+	-webkit-align-items: streatch;
+	-webkit-box-align: streatch;
+	align-items: streatch;
+	-webkit-flex: 0 1 25%;
+	-moz-flex: 0 1 25%;
+	-ms-flex: 0 1 25%;
+	-o-flex: 0 1 25%;
+	flex: 0 1 25%;
+	margin: 0 2%;
+}
+
+@media screen and (min-width: 75em) {
+	.buddypress.widget .avatar-block .item-avatar {
+		-webkit-flex: 0 1 21%;
+		-moz-flex: 0 1 21%;
+		-ms-flex: 0 1 21%;
+		-o-flex: 0 1 21%;
+		flex: 0 1 21%;
+	}
+}
+
+.buddypress.widget .avatar-block .item-avatar img {
+	margin: 0;
+}
+
+.buddypress.widget .item-options {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.buddypress.widget ul.item-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	list-style: none;
+	margin: 10px -2%;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 46.8em) {
+	.buddypress.widget ul.item-list {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+}
+
+.buddypress.widget ul.item-list li {
+	border: 1px solid #333;
+	-ms-flex-align: baseline;
+	-webkit-align-items: baseline;
+	-webkit-box-align: baseline;
+	align-items: baseline;
+	-webkit-flex: 0 1 46%;
+	-moz-flex: 0 1 46%;
+	-ms-flex: 0 1 46%;
+	-o-flex: 0 1 46%;
+	flex: 0 1 46%;
+	margin: 0 2% 10px;
+}
+
+@media screen and (min-width: 75em) {
+	.buddypress.widget ul.item-list li {
+		-webkit-flex: 0 1 21%;
+		-moz-flex: 0 1 21%;
+		-ms-flex: 0 1 21%;
+		-o-flex: 0 1 21%;
+		flex: 0 1 21%;
+	}
+}
+
+.buddypress.widget ul.item-list li .item-avatar {
+	padding: 0.5em;
+	text-align: center;
+}
+
+.buddypress.widget ul.item-list li .item {
+	padding: 0 0.5em 0.5em;
+}
+
+.buddypress.widget ul.item-list li .item .item-meta {
+	font-size: 12px;
+	font-size: 0.75rem;
+	overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 32em) {
+	aside.widget-area .buddypress.widget ul.item-list {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+}
+
+aside.widget-area .buddypress.widget ul.item-list li {
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
+	-moz-box-shadow: 0 0 5px 0 #eaeaea;
+	box-shadow: 0 0 5px 0 #eaeaea;
+	-webkit-flex: 0 1 46%;
+	-moz-flex: 0 1 46%;
+	-ms-flex: 0 1 46%;
+	-o-flex: 0 1 46%;
+	flex: 0 1 46%;
+	margin: 2% 2% 10px;
+}
+
+@media screen and (min-width: 75em) {
+	aside.widget-area .buddypress.widget ul.item-list li {
+		-webkit-flex: 0 1 21%;
+		-moz-flex: 0 1 21%;
+		-ms-flex: 0 1 21%;
+		-o-flex: 0 1 21%;
+		flex: 0 1 21%;
+	}
+}
+
+@media screen and (min-width: 46.8em) {
+	aside.widget-area .buddypress.widget ul.item-list li .avatar {
+		width: 100%;
+	}
+}
+
+aside.widget-area .buddypress.widget ul#blog-post-list li p {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 55em) {
+	aside.widget-area .buddypress.widget ul.item-list {
+		margin: 10px -2%;
+		width: 100%;
+	}
+	aside.widget-area .buddypress.widget ul.item-list li {
+		-webkit-flex: 0 1 auto;
+		-moz-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		-o-flex: 0 1 auto;
+		flex: 0 1 auto;
+		margin: 10px 2% 1%;
+		width: 46%;
+	}
+	aside.widget-area .buddypress.widget ul#blog-post-list {
+		margin: 0;
+	}
+	aside.widget-area .buddypress.widget ul#blog-post-list li {
+		-webkit-flex: 1 1 100%;
+		-moz-flex: 1 1 100%;
+		-ms-flex: 1 1 100%;
+		-o-flex: 1 1 100%;
+		flex: 1 1 100%;
+		margin: 0 0 10px;
+		padding: 0 0.5em;
+	}
+}
+
 #buddypress-wrap * {
 	transition: opacity 0.1s ease-in-out 0.1s;
 }

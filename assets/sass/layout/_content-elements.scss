@@ -1,1 +1,45 @@
 // Content inner elements structural positioning
+
+.home-page.logged-in {
+
+	.site-main {
+
+			@include flex-box-dir($flex-dir: column);
+
+			@include medium-up() {
+
+				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+			}
+
+			justify-content: space-between;
+
+			@include large-up() {
+
+				justify-content: flex-start; // default to reset.
+			}
+
+			.block-1,
+			.block-2 {
+
+				@include box-item-size($grow: 1, $basis: 50%);
+
+				@include medium-up() {
+					padding: 0 $pad-sml;
+				}
+			}
+
+		.block-1 {
+
+			@include medium-up() {
+				padding-left: 0;
+			}
+		}
+
+		.block-2 {
+
+			@include medium-up() {
+				padding-right: 0;
+			}
+		}
+	}
+}

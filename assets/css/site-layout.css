@@ -309,6 +309,69 @@ Primary header/menu positioning
 /*==============================================================
 3.0 Main content
 ================================================================*/
+.home-page.logged-in .site-main {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 46.8em) {
+	.home-page.logged-in .site-main {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.home-page.logged-in .site-main {
+		justify-content: flex-start;
+	}
+}
+
+.home-page.logged-in .site-main .block-1,
+.home-page.logged-in .site-main .block-2 {
+	-webkit-flex: 1 1 50%;
+	-moz-flex: 1 1 50%;
+	-ms-flex: 1 1 50%;
+	-o-flex: 1 1 50%;
+	flex: 1 1 50%;
+}
+
+@media screen and (min-width: 46.8em) {
+	.home-page.logged-in .site-main .block-1,
+	.home-page.logged-in .site-main .block-2 {
+		padding: 0 0.5em;
+	}
+}
+
+@media screen and (min-width: 46.8em) {
+	.home-page.logged-in .site-main .block-1 {
+		padding-left: 0;
+	}
+}
+
+@media screen and (min-width: 46.8em) {
+	.home-page.logged-in .site-main .block-2 {
+		padding-right: 0;
+	}
+}
+
 /*==============================================================
 4.0 Footer elements
 ================================================================*/

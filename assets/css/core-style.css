@@ -1119,6 +1119,36 @@ Site post lists layouts - as boxes
 	margin: 0 0 10px;
 }
 
+.post-list-grid.archive .box-align article.post .entry-footer, .post-list-grid.category .box-align article.post .entry-footer, .post-list-grid.home-page .box-align article.post .entry-footer {
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+.home-page.post-list-grid .box-align .box {
+	margin-bottom: 15px;
+}
+
+@media screen and (min-width: 75em) {
+	.home-page.post-list-grid .box-align .box {
+		-webkit-flex: 0 1 33.3%;
+		-moz-flex: 0 1 33.3%;
+		-ms-flex: 0 1 33.3%;
+		-o-flex: 0 1 33.3%;
+		flex: 0 1 33.3%;
+	}
+	.home-page.post-list-grid .box-align .box article {
+		height: 100%;
+	}
+}
+
+.home-page.post-list-grid .box-align .box.sticky-post {
+	-webkit-flex: 1 1 auto;
+	-moz-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	-o-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

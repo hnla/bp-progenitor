@@ -1,0 +1,161 @@
+// BP Widgets
+
+.buddypress.widget {
+
+	// recent active members defines divs as
+
+	.avatar-block {
+
+		@include flex-box-dir($flex-dir: column);
+
+		@include medium-up() {
+
+			@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+		}
+
+		margin: 0 -2%;
+
+		.item-avatar {
+
+			@include flex-align($align: streatch);
+
+			@include box-item-size($grow: 0, $basis: 25%);
+
+			@include large-up() {
+
+				@include box-item-size($grow: 0, $basis: 21%);
+			}
+
+			margin: 0 2%;
+
+			img{
+				margin: 0;
+			}
+		}
+	}
+
+	// Widgets which better use a ul construct!
+	.item-options {
+
+		@include font-size(14);
+	}
+
+
+
+	ul.item-list {
+
+
+		@include flex-box-dir($flex-dir: column);
+
+		@include medium-up() {
+
+			@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+		}
+
+		list-style: none;
+		margin: $marg-sml -2%;
+		overflow: hidden;
+
+		li {
+			border: 1px solid $black;
+
+			@include flex-align($align: baseline);
+			@include box-item-size($grow: 0, $basis: 46%);
+
+			@include large-up() {
+
+				@include box-item-size($grow: 0, $basis: 21%);
+			}
+
+			margin: 0 2% 10px;
+
+			.item-avatar {
+				padding: $pad-sml;
+				text-align: center;
+			}
+
+			.item {
+				padding: 0 $pad-sml $pad-sml;
+
+				.item-meta {
+
+					@include font-size(12);
+					overflow-wrap: break-word;
+				}
+			}
+		} // close li
+	}
+}
+
+
+// The main site sidebar
+aside.widget-area {
+
+	.buddypress.widget {
+
+		ul.item-list {
+
+			@include medium-small-up() {
+
+				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+			}
+
+			li {
+				border: 1px solid $bp-border-dark;
+
+				@include box-shadow(0 0 5px 0 $light-box-shadow);
+
+				@include box-item-size($grow: 0, $basis: 46%);
+
+				@include large-up {
+
+					@include box-item-size($grow: 0, $basis: 21%);
+				}
+
+				margin: 2% 2% 10px;
+
+				@include medium-up {
+					.avatar {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		ul#blog-post-list {
+
+			li {
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@include medium-lrg-up() {
+
+			ul.item-list {
+				margin: $marg-sml -2%;
+				width: 100%;
+
+				li {
+
+					@include box-item-size($grow: 0, $basis: auto);
+					margin: $marg-sml 2% 1%;
+					width: 46%;
+				}
+			} // ul.item-list
+
+			ul#blog-post-list {
+				margin: 0;
+
+				li {
+
+					@include box-item-size($grow: 1, $basis: 100%);
+					margin: 0 0 $marg-sml;
+					padding: 0 $pad-sml;
+				}
+			}
+		} // @media query
+	}
+}
