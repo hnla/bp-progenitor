@@ -30,10 +30,3 @@
 				</div><!-- #third .widget-area -->
 <?php endif; ?>
 
-<?php if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) : ?>
-				<div id="fourth" class="widget-area fourth">
-
-						<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
-
-				</div><!-- #fourth .widget-area -->
-<?php endif;

@@ -19,8 +19,8 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 
 		/**
 		 * @todo: Lets setup something for managing adminbar and users
-			*
-			*/
+		 *
+		 */
 //		add_filter('show_admin_bar', '__return_false');
 
 		/*
@@ -88,8 +88,8 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		) );
 
 		/**
-			* Add custom images
-			*/
+		 * Add custom images
+		 */
 		add_image_size('single-featured', '800', '200', true );
 		add_image_size('lists-featured-thumb', '1200', '300', true );
 		add_image_size('featured-sticky', '650', '400', true );
@@ -131,6 +131,26 @@ add_action( 'after_setup_theme', 'bp_progenitor_content_width', 0 );
  */
 function bp_progenitor_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Block 1 Loggedout', 'bp-progenitor' ),
+		'id'            => 'homepage-block-1-loggedout',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Block 1 Loggedin', 'bp-progenitor' ),
+		'id'            => 'homepage-block-1-loggedin',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	// Site sidebars
+	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bp-progenitor' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
@@ -157,49 +177,39 @@ function bp_progenitor_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
 	// footer widgets
 	register_sidebar(
 		array(
 			'name' => __('First Footer Widget', 'bp-progenitor'),
-	  'id' =>   'first-footer-widget-area',
-	  'description' => __('footer widget region', 'bp-progenitor'),
+			'id' =>   'first-footer-widget-area',
+			'description' => __('footer widget region', 'bp-progenitor'),
 			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-	  'after_widget' => '</div>',
-	  'before_title' => '<h2 class="widgettitle">',
-	  'after_title' => '</h2>'
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widgettitle">',
+			'after_title' => '</h2>'
 		)
 	);
 	register_sidebar(
 		array(
 			'name' => __('Second Footer Widget', 'bp-progenitor'),
-	  'id' =>   'second-footer-widget-area',
-	  'description' => __('footer widget region', 'bp-progenitor'),
+			'id' =>   'second-footer-widget-area',
+			'description' => __('footer widget region', 'bp-progenitor'),
 			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-	  'after_widget' => '</div>',
-	  'before_title' => '<h2 class="widgettitle">',
-	  'after_title' => '</h2>'
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widgettitle">',
+			'after_title' => '</h2>'
 		)
 	);
 	register_sidebar(
 		array(
 			'name' => __('third Footer Widget', 'bp-progenitor'),
-	  'id' =>   'third-footer-widget-area',
-	  'description' => __('footer widget region', 'bp-progenitor'),
+			'id' =>   'third-footer-widget-area',
+			'description' => __('footer widget region', 'bp-progenitor'),
 			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-	  'after_widget' => '</div>',
-	  'before_title' => '<h2 class="widgettitle">',
-	  'after_title' => '</h2>'
-		)
-	);
-	register_sidebar(
-		array(
-			'name' => __('Fourth Footer Widget', 'bp-progenitor'),
-	  'id' =>   'fourth-footer-widget-area',
-	  'description' => __('footer widget region', 'bp-progenitor'),
-			'before_widget' => '<div id="%1$s" class="widget first-foot-widget %2$s">',
-	  'after_widget' => '</div>',
-	  'before_title' => '<h2 class="widgettitle">',
-	  'after_title' => '</h2>'
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widgettitle">',
+			'after_title' => '</h2>'
 		)
 	);
 }
@@ -279,10 +289,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
-* Add custom classes to WP $classes for body element
-* Manage styles for layout positioning based on option settings
-*
-*/
+ * Add custom classes to WP $classes for body element
+ * Manage styles for layout positioning based on option settings
+ *
+ */
 function progenitor_body_classes( $classes ) {
 
 	if( function_exists( 'bp_is_active' ) ) :
@@ -297,8 +307,8 @@ function progenitor_body_classes( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar-pages' )
 		&& is_page() && ! bp_is_user()
-		 && ! bp_is_group()
-		  && ! bp_is_directory() ){
+			&& ! bp_is_group()
+				&& ! bp_is_directory() ){
 		$classes[] = 'page-sbar-active';
 	}
 
