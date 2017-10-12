@@ -11,9 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if( is_category() || is_archive() || is_tag() || is_home() ) : ?>
-		<div class="featured-image"><?php the_post_thumbnail( 'lists-featured-thumb' ); ?></div>
-	<?php endif; ?>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<?php if( is_category() || is_archive() || is_tag() || is_home() || is_search() || is_author() ) : ?>
+			<div class="featured-image"><?php the_post_thumbnail( 'lists-featured-thumb' ); ?></div>
+		<?php endif; ?>
+	<?php } ?>
 
 
 		<?php
@@ -29,7 +31,7 @@
 
 	<div class="entry-content">
 
-		<?php if( is_category() || is_archive() || is_tag() || is_home() ) :
+		<?php if( is_category() || is_archive() || is_tag() || is_home()  || is_search() || is_author() ) :
 
 		the_excerpt();
 
