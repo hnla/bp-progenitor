@@ -1,5 +1,5 @@
 /*----------------------------------------------------
-## Menus
+## Menus & post navigation
 ----------------------------------------------------*/
 
 .menu-main-menu-container {
@@ -123,6 +123,41 @@
 }
 
 /*
+Main menu vertical option - elements adjustments.
+*/
+
+@include medium-up() {
+
+	.site-nav-vertical {
+
+		.main-navigation {
+
+			ul {
+
+				li {
+					margin: 0;
+					padding: 0;
+
+					a {
+						padding: $pad-sml 0 $pad-sml $pad-sml;
+					}
+
+					&:hover > ul,
+					&.focus > ul {
+						left: 96%;
+						top: 2px;
+					}
+
+					a {
+
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
 Small menu display.
 */
 .menu-toggle,
@@ -143,7 +178,7 @@ Small menu display.
 
 
 /*
-Post next/prev nav & archives next page links
+Post next/prev nav & archives pagination.
 */
 
 @include clearfix-element(".post-navigation");
@@ -187,37 +222,30 @@ Post next/prev nav & archives next page links
 	}
 }
 
-/*
-Main menu vertical option - elements adjustments
-*/
+.paginate-loop {
 
-@include medium-up() {
+	ul {
+		list-style: none;
+		margin: $marg-lrg 0 $marg-sml;
+		text-align: center;
 
-	.site-nav-vertical {
+		li {
+			display: inline-block;
 
-		.main-navigation {
+			a {
+				padding: 0 $pad-sml;
+				text-decoration: none;
 
-			ul {
-
-				li {
-					margin: 0;
-					padding: 0;
-
-					a {
-						padding: $pad-sml 0 $pad-sml $pad-sml;
-					}
-
-					&:hover > ul,
-					&.focus > ul {
-						left: 96%;
-						top: 2px;
-					}
-
-					a {
-
-					}
+				&.focus,
+				&:hover {
+					background: $golden;
+					color: $white;
 				}
+			}
+			.current {
+				text-decoration: underline;
 			}
 		}
 	}
 }
+

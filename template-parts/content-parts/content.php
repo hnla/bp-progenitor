@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) : ?>
+	<?php if( is_category() || is_archive() || is_tag() || is_home() ) : ?>
 		<div class="featured-image"><?php the_post_thumbnail( 'lists-featured-thumb' ); ?></div>
 	<?php endif; ?>
 
@@ -29,7 +29,7 @@
 
 	<div class="entry-content">
 
-		<?php if( is_category() || is_archive() || is_tag() || is_front_page() ) :
+		<?php if( is_category() || is_archive() || is_tag() || is_home() ) :
 
 		the_excerpt();
 
@@ -60,4 +60,6 @@
 	<footer class="entry-footer">
 		<?php bp_progenitor_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
+

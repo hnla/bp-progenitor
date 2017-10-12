@@ -26,7 +26,9 @@ if ( have_posts() ) : ?>
 
 	</div>
 
-<?php bp_progenitor_post_navigation( array('prev_text' => 'Older posts', 'next_text' => 'Newer Posts', 'icons' => true) );
+	<?php if ( ! is_front_page() ) {
+		bp_progenitor_post_navigation( array('prev_text' => 'Older posts', 'next_text' => 'Newer Posts', 'icons' => true) );
+	};
 
 else :
 

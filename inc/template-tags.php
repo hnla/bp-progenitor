@@ -21,8 +21,7 @@ function post_loops_as_grid() {
 
 /**
  * Set a class for the post loop parent wrapper
- *
- * Swap out loop-wrap for 'box-align' if grid set.
+ * 	* Swap out loop-wrap for 'box-align' if grid set.
  *
  * @return string
  * @since 0.1.0
@@ -70,13 +69,13 @@ return (bool) progenitor_opts('bp_dir_sbar');
 }
 
 /**
-* Set footer widgets class on parent wrapper
-* Builds a class for widget container to report number of widgets being used
-* enables styling based on the known number of active foot widgets.
-*
-* @return string
-* @since 0.1.0
-*/
+ * Set footer widgets class on parent wrapper
+ * Builds a class for widget container to report number of widgets being used
+ * enables styling based on the known number of active foot widgets.
+ *
+ * @return string
+ * @since 0.1.0
+ */
 
 
 function progenitor_foot_widgets_count() {
@@ -109,8 +108,8 @@ return $the_active_foot_widgets;
 
 if ( ! function_exists( 'bp_progenitor_posted_on' ) ) :
 	/**
-	 * Prints HTML with meta information for the current post-date/time and author.
-	 */
+		* Prints HTML with meta information for the current post-date/time and author.
+		*/
 	function bp_progenitor_posted_on( $post ) {
 
 		// This function is used mainly outside of the direct loop so find the post id
@@ -172,8 +171,8 @@ endif;
 
 if ( ! function_exists( 'bp_progenitor_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
+  * Prints HTML with meta information for the categories, tags and comments.
+  */
 	function bp_progenitor_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
@@ -230,3 +229,44 @@ if ( ! function_exists( 'bp_progenitor_entry_footer' ) ) :
 		);
 	}
 endif;
+
+/**
+ *  Paginate post loops
+ *
+ * @since 0.1.0
+ */
+function progenitor_postloop_paginate() {
+	global $wp_query, $wp_rewrite;
+
+
+	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+
+	$pagination = array(
+		'base' => esc_url( add_query_arg('page','%#%') ),
+		'format' => '',
+		'total' => $wp_query->max_num_pages,
+		'current' => $current,
+		'show_all' => false,
+		'end_size' => 3,
+		'mid_size' => 5,
+		'type' => 'list'
+	);
+
+	if ( $wp_rewrite->using_permalinks() ) {
+		$pagination['base'] =
+			user_trailingslashit(
+				trailingslashit(
+					esc_url( remove_query_arg( 's', get_pagenum_link( 1 ) ) )
+				) . 'page/%#%/', 'paged'
+			);
+	}
+
+	if ( !empty( $wp_query->query_vars['s'] ) ) {
+		$pagination['add_args'] = array(
+			's' => urlencode( get_query_var( 's' ) )
+		);
+	}
+
+	$the_links = '<div class="paginate-loop" role="navigation">' . paginate_links( $pagination ) . '</div>';
+	echo $the_links;
+}

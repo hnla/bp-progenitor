@@ -38,7 +38,9 @@ get_header(); ?>
 
 			</div>
 
-		<?php bp_progenitor_post_navigation( array('prev_text' => 'Older posts', 'next_text' => 'Newer Posts', 'icons' => true) );
+		<?php
+
+			progenitor_postloop_paginate();
 
 		else :
 
@@ -50,4 +52,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();

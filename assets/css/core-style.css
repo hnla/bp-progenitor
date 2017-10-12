@@ -586,7 +586,7 @@ a:hover, a:active {
 }
 
 /*----------------------------------------------------
-## Menus
+## Menus & post navigation
 ----------------------------------------------------*/
 .menu-main-menu-container {
 	border-radius: 0;
@@ -691,6 +691,24 @@ a:hover, a:active {
 }
 
 /*
+Main menu vertical option - elements adjustments.
+*/
+@media screen and (min-width: 46.8em) {
+	.site-nav-vertical .main-navigation ul li {
+		margin: 0;
+		padding: 0;
+	}
+	.site-nav-vertical .main-navigation ul li a {
+		padding: 0.5em 0 0.5em 0.5em;
+	}
+	.site-nav-vertical .main-navigation ul li:hover > ul,
+	.site-nav-vertical .main-navigation ul li.focus > ul {
+		left: 96%;
+		top: 2px;
+	}
+}
+
+/*
 Small menu display.
 */
 .menu-toggle,
@@ -708,7 +726,7 @@ Small menu display.
 }
 
 /*
-Post next/prev nav & archives next page links
+Post next/prev nav & archives pagination.
 */
 .post-navigation:before,
 .post-navigation:after {
@@ -759,22 +777,28 @@ Post next/prev nav & archives next page links
 	width: auto;
 }
 
-/*
-Main menu vertical option - elements adjustments
-*/
-@media screen and (min-width: 46.8em) {
-	.site-nav-vertical .main-navigation ul li {
-		margin: 0;
-		padding: 0;
-	}
-	.site-nav-vertical .main-navigation ul li a {
-		padding: 0.5em 0 0.5em 0.5em;
-	}
-	.site-nav-vertical .main-navigation ul li:hover > ul,
-	.site-nav-vertical .main-navigation ul li.focus > ul {
-		left: 96%;
-		top: 2px;
-	}
+.paginate-loop ul {
+	list-style: none;
+	margin: 20px 0 10px;
+	text-align: center;
+}
+
+.paginate-loop ul li {
+	display: inline-block;
+}
+
+.paginate-loop ul li a {
+	padding: 0 0.5em;
+	text-decoration: none;
+}
+
+.paginate-loop ul li a.focus, .paginate-loop ul li a:hover {
+	background: #edbb34;
+	color: #fff;
+}
+
+.paginate-loop ul li .current {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1018,7 +1042,7 @@ h1.site-title {
 /*
 Site post lists layouts - as boxes
 */
-.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
+.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.blog .box-align {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -1034,7 +1058,7 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 46.8em) {
-	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
+	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.blog .box-align {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -1049,12 +1073,12 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.home-page .box-align {
+	.post-list-grid.archive .box-align, .post-list-grid.category .box-align, .post-list-grid.blog .box-align {
 		justify-content: flex-start;
 	}
 }
 
-.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.home-page .box-align .box {
+.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.blog .box-align .box {
 	-ms-flex-align: stretch;
 	-webkit-align-items: stretch;
 	-webkit-box-align: stretch;
@@ -1067,7 +1091,7 @@ Site post lists layouts - as boxes
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.home-page .box-align .box {
+	.post-list-grid.archive .box-align .box, .post-list-grid.category .box-align .box, .post-list-grid.blog .box-align .box {
 		-webkit-flex: 0 1 20%;
 		-moz-flex: 0 1 20%;
 		-ms-flex: 0 1 20%;
@@ -1076,50 +1100,50 @@ Site post lists layouts - as boxes
 	}
 }
 
-.post-list-grid.archive .box-align .box article.post, .post-list-grid.category .box-align .box article.post, .post-list-grid.home-page .box-align .box article.post {
+.post-list-grid.archive .box-align .box article.post, .post-list-grid.category .box-align .box article.post, .post-list-grid.blog .box-align .box article.post {
 	border: 1px solid #ccc;
 	margin: 0 0.5em 0.5em;
 	padding: 0.5em;
 }
 
-.post-list-grid.archive .box-align .box article.post .featured-image img, .post-list-grid.category .box-align .box article.post .featured-image img, .post-list-grid.home-page .box-align .box article.post .featured-image img {
+.post-list-grid.archive .box-align .box article.post .featured-image img, .post-list-grid.category .box-align .box article.post .featured-image img, .post-list-grid.blog .box-align .box article.post .featured-image img {
 	max-width: 100%;
 	width: 100%;
 }
 
-.post-list-grid.archive .box-align article.post, .post-list-grid.category .box-align article.post, .post-list-grid.home-page .box-align article.post {
+.post-list-grid.archive .box-align article.post, .post-list-grid.category .box-align article.post, .post-list-grid.blog .box-align article.post {
 	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
 	-moz-box-shadow: 0 0 5px 0 #eaeaea;
 	box-shadow: 0 0 5px 0 #eaeaea;
 }
 
-.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.home-page .box-align article.post .entry-title {
+.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.blog .box-align article.post .entry-title {
 	font-size: 22px;
 	font-size: 1.375rem;
 	margin: 0 0 10px;
 }
 
 @media screen and (min-width: 75em) {
-	.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.home-page .box-align article.post .entry-title {
+	.post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.blog .box-align article.post .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
 }
 
-.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.home-page .box-align article.post .entry-content {
+.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.blog .box-align article.post .entry-content {
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
-.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.home-page .box-align article.post .entry-content {
+.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.blog .box-align article.post .entry-content {
 	margin-top: 0;
 }
 
-.post-list-grid.archive .box-align article.post .entry-content p, .post-list-grid.category .box-align article.post .entry-content p, .post-list-grid.home-page .box-align article.post .entry-content p {
+.post-list-grid.archive .box-align article.post .entry-content p, .post-list-grid.category .box-align article.post .entry-content p, .post-list-grid.blog .box-align article.post .entry-content p {
 	margin: 0 0 10px;
 }
 
-.post-list-grid.archive .box-align article.post .entry-footer, .post-list-grid.category .box-align article.post .entry-footer, .post-list-grid.home-page .box-align article.post .entry-footer {
+.post-list-grid.archive .box-align article.post .entry-footer, .post-list-grid.category .box-align article.post .entry-footer, .post-list-grid.blog .box-align article.post .entry-footer {
 	font-size: 12px;
 	font-size: 0.75rem;
 }

@@ -38,7 +38,8 @@ get_header(); ?>
 			</div>
 
 			<?php
-			the_posts_navigation();
+
+			progenitor_postloop_paginate();
 
 		else :
 

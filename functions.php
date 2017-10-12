@@ -348,6 +348,12 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'wp-single';
 	}
 
+	// If static pages are set check for is_home() ! is_front_page()
+	// to set a body tag for style convenience.
+	if ( is_home() && ! is_front_page() ) {
+		$classes[] = 'static-posts-home';
+	}
+
 	return $classes;
 }
 add_filter('body_class', 'progenitor_body_classes', 15);
