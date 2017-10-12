@@ -71,7 +71,7 @@
 			<div id="content" class="site-content">
 
 				<div class="meta-bar">
-					<?php if( is_page() || is_single() ) { ?>
+					<?php if( ( is_page() || is_single() ) && ! is_front_page() ) { ?>
 
 						<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
