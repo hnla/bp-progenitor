@@ -91,7 +91,7 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		 * Add custom images
 		 */
 		add_image_size('single-featured', '800', '200', true );
-		add_image_size('lists-featured-thumb', '1200', '300', true );
+		add_image_size('lists-featured-thumb', '1200', '400', true );
 		add_image_size('featured-sticky', '650', '400', true );
 
 	}

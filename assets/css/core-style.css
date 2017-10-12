@@ -1133,10 +1133,12 @@ Site post lists layouts - as boxes
 .post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.blog .box-align article.post .entry-content {
 	font-size: 14px;
 	font-size: 0.875rem;
-}
-
-.post-list-grid.archive .box-align article.post .entry-content, .post-list-grid.category .box-align article.post .entry-content, .post-list-grid.blog .box-align article.post .entry-content {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 	margin-top: 0;
+	word-break: break-word;
 }
 
 .post-list-grid.archive .box-align article.post .entry-content p, .post-list-grid.category .box-align article.post .entry-content p, .post-list-grid.blog .box-align article.post .entry-content p {

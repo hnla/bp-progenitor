@@ -71,11 +71,14 @@ Site post lists layouts - as boxes
 				}
 
 				.entry-content {
-					@include font-size(14);
-				}
 
-				.entry-content {
+					@include font-size(14);
+					-webkit-hyphens: auto;
+					-moz-hyphens: auto;
+					-ms-hyphens: auto;
+					hyphens: auto;
 					margin-top: 0;
+					word-break: break-word;
 				}
 
 				.entry-content p {
