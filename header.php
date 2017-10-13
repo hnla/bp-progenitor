@@ -82,6 +82,13 @@
 							</div><!-- .entry-meta -->
 							<?php bp_progenitor_post_navigation( array( 'prev_text' => 'Prev post', 'next_text' => 'Next Post', 'icons' => true ) ); ?>
 						<?php	endif; ?>
+
+						<?php if ( bp_is_group() ) : ?>
+							<p class="highlight group-status">
+								<?php esc_html( bp_progenitor_group_status() ) . _e(' Group', 'bp-progenitor'); ?>
+							</p>
+						<?php endif; ?>
+
 						</header>
 
 					<?php } elseif( is_category() || is_archive() || is_tag() ) { ?>

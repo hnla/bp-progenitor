@@ -2115,7 +2115,6 @@ body.no-js .single-item-header .js-self-profile-button {
 }
 
 #header-cover-image {
-	background-color: #c5c5c5;
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2131,12 +2130,38 @@ body.no-js .single-item-header .js-self-profile-button {
 }
 
 #item-header-cover-image {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	-moz-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	-o-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-bottom: 0;
 	position: relative;
 	z-index: 2;
+	width: 100%;
 }
 
 #item-header-cover-image #item-header-avatar {
+	float: none;
+	margin: 0 !important;
 	padding: 0 1em;
+}
+
+#item-header-cover-image #item-header-avatar img {
+	margin: 0;
 }
 
 /*
@@ -2158,10 +2183,16 @@ body.no-js .single-item-header .js-self-profile-button {
 }
 
 .groups-header .group-item-actions {
-	float: left;
-	margin: 0 0 15px 15px;
 	padding-top: 0;
-	width: 100%;
+}
+
+.groups-header .group-item-actions ul {
+	margin: 0;
+	padding: 0;
+}
+
+.groups-header .activity {
+	margin: 0;
 }
 
 .groups-header .moderators-lists {
@@ -2201,19 +2232,43 @@ body.no-js .single-item-header .js-self-profile-button {
 	width: 30px;
 }
 
-@media screen and (min-width: 46.8em) {
+@media screen and (min-width: 32em) {
 	.groups-header div#item-header-content {
-		float: left;
-		margin-left: 10%;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-ms-flex-align: stretch;
+		-webkit-align-items: stretch;
+		-webkit-box-align: stretch;
+		align-items: stretch;
 		text-align: left;
-		padding-top: 15px;
-		width: 42%;
+		padding-bottom: 15px;
+	}
+	.groups-header .meta-info,
+	.groups-header .group-item-actions {
+		-webkit-flex: 0 1 50%;
+		-moz-flex: 0 1 50%;
+		-ms-flex: 0 1 50%;
+		-o-flex: 0 1 50%;
+		flex: 0 1 50%;
+		margin: 0;
+	}
+	.groups-header .action {
+		-webkit-flex: 1 0 100%;
+		-moz-flex: 1 0 100%;
+		-ms-flex: 1 0 100%;
+		-o-flex: 1 0 100%;
+		flex: 1 0 100%;
 	}
 	.groups-header .group-item-actions {
-		float: right;
-		margin: 0 0 15px 15px;
 		text-align: right;
-		width: 20%;
 	}
 	.groups-header .groups-meta {
 		clear: both;
@@ -2420,6 +2475,17 @@ body.no-js .single-item-header .js-self-profile-button {
 		clear: both;
 		float: left;
 	}
+}
+
+.bp-cover-image .drag-drop-inside .drag-drop-buttons input.button {
+	display: inline-block;
+	width: auto;
+}
+
+#buddypress .bp-cover-image-status p.warning {
+	border: 1px solid #27508f;
+	background: #4e80ce;
+	color: #fff;
 }
 
 /**

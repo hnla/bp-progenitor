@@ -20,28 +20,30 @@
 
 <div id="item-header-content">
 
-	<p class="highlight group-status"><strong><?php echo esc_html( bp_progenitor_group_meta()->status ); ?></strong></p>
+	<div class="meta-info">
 
-	<p class="activity" data-livestamp="<?php bp_core_iso8601_date( bp_get_group_last_active( 0, array( 'relative' => false ) ) ); ?>"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></p>
+		<p class="activity" data-livestamp="<?php bp_core_iso8601_date( bp_get_group_last_active( 0, array( 'relative' => false ) ) ); ?>">
+			<?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?>
+		</p>
 
+	</div>
 	<?php bp_progenitor_group_hook( 'before', 'header_meta' ); ?>
 
 	<?php if ( bp_progenitor_group_has_meta_extra() ): ?>
 		<div class="item-meta">
 
-			<?php echo bp_progenitor_group_meta()->extra; ?>
+			<?php echo bp_progenitor_group_extra() ?>
 
 		</div><!-- .item-meta -->
 	<?php endif; ?>
 
-
-		<?php if ( ! bp_progenitor_groups_front_page_description() ) { ?>
-			<?php if ( bp_progenitor_group_meta()->description ) { ?>
-				<div class="group-description">
-					<?php echo bp_progenitor_group_meta()->description; ?>
-				</div><!-- //.group_description -->
-			<?php	} ?>
-		<?php } ?>
+	<?php if ( ! bp_progenitor_groups_front_page_description() ) { ?>
+		<?php if ( bp_progenitor_group_description() ) { ?>
+			<div class="group-description">
+				<?php echo bp_progenitor_group_description() ?>
+			</div><!-- //.group_description -->
+		<?php	} ?>
+	<?php } ?>
 
 </div><!-- #item-header-content -->
 

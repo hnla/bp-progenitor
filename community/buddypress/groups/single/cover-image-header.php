@@ -20,43 +20,41 @@
 			</div><!-- #item-header-avatar -->
 		<?php endif; ?>
 
-<?php	if ( ! bp_progenitor_groups_front_page_description() ) : ?>
+	</div><!-- #item-header-cover-image -->
+
+</div><!-- #cover-image-container -->
+
+	<?php	if ( ! bp_progenitor_groups_front_page_description() ) : ?>
 		<div id="item-header-content">
 
-
-
-			<p class="highlight group-status"><strong><?php echo esc_html( bp_progenitor_group_meta()->status ); ?></strong></p>
-			<p class="activity" data-livestamp="<?php bp_core_iso8601_date( bp_get_group_last_active( 0, array( 'relative' => false ) ) ); ?>"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></p>
-			<?php echo bp_progenitor_group_meta()->group_type_list; ?>
+			<div class="meta-info">
+				<p class="activity" data-livestamp="<?php bp_core_iso8601_date( bp_get_group_last_active( 0, array( 'relative' => false ) ) ); ?>"><?php printf( __( 'Active %s', 'buddypress' ), bp_get_group_last_active() ); ?></p>
+				<?php echo bp_progenitor_group_type(); ?>
+			</div>
 
 			<?php bp_progenitor_group_hook( 'before', 'header_meta' ); ?>
 
 			<?php if ( bp_progenitor_group_has_meta_extra() ): ?>
 				<div class="item-meta">
 
-					<?php echo bp_progenitor_group_meta()->extra; ?>
+					<?php echo bp_progenitor_group_extra(); ?>
 
 				</div><!-- .item-meta -->
 			<?php endif; ?>
 
+			<?php bp_get_template_part( 'groups/single/parts/header-item-actions' ); ?>
+
 			<?php bp_progenitor_group_header_buttons(); ?>
 
 		</div><!-- #item-header-content -->
-<?php endif; ?>
+	<?php endif; ?>
 
-		<?php bp_get_template_part( 'groups/single/parts/header-item-actions' ); ?>
-
-	</div><!-- #item-header-cover-image -->
-
-
-</div><!-- #cover-image-container -->
-
-<?php	if ( ! bp_progenitor_groups_front_page_description() ) : ?>
-<?php if ( bp_progenitor_group_meta()->description ) { ?>
-	<div class="desc-wrap">
-		<div class="group-description">
-		<?php echo bp_progenitor_group_meta()->description; ?>
-	</div><!-- //.group_description -->
-</div>
-<?php	} ?>
-<?php endif; ?>
+	<?php	if ( ! bp_progenitor_groups_front_page_description() ) : ?>
+		<?php if ( bp_progenitor_group_description() ) { ?>
+		<div class="desc-wrap">
+			<div class="group-description">
+			<?php echo bp_progenitor_group_description(); ?>
+			</div><!-- //.group_description -->
+		</div>
+		<?php	} ?>
+	<?php endif; ?>

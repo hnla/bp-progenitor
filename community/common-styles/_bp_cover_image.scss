@@ -7,11 +7,13 @@
 */
 
 #cover-image-container {
+
+//	margin: -#{$marg-lrg} -#{$marg-med} 0;
 	position: relative;
 }
 
 #header-cover-image {
-	background-color: #c5c5c5;
+//	background-color: #c5c5c5;
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -27,12 +29,23 @@
 }
 
 #item-header-cover-image {
-	//padding: 0 1em;
+
+	@include flex-box-dir();
+
+	@include center-vert();
+	margin-bottom: 0;
 	position: relative;
 	z-index: 2;
+	width: 100%;
 
 	#item-header-avatar {
+		float: none;
+		margin: 0 !important;
 		padding: 0 1em;
+
+		img {
+			margin: 0;
+		}
 	}
 }
 

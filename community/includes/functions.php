@@ -933,9 +933,9 @@ function bp_progenitor_theme_cover_image( $params = array() ) {
 	if ( empty( $params ) ) {
 		return '';
 	}
-
+$params['height'] = 300;
 	// Avatar height - padding - 1/2 avatar height.
-	$avatar_offset = $params['height'] - 5 - round( (int) bp_core_avatar_full_height() / 2 );
+	$avatar_offset = $params['height'] - 30 - round( (int) bp_core_avatar_full_height() / 1 );
 
 	// Header content offset + spacing.
 	$top_offset  = bp_core_avatar_full_height() - 10;
@@ -972,7 +972,6 @@ function bp_progenitor_theme_cover_image( $params = array() ) {
 		/* Cover image */
 		#buddypress #item-header-cover-image {
 			min-height: ' . $params["height"] . 'px;
-			margin-bottom: 1em;
 		}
 
 		#buddypress #item-header-cover-image:after {

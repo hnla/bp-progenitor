@@ -138,3 +138,29 @@
 	}
 
 } //close .groups-manage-members-list
+
+// ======= cover image & avatar screens ========
+
+.bp-cover-image {
+
+	.drag-drop-inside {
+		.drag-drop-buttons, {
+			input.button {
+				display: inline-block;
+				width: auto;
+			}
+		}
+	}
+}
+
+#buddypress {
+
+	.bp-cover-image-status {
+
+		p.warning {
+			border: 1px solid darken($informational, 20%);
+			background: $informational;
+			color: $white;
+		}
+	}
+}

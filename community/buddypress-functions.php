@@ -179,7 +179,7 @@ class BP_Progenitor extends BP_Theme_Compat {
 			$top_offset = $avatar_height;
 		}
 
-		bp_set_theme_compat_feature( $this->id, array(
+		bp_set_theme_compat_feature( 'progenitor', array(
 			'name'     => 'cover_image',
 			'settings' => array(
 				'components'   => array( 'xprofile', 'groups' ),

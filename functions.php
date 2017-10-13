@@ -94,6 +94,23 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		add_image_size('lists-featured-thumb', '1200', '400', true );
 		add_image_size('featured-sticky', '650', '400', true );
 
+		function progenitor_groups_types() {
+			bp_groups_register_group_type( 'team', array(
+				'labels' => array(
+				'name' => 'Teams',
+				'singular_name' => 'Team'
+				),
+
+				// New parameters as of BP 2.7.
+				'has_directory' => 'teams',
+				'show_in_create_screen' => true,
+				'show_in_list' => true,
+				'description' => 'Teams are good',
+				'create_screen_checked' => true
+				) );
+		}
+		add_action( 'bp_groups_register_group_types', 'progenitor_groups_types' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'bp_progenitor_setup' );
