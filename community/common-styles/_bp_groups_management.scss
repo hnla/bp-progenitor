@@ -141,7 +141,8 @@
 
 // ======= cover image & avatar screens ========
 
-.bp-cover-image {
+.bp-cover-image,
+.bp-avatar {
 
 	.drag-drop-inside {
 		.drag-drop-buttons, {
@@ -155,7 +156,8 @@
 
 #buddypress {
 
-	.bp-cover-image-status {
+	.bp-cover-image-status,
+	.bp-avatar-status {
 
 		p.warning {
 			border: 1px solid darken($informational, 20%);
