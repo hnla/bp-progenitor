@@ -309,6 +309,10 @@ Primary header/menu positioning
 /*==============================================================
 3.0 Main content
 ================================================================*/
+.meta-bar .group-status {
+	margin-bottom: 0.5em;
+}
+
 .home-page.logged-in .site-main {
 	display: -webkit-flex;
 	display: -moz-flex;

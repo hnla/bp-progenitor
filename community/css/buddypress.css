@@ -524,6 +524,12 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 @media screen and (min-width: 46.8em) {
+	.buddypress-wrap .bp-navs.dir-navs {
+		margin: -25px -16px 0;
+	}
+}
+
+@media screen and (min-width: 46.8em) {
 	.buddypress-wrap .bp-navs li {
 		float: left;
 	}
@@ -646,6 +652,8 @@ body.buddypress article.page > .entry-header .entry-title {
 .buddypress-wrap .subnav-filters > ul {
 	float: left;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .buddypress-wrap .subnav-filters.bp-messages-filters ul {
@@ -750,7 +758,8 @@ body.buddypress article.page > .entry-header .entry-title {
 	.buddypress-wrap .subnav-filters .dir-search,
 	.buddypress-wrap .subnav-filters .user-messages-bulk-actions,
 	.buddypress-wrap .subnav-filters .user-messages-search,
-	.buddypress-wrap .subnav-filters .group-invites-search {
+	.buddypress-wrap .subnav-filters .group-invites-search,
+	.buddypress-wrap .subnav-filters .group-act-search {
 		float: left;
 	}
 	.buddypress-wrap .subnav-filters .last,
@@ -2084,11 +2093,6 @@ form.ac-form .ac-reply-content input {
 	.single-headers li.generic-button {
 		float: left;
 	}
-}
-
-.single-headers div.generic-button,
-.single-headers a.button {
-	margin: 10px 10px 0 0;
 }
 
 .single-headers li.generic-button {
@@ -4007,7 +4011,8 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	content: "\f536";
 }
 
-.buddypress-wrap div.feed a:before {
+.buddypress-wrap div.feed a:before,
+.buddypress-wrap li.feed a:before {
 	content: "\f303";
 }
 

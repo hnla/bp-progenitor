@@ -13,7 +13,7 @@
 		}
 	}
 
-	// User account filters .subnav-filters
+	// User/group accounts filters .subnav-filters
 
 	.subnav-filters {
 		background: none;
@@ -29,6 +29,8 @@
 		> ul {
 			float: left;
 			list-style: none;
+			margin: 0;
+			padding: 0;
 		}
 
 		&.bp-messages-filters {
@@ -143,7 +145,8 @@
 			.dir-search,
 			.user-messages-bulk-actions,
 			.user-messages-search,
-			.group-invites-search {
+			.group-invites-search,
+			.group-act-search {
 				float: left;
 			}
 

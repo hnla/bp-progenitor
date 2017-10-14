@@ -198,21 +198,21 @@
 /*========================================
 3.5 BP navigation
 ==========================================*/
-.buddypress-wrap .bp-navs > ul > li {
+.buddypress-wrap .bp-navs:not(.tabbed-links) > ul > li {
 	border-right: 1px solid #273f65;
 	border-left: 1px solid #446eae;
 	margin-right: 0;
 }
 
-.buddypress-wrap .bp-navs > ul > li:first-child {
+.buddypress-wrap .bp-navs:not(.tabbed-links) > ul > li:first-child {
 	border-left: 0;
 }
 
-.buddypress-wrap .bp-navs > ul > li:last-child {
+.buddypress-wrap .bp-navs:not(.tabbed-links) > ul > li:last-child {
 	border-right: 0;
 }
 
-.buddypress-wrap .bp-navs li {
+.buddypress-wrap .bp-navs:not(.tabbed-links) li {
 	border-radius: 0;
 }
 

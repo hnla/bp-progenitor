@@ -414,9 +414,19 @@
 
 .buddypress-wrap {
 
-	// position our nav elements at larger screen widths
-
+	// Horizontal dir navs neg margin to fit under  meta-bar header &
+	// full screen width.
 	@include medium-up() {
+
+		.bp-navs.dir-navs {
+		margin: -25px -16px 0;
+		}
+	}
+
+	// position our nav elements at larger screen widths
+	@include medium-up() {
+
+
 
 		.bp-navs {
 
