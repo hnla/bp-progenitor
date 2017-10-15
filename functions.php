@@ -326,7 +326,8 @@ function progenitor_body_classes( $classes ) {
 		&& is_page() && ! bp_is_user()
 			&& ! bp_is_group()
 				&& ! bp_is_directory()
-				 && ! bp_is_group_create() ){
+				 && ! bp_is_group_create()
+				  && ! is_front_page()){
 		$classes[] = 'page-sbar-active';
 	}
 

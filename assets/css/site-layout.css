@@ -159,6 +159,10 @@ Header aka .site-banner includes primary nav
 /*===============================================
 1.4.0 - Content
 =================================================*/
+body.home.site-nav-vertical .site-content {
+	padding-top: 1em;
+}
+
 @media screen and (min-width: 46.8em) {
 	.content-area {
 		margin: 0;

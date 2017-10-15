@@ -69,6 +69,39 @@ return (bool) progenitor_opts('bp_dir_sbar');
 }
 
 /**
+ * Check which layout menu style is selected
+ *
+ * @since 0.1.0
+ *
+ * @return string
+ */
+function progenitor_menu_style() {
+
+	$type =  progenitor_opts('main_site_menu');
+
+	return $type;
+}
+
+/**
+ * Check whether to hide meta bar front page
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function progenitor_display_metabar() {
+	$menu = progenitor_opts('main_site_menu');
+	$ret = true;
+
+	if ( is_front_page() ) {
+		if ('vertical' === $menu ) {
+			$ret = false;
+		}
+	}
+	return $ret;
+}
+
+/**
  * Set footer widgets class on parent wrapper
  * Builds a class for widget container to report number of widgets being used
  * enables styling based on the known number of active foot widgets.

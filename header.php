@@ -70,6 +70,12 @@
 
 			<div id="content" class="site-content">
 
+				<?php
+				/**
+				 * Dont display empty meta bar on front page i.e static page & vertical main menu
+				 */
+				if ( progenitor_display_metabar() ) : ?>
+
 				<div class="meta-bar">
 					<?php if( ( is_page() || is_single() ) && ! is_front_page() ) { ?>
 
@@ -116,4 +122,4 @@
 						</header>
 				<?php }; ?>
 				</div>
-
+			<?php endif; ?>

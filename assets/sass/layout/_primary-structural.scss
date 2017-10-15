@@ -160,6 +160,15 @@ Header aka .site-banner includes primary nav
 1.4.0 - Content
 =================================================*/
 
+// If vertical main menu & is static home page
+// We've remove the meta-bar so need padding on the content area
+
+body.home.site-nav-vertical {
+	.site-content {
+		padding-top: $pad-med;
+	}
+}
+
 @include medium-up() {
 
 	.content-area {
