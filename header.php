@@ -89,6 +89,12 @@
 							</p>
 						<?php endif; ?>
 
+						<?php if ( bp_is_user() ) : ?>
+							<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
+								<span class="user-nicename" aria-role="hidden">@<?php bp_displayed_user_mentionname(); ?></span>
+							<?php endif; ?>
+						<?php endif; ?>
+
 						</header>
 
 					<?php } elseif( is_category() || is_archive() || is_tag() ) { ?>

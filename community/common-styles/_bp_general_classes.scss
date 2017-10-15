@@ -52,3 +52,9 @@
 
 	@include show();
 }
+
+
+// Generate the tabbed links class rulesets
+// This isn't the right  or best approach to this
+// and needs reviwing and changing.
+@include tabbed-links();

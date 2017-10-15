@@ -71,41 +71,6 @@
 		}
 	}
 
-	// @mention user name
-	h2 {
-		line-height: 1.2;
-		margin: 0 0 $marg-xsml;
-
-		a {
-			color: $light-text;
-			text-decoration: none;
-		}
-
-		span.highlight {
-			display: inline-block;
-			font-size: 60%;
-			font-weight: 400;
-			line-height: 1.7;
-			vertical-align: middle;
-
-			span {
-				background: #a1dcfa;
-				color: $white;
-				cursor: pointer;
-				font-size: 80%;
-				font-weight: 700;
-				margin-bottom: 2px;
-				padding: 1px 4px;
-				position: relative;
-				right: -2px;
-				top: -2px;
-				vertical-align: middle;
-			}
-
-		}
-
-	} // close h2
-
 	img.avatar {
 		float: left;
 		margin: 0 15px 19px 0;
@@ -128,45 +93,74 @@
 		}
 	}
 
-	div.generic-button {
-		text-align: center;
-	}
+	// The action buttons
+	.action {
 
-	li.generic-button {
-		display: inline-block;
-		text-align: center;
-	}
-
-	@include medium-up() {
+		clear: both;
+		margin: 2px 0 0;
+		padding: 0;
 
 		div.generic-button,
-		a.button,
 		li.generic-button {
-			float: left;
+			border-radius: 0;
+			text-align: center;
 		}
-	}
 
-//	div.generic-button,
-//	a.button {
-//		margin: $marg-sml $marg-sml 0 0;
-//	}
+			a,
+			button {
+				border-radius: 0;
+				display: inline-block;
 
-	// if these are list constructs
-	li.generic-button {
-		margin: 2px 10px;
-	}
+				@include font-size(14);
+				line-height: 1;
+				margin: 0 0 $marg-xsml;
+				padding: 5px;
+				width: 100%;
+			}
 
-	li.generic-button:first-child {
-		margin-left: 0;
-	}
+		@include small-up() {
 
-	div#message.info {
-		line-height: 0.8;
-	}
+			div.generic-button,
+			li.generic-button {
+				margin-right: $marg-xsml;
+				text-align: left;
+			}
 
+			.generic-button,
+			a.button,
+			button,
+			a {
+				display: inline-block;
+				width: auto;
+			}
+		}
+
+	//	div.generic-button,
+	//	a.button {
+	//		margin: $marg-sml $marg-sml 0 0;
+	//	}
+
+		// if these are list constructs
+		li.generic-button {
+			margin: 2px 10px;
+		}
+
+		li.generic-button:first-child {
+			margin-left: 0;
+		}
+
+		div#message.info {
+			line-height: 0.8;
+		}
+	} // close action buttons
 } // close .single-headers
 
 body.no-js  .single-item-header .js-self-profile-button {
 	display: none;
 }
+
+/*
+ Member account action buttons
+	*/
+
 
