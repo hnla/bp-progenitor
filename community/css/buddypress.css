@@ -1184,7 +1184,7 @@ body.buddypress article.page > .entry-header .entry-title {
 	.activity-list .activity-item div.item-avatar {
 		margin: 0 2% 0 0;
 		text-align: left;
-		width: 15%;
+		width: auto;
 	}
 	.activity-list .activity-item div.item-avatar img {
 		max-width: 80%;
@@ -1206,19 +1206,18 @@ body.buddypress article.page > .entry-header .entry-title {
 .activity-list .activity-item.mini .activity-avatar img.avatar,
 .activity-list .activity-item.mini .activity-avatar img.FB_profile_pic {
 	/* stylelint-disable-line selector-class-pattern */
-	max-width: 15%;
+	max-width: 20%;
 }
 
 @media screen and (min-width: 46.8em) {
 	.activity-list .activity-item.mini .activity-avatar {
-		margin-left: 15px;
 		text-align: left;
-		width: 15%;
+		width: 10%;
 	}
 	.activity-list .activity-item.mini .activity-avatar img.avatar,
 	.activity-list .activity-item.mini .activity-avatar img.FB_profile_pic {
 		/* stylelint-disable-line selector-class-pattern */
-		max-width: 60%;
+		max-width: 100%;
 	}
 }
 
@@ -1515,7 +1514,6 @@ body.activity-permalink .activity-list .activity-comments {
 .buddypress-wrap .activity-comments {
 	clear: both;
 	margin: 0 5%;
-	overflow: hidden;
 	position: relative;
 	width: auto;
 }
@@ -1571,7 +1569,7 @@ body.activity-permalink .activity-list .activity-comments {
 
 .buddypress-wrap .activity-comments .acomment-content {
 	border-left: 1px solid #ccc;
-	margin: 15px 0 0 10%;
+	margin: 15px 0 0 2%;
 	padding: 0.5em 1em;
 }
 
@@ -1613,7 +1611,7 @@ body.activity-permalink .activity-list .activity-comments {
 
 @media screen and (min-width: 46.8em) {
 	.buddypress-wrap .activity-comments {
-		margin-left: 17%;
+		margin-left: 10%;
 	}
 }
 

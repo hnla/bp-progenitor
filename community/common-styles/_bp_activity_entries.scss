@@ -39,7 +39,7 @@
 			div.item-avatar { // 'div' for weight
 				margin: 0 2% 0 0;
 				text-align: left;
-				width: 15%;
+				width: auto;
 
 				img {
 					max-width: 80%;
@@ -59,20 +59,19 @@
 
 				img.avatar,
 				img.FB_profile_pic { /* stylelint-disable-line selector-class-pattern */
-					max-width: 15%;
+					max-width: 20%;
 				}
 			}
 
 			@include medium-up() {
 
 				.activity-avatar {
-					margin-left: $marg-med;
 					text-align: left;
-					width: 15%;
+					width: 10%;
 
 					img.avatar,
 					img.FB_profile_pic { /* stylelint-disable-line selector-class-pattern */
-						max-width: 60%;
+						max-width: 100%;
 					}
 				}
 			}

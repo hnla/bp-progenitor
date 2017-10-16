@@ -4,7 +4,7 @@
 	.activity-comments {
 		clear: both;
 		margin: 0 5%;
-		overflow: hidden;
+//		overflow: hidden;
 		position: relative;
 		width: auto;
 
@@ -60,7 +60,7 @@
 
 		.acomment-content {
 			border-left: 1px solid $bp-border-dark;
-			margin: $marg-med 0 0 10%;
+			margin: $marg-med 0 0 2%;
 			padding: $pad-sml $pad-med;
 
 			p {
@@ -118,7 +118,7 @@
 	.buddypress-wrap {
 
 		.activity-comments {
-			margin-left: 17%;
+			margin-left: 10%;
 
 			ul {
 				//	margin: $marg-med 0 0;
