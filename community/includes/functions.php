@@ -244,7 +244,7 @@ function bp_progenitor_wrapper( $args = array() ) {
 	$r = wp_parse_args( $args, array(
 		'container'         => 'div',
 		'container_id'      => '',
-		'container_classes' => array( $generic_class, $current_component_class   ),
+		'container_classes' => array( $generic_class, $current_component_class ),
 		'output'            => '',
 	) );
 

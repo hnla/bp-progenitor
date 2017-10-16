@@ -241,7 +241,7 @@ function bp_progenitor_activity_entry_buttons( $args = array() ) {
 		 *
 		 * Will render li elements around anchors/buttons.
 		 */
-		if ( 'ul' === $args['container']  ) {
+		if ( isset( $args['container'] ) && 'ul' === $args['container'] ) {
 			$parent_element = 'li';
 		} elseif ( ! empty( $args['parent_element'] ) ) {
 			$parent_element = $args['parent_element'];
@@ -329,9 +329,17 @@ function bp_progenitor_activity_entry_buttons( $args = array() ) {
 				$buttons['activity_conversation']['button_attr']['role'] = 'button';
 			}
 
-		}
+		};
 
 		if ( bp_activity_can_favorite() ) {
+
+			// If button element set attr needs to be data-* else 'href'
+			if ( 'button' === $button_element ) {
+				$key = 'data-bp-nonce';
+			} else {
+				$key = 'href';
+			}
+
 			if ( ! bp_get_activity_is_favorite() ) {
 				$fav_args = array(
 					'parent_element'   => $parent_element,
@@ -341,15 +349,8 @@ function bp_progenitor_activity_entry_buttons( $args = array() ) {
 					'data_bp_tooltip'  => __( 'Mark as Favorite', 'buddypress' ),
 					'link_text'        => __( 'Favorite', 'buddypress' ),
 					'aria-pressed'     => 'false',
+					'link_attr'        => bp_get_activity_favorite_link(),
 				);
-
-				// If button element set add nonce link to data-attr attr
-				if ( 'button' === $button_element ) {
-					$fav_args['data_attr'] = bp_get_activity_favorite_link();
-					$key = 'data-bp-nonce';
-				} else {
-					$fav_args['link_href'] = bp_get_activity_favorite_link();
-				}
 
 			} else {
 				$fav_args = array(
@@ -360,15 +361,8 @@ function bp_progenitor_activity_entry_buttons( $args = array() ) {
 					'data_bp_tooltip' => __( 'Remove Favorite', 'buddypress' ),
 					'link_text'       => __( 'Remove Favorite', 'buddypress' ),
 					'aria-pressed'    => 'true',
+					'link_attr'       => bp_get_activity_unfavorite_link(),
 				);
-
-				// If button element set add nonce link nonce to data-attr
-				if ( 'button' === $button_element ) {
-					$fav_args['data_attr'] = bp_get_activity_unfavorite_link();
-					$key = 'data-bp-nonce';
-				} else {
-					$fav_args['link_href'] = bp_get_activity_unfavorite_link();
-				}
 			}
 
 			$buttons['activity_favorite'] =  array(
@@ -381,11 +375,10 @@ function bp_progenitor_activity_entry_buttons( $args = array() ) {
 				'button_element'    => $fav_args['button_element'],
 				'link_text'         => sprintf( '<span class="bp-screen-reader-text">%1$s</span>', esc_html( $fav_args['link_text'] ) ),
 				'button_attr'       => array(
-					'href'            => $fav_args['link_href'],
+					$key              => $fav_args['link_attr'],
 					'class'           => $fav_args['link_class'],
 					'data-bp-tooltip' => $fav_args['data_bp_tooltip'],
 					'aria-pressed'    => $fav_args['aria-pressed'],
-					$key              => $fav_args['data_attr'],
 				),
 			);
 		}
@@ -775,7 +768,7 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 				'button_element'    => $button_element,
 				'link_text'         => __( 'Reply', 'buddypress' ),
 				'button_attr'       =>  array(
-					'class' => "acomment-reply bp-primary-action {$icons}",
+					'class' => "acomment-reply bp-primary-action",
 					'id'    => sprintf( 'acomment-reply-%1$s-from-%2$s', $activity_id, $activity_comment_id ),
 				),
 			),
