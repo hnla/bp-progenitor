@@ -716,7 +716,7 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 	 *
 	 * @return array
 	 */
-	function bp_progenitor_get_activity_comment_buttons($args) {
+	function bp_progenitor_get_activity_comment_buttons( $args ) {
 		$buttons = array();
 
 		if ( ! isset( $GLOBALS['activities_template'] ) ) {
@@ -757,6 +757,10 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 			$button_element = 'a';
 		}
 
+		if ( isset( $args['item_classes'] ) ) {
+			$item_classes = implode(' ', $args['item_classes'] );
+		}
+
 		$buttons = array(
 			'activity_comment_reply' => array(
 				'id'                => 'activity_comment_reply',
@@ -768,7 +772,7 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 				'button_element'    => $button_element,
 				'link_text'         => __( 'Reply', 'buddypress' ),
 				'button_attr'       =>  array(
-					'class' => "acomment-reply bp-primary-action",
+					'class' => "acomment-reply bp-primary-action {$item_classes}",
 					'id'    => sprintf( 'acomment-reply-%1$s-from-%2$s', $activity_id, $activity_comment_id ),
 				),
 			),
@@ -782,7 +786,7 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 				'button_element'    => $button_element,
 				'link_text'         => __( 'Delete', 'buddypress' ),
 				'button_attr'       => array(
-					'class' => 'delete acomment-delete confirm bp-secondary-action',
+					'class' => "delete acomment-delete confirm bp-secondary-action {$item_classes}",
 					'rel'   => 'nofollow',
 					),
 			),
@@ -810,7 +814,7 @@ function bp_progenitor_activity_comment_buttons( $args = array() ) {
 				'link_text'         => __( 'Spam', 'buddypress' ),
 				'button_attr'       => array(
 					'id'     => "activity_make_spam_{$activity_comment_id}",
-					'class'  => 'bp-secondary-action spam-activity-comment confirm',
+					'class'  => "bp-secondary-action spam-activity-comment confirm {$item_classes}",
 					'rel'    => 'nofollow',
 				),
 			);

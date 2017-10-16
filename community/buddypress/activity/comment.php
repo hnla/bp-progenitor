@@ -23,7 +23,7 @@
 
 	<div class="acomment-content"><?php bp_activity_comment_content(); ?></div>
 
-	<?php bp_progenitor_activity_comment_buttons( array( 'container' => 'div' ) );?>
+	<?php bp_progenitor_activity_comment_buttons( array( 'container' => 'div', 'item_classes' => array( 'icons' ) ) );?>
 
 	<?php bp_progenitor_activity_recurse_comments( bp_activity_current_comment() ); ?>
 </li>
