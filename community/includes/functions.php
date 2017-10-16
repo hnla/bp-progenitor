@@ -920,6 +920,20 @@ function bp_progenitor_sanitize_nav_order( $option = '' ) {
 	return array_map( 'sanitize_key', $option );
 }
 
+
+/**
+ * Progenitor group & user cover image default image
+ *
+ * @since 0.1.0
+ */
+function progenitor_group_cover_default( $settings = array() ) {
+	$settings['default_cover'] =  get_template_directory_uri() .'/assets/images/default-images/default-group-cover-image.jpg';
+
+	return $settings;
+}
+add_action('bp_before_groups_cover_image_settings_parse_args', 'progenitor_group_cover_default', 10, 1);
+add_action('bp_before_xprofile_cover_image_settings_parse_args', 'progenitor_group_cover_default', 10, 1);
+
 /**
  * BP Progenitor's callback for the cover image feature.
  *
