@@ -18,6 +18,9 @@ get_header(); ?>
 		<?php if ( is_user_logged_in() ) : ?>
 
 			<div class="block-1">
+
+				<?php get_template_part('/template-parts/home-page/home-page-activity-loop'); ?>
+
 				<?php if ( is_active_sidebar('homepage-block-1-loggedin') ) {
 						dynamic_sidebar( 'homepage-block-1-loggedin' );
 				}; ?>
@@ -25,7 +28,9 @@ get_header(); ?>
 
 			<div class="block-2"><?php get_template_part('/template-parts/home-page/home-page-post-loop'); ?></div>
 
-			<?php else: ?>
+			<?php ################# Loggedout frontpage elements ##################### ?>
+
+		<?php else: ?>
 
 				<?php if ( is_active_sidebar('homepage-block-1-loggedout') ) {
 						dynamic_sidebar( 'homepage-block-1-loggedout' );
@@ -33,7 +38,7 @@ get_header(); ?>
 
 					<p>You're logged out oh numpty one</p>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
