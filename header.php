@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The header for BP Progenitor
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -30,30 +30,37 @@
 
 			<header id="masthead" class="site-header">
 
-				<?php if( has_header_image() && 'horizontal' == progenitor_opts( 'main_site_menu' ) ) : ?>
+				<?php if( has_header_image() && 'horizontal' === progenitor_opts( 'main_site_menu' ) ) : ?>
 				<div class="header-background">
 				<?php endif; ?>
 
 					<div class="site-branding">
 
 						<?php
-						the_custom_logo();
+						if ( 'vertical' === progenitor_opts( 'main_site_menu' ) || progenitor_overlay_logo() ) :
+							progenitor_custom_logo();
+					 endif;
 
-						if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-						<?php else : ?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-						endif;
+					 if ( progenitor_show_title() ) {
+							if ( is_front_page() && is_home() ) : ?>
+								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+							<?php else : ?>
+								<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<?php
+							endif;
+						};
 
-						$description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php
-						endif; ?>
+						if ( progenitor_show_tagline() ) {
+							$description = get_bloginfo( 'description', 'display' );
+							if ( $description || is_customize_preview() ) : ?>
+								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+							<?php
+							endif;
+						} ?>
+
 					</div><!-- .site-branding -->
 
-				<?php if( has_header_image() && 'horizontal' == progenitor_opts( 'main_site_menu' ) ) : ?>
+				<?php if( has_header_image() && 'horizontal' === progenitor_opts( 'main_site_menu' ) ) : ?>
 				</div><!-- // .header-background -->
 				<?php endif; ?>
 

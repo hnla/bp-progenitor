@@ -78,6 +78,13 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 
 	$settings = apply_filters( 'bp_progenitor_customizer_settings', array(
 
+		'bp_progenitor_appearance[site_title]' => array(
+			'index'             => 'site_title',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
 		'bp_progenitor_appearance[site_tagline]' => array(
 			'index'             => 'site_tagline',
 			'capability'        => 'bp_moderate',
@@ -87,6 +94,20 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 		),
 		'bp_progenitor_appearance[header_img_background]' => array(
 			'index'             => 'header_img_background',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
+		'bp_progenitor_appearance[overlay_logo]' => array(
+			'index'             => 'overlay_logo',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
+		'bp_progenitor_appearance[overlay_logo_size]' => array(
+			'index'             => 'overlay_logo_size',
 			'capability'        => 'bp_moderate',
 			'sanitize_callback' => 'absint',
 			'transport'         => 'refresh',
@@ -277,6 +298,12 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'settings'   => 'bp_progenitor_appearance[bp_dir_sbar]',
 			'type'       => 'checkbox',
 		),
+			'site_title' => array(
+			'label'      => __( 'Display the sites title in header - title & tagline may also be turned off together in \'Site Identity\' section.', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_header',
+			'settings'   => 'bp_progenitor_appearance[site_title]',
+			'type'       => 'checkbox',
+		),
 		'site_tagline' => array(
 			'label'      => __( 'Display the sites tagline in header', 'buddypress' ),
 			'section'    => 'bp_progenitor_site_header',
@@ -288,6 +315,19 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'section'    => 'bp_progenitor_site_header',
 			'settings'   => 'bp_progenitor_appearance[header_img_background]',
 			'type'       => 'checkbox',
+		),
+		'overlay_logo' => array(
+			'label'      => __( 'Overlay the custom logo selection on the header background for horizontal header layout.', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_header',
+			'settings'   => 'bp_progenitor_appearance[overlay_logo]',
+			'type'       => 'checkbox',
+		),
+		'overlay_logo_size' => array(
+			'label'      => __( 'Define the width of the overlaid logo container as a percentage of the header width - image will be 100% of that width, set 100 to allow images actual real width to display.', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_header',
+			'settings'   => 'bp_progenitor_appearance[overlay_logo_size]',
+			'type'       => 'select',
+			'choices'    => progenitor_logo_sizes(),
 		),
 		'bp_site_avatars' => array(
 			'label'      => __( 'Set BP User, Group avatars to rounded style.', 'buddypress' ),
@@ -413,6 +453,24 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 	}
 }
 add_action( 'bp_customize_register', 'bp_progenitor_customize_register', 10, 1 );
+
+/**
+ * Log selection sizes for custom logo control
+ *
+ * @since 1.0.0
+ */
+function progenitor_logo_sizes() {
+	return array(
+		'20' => 20,
+		'25' => 25,
+		'30' => 30,
+		'35' => 35,
+		'40' => 40,
+		'45' => 45,
+		'50' => 50,
+		'100' => 100,
+		);
+}
 
 /**
  * Enqueue needed JS for our customizer Settings & Controls

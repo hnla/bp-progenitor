@@ -308,8 +308,52 @@ Primary header/menu positioning vertical
 2.0 Header
 ================================================================*/
 /*
-Primary header/menu positioning
+Primary header elements
 */
+.site-header {
+	/*
+	Manage elements if background image set &
+	use as background selected to render the background wrapper el
+	*/
+}
+
+.site-header .header-background .custom-logo-link {
+	display: block;
+	width: 20%;
+}
+
+.site-header .custom-logo-link.width-20 {
+	width: 20%;
+}
+
+.site-header .custom-logo-link.width-25 {
+	width: 25%;
+}
+
+.site-header .custom-logo-link.width-30 {
+	width: 30%;
+}
+
+.site-header .custom-logo-link.width-35 {
+	width: 35%;
+}
+
+.site-header .custom-logo-link.width-40 {
+	width: 40%;
+}
+
+.site-header .custom-logo-link.width-45 {
+	width: 45%;
+}
+
+.site-header .custom-logo-link.width-50 {
+	width: 50%;
+}
+
+.site-header .custom-logo-link.width-100 {
+	width: 100%;
+}
+
 /*==============================================================
 3.0 Main content
 ================================================================*/

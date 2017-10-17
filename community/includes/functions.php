@@ -814,8 +814,11 @@ function bp_progenitor_get_temporary_setting( $option = '', $retval = false ) {
  */
 function bp_progenitor_get_appearance_settings( $option = '' ) {
 	$default_args = array(
+		'site_title'            => 0,
 		'site_tagline'          => 0,
 		'header_img_background' => 0,
+		'overlay_logo'          => 0,
+		'overlay_logo_size'     => 20,
 		'main_site_menu'        => 'horizontal',
 		'post_loops_grid'      	=> 0,
 		'bp_dir_sbar'           => 0,
@@ -922,7 +925,7 @@ function bp_progenitor_sanitize_nav_order( $option = '' ) {
 
 
 /**
- * Progenitor group & user cover image default image
+ * Progenitor group cover image default image
  *
  * @since 0.1.0
  */
@@ -932,7 +935,18 @@ function progenitor_group_cover_default( $settings = array() ) {
 	return $settings;
 }
 add_action('bp_before_groups_cover_image_settings_parse_args', 'progenitor_group_cover_default', 10, 1);
-add_action('bp_before_xprofile_cover_image_settings_parse_args', 'progenitor_group_cover_default', 10, 1);
+
+/**
+ * Progenitor user cover image default image
+ *
+ * @since 0.1.0
+ */
+function progenitor_user_cover_default( $settings = array() ) {
+	$settings['default_cover'] =  get_template_directory_uri() .'/assets/images/default-images/default-user-cover-image.jpg';
+
+	return $settings;
+}
+add_action('bp_before_xprofile_cover_image_settings_parse_args', 'progenitor_user_cover_default', 10, 1);
 
 /**
  * BP Progenitor's callback for the cover image feature.

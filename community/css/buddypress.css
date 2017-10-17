@@ -1177,17 +1177,14 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 .activity-list .activity-item div.item-avatar img {
-	max-width: 40%;
+	max-width: 100%;
 }
 
 @media screen and (min-width: 46.8em) {
 	.activity-list .activity-item div.item-avatar {
 		margin: 0 2% 0 0;
 		text-align: left;
-		width: auto;
-	}
-	.activity-list .activity-item div.item-avatar img {
-		max-width: 80%;
+		width: 20%;
 	}
 }
 

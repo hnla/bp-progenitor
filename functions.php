@@ -82,7 +82,7 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		 */
 		add_theme_support( 'custom-logo', array(
 			'height'      => 250,
-			'width'       => 250,
+			'width'       => 500,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -282,6 +282,11 @@ add_action( 'wp_enqueue_scripts', 'bp_progenitor_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Implement a Custom logo fcopy of WP core function.
+ */
+require get_template_directory() . '/inc/custom-logo.php';
 
 /**
  * Custom template tags for this theme.

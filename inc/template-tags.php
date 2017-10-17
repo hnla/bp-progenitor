@@ -91,16 +91,62 @@ function progenitor_menu_style() {
  */
 function progenitor_display_metabar() {
 	$menu = progenitor_opts('main_site_menu');
-	$ret = true;
+	$retval = true;
 
 	if ( is_front_page() ) {
 		if ('vertical' === $menu ) {
 			$ret = false;
 		}
 	}
-	return $ret;
+	return $retval;
 }
 
+/**
+ * Check whether to hide or show site-title
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function progenitor_show_title() {
+	return (bool) progenitor_opts('site_title');
+}
+
+/**
+ * Check whether to hide or show site-tagline
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function progenitor_show_tagline() {
+	return (bool) progenitor_opts('site_tagline');
+}
+
+/**
+ * Check whether to overlay the custom logo on background
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function progenitor_overlay_logo() {
+	return (bool) progenitor_opts('overlay_logo');
+}
+
+/**
+ * Check the custom logo size & return
+ *
+ * @since 0.1.0
+ *
+ * @return int
+ */
+function progenitor_logo_size() {
+
+	$size = absint( progenitor_opts('overlay_logo_size') );
+
+	return $size;
+}
 /**
  * Set footer widgets class on parent wrapper
  * Builds a class for widget container to report number of widgets being used
