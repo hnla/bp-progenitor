@@ -30,7 +30,7 @@
 			width: auto;
 
 			img {
-				max-width: 40%;
+				max-width: 100%;
 			}
 		}
 
@@ -39,11 +39,7 @@
 			div.item-avatar { // 'div' for weight
 				margin: 0 2% 0 0;
 				text-align: left;
-				width: auto;
-
-				img {
-					max-width: 80%;
-				}
+				width: 20%;
 			}
 		}
 
