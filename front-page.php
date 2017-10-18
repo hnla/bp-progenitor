@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<div class="block-1">
 
-				<?php get_template_part('/template-parts/home-page/home-page-activity-loop'); ?>
+				<?php //get_template_part('/template-parts/home-page/home-page-activity-loop'); ?>
 
 				<?php if ( is_active_sidebar('homepage-block-1-loggedin') ) {
 						dynamic_sidebar( 'homepage-block-1-loggedin' );

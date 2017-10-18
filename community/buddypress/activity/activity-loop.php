@@ -5,7 +5,7 @@
 
 bp_progenitor_before_loop(); ?>
 
-<?php if ( bp_has_activities( bp_ajax_querystring( 'activity' ) ) ) : ?>
+<?php if ( bp_has_activities( bp_ajax_querystring( 'activity' ) . '&per_page= 12') ) : ?>
 
 	<?php while ( bp_activities() ) : bp_the_activity(); ?>
 

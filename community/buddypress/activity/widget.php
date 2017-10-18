@@ -1,8 +1,8 @@
 <?php
 /**
- * BP - Progenitor Activity Widget template.
+ * BP - Progenitor Activity Widget template - plain style
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 ?>
 
@@ -24,8 +24,8 @@
 								<a href="<?php bp_activity_user_link(); ?>">
 									<?php bp_activity_avatar( array(
 										'type'   => 'thumb',
-										'width'  => '40px',
-										'height' => '40px',
+										'width'  => '',
+										'height' => '',
 									) ); ?>
 								</a>
 							</cite>

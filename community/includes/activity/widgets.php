@@ -51,6 +51,7 @@ class BP_Latest_Activities extends WP_Widget {
 		$title      = __( 'Latest updates', 'buddypress' );
 		$type       = array( 'activity_update' );
 		$max        = 5;
+		$style      = 'plain';
 		$bp_progenitor = bp_progenitor();
 
 		// Check instance for a custom title
@@ -64,6 +65,10 @@ class BP_Latest_Activities extends WP_Widget {
 		// Check instance for custom max number of activities to display
 		if ( ! empty( $instance['max'] ) ) {
 			$max = (int) $instance['max'];
+		}
+
+		if ( ! empty( $instance['style'] ) ) {
+			$style = $instance['style'];
 		}
 
 		// Check instance for custom activity types
@@ -88,9 +93,9 @@ class BP_Latest_Activities extends WP_Widget {
 
 		/**
 		 * Globalize the activity widget arguments.
-		 * @see bp_nouveau_activity_widget_query() to override
+		 * @see bp_progenitor_activity_widget_query() to override
 		 */
-		$bp_nouveau->activity->widget_args = array(
+		$bp_progenitor->activity->widget_args = array(
 			'max'          => $max,
 			'scope'        => 'all',
 			'user_id'      => 0,
@@ -100,11 +105,15 @@ class BP_Latest_Activities extends WP_Widget {
 			'secondary_id' => 0,
 		);
 
-		bp_get_template_part( 'activity/widget' );
+		if ( 'full-loop' === $style ) {
+			bp_get_template_part( 'activity/widget-full' );
+		} elseif ( 'plain' === $style ) {
+			bp_get_template_part( 'activity/widget' );
+		}
 
 		// Reset the globals
 		$GLOBALS['activities_template']    = $reset_activities_template;
-		$bp_nouveau->activity->widget_args = array();
+		$bp_progenitor->activity->widget_args = array();
 
 		echo $args['after_widget'];
 	}
@@ -133,6 +142,8 @@ class BP_Latest_Activities extends WP_Widget {
 			$instance['type'] = maybe_serialize( $new_instance['type'] );
 		}
 
+		$instance['style'] = sanitize_text_field( $new_instance['style'] );
+
 		return $instance;
 	}
 
@@ -150,7 +161,10 @@ class BP_Latest_Activities extends WP_Widget {
 			'title' => __( 'Latest updates', 'buddypress' ),
 			'max'   => 5,
 			'type'  => '',
+			'style' => '',
 		) );
+
+		$style = sanitize_text_field( $instance['style'] );
 
 		$title = esc_attr( $instance['title'] );
 		$max   = (int) $instance['max'];
@@ -159,7 +173,10 @@ class BP_Latest_Activities extends WP_Widget {
 		if ( ! empty( $instance['type'] ) ) {
 			$type = maybe_unserialize( $instance['type'] );
 		}
-		?>
+
+	// For the form field
+	$style_types = array('plain' => 'plain', 'full-loop' => 'full-loop');
+	?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'buddypress' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
@@ -174,6 +191,14 @@ class BP_Latest_Activities extends WP_Widget {
 			<select class="widefat" multiple="multiple" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>[]">
 				<?php foreach ( bp_progenitor_get_activity_filters() as $key => $name ) : ?>
 					<option value="<?php echo esc_attr( $key ); ?>" <?php selected( in_array( $key, $type ) ); ?>><?php echo esc_html( $name ); ?></option>
+				<?php endforeach ; ?>
+			</select>
+		</p>
+			<p>
+			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Select loop appearence:', 'buddypress' ); ?></label>
+			<select class="widefat"  id="<?php echo $this->get_field_id( 'style' ); ?>" name="<?php echo $this->get_field_name( 'style' ); ?>">
+				<?php foreach ( $style_types as $key => $name ) : ?>
+					<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $key, $style ); ?>><?php echo esc_html( $name ); ?></option>
 				<?php endforeach ; ?>
 			</select>
 		</p>

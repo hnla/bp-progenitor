@@ -1,92 +1,92 @@
 // BP Widgets
 
-.buddypress.widget {
+aside,
+.footer-widgets-wrap {
 
-	// recent active members defines divs as
+	.buddypress.widget {
 
-	.avatar-block {
+		// recent active members defines divs as
 
-		@include flex-box-dir($flex-dir: column);
+		.avatar-block {
 
-		@include medium-up() {
+			@include flex-box-dir($flex-dir: column);
 
-			@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
-		}
+			@include medium-up() {
 
-		margin: 0 -2%;
-
-		.item-avatar {
-
-			@include flex-align($align: streatch);
-
-			@include box-item-size($grow: 0, $basis: 25%);
-
-			@include large-up() {
-
-				@include box-item-size($grow: 0, $basis: 21%);
+				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
 			}
 
-			margin: 0 2%;
-
-			img{
-				margin: 0;
-			}
-		}
-	}
-
-	// Widgets which better use a ul construct!
-	.item-options {
-
-		@include font-size(14);
-	}
-
-
-
-	ul.item-list {
-
-
-		@include flex-box-dir($flex-dir: column);
-
-		@include medium-up() {
-
-			@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
-		}
-
-		list-style: none;
-		margin: $marg-sml -2%;
-		overflow: hidden;
-
-		li {
-			border: 1px solid $black;
-
-			@include flex-align($align: baseline);
-			@include box-item-size($grow: 0, $basis: 46%);
-
-			@include large-up() {
-
-				@include box-item-size($grow: 0, $basis: 21%);
-			}
-
-			margin: 0 2% 10px;
+			margin: 0 -2%;
 
 			.item-avatar {
-				padding: $pad-sml;
-				text-align: center;
-			}
 
-			.item {
-				padding: 0 $pad-sml $pad-sml;
+				@include flex-align($align: streatch);
 
-				.item-meta {
+				@include box-item-size($grow: 0, $basis: 25%);
 
-					@include font-size(12);
-					overflow-wrap: break-word;
+				@include large-up() {
+
+					@include box-item-size($grow: 0, $basis: 21%);
+				}
+
+				margin: 0 2%;
+
+				img{
+					margin: 0;
 				}
 			}
-		} // close li
+		} // .avatar-block
+
+		// Widgets which better use a ul construct!
+		.item-options {
+
+			@include font-size(14);
+		}
+
+		ul.item-list {
+
+			@include flex-box-dir($flex-dir: column);
+
+			@include medium-up() {
+
+				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+			}
+
+			list-style: none;
+			margin: $marg-sml -2%;
+			overflow: hidden;
+
+			li {
+				border: 1px solid $black;
+
+				@include flex-align($align: baseline);
+				@include box-item-size($grow: 0, $basis: 46%);
+
+				@include large-up() {
+
+					@include box-item-size($grow: 0, $basis: 21%);
+				}
+
+				margin: 0 2% 10px;
+
+				.item-avatar {
+					padding: $pad-sml;
+					text-align: center;
+				}
+
+				.item {
+					padding: 0 $pad-sml $pad-sml;
+
+					.item-meta {
+
+						@include font-size(12);
+						overflow-wrap: break-word;
+					}
+				}
+			} // close li
+		}
 	}
 }
-
 
 // The main site sidebar
 aside.widget-area {
@@ -157,5 +157,44 @@ aside.widget-area {
 				}
 			}
 		} // @media query
+
+		// Activity widget in a sidebar, wide screens (narrow sidebar)
+		// Display widget as 'column'
+		&.bp-latest-activities {
+
+			li {
+
+				.activity-header {
+					@include font-size(12);
+					margin: 0;
+
+					img { // the group image avatar in header links
+						width: 20px;
+					}
+				}
+
+				.activity-inner {
+					clear: both;
+					@include font-size(14);
+					overflow: visible;
+				}
+			}
+
+			@include medium-lrg-up() {
+
+				ul.activity-list {
+
+					@include flex-box-dir($flex-dir: column, $flex-wrap: nowrap);
+					padding: 0;
+
+						li {
+
+							@include box-item-size($grow: 1, $basis: 100%);
+							padding: 0 $pad-sml;
+							width: auto;
+						}
+				}
+			}
+		}
 	}
 }

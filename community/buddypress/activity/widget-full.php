@@ -1,17 +1,17 @@
 <?php
 /**
-* BP Activity loop
-* A custom short loop for site activity
+* Activity widget - full loop
 *
 * @since 0.1.0
 */
 ?>
-<div id="buddypress" class="buddypress-wrap">
+
+<?php if ( is_front_page() ) { ?>
 <div class="homepage-site-activity activity">
+	<?php } ?>
 
-<?php if ( bp_has_activities( bp_ajax_querystring( 'activity' ) . '&max= 6' ) ) : ?>
+<?php if ( bp_has_activities( bp_progenitor_activity_widget_query() ) ) : ?>
 
-<h2><?php _e('Latest site activity', 'progenitor'); ?></h2>
 
 <ul id="activity-stream" class="activity-list item-list bp-list act-home-loop-list" data-bp-list="activity">
 
@@ -47,7 +47,7 @@
 
 			<?php endif; ?>
 
-			<?php bp_progenitor_activity_entry_buttons(); ?>
+			<?php //bp_progenitor_activity_entry_buttons(); ?>
 
 		</div>
 
@@ -79,5 +79,7 @@
 
 </ul>
 <?php endif; ?>
+
+<?php if ( is_front_page() ) { ?>
 </div>
-</div>
+<?php } ?>
