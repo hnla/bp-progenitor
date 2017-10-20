@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @since 1.0.0
  */
-class BP_Nouveau_Friends {
+class BP_Progenitor_Friends {
 	/**
 	 * Constructor
 	 *
@@ -65,7 +65,7 @@ class BP_Nouveau_Friends {
 		remove_action( 'bp_directory_members_actions', 'bp_member_add_friend_button' );
 
 		// Register the friends Notifications filters
-		add_action( 'bp_nouveau_notifications_init_filters', array( $this, 'notification_filters' ) );
+		add_action( 'bp_progenitor_notifications_init_filters', array( $this, 'notification_filters' ) );
 	}
 
 	/**
@@ -84,7 +84,7 @@ class BP_Nouveau_Friends {
 		);
 
 		foreach ( $buttons as $button ) {
-			add_filter( 'bp_button_' . $button, 'bp_nouveau_ajax_button', 10, 5 );
+			add_filter( 'bp_button_' . $button, 'bp_progenitor_ajax_button', 10, 5 );
 		}
 	}
 
@@ -108,7 +108,7 @@ class BP_Nouveau_Friends {
 		);
 
 		foreach ( $notifications as $notification ) {
-			bp_nouveau_notifications_register_filter( $notification );
+			bp_progenitor_notifications_register_filter( $notification );
 		}
 	}
 }
@@ -118,11 +118,11 @@ class BP_Nouveau_Friends {
  *
  * @since 1.0.0
  */
-function bp_nouveau_friends( $bp_nouveau = null ) {
-	if ( is_null( $bp_nouveau ) ) {
+function bp_progenitor_friends( $bp_progenitor = null ) {
+	if ( is_null( $bp_progenitor ) ) {
 		return;
 	}
 
-	$bp_nouveau->friends = new BP_Nouveau_Friends();
+	$bp_progenitor->friends = new BP_Progenitor_Friends();
 }
-add_action( 'bp_nouveau_includes', 'bp_nouveau_friends', 10, 1 );
+add_action( 'bp_progenitor_includes', 'bp_progenitor_friends', 10, 1 );

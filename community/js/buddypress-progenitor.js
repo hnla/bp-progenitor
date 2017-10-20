@@ -1,4 +1,4 @@
-/* global wp, bp, BP_Nouveau, JSON */
+/* global wp, bp, BP_Progenitor, JSON */
 /* jshint devel: true */
 /* jshint browser: true */
 window.wp = window.wp || {};
@@ -12,7 +12,7 @@ window.bp = window.bp || {};
 	}
 
 	/**
-	 * [Nouveau description]
+	 * [Progenitor description]
 	 * @type {Object}
 	 */
 	bp.Progenitor = {
@@ -736,7 +736,7 @@ window.bp = window.bp || {};
 			// Stop event propagation
 			event.preventDefault();
 
-			if ( ( undefined !== BP_Nouveau[ action + '_confirm'] && false === window.confirm( BP_Nouveau[ action + '_confirm'] ) ) || target.hasClass( 'pending' ) ) {
+			if ( ( undefined !== BP_Progenitor[ action + '_confirm'] && false === window.confirm( BP_Progenitor[ action + '_confirm'] ) ) || target.hasClass( 'pending' ) ) {
 				return false;
 			}
 
@@ -791,7 +791,7 @@ window.bp = window.bp || {};
 					// User's groups invitations screen & User's friend screens
 					if ( undefined !== response.data.is_user && response.data.is_user ) {
 						target.parent().html( response.data.feedback );
-						item.fadeOut( 1500 );
+						item.fadeOut( 3000 );
 						return;
 					}
 
@@ -908,7 +908,7 @@ window.bp = window.bp || {};
 		}
 	};
 
-	// Launch BP Nouveau
+	// Launch BP Progenitor
 	bp.Progenitor.start();
 
 } )( bp, jQuery );

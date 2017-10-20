@@ -11,12 +11,12 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers friends AJAX actions.
  */
-bp_nouveau_register_ajax_actions( array(
-	array( 'friends_remove_friend'       => array( 'function' => 'bp_nouveau_ajax_addremove_friend', 'nopriv' => false ) ),
-	array( 'friends_add_friend'          => array( 'function' => 'bp_nouveau_ajax_addremove_friend', 'nopriv' => false ) ),
-	array( 'friends_withdraw_friendship' => array( 'function' => 'bp_nouveau_ajax_addremove_friend', 'nopriv' => false ) ),
-	array( 'friends_accept_friendship'   => array( 'function' => 'bp_nouveau_ajax_addremove_friend', 'nopriv' => false ) ),
-	array( 'friends_reject_friendship'   => array( 'function' => 'bp_nouveau_ajax_addremove_friend', 'nopriv' => false ) ),
+bp_progenitor_register_ajax_actions( array(
+	array( 'friends_remove_friend'       => array( 'function' => 'bp_progenitor_ajax_addremove_friend', 'nopriv' => false ) ),
+	array( 'friends_add_friend'          => array( 'function' => 'bp_progenitor_ajax_addremove_friend', 'nopriv' => false ) ),
+	array( 'friends_withdraw_friendship' => array( 'function' => 'bp_progenitor_ajax_addremove_friend', 'nopriv' => false ) ),
+	array( 'friends_accept_friendship'   => array( 'function' => 'bp_progenitor_ajax_addremove_friend', 'nopriv' => false ) ),
+	array( 'friends_reject_friendship'   => array( 'function' => 'bp_progenitor_ajax_addremove_friend', 'nopriv' => false ) ),
 ) );
 
 /**
@@ -26,7 +26,7 @@ bp_nouveau_register_ajax_actions( array(
  *
  * @return string HTML
  */
-function bp_nouveau_ajax_addremove_friend() {
+function bp_progenitor_ajax_addremove_friend() {
 	$response = array(
 		'feedback' => sprintf(
 			'<div class="bp-feedback error bp-ajax-message"><p>%s</p></div>',
@@ -45,7 +45,7 @@ function bp_nouveau_ajax_addremove_friend() {
 
 	// Use default nonce
 	$nonce = $_POST['nonce'];
-	$check = 'bp_nouveau_friends';
+	$check = 'bp_progenitor_friends';
 
 	// Use a specific one for actions needed it
 	if ( ! empty( $_POST['_wpnonce'] ) && ! empty( $_POST['action'] ) ) {
