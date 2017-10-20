@@ -436,7 +436,7 @@ window.bp = window.bp || {};
 
 		initialize: function() {
 			if ( 1 === this.model.get( 'active' ) ) {
-				this.el.className += ' current';
+				this.el.className += ' selected current';
 			}
 
 			if ( 'invites' === this.model.get( 'id' ) ) {
@@ -470,9 +470,9 @@ window.bp = window.bp || {};
 
 		toggleClass: function( model ) {
 			if ( 0 === model.get( 'active' ) ) {
-				$( this.el ).removeClass( 'current' );
+				$( this.el ).removeClass( 'selected current' );
 			} else {
-				$( this.el ).addClass( 'current' );
+				$( this.el ).addClass( 'selected current' );
 			}
 		}
 	} );
@@ -787,6 +787,7 @@ window.bp = window.bp || {};
 
 	bp.Views.selectedUsers = bp.Progenitor.GroupInvites.View.extend( {
 		tagName : 'ul',
+		className: 'selected-members-list',
 
 		initialize: function() {
 			this.cleanContent();

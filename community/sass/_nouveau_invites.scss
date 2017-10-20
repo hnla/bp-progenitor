@@ -84,15 +84,16 @@
 				width: 100%;
 			}
 
-			ul {
+			.selected-members-list {
 				clear: both;
 				list-style: none;
 				margin: $marg-sml 0;
 				overflow: hidden;
+				padding: $pad-sml 0;
 
 				li {
 					float: left;
-					margin: 0.5%;
+					margin-right: 0.5%;
 					max-height: 50px;
 					max-width: 50px;
 				}

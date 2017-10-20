@@ -2566,16 +2566,17 @@ body.no-js .single-item-header .js-self-profile-button {
 	width: 100%;
 }
 
-.buddypress .bp-invites-content #send-invites-editor ul {
+.buddypress .bp-invites-content #send-invites-editor .selected-members-list {
 	clear: both;
 	list-style: none;
 	margin: 10px 0;
 	overflow: hidden;
+	padding: 0.5em 0;
 }
 
-.buddypress .bp-invites-content #send-invites-editor ul li {
+.buddypress .bp-invites-content #send-invites-editor .selected-members-list li {
 	float: left;
-	margin: 0.5%;
+	margin-right: 0.5%;
 	max-height: 50px;
 	max-width: 50px;
 }
@@ -4282,12 +4283,6 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	margin: 0 0 10px 0;
 	padding: 0.5em;
 	width: 90%;
-}
-
-.buddypress-wrap .accept,
-.buddypress-wrap .reject {
-	float: left;
-	margin-left: 10px;
 }
 
 .buddypress-wrap .members-list.grid .bp-ajax-message {

@@ -1016,21 +1016,27 @@ function bp_progenitor_groups_manage_members_buttons( $args = array() ) {
 
 /**
  * Build group data
- * This block supercedes the meta functions below
+ * This block supercedes the meta functions below.
  * Simpler? approach to provide group meta data as tags not a array
  * That's hard to seperate in html templates.
  */
 
 /**
- * Group Status
+ * Group Status.
  *
+ *	@since 0.1.0
  */
 function bp_progenitor_group_status() {
 	$status = ucfirst(bp_progenitor_get_group_meta_data()->status );
 
-	echo   $status;
+	echo $status;
 }
 
+/**
+ * Group type list.
+ *
+ *	@since 0.1.0
+ */
 function bp_progenitor_group_type() {
 
 	$type_list = bp_get_group_type_list();
@@ -1038,31 +1044,45 @@ function bp_progenitor_group_type() {
 	return $type_list;
 }
 
+/**
+ * Group last active.
+ *
+ *	@since 0.1.0
+ */
 function bp_progenitor_group_active() {
 	$active = bp_progenitor_get_group_meta_data()->active;
 
 	echo $active;
 }
 
+/**
+ * Group decription.
+ *
+ *	@since 0.1.0
+ */
 function bp_progenitor_group_description() {
 	$desc = bp_progenitor_get_group_meta_data()->description;
 
 	return wpautop( $desc );
 }
 
+/**
+ * Group extra meta.
+ *
+ *	@since 0.1.0
+ */
 function bp_progenitor_group_extra() {
 
 	$meta_extra =  bp_progenitor_get_hooked_group_meta();
 
 	return $meta_extra;
 }
+
 /**
  * Get the group meta data.
  *
  * @since 0.1.0
  */
-
-
 function bp_progenitor_get_group_meta_data() {
 
 	$group_meta = groups_get_current_group();
