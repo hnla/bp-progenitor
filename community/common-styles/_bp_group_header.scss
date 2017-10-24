@@ -103,6 +103,16 @@
 		padding: $pad-med;
 		text-align: center;
 
+		.single-group-desc-title {
+			background: #ccc;
+			border: 1px solid $bp-border-dark;
+			border-bottom: 0;
+
+			@include border-top-radius(2px);
+
+			margin: -#{$marg-med} -#{$marg-med} 0 -#{$marg-med};
+			padding: 5px 0 5px $marg-med;
+		}
 		.group-description {
 			background: $off-white;
 

@@ -303,7 +303,7 @@ body.buddypress article.page > .entry-header .entry-title {
 
 .bp-navs ul li span {
 	background: #eaeaea;
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	border-radius: 50%;
 	color: #555;
 	display: inline;
@@ -322,7 +322,7 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 .bp-navs.bp-invites-filters ul li a, .bp-navs.bp-messages-filters ul li a {
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	display: inline-block;
 }
 
@@ -563,7 +563,7 @@ body.buddypress article.page > .entry-header .entry-title {
 
 @media screen and (min-width: 46.8em) {
 	.buddypress-wrap .item-body .tabbed-links ul {
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid #b7b7b7;
 		float: none;
 		margin: 20px 0 10px;
 	}
@@ -586,7 +586,7 @@ body.buddypress article.page > .entry-header .entry-title {
 		padding: 4px 10px;
 	}
 	.buddypress-wrap .item-body .tabbed-links ul li.current {
-		border-color: #ccc #ccc #fff;
+		border-color: #b7b7b7 #b7b7b7 #fff;
 		border-style: solid;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
@@ -823,6 +823,12 @@ body.buddypress article.page > .entry-header .entry-title {
 * @section 3.0 - BP Lists / Loops Generic
 *-------------------------------------------------------------------------------
 */
+.bp-list,
+.groups-manage-members-list ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
 .bp-list:before,
 .bp-list:after {
 	content: " ";
@@ -1019,7 +1025,7 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 .activity-update-form {
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	-webkit-box-shadow: inset 0 0 6px #eee;
 	-moz-box-shadow: inset 0 0 6px #eee;
 	box-shadow: inset 0 0 6px #eee;
@@ -1565,7 +1571,7 @@ body.activity-permalink .activity-list .activity-comments {
 }
 
 .buddypress-wrap .activity-comments .acomment-content {
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #b7b7b7;
 	margin: 15px 0 0 2%;
 	padding: 0.5em 1em;
 }
@@ -1730,7 +1736,7 @@ form.ac-form .ac-reply-content input {
 	font-size: 13px;
 	color: #737373;
 	font-style: italic;
-	margin: 10px auto 0;
+	margin: 10px auto 15px;
 	padding: 1em;
 }
 
@@ -1738,6 +1744,19 @@ form.ac-form .ac-reply-content input {
 	.buddypress-wrap .groups-list li .group-desc {
 		font-size: 16px;
 	}
+}
+
+.buddypress-wrap .groups-list li .group-desc .group-desc-title {
+	background: #eaeaea;
+	border-bottom: 1px solid #eee;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	background-clip: padding-box;
+	margin: -1em -1em 10px;
+	padding: 0.5em 0;
+	text-align: center;
 }
 
 .buddypress-wrap .groups-list li p {
@@ -1759,6 +1778,9 @@ form.ac-form .ac-reply-content input {
 	.buddypress-wrap .groups-list li .last-activity {
 		clear: left;
 		margin-top: -20px;
+	}
+	.buddypress-wrap .groups-list li .group-desc {
+		margin-top: 0;
 	}
 }
 
@@ -1840,6 +1862,76 @@ form.ac-form .ac-reply-content input {
 @media screen and (min-width: 32em) {
 	body:not(.logged-in) .members-list .user-update {
 		width: 96%;
+	}
+}
+
+.members-friends-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-ms-flex-align: stretch;
+	-webkit-align-items: stretch;
+	-webkit-box-align: stretch;
+	align-items: stretch;
+	border-top: 0;
+	margin: 10px -1%;
+	width: auto;
+}
+
+.members-friends-list > * {
+	-webkit-flex: 0 1 48%;
+	-moz-flex: 0 1 48%;
+	-ms-flex: 0 1 48%;
+	-o-flex: 0 1 48%;
+	flex: 0 1 48%;
+}
+
+.members-friends-list li {
+	border-bottom: 0;
+	margin: 0 1%;
+}
+
+.members-friends-list .list-wrap {
+	background: #fafafa;
+	border: 1px solid #b7b7b7;
+	-webkit-box-shadow: 0 0 5px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 5px 0 #d2d2d2;
+	box-shadow: 0 0 5px 0 #d2d2d2;
+	height: 100%;
+	padding: 0.5em;
+}
+
+.members-friends-list .list-wrap .item .item-block {
+	width: auto;
+}
+
+.members-friends-list .list-wrap .item-avatar {
+	text-align: center;
+	width: 100%;
+}
+
+.members-friends-list .list-wrap .list-title.member-name {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.members-friends-list .list-wrap .action {
+	padding-left: 0;
+}
+
+@media screen and (min-width: 46.8em) {
+	.members-friends-list .list-wrap .item-avatar {
+		width: 30%;
+	}
+	.members-friends-list .list-wrap .item-avatar img {
+		margin-bottom: 0;
 	}
 }
 
@@ -2154,9 +2246,6 @@ body.no-js .single-item-header .js-self-profile-button {
 }
 
 #item-header-cover-image #item-header-avatar img {
-	-webkit-box-shadow: 0 0 8px 0 #555;
-	-moz-box-shadow: 0 0 8px 0 #555;
-	box-shadow: 0 0 8px 0 #555;
 	margin: 0;
 	opacity: 0.8;
 }
@@ -2282,6 +2371,19 @@ body.no-js .single-item-header .js-self-profile-button {
 	margin: 0 0 15px;
 	padding: 1em;
 	text-align: center;
+}
+
+.groups-header .desc-wrap .single-group-desc-title {
+	background: #ccc;
+	border: 1px solid #b7b7b7;
+	border-bottom: 0;
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	background-clip: padding-box;
+	margin: -15px -15px 0 -15px;
+	padding: 5px 0 5px 15px;
 }
 
 .groups-header .desc-wrap .group-description {
@@ -2430,6 +2532,7 @@ body.no-js .single-item-header .js-self-profile-button {
 
 @media screen and (min-width: 32em) {
 	.groups-manage-members-list ul .members-manage-buttons a.button {
+		border-right: 1px solid #eee;
 		display: inline-block;
 	}
 }
@@ -2792,7 +2895,7 @@ body.no-js .buddypress-wrap .field-visibility-settings {
 }
 
 .buddypress-wrap .profile.public .profile-group-title {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #b7b7b7;
 }
 
 body.register .buddypress-wrap .page ul {
@@ -3076,7 +3179,7 @@ li#compose-personal-li a#compose:hover {
 }
 
 .bp-messages-content #bp-message-thread-list .message-metadata {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #b7b7b7;
 	-webkit-box-shadow: -2px 1px 9px 0 #eee;
 	-moz-box-shadow: -2px 1px 9px 0 #eee;
 	box-shadow: -2px 1px 9px 0 #eee;
@@ -3692,7 +3795,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 .buddypress-wrap table.wp-profile-fields thead tr,
 .buddypress-wrap table.forum thead tr {
 	background: none;
-	border-bottom: 2px solid #ccc;
+	border-bottom: 2px solid #b7b7b7;
 }
 
 .buddypress-wrap .bp-tables-user tbody tr,
@@ -3878,7 +3981,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .tabbed-links ul {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #b7b7b7;
 	float: none;
 	margin: 20px 0 10px;
 }
@@ -3906,7 +4009,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .tabbed-links ul li.current {
-	border-color: #ccc #ccc #fff;
+	border-color: #b7b7b7 #b7b7b7 #fff;
 	border-style: solid;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
@@ -3925,7 +4028,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .bp-list.grid .action a,
 .buddypress-wrap .bp-list.grid .action button {
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	display: block;
 	margin: 0;
 }
@@ -4064,7 +4167,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .buddypress-wrap .bp-messages {
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	margin: 0 0 15px;
 }
 
@@ -4457,10 +4560,10 @@ aside .buddypress.widget ul.item-list li .item .item-meta,
 }
 
 aside.widget-area .buddypress.widget ul.item-list li {
-	border: 1px solid #ccc;
-	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
-	-moz-box-shadow: 0 0 5px 0 #eaeaea;
-	box-shadow: 0 0 5px 0 #eaeaea;
+	border: 1px solid #b7b7b7;
+	-webkit-box-shadow: 0 0 5px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 5px 0 #d2d2d2;
+	box-shadow: 0 0 5px 0 #d2d2d2;
 	-webkit-flex: 0 1 46%;
 	-moz-flex: 0 1 46%;
 	-ms-flex: 0 1 46%;
@@ -5084,7 +5187,7 @@ aside.widget-area .buddypress.widget.bp-latest-activities li .activity-inner {
 		margin: 10px 0;
 	}
 	.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li a {
-		border-right: 1px solid #ccc;
+		border-right: 1px solid #b7b7b7;
 		padding: 0 0.5em;
 	}
 	.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li a:focus,

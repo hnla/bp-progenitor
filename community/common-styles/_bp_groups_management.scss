@@ -87,6 +87,7 @@
 			@include medium-small-up() {
 
 				a.button {
+					border-right: 1px solid $bp-border-color;
 					display: inline-block;
 				}
 			}

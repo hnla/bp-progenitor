@@ -21,8 +21,18 @@
 				@include responsive-font(16);
 				color: $meta-text;
 				font-style: italic;
-				margin: $marg-sml auto 0;
+				margin: $marg-sml auto $marg-med;
 				padding: $pad-med;
+
+				.group-desc-title {
+					background: $light-grey;
+					border-bottom: 1px solid $bp-border-color;
+
+					@include border-top-radius(10px);
+					margin: -#{$pad-med} -#{$pad-med} $marg-sml;
+					padding: $pad-sml 0;
+					text-align: center;
+				}
 			}
 
 			p {
@@ -50,6 +60,9 @@
 					margin-top: -20px;
 				}
 
+				.group-desc {
+					margin-top: 0;
+				}
 			} // close @media
 
 		} // close li

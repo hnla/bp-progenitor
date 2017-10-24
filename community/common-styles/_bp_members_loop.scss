@@ -92,3 +92,55 @@ body:not(.logged-in) {
 //		}
 //	}
 //}
+
+// Members friend loop - user account
+.members-friends-list {
+
+	@include build-flex-layout($basis: 48%);
+		border-top: 0;
+		margin: $marg-sml -1%;
+		width: auto;
+
+		li {
+			border-bottom: 0;
+			margin: 0 1%;
+		}
+
+	.list-wrap {
+		background: $off-white;
+		border: 1px solid $bp-border-dark;
+
+		@include box-shadow(0 0 5px 0 $light-box-shadow);
+		height: 100%;
+		padding: $pad-sml;
+
+		.item .item-block {
+			width: auto;
+		}
+
+		.item-avatar {
+			text-align: center;
+			width: 100%;
+		}
+
+		.list-title.member-name {
+
+			@include font-size(18);
+		}
+
+		.action {
+			padding-left: 0;
+		}
+
+		@include medium-up() {
+
+			.item-avatar {
+				width: 30%;
+
+				img {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
