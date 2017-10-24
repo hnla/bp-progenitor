@@ -2220,7 +2220,7 @@ function bp_progenitor_submit_button( $action ) {
 	// Output the submit button.
 	printf( '
 		<div class="submit">
-			<input type="submit" %s/>
+			<input class="bp-submit" type="submit" %s/>
 		</div>',
 		bp_get_form_field_attributes( 'submit', $submit_data['attributes'] )  // Safe.
 	);

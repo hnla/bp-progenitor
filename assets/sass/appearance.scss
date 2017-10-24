@@ -60,8 +60,20 @@
 // Generic buttons styling
 .bp-progenitor {
 
-	li.generic-button {
-		@include box-shadow(0 0 9px 0 $light-box-shadow);
+	ul:not(.grid) {
+
+		li.generic-button {
+
+			@include box-shadow(0 0 9px 0 $light-box-shadow);
+		}
+	}
+
+	ul.bp-list.grid {
+
+		li.generic-button {
+
+			@include box-shadow-none();
+		}
 	}
 
 	.button,
@@ -409,7 +421,9 @@
 
 			li.selected {
 
-				a {
+				a,
+				a:focus,
+				a:hover {
 
 					@include background-gradient-3d($color: darken( $color__main-nav, 10%) );
 					color: $color-secondary-1-4;
@@ -518,13 +532,14 @@
 					}
 				}
 
-				li.selected,
-				li:focus,
-				li:hover {
+				li.selected {
 
-					a {
+					a,
+					a:focus,
+					a:hover {
 
 						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+						opacity: 1;
 					}
 				}
 			}

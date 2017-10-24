@@ -20,8 +20,8 @@ function post_loops_as_grid() {
 }
 
 /**
- * Set a class for the post loop parent wrapper
- * 	* Swap out loop-wrap for 'box-align' if grid set.
+ * Set a class for the post loop parent wrapper.
+ * Swap out loop-wrap for 'box-align' if grid set.
  *
  * @return string
  * @since 0.1.0
@@ -147,6 +147,11 @@ function progenitor_logo_size() {
 
 	return $size;
 }
+function set_logo_size() {
+
+}
+add_filter('get_custom_logo', 'set_logo_size', 1);
+
 /**
  * Set footer widgets class on parent wrapper
  * Builds a class for widget container to report number of widgets being used

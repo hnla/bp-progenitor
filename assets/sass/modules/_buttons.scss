@@ -122,34 +122,35 @@ input:disabled {
 // Example usage on group members manage screen.
 
 #site-wrap {
+
 	.text-links-list {
 
-	a.button {
-		background: none;
-		border: none;
-		border-right: 1px solid $bp-border-color;
-		color: $light-text;
-		display: inline-block;
-		padding: $pad-xsml $pad-med;
+		a.button {
+			background: none;
+			border: none;
+			border-right: 1px solid $bp-border-color;
+			color: $light-text;
+			display: inline-block;
+			padding: $pad-xsml $pad-med;
 
-		&:visited {
-			color: $text-link-visited;
+			&:visited {
+				color: $text-link-visited;
+			}
+
+			&:focus,
+			&:hover {
+				color: $text-link-hover;
+			}
+
 		}
 
-		&:focus,
-		&:hover {
-			color: $text-link-hover;
+		a.button:first-child {
+			padding-left: 0;
 		}
 
-	}
-
-	a.button:first-child {
-		padding-left: 0;
-	}
-
-	a.button:last-child {
-		border-right: none;
-	}
+		a.button:last-child {
+			border-right: none;
+		}
 
 	} // close text-links-list
 }

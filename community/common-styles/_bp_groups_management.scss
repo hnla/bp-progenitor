@@ -18,7 +18,7 @@
 
 	dd {
 		margin: 0;
-		padding: $pad-med 0;
+		padding: $pad-sml 0;
 	}
 
 	.section-title {
@@ -72,10 +72,16 @@
 			}
 		}
 
+		// action buttons
+		.action {
+			margin: $marg-med 0 $marg-xsml;
+		}
+
 		@include clearfix-element(".members-manage-buttons");
 
+
+
 		.members-manage-buttons {
-			margin: $marg-med 0 $marg-xsml;
 
 			a.button {
 				color: $light-text;
