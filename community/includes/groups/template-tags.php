@@ -345,12 +345,12 @@ function bp_progenitor_group_manage_screen() {
 
 		if ( ! empty( $core_screen['nonce'] ) ) {
 			if ( ! $is_group_create ) {
-				$output = sprintf( '<p><input type="submit" value="%s" id="save" name="save" /></p>', esc_attr__( 'Save Changes', 'buddypress' ) );
+				$output = sprintf( '<p><input id="save" class="bp-submit" type="submit" value="%s"  name="save" /></p>', esc_attr__( 'Save Changes', 'buddypress' ) );
 
 				// Specific case for the delete group screen
 				if ( 'delete-group' === $screen_id ) {
 					$output = sprintf( '<div class="submit">
-							<input type="submit" disabled="disabled" value="%s" id="delete-group-button" name="delete-group-button" />
+							<input id="delete-group-button" class="bp-submit" type="submit" disabled="disabled" value="%s"  name="delete-group-button" />
 						</div>',
 						esc_attr__( 'Delete Group', 'buddypress' )
 					);
@@ -647,7 +647,7 @@ function bp_progenitor_groups_manage_members_buttons( $args = array() ) {
 		/*
 		 * If we have a arg value for $button_element passed through
 		 * use it to default all the $buttons['button_element'] values
-		 * otherwise default to 'a' (anchor) o override & hardcode the
+		 * otherwise default to 'a' (anchor) or override & hardcode the
 		 * 'element' string on $buttons array.
 		 *
 		 * Icons sets a class for icon display if not using the button element
@@ -926,6 +926,12 @@ function bp_progenitor_groups_manage_members_buttons( $args = array() ) {
 					$parent_class .= ' ' . $button_args['wrapper_class'];
 				}
 
+				// The join or leave group header button should default to 'button'
+				// Reverse the earler button var to set default as 'button' not 'a'
+				if ( empty( $args['button_element'] ) ) {
+					$button_element = 'button';
+				}
+
 				$buttons['group_membership'] = array(
 					'id'                => 'group_membership',
 					'position'          => 5,
@@ -940,7 +946,6 @@ function bp_progenitor_groups_manage_members_buttons( $args = array() ) {
 							'class' => $parent_class,
 					),
 					'button_attr'       => array(
-						'href'  => $button_args['link_href'],
 						'id'    => ! empty( $button_args['link_id'] ) ? $button_args['link_id'] : '',
 						'class' => $button_args['link_class'] . ' button',
 						'rel'   => ! empty( $button_args['link_rel'] ) ? $button_args['link_rel'] : '',
@@ -952,6 +957,7 @@ function bp_progenitor_groups_manage_members_buttons( $args = array() ) {
 			if ( 'button' === $button_element ) {
 				$buttons['group_membership']['button_attr']['data-bp-nonce'] = $button_args['link_href'];
 			} else {
+			// Else this is an anchor so use href attr
 				$buttons['group_membership']['button_attr']['href'] = $button_args['link_href'];
 			}
 

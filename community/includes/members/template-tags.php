@@ -293,7 +293,7 @@ function bp_progenitor_members_loop_buttons( $args = array() ) {
 						),
 						'button_element'    => $button_element,
 						'button_attr'       => array(
-							'class'           => 'button accept bp-tooltip',
+							'class'           => 'button bt-btn-action accept bp-tooltip',
 							'rel'             => '',
 							'data-bp-tooltip' => __( 'Accept', 'buddypress' ),
 						),
@@ -337,7 +337,7 @@ function bp_progenitor_members_loop_buttons( $args = array() ) {
 				 */
 				add_filter( 'bp_get_add_friend_button', 'bp_progenitor_members_catch_button_args', 100, 1 );
 
-				bp_get_add_friend_button( $user_id );
+					bp_get_add_friend_button( $user_id );
 
 				remove_filter( 'bp_get_add_friend_button', 'bp_progenitor_members_catch_button_args', 100, 1 );
 

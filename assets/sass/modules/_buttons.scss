@@ -121,7 +121,8 @@ input:disabled {
 // .text-links-list would be stated for anchors parent wrapping element
 // Example usage on group members manage screen.
 
-.text-links-list {
+#site-wrap {
+	.text-links-list {
 
 	a.button {
 		background: none;
@@ -142,14 +143,14 @@ input:disabled {
 
 	}
 
-	a:first-child {
+	a.button:first-child {
 		padding-left: 0;
 	}
 
-	a:last-child {
+	a.button:last-child {
 		border-right: none;
 	}
 
-} // close text-links-list
-
+	} // close text-links-list
+}
 

@@ -46,15 +46,13 @@ bp_progenitor_before_loop(); ?>
 
 					</div>
 
-					<?php if ( bp_get_member_latest_update() && ! bp_progenitor_loop_is_grid() ) : ?>
+					<?php if ( bp_get_member_latest_update() && ! bp_progenitor_loop_is_grid() &&  'friends' != bp_current_component() ) : ?>
 					<div class="user-update">
 						<p class="update"> <?php bp_member_latest_update(); ?></p>
 					</div>
 						<?php endif; ?>
 
 				</div><!-- // .item -->
-
-
 
 			</div>
 		</li>

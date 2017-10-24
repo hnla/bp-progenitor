@@ -24,7 +24,7 @@
 
 <script type="text/html" id="tmpl-bp-invites-users">
 	<div class="item-avatar">
-		<img src="{{data.avatar}}" class="avatar" alt="">
+		<img src="{{data.avatar}}" class="avatar" alt="{{data.name}}">
 	</div>
 
 	<div class="item">

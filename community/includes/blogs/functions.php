@@ -164,11 +164,11 @@ function bp_progenitor_blogs_customizer_settings( $settings = array() ) {
 function bp_progenitor_blogs_customizer_controls( $controls = array() ) {
 	return array_merge( $controls, array(
 		'blogs_layout' => array(
-			'label'      => __( 'Blogs loop:', 'buddypress' ),
+			'label'      => __( 'Blogs loop', 'buddypress' ),
 			'section'    => 'bp_progenitor_loops_layout',
 			'settings'   => 'bp_progenitor_appearance[blogs_layout]',
 			'type'       => 'select',
-			'choices'    => bp_progenitor_customizer_grid_choices(),
+			'choices'    =>  bp_progenitor_customizer_grid_choices(),
 		),
 	) );
 }

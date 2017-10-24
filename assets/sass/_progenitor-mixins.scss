@@ -238,6 +238,7 @@
 // Provide a box-shadow: none;
 
 @mixin box-shadow-none() {
+
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -318,6 +319,22 @@
 	-webkit-box-align: center; // old
 	align-items: center; // current specs
 }
+
+
+// Layout elements / lists as grids
+// A combined mixin to set flex-flow & flex
+// This mixin must be called on the parent i.e 'ul'
+
+@mixin build-flex-layout($row-wrap: wrap, $align: stretch, $basis: auto, $grow: 0 ) {
+
+	@include flex-box-dir($flex-dir: "row", $flex-wrap: $row-wrap);
+	@include flex-align($align: $align);
+
+	> * {
+		@include box-item-size($grow: $grow, $shrink: 1, $basis: $basis);
+	}
+}
+
 
 // Links as a tabbed effect.
 // Renders links in a horizontal layout as a

@@ -501,13 +501,16 @@ Internal widgets structural
 .widget_bp_groups_widget .item-options,
 .widget_bp_groups_widget .item-list,
 .widget_bp_blogs_widget .item-options,
-.widget_bp_blogs_widget .item-list {
+.widget_bp_blogs_widget .item-list,
+.widget_bp_core_members_widget .item-options,
+.widget_bp_core_members_widget .item-list {
 	font-size: 13px;
 	font-size: 0.8125rem;
 }
 
 .widget_bp_groups_widget ul,
-.widget_bp_blogs_widget ul {
+.widget_bp_blogs_widget ul,
+.widget_bp_core_members_widget ul {
 	list-style: none;
 	padding: 0;
 }

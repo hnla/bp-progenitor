@@ -57,19 +57,43 @@
 
 }
 
+// Generic buttons styling
 .bp-progenitor {
-//li.generic-button {@include box-shadow(0 0 9px 0 $light-box-shadow);}
-	.button {
+
+	li.generic-button {
+		@include box-shadow(0 0 9px 0 $light-box-shadow);
+	}
+
+	.button,
+	.bp-submit {
+		@include background-gradient-3d($color: $off-white, $depth: low);
 
 		&:focus,
 		&:hover {
 
-//				@include background-gradient-3d($color: #555);
+			@include background-gradient-3d($color: $off-white, $depth: medium);
+			@include box-shadow(0 0 3px 0 $light-box-shadow);
 //				color: $white;
 		}
 	}
 }
 
+.avatar {
+	@include box-shadow(0 0 9px 0 $light-box-shadow);
+}
+
+.footer-widgets-wrap {
+	.avatar {
+		border: 1px solid $med-light-grey;
+
+		@include box-shadow(0 0 5px 0 $dark-grey)
+	}
+}
+#item-header-cover-image {
+	.avatar {
+		@include box-shadow(0 0 5px 0 $dark-grey );
+	}
+}
 /*====================================================
 2. Header elements
 ======================================================*/
@@ -531,7 +555,8 @@
 				color: $light-grey;
 			}
 
-			li {
+			li,
+			p {
 				color: $off-white;
 			}
 		}
@@ -560,5 +585,32 @@
 	a:focus {
 
 		opacity: 0.9;
+	}
+}
+
+/*==========================================
+6. Elements - modules, lists, boxes etc
+===========================================*/
+
+// Activity list panel: full loop widget
+
+.bp-latest-activities.buddypress {
+	background: $off-white;
+	border: 1px solid $bp-border-color;
+	padding: 0 $pad-med $pad-med;
+
+	.widget-title {
+		margin: $pad-sml 0;
+	}
+
+	.activity-list.bp-list {
+		background: none;
+		border: 0;
+		margin-bottom: 0;
+		padding: 0;
+
+		li:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

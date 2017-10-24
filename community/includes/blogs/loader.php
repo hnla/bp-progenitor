@@ -84,10 +84,10 @@ class BP_Progenitor_Blogs {
 	protected function setup_filters() {
 		if ( is_multisite() ) {
 			// Add settings into the Blogs sections of the customizer.
-			add_filter( 'bp_progenitor_customizer_settings', 'bp_progenitor_blogs_customizer_settings', 11, 1 );
+			add_filter( 'bp_progenitor_customizer_settings', 'bp_progenitor_blogs_customizer_settings', 10, 1 );
 
 			// Add controls into the Blogs sections of the customizer.
-			add_filter( 'bp_progenitor_customizer_controls', 'bp_progenitor_blogs_customizer_controls', 11, 1 );
+			add_filter( 'bp_progenitor_customizer_controls', 'bp_progenitor_blogs_customizer_controls', 10, 1 );
 		}
 	}
 }
@@ -102,6 +102,6 @@ function bp_progenitor_blogs( $bp_progenitor = null ) {
 		return;
 	}
 
-	$bp_progenitor->blogs = new BP_progenitor_Blogs();
+	$bp_progenitor->blogs = new BP_Progenitor_Blogs();
 }
 add_action( 'bp_progenitor_includes', 'bp_progenitor_blogs', 10, 1 );

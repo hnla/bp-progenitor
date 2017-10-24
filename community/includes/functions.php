@@ -864,6 +864,7 @@ function bp_progenitor_get_appearance_settings( $option = '' ) {
 		$default_args = array_merge( $default_args, array(
 			'sites_dir_layout' => 0,
 			'sites_dir_tabs'   => 0,
+			'blogs_layout'     => 1,
 		) );
 	}
 

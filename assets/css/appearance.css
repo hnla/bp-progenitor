@@ -34,6 +34,53 @@
 	color: #f1da7c;
 }
 
+.bp-progenitor li.generic-button {
+	-webkit-box-shadow: 0 0 9px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 9px 0 #d2d2d2;
+	box-shadow: 0 0 9px 0 #d2d2d2;
+}
+
+.bp-progenitor .button,
+.bp-progenitor .bp-submit {
+	background: #fafafa;
+	background: -moz-linear-gradient(top, #fafafa 0%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
+	background: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa", endColorstr="#ededed", GradientType=0);
+}
+
+.bp-progenitor .button:focus, .bp-progenitor .button:hover,
+.bp-progenitor .bp-submit:focus,
+.bp-progenitor .bp-submit:hover {
+	background: #fafafa;
+	background: -moz-linear-gradient(top, #fafafa 0%, #e1e0e0 100%);
+	background: -webkit-linear-gradient(top, #fafafa 0%, #e1e0e0 100%);
+	background: linear-gradient(to bottom, #fafafa 0%, #e1e0e0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa", endColorstr="#e1e0e0", GradientType=0);
+	-webkit-box-shadow: 0 0 3px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 3px 0 #d2d2d2;
+	box-shadow: 0 0 3px 0 #d2d2d2;
+}
+
+.avatar {
+	-webkit-box-shadow: 0 0 9px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 9px 0 #d2d2d2;
+	box-shadow: 0 0 9px 0 #d2d2d2;
+}
+
+.footer-widgets-wrap .avatar {
+	border: 1px solid #d6d6d6;
+	-webkit-box-shadow: 0 0 5px 0 #555;
+	-moz-box-shadow: 0 0 5px 0 #555;
+	box-shadow: 0 0 5px 0 #555;
+}
+
+#item-header-cover-image .avatar {
+	-webkit-box-shadow: 0 0 5px 0 #555;
+	-moz-box-shadow: 0 0 5px 0 #555;
+	box-shadow: 0 0 5px 0 #555;
+}
+
 /*====================================================
 2. Header elements
 ======================================================*/
@@ -375,7 +422,8 @@
 	color: #eaeaea;
 }
 
-.footer-widgets-wrap .widget-area .widget li {
+.footer-widgets-wrap .widget-area .widget li,
+.footer-widgets-wrap .widget-area .widget p {
 	color: #fafafa;
 }
 
@@ -399,4 +447,28 @@
 .site-footer a:hover,
 .site-footer a:focus {
 	opacity: 0.9;
+}
+
+/*==========================================
+6. Elements - modules, lists, boxes etc
+===========================================*/
+.bp-latest-activities.buddypress {
+	background: #fafafa;
+	border: 1px solid #eee;
+	padding: 0 1em 1em;
+}
+
+.bp-latest-activities.buddypress .widget-title {
+	margin: 0.5em 0;
+}
+
+.bp-latest-activities.buddypress .activity-list.bp-list {
+	background: none;
+	border: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.bp-latest-activities.buddypress .activity-list.bp-list li:last-child {
+	margin-bottom: 0;
 }

@@ -2,12 +2,12 @@
 /**
  * Functions of BuddyPress's "progenitor" template pack.
  *
- * @since 1.0.0
+ * @since 0.1.0
  *
  * @buddypress-template-pack {
  * Template Pack ID:       bp-progenitor
  * Template Pack Name:     BP Progenitor
- * Version:                1.0.0
+ * Version:                0.1.0
  * WP required version:    4.8
  * BP required version:    3.0
  * Description:            A new template pack for BuddyPress!

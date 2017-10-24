@@ -46,7 +46,10 @@ bp_progenitor_before_loop(); ?>
 
 					</div>
 
-					<div class="group-desc"><p><?php bp_progenitor_group_description_excerpt(); ?></p></div>
+					<div class="group-desc">
+						<h3 class="group-desc-title"><?php _e('Group Description', 'bp-progenitor'); ?></h3>
+						<p><?php bp_progenitor_group_description_excerpt(); ?></p>
+					</div>
 
 					<?php bp_progenitor_groups_loop_item(); ?>
 

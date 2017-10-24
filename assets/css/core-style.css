@@ -626,7 +626,7 @@ a:hover, a:active {
 
 .main-navigation ul ul {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	box-shadow: 0 0 7px rgba(214, 214, 214, 0.9);
 	position: absolute;
 	top: 0;
@@ -1111,7 +1111,7 @@ Site post lists layouts - as boxes
 }
 
 .post-list-grid.archive .box-align .box article.post, .post-list-grid.category .box-align .box article.post, .post-list-grid.blog .box-align .box article.post {
-	border: 1px solid #ccc;
+	border: 1px solid #b7b7b7;
 	margin: 0 0.5em 0.5em;
 	padding: 0.5em;
 }
@@ -1122,9 +1122,9 @@ Site post lists layouts - as boxes
 }
 
 .post-list-grid.archive .box-align article.post, .post-list-grid.category .box-align article.post, .post-list-grid.blog .box-align article.post {
-	-webkit-box-shadow: 0 0 5px 0 #eaeaea;
-	-moz-box-shadow: 0 0 5px 0 #eaeaea;
-	box-shadow: 0 0 5px 0 #eaeaea;
+	-webkit-box-shadow: 0 0 5px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 5px 0 #d2d2d2;
+	box-shadow: 0 0 5px 0 #d2d2d2;
 }
 
 .post-list-grid.archive .box-align article.post .entry-title, .post-list-grid.category .box-align article.post .entry-title, .post-list-grid.blog .box-align article.post .entry-title {
@@ -1337,7 +1337,7 @@ a.bp-title-button,
 .activity-read-more a {
 	background: #fff;
 	/* Old browsers */
-	border-color: #ccc;
+	border-color: #b7b7b7;
 	border-style: solid;
 	border-width: 1px;
 	color: #555;
@@ -1375,7 +1375,7 @@ input[type="reset"]:hover,
 .activity-read-more a:focus,
 .activity-read-more a:hover {
 	background: #ededed;
-	border-color: #999999;
+	border-color: #848484;
 	color: #333;
 	outline: none;
 	text-decoration: none;
@@ -1437,7 +1437,7 @@ input:disabled:hover, input:disabled:focus {
 	background: none;
 }
 
-.text-links-list a.button {
+#site-wrap .text-links-list a.button {
 	background: none;
 	border: none;
 	border-right: 1px solid #eee;
@@ -1446,18 +1446,18 @@ input:disabled:hover, input:disabled:focus {
 	padding: 0.3em 1em;
 }
 
-.text-links-list a.button:visited {
+#site-wrap .text-links-list a.button:visited {
 	color: #d6d6d6;
 }
 
-.text-links-list a.button:focus, .text-links-list a.button:hover {
+#site-wrap .text-links-list a.button:focus, #site-wrap .text-links-list a.button:hover {
 	color: #5087e5;
 }
 
-.text-links-list a:first-child {
+#site-wrap .text-links-list a.button:first-child {
 	padding-left: 0;
 }
 
-.text-links-list a:last-child {
+#site-wrap .text-links-list a.button:last-child {
 	border-right: none;
 }
