@@ -1185,6 +1185,15 @@ Site post lists layouts - as boxes
 	flex: 1 1 auto;
 }
 
+.blog .box-align .box.post-sticky-box {
+	padding: 0 0 2em;
+	-webkit-flex: 1 1 100%;
+	-moz-flex: 1 1 100%;
+	-ms-flex: 1 1 100%;
+	-o-flex: 1 1 100%;
+	flex: 1 1 100%;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

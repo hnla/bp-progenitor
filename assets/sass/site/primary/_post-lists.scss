@@ -93,6 +93,7 @@ Site post lists layouts - as boxes
 	}
 }
 
+// The front page loop layout
 .home-page.post-list-grid {
 
 		.box-align {
@@ -111,4 +112,18 @@ Site post lists layouts - as boxes
 				}
 			}
 		}
+}
+
+// The static page displaying blog posts index i.e 'blog'
+
+.blog {
+
+	.box-align {
+
+		.box.post-sticky-box {
+			padding: 0 0 $pad-lrg;
+
+			@include box-item-size($grow: 1, $basis: 100%);
+		}
+	}
 }

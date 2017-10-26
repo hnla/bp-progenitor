@@ -19,6 +19,18 @@ function post_loops_as_grid() {
 	return (bool) progenitor_opts('post_loops_grid');
 }
 
+function blogs_grid_static_post_class() {
+	$retval = '';
+
+	if ( post_loops_as_grid() && ! is_front_page() ) {
+		if ( is_sticky() ) {
+			$retval = ' post-sticky-box';
+		}
+	}
+
+	echo $retval;
+}
+
 /**
  * Set a class for the post loop parent wrapper.
  * Swap out loop-wrap for 'box-align' if grid set.
