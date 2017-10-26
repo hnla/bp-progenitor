@@ -34,7 +34,7 @@
 	color: #f1da7c;
 }
 
-.bp-progenitor ul:not(.grid) li.generic-button {
+.bp-progenitor ul li.generic-button {
 	-webkit-box-shadow: 0 0 9px 0 #d2d2d2;
 	-moz-box-shadow: 0 0 9px 0 #d2d2d2;
 	box-shadow: 0 0 9px 0 #d2d2d2;
@@ -48,24 +48,24 @@
 
 .bp-progenitor .button,
 .bp-progenitor .bp-submit {
-	background: #fafafa;
-	background: -moz-linear-gradient(top, #fafafa 0%, #ededed 100%);
-	background: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
-	background: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa", endColorstr="#ededed", GradientType=0);
+	background: #fff;
+	background: -moz-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+	background: -webkit-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+	background: linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff", endColorstr="#f2f2f2", GradientType=0);
 }
 
 .bp-progenitor .button:focus, .bp-progenitor .button:hover,
 .bp-progenitor .bp-submit:focus,
 .bp-progenitor .bp-submit:hover {
-	background: #fafafa;
-	background: -moz-linear-gradient(top, #fafafa 0%, #e1e0e0 100%);
-	background: -webkit-linear-gradient(top, #fafafa 0%, #e1e0e0 100%);
-	background: linear-gradient(to bottom, #fafafa 0%, #e1e0e0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa", endColorstr="#e1e0e0", GradientType=0);
-	-webkit-box-shadow: 0 0 3px 0 #d2d2d2;
-	-moz-box-shadow: 0 0 3px 0 #d2d2d2;
-	box-shadow: 0 0 3px 0 #d2d2d2;
+	background: #fff;
+	background: -moz-linear-gradient(top, #fff 0%, #e6e5e5 100%);
+	background: -webkit-linear-gradient(top, #fff 0%, #e6e5e5 100%);
+	background: linear-gradient(to bottom, #fff 0%, #e6e5e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff", endColorstr="#e6e5e5", GradientType=0);
+	-webkit-box-shadow: 0 0 1px 0 #d2d2d2;
+	-moz-box-shadow: 0 0 1px 0 #d2d2d2;
+	box-shadow: 0 0 1px 0 #d2d2d2;
 }
 
 .avatar {

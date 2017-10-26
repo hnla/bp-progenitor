@@ -4558,6 +4558,7 @@ aside .buddypress.widget ul.item-list li .item .item-meta,
 		-ms-flex-flow: row wrap;
 		-o-flex-flow: row wrap;
 		flex-flow: row wrap;
+		width: auto;
 	}
 }
 
@@ -4571,7 +4572,7 @@ aside.widget-area .buddypress.widget ul.item-list li {
 	-ms-flex: 0 1 46%;
 	-o-flex: 0 1 46%;
 	flex: 0 1 46%;
-	margin: 2% 2% 10px;
+	margin: 2% 2% 20px;
 }
 
 @media screen and (min-width: 75em) {
@@ -4597,7 +4598,6 @@ aside.widget-area .buddypress.widget ul#blog-post-list li p {
 @media screen and (min-width: 55em) {
 	aside.widget-area .buddypress.widget ul.item-list {
 		margin: 10px -2%;
-		width: 100%;
 	}
 	aside.widget-area .buddypress.widget ul.item-list li {
 		-webkit-flex: 0 1 auto;
@@ -4605,7 +4605,7 @@ aside.widget-area .buddypress.widget ul#blog-post-list li p {
 		-ms-flex: 0 1 auto;
 		-o-flex: 0 1 auto;
 		flex: 0 1 auto;
-		margin: 10px 2% 1%;
+		margin: 10px 2% 2%;
 		width: 46%;
 	}
 	aside.widget-area .buddypress.widget ul#blog-post-list {
@@ -4651,6 +4651,8 @@ aside.widget-area .buddypress.widget.bp-latest-activities li .activity-inner {
 		-ms-flex-flow: column nowrap;
 		-o-flex-flow: column nowrap;
 		flex-flow: column nowrap;
+		margin: 0 1%;
+		overflow: visible;
 		padding: 0;
 	}
 	aside.widget-area .buddypress.widget.bp-latest-activities ul.activity-list li {
@@ -4659,6 +4661,7 @@ aside.widget-area .buddypress.widget.bp-latest-activities li .activity-inner {
 		-ms-flex: 1 1 100%;
 		-o-flex: 1 1 100%;
 		flex: 1 1 100%;
+		margin: 10px 0 1%;
 		padding: 0 0.5em;
 		width: auto;
 	}

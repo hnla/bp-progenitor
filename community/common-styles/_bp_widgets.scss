@@ -98,6 +98,7 @@ aside.widget-area {
 			@include medium-small-up() {
 
 				@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
+				width: auto;
 			}
 
 			li {
@@ -112,7 +113,7 @@ aside.widget-area {
 					@include box-item-size($grow: 0, $basis: 21%);
 				}
 
-				margin: 2% 2% 10px;
+				margin: 2% 2% 20px;
 
 				@include medium-up {
 					.avatar {
@@ -136,12 +137,12 @@ aside.widget-area {
 
 			ul.item-list {
 				margin: $marg-sml -2%;
-				width: 100%;
+
 
 				li {
 
 					@include box-item-size($grow: 0, $basis: auto);
-					margin: $marg-sml 2% 1%;
+					margin: $marg-sml 2% 2%;
 					width: 46%;
 				}
 			} // ul.item-list
@@ -185,11 +186,14 @@ aside.widget-area {
 				ul.activity-list {
 
 					@include flex-box-dir($flex-dir: column, $flex-wrap: nowrap);
+					margin: 0 1%;
+					overflow: visible;
 					padding: 0;
 
 						li {
 
 							@include box-item-size($grow: 1, $basis: 100%);
+							margin: 10px 0 1%;
 							padding: 0 $pad-sml;
 							width: auto;
 						}

@@ -133,7 +133,7 @@ Header aka .site-banner includes primary nav
 
 .site-content .widget-area {
 	overflow: hidden;
-	padding: 0 $pad-sml 0 $pad-med;
+	padding: 0 $pad-sml;
 	width: auto;
 }
 
@@ -151,6 +151,8 @@ Header aka .site-banner includes primary nav
 @include medium-up() {
 
 	.site-content .widget-area {
+		padding: 0 $pad-sml 0 $pad-med;
+
 		float: right;
 		width: $size__site-sidebar;
 	}

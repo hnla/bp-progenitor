@@ -60,7 +60,7 @@
 // Generic buttons styling
 .bp-progenitor {
 
-	ul:not(.grid) {
+	ul {
 
 		li.generic-button {
 
@@ -78,13 +78,13 @@
 
 	.button,
 	.bp-submit {
-		@include background-gradient-3d($color: $off-white, $depth: low);
+		@include background-gradient-3d($color: $white, $depth: low);
 
 		&:focus,
 		&:hover {
 
-			@include background-gradient-3d($color: $off-white, $depth: medium);
-			@include box-shadow(0 0 3px 0 $light-box-shadow);
+			@include background-gradient-3d($color: $white, $depth: medium);
+			@include box-shadow(0 0 1px 0 $light-box-shadow);
 //				color: $white;
 		}
 	}
