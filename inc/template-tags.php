@@ -214,10 +214,9 @@ if ( ! function_exists( 'bp_progenitor_posted_on' ) ) :
 	/**
 		* Prints HTML with meta information for the current post-date/time and author.
 		*/
-	function bp_progenitor_posted_on( $post ) {
+	function bp_progenitor_posted_on() {
+		global $post;
 
-		// This function is used mainly outside of the direct loop so find the post id
-		$id = $post->ID;
 
 		// If BP active fetch the BP user domain url
 		// else we'll use the WP link to author posts loop.
