@@ -814,24 +814,28 @@ function bp_progenitor_get_temporary_setting( $option = '', $retval = false ) {
  */
 function bp_progenitor_get_appearance_settings( $option = '' ) {
 	$default_args = array(
-		'site_title'            => 0,
-		'site_tagline'          => 0,
-		'header_img_background' => 0,
-		'overlay_logo'          => 0,
-		'overlay_logo_size'     => 20,
-		'main_site_menu'        => 'horizontal',
-		'post_loops_grid'      	=> 0,
-		'bp_dir_sbar'           => 0,
-		'avatar_style'          => 0,
-		'user_front_page'       => 1,
-		'user_front_bio'        => 0,
-		'user_nav_display'      => 0, // O is default (horizontally). 1 is vertically.
-		'user_nav_tabs'         => 0,
-		'user_subnav_tabs'      => 0,
-		'user_nav_order'        => array(),
-		'members_layout'        => 1,
-		'members_dir_tabs'      => 0,
-		'members_dir_layout'    => 0,
+		'site_title'                => 0,
+		'site_tagline'              => 0,
+		'header_img_background'     => 0,
+		'overlay_logo'              => 0,
+		'overlay_logo_size'         => 20,
+		'main_site_menu'            => 'horizontal',
+		'post_loops_grid'          	=> 0,
+		'post_loops_grid_archives'  => 0,
+		'post_loops_grid_search'    => 0,
+		'post_loops_grid_tags'      => 0,
+		'post_loops_grid_author'    => 0,
+		'bp_dir_sbar'               => 0,
+		'avatar_style'              => 0,
+		'user_front_page'           => 1,
+		'user_front_bio'            => 0,
+		'user_nav_display'          => 0, // O is default (horizontally). 1 is vertically.
+		'user_nav_tabs'             => 0,
+		'user_subnav_tabs'          => 0,
+		'user_nav_order'            => array(),
+		'members_layout'            => 1,
+		'members_dir_tabs'          => 0,
+		'members_dir_layout'        => 0,
 	);
 
 	if ( bp_is_active( 'friends' ) ) {

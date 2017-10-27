@@ -364,7 +364,19 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'site-nav-horizontal';
 	endif;
 
-	if ( 1 === progenitor_opts('post_loops_grid') ) {
+	if ( 1 === progenitor_opts('post_loops_grid') && is_home() ) {
+		$classes[] = 'post-list-grid';
+	}
+	if ( 1 === progenitor_opts('post_loops_grid_archives') && ( is_archive() || is_category() ) ) {
+		$classes[] = 'post-list-grid';
+	}
+	if ( 1 === progenitor_opts('post_loops_grid_search') && is_search() ) {
+		$classes[] = 'post-list-grid';
+	}
+	if ( 1 === progenitor_opts('post_loops_grid_tags') && is_tag() ) {
+		$classes[] = 'post-list-grid';
+	}
+	if ( 1 === progenitor_opts('post_loops_grid_author') && is_author() ) {
 		$classes[] = 'post-list-grid';
 	}
 
