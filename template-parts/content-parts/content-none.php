@@ -12,7 +12,12 @@
 <div class="no-results not-found">
 
 	<header class="page-info">
-		<h2 class="page-info-title"><?php esc_html_e( 'Nothing Found', 'bp-progenitor' ); ?></h2>
+
+		<?php if ( is_search() ) { ?>
+		<h2 class="page-info-title"><?php printf( __('No Results for the query: %1$s', 'bp-progenitor' ), get_search_query() ); ?></h2>
+	<?php } else { ?>
+		<h2 class="page-info-title"><?php esc_html_e( 'No Results', 'bp-progenitor' ); ?></h2>
+		<?php } ?>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -36,9 +41,10 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bp-progenitor' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, we couldn&rsquo;t locate any content for your search terms. Please try again with some different keywords or browse the most recent content listed below.', 'bp-progenitor' ); ?></p>
 			<?php
-				get_search_form();
+				progenitor_site_search( array( 'parent_class' => array('wide') ) );
+			 get_template_part('template-parts/content-parts/no-results-suggested-content');
 
 		else : ?>
 

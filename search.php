@@ -22,8 +22,11 @@ get_header(); ?>
 				?></h2>
 			</header><!-- .page-header -->
 
+			<div class="box-align">
+
 			<?php
 			/* Start the Loop */
+
 			while ( have_posts() ) : the_post();
 
 				/**
@@ -33,9 +36,11 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content-parts/content', 'search' );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+			</div><!-- // box-align -->
+
+			<?php the_posts_navigation();
 
 		else :
 

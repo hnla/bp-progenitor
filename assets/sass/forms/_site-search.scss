@@ -36,18 +36,19 @@
 			@include flex-box-dir($flex-dir: "row", $flex-wrap: "nowrap" );
 			@include flex-align();
 
+
 			input[type="search"],
 			button[type="submit"] {
 			}
 
 			input[type="search"] {
 
-				@include box-item-size($basis: 80%);
+				@include box-item-size($basis: 90%);
 			}
 
 			button[type="submit"] {
 
-				@include box-item-size($basis: 20%);
+				@include box-item-size($basis: 10%);
 			}
 		}
 	}

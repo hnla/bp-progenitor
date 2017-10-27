@@ -121,7 +121,7 @@
 
 					<?php } elseif ( is_search() ) { ?>
 						<header class="page-header">
-							<h1 class="page-title"><?php _e('Search', 'bp-progenitor'); ?></h1>
+							<h1 class="page-title"><?php _e('Search Results', 'bp-progenitor'); ?></h1>
 						</header>
 					<?php } elseif ( is_home() && ! is_front_page() ) { ?>
 						<header>

@@ -18,7 +18,9 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
+					<p><?php esc_html_e( 'This may habve been due to a typo or we have removed the page?. Maybe try one of the links below or a search?', 'bp-progenitor' ); ?></p>
 
+					<?php  progenitor_site_search( array( 'parent_class' => array( 'wide') ) ); ?>
 					<?php get_template_part('template-parts/content-parts/no-results-suggested-content'); ?>
 
 				</div><!-- .page-content -->
