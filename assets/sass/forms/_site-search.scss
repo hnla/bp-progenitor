@@ -28,4 +28,27 @@
 			@include font-size(20);
 		}
 	}
+
+	&.wide {
+
+		.site-search-form {
+
+			@include flex-box-dir($flex-dir: "row", $flex-wrap: "nowrap" );
+			@include flex-align();
+
+			input[type="search"],
+			button[type="submit"] {
+			}
+
+			input[type="search"] {
+
+				@include box-item-size($basis: 80%);
+			}
+
+			button[type="submit"] {
+
+				@include box-item-size($basis: 20%);
+			}
+		}
+	}
 }

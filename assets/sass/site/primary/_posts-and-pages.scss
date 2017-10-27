@@ -121,3 +121,51 @@
 		}
 	}
 }
+
+// 404 & search pages
+
+.error404,
+.search {
+
+	.page-content {
+
+		.site-search-form {
+			margin-bottom: $pad-lrg;
+		}
+	}
+}
+
+// Suggested content block
+
+.suggested-content {
+
+	@include build-flex-layout($dir: column);
+
+	@include medium-up() {
+		@include build-flex-layout($row-wrap: wrap, $basis: 33.3%, $grow: 1);
+	}
+
+	.box {
+
+		padding: 0 $pad-med;
+
+	.widget {
+
+		.widget-title,
+		.widgettitle {
+			margin-top: 0;
+		}
+
+		> ul {
+			margin-left: 0;
+			padding-left: 0;
+
+			li {
+				margin-left: 20px;
+			}
+		}
+	}
+
+
+	}
+}

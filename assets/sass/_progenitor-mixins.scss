@@ -323,11 +323,11 @@
 
 // Layout elements / lists as grids
 // A combined mixin to set flex-flow & flex
-// This mixin must be called on the parent i.e 'ul'
+// This mixin must be called on the parent i.e 'ul' or 'div'
 
-@mixin build-flex-layout($row-wrap: wrap, $align: stretch, $basis: auto, $grow: 0 ) {
+@mixin build-flex-layout($dir: row, $row-wrap: wrap, $align: stretch, $basis: auto, $grow: 0 ) {
 
-	@include flex-box-dir($flex-dir: "row", $flex-wrap: $row-wrap);
+	@include flex-box-dir($flex-dir: $dir, $flex-wrap: $row-wrap);
 	@include flex-align($align: $align);
 
 	> * {

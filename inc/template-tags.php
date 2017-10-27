@@ -19,6 +19,14 @@ function post_loops_as_grid() {
 	return (bool) progenitor_opts('post_loops_grid');
 }
 
+
+/**
+ * Create a class for the grid box element
+ * to allow sticky posts to have adjusted properties.
+ *
+ * @return string
+ * @since 0.1.0
+ */
 function blogs_grid_static_post_class() {
 	$retval = '';
 
@@ -365,4 +373,58 @@ function progenitor_postloop_paginate() {
 
 	$the_links = '<div class="paginate-loop" role="navigation">' . paginate_links( $pagination ) . '</div>';
 	echo $the_links;
+}
+
+/**
+* Progenitors site search
+*
+*/
+function progenitor_site_search( $args ) {
+	$defaults = array (
+		'parent_class' => array(),
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$primary_classes = array ('site-search', 'bp-search') ;
+	$parent_classes = array_merge( $primary_classes, $args['parent_class'] );
+	$display_classes = implode(' ', $parent_classes);
+
+	/*
+	* Look for a searchform hardcoded file in theme or child theme
+	*	This is similar to the WP function 'get_search_form()' approach
+	*	& allows simple overriding of form if required
+	*/
+	$search_form_template = locate_template( 'searchform.php' );
+		if ( '' != $search_form_template ) {
+
+			ob_start();
+				require( $search_form_template );
+			$form = ob_get_clean();
+
+			echo $form;
+
+		} else { ?>
+
+		<div class="<?php echo esc_attr( $display_classes ); ?>">
+		<form role="search" method="get" class="site-search-form" action="<?php echo home_url( '/' ); ?>">
+
+			<label>
+				<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+			</label>
+
+			<input type="search" class="search-field"
+					placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+					value="<?php echo get_search_query() ?>" name="s" />
+
+
+				<button type="submit" class="search-submit" name="search">
+					<span class="fa fa-search" aria-hidden="true"></span>
+					<span id="button-text" class="screen-reader-text"><?php _e( 'Search', 'bp-progenitor' ); ?></span>
+				</button>
+		</form>
+		</div>
+<?php	}
+
+	return;
 }
