@@ -11,8 +11,7 @@
 
 		ul {
 			margin-left: 0;
-			padding-left: 0;
-			list-style-position: inside;
+			padding-left: $pad-med;
 		}
 	}
 }
@@ -32,6 +31,7 @@
 
 	ul {
 		list-style: none;
+		margin-left: 0;
 		padding: 0;
 	}
 }

@@ -41,9 +41,9 @@ Site post lists layouts - as boxes
 					@include box-item-size($grow: 0, $basis: 20%);
 				}
 
-				article.post {
+				article {
 					border: 1px solid $bp-border-dark;
-					margin: 0 $pad-sml $pad-sml;
+					margin: 0 $pad-sml $pad-med;
 					padding: $pad-sml;
 
 					.featured-image {
@@ -56,9 +56,17 @@ Site post lists layouts - as boxes
 				}
 			}
 
-			article.post {
+			article {
 
 				@include box-shadow(0 0 5px 0 $light-box-shadow);
+
+				.entry-title,
+				.entry-content {
+					-webkit-hyphens: auto;
+					-moz-hyphens: auto;
+					-ms-hyphens: auto;
+					hyphens: auto;
+				}
 
 				.entry-title {
 
@@ -74,10 +82,7 @@ Site post lists layouts - as boxes
 				.entry-content {
 
 					@include font-size(14);
-					-webkit-hyphens: auto;
-					-moz-hyphens: auto;
-					-ms-hyphens: auto;
-					hyphens: auto;
+
 					margin-top: 0;
 					word-break: break-word;
 				}
@@ -86,13 +91,36 @@ Site post lists layouts - as boxes
 					margin: 0 0 $marg-sml;
 				}
 
+				.entry-meta,
 				.entry-footer {
 					@include font-size(12);
 				}
 			}
-		} // close main.site-main
+		} // .box-align
 	}
 }
+
+// If a sidebar is present then we'll determin that less room available
+// for grid boxes i.e they will be too narrow so we'll check body class
+// and re-set the Flex  basis sizing to 25%, 4 to a row large up.
+
+.post-list-grid.main-sidebar {
+
+	&.archive,
+	&.category,
+	&.blog,
+	&.search {
+
+		.box {
+
+			@include large-up() {
+
+				@include box-item-size($grow: 0, $basis: 25%);
+			}
+		}
+	}
+}
+
 
 // The front page loop layout
 .home-page.post-list-grid {
