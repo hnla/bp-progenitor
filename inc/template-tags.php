@@ -115,7 +115,7 @@ function progenitor_display_metabar() {
 
 	if ( is_front_page() ) {
 		if ('vertical' === $menu ) {
-			$ret = false;
+			$retval = false;
 		}
 	}
 	return $retval;
