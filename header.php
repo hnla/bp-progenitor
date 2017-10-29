@@ -78,9 +78,10 @@
 			<div id="content" class="site-content">
 
 				<?php
-				/**
-				 * Dont display empty meta bar on front page i.e static page & vertical main menu
+				/*
+				 * Dont display empty meta bar on front page i.e static page/ home page & vertical main menu set
 				 */
+
 				if ( progenitor_display_metabar() ) : ?>
 
 				<div class="meta-bar">
