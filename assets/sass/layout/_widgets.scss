@@ -1,5 +1,5 @@
 // Widgets - general
-// Layout styles for general widget elements in footers/sidebars
+// Layout styles for general widget elements in footers/sidebars & homepage
 
 .widget-area {
 
@@ -11,7 +11,7 @@
 
 		ul {
 			margin-left: 0;
-			padding-left: $pad-med;
+//			padding-left: $pad-med;
 		}
 	}
 }
@@ -36,4 +36,9 @@
 	}
 }
 
+.home-page {
 
+	.widget-title {
+		margin-top: $pad-sml;
+	}
+}

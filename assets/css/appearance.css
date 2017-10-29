@@ -7,6 +7,10 @@
 /*====================================================
 1. classed, grouped, & container colours
 ======================================================*/
+#page .site-branding {
+	border-radius: 0;
+}
+
 .primary-color,
 .bp-navs {
 	background: #3d629c;
@@ -91,7 +95,11 @@
 2. Header elements
 ======================================================*/
 .site-header {
-	background: #fafafa;
+	background: #3d629c;
+	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
 }
 
 .meta-bar {
@@ -282,16 +290,20 @@
 	color: #333;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links),
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) {
 	margin-bottom: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose) {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose),
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose) {
 	color: #fff;
 	opacity: 0.9;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):focus, .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):hover {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):focus, .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):hover,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):focus,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li a:not(#compose):hover {
 	background: #517abb;
 	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
@@ -302,13 +314,16 @@
 }
 
 .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a span,
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a span {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a span,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a span,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li a span {
 	background: #203453;
 	border: none;
 	color: #e4eaf4;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a#compose {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li a#compose,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li a#compose {
 	background: #3d629c;
 	background: -moz-linear-gradient(top, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(top, #3d629c 0%, #2f4b77 100%);
@@ -320,7 +335,10 @@
 
 .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a,
 .site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a:focus,
-.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a:hover {
+.site-nav-horizontal .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a:hover,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a:focus,
+.site-nav-vertical .buddypress-wrap .bp-navs:not(.tabbed-links) li.selected a:hover {
 	background: #2f4b77;
 	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
 	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
@@ -331,22 +349,27 @@
 }
 
 .site-nav-horizontal .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
-.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a {
+.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a,
+.site-nav-vertical .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
+.site-nav-vertical .buddypress-wrap .bp-subnavs > ul > li:first-child a {
 	padding-left: 0.5em;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li,
+.site-nav-vertical .buddypress-wrap .bp-navs.vertical ul li {
 	border: 0;
 	border-bottom: 1px solid #4067a3;
 }
 
 @media screen and (min-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li {
+	.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li,
+	.site-nav-vertical .buddypress-wrap .bp-navs.vertical ul li {
 		border-bottom: 1px solid #2f4b77;
 	}
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li a {
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li a,
+.site-nav-vertical .buddypress-wrap .bp-navs.vertical ul li a {
 	background: #3d629c;
 	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
@@ -355,7 +378,8 @@
 	opacity: 0.9;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul .selected a {
+.site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul .selected a,
+.site-nav-vertical .buddypress-wrap .bp-navs.vertical ul .selected a {
 	background: #517abb;
 	background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
@@ -363,7 +387,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#517abb", endColorstr="#3d629c", GradientType=0);
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links),
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
 	background: #3d629c;
 	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
@@ -372,30 +397,38 @@
 	margin-left: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a {
 	color: #ff9751;
 }
 
 @media screen and (min-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) {
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected),
+	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li:not(.selected) {
 		border: 0;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) a {
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) a,
+	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li:not(.selected) a {
 		color: #767676;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li.selected a {
+	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li.selected a,
+	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li.selected a {
 		color: #333;
 	}
 }
 
 @media screen and (max-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap #subnav li a {
+	.site-nav-horizontal .buddypress-wrap #subnav li a,
+	.site-nav-vertical .buddypress-wrap #subnav li a {
 		color: #fff;
 		opacity: 0.9;
 	}
 	.site-nav-horizontal .buddypress-wrap #subnav li.selected a,
 	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:focus,
-	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:hover {
+	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:hover,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a:focus,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a:hover {
 		background: #517abb;
 		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);

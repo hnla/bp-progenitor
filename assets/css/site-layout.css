@@ -495,7 +495,6 @@ Internal widgets structural
 
 .widget-area .widget ul {
 	margin-left: 0;
-	padding-left: 1em;
 }
 
 .widget_bp_groups_widget .item-options,
@@ -514,4 +513,8 @@ Internal widgets structural
 	list-style: none;
 	margin-left: 0;
 	padding: 0;
+}
+
+.home-page .widget-title {
+	margin-top: 0.5em;
 }

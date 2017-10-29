@@ -17,6 +17,12 @@
 1. classed, grouped, & container colours
 ======================================================*/
 
+#page {
+	.site-branding {
+		border-radius: 0;
+	}
+}
+
 .primary-color,
 .bp-navs {
 
@@ -111,7 +117,8 @@
 ======================================================*/
 
 .site-header {
-	background: $off-white;
+//	background: $off-white;
+@include background-gradient-3d-hori($color: $color__main-nav, $depth: med);
 }
 
 .meta-bar {
@@ -378,7 +385,8 @@
 	}
 }
 
-.site-nav-horizontal {
+.site-nav-horizontal,
+.site-nav-vertical { // @todo both these aren't required, check if a parent class needed
 
 	.buddypress-wrap {
 
