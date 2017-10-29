@@ -148,7 +148,7 @@ add_action( 'after_setup_theme', 'bp_progenitor_content_width', 0 );
  */
 function bp_progenitor_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Homepage Block 1 Loggedout', 'bp-progenitor' ),
+		'name'          => esc_html__( 'Homepage Block 1 Logged-out', 'bp-progenitor' ),
 		'id'            => 'homepage-block-1-loggedout',
 		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -157,7 +157,16 @@ function bp_progenitor_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Homepage Block 1 Loggedin', 'bp-progenitor' ),
+		'name'          => esc_html__( 'Homepage Block 2 Logged-out', 'bp-progenitor' ),
+		'id'            => 'homepage-block-2-loggedout',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Block 1 Logged-in', 'bp-progenitor' ),
 		'id'            => 'homepage-block-1-loggedin',
 		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -165,7 +174,15 @@ function bp_progenitor_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
+	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Block 2 Logged-in', 'bp-progenitor' ),
+		'id'            => 'homepage-block-2-loggedin',
+		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 	// Site sidebars
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bp-progenitor' ),
