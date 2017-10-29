@@ -26,17 +26,31 @@ get_header(); ?>
 				}; ?>
 			</div>
 
-			<div class="block-2"><?php get_template_part('/template-parts/home-page/home-page-post-loop'); ?></div>
+			<div class="block-2">
+
+				<?php if ( is_active_sidebar('homepage-block-2-loggedin') ) {
+						dynamic_sidebar( 'homepage-block-2-loggedin' );
+				}; ?>
+
+				<?php get_template_part('/template-parts/home-page/home-page-post-loop'); ?>
+
+			</div>
 
 			<?php ################# Loggedout frontpage elements ##################### ?>
 
 		<?php else: ?>
 
+			<div class="block-1">
 				<?php if ( is_active_sidebar('homepage-block-1-loggedout') ) {
 						dynamic_sidebar( 'homepage-block-1-loggedout' );
 				}; ?>
+			</div>
 
-					<p>You're logged out oh numpty one</p>
+			<div class="block-2">
+				<?php if ( is_active_sidebar('homepage-block-2-loggedout') ) {
+						dynamic_sidebar( 'homepage-block-2-loggedout' );
+				}; ?>
+			</div>
 
 		<?php endif; ?>
 
