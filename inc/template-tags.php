@@ -163,14 +163,12 @@ function progenitor_overlay_logo() {
  */
 function progenitor_logo_size() {
 
-	$size = absint( progenitor_opts('overlay_logo_size') );
+	if ( ! $size = absint( progenitor_opts('overlay_logo_size') ) ) {
+		$size = 100;
+	}
 
 	return $size;
 }
-function set_logo_size() {
-
-}
-add_filter('get_custom_logo', 'set_logo_size', 1);
 
 /**
  * Set footer widgets class on parent wrapper

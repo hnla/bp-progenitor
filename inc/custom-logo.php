@@ -26,12 +26,7 @@ function progenitor_get_custom_logo( $blog_id = 0 ) {
 
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
 
-			$custom_logo_size = 'width-' . progenitor_logo_size();
-
-			// If the site menu is vertical then we need logo 100%
-			if ( 'vertical' === progenitor_menu_style() ) {
-				$custom_logo_size = 'width-100';
-			}
+			$custom_logo_size = esc_attr('width-' . progenitor_logo_size() );
 
 			// We have a logo. Logo is go.
 			if ( $custom_logo_id ) {
@@ -72,5 +67,5 @@ function progenitor_get_custom_logo( $blog_id = 0 ) {
 				* @param string $html    Custom logo HTML output.
 				* @param int    $blog_id ID of the blog to get the custom logo for.
 				*/
-			return apply_filters( 'get_custom_logo', $html, $blog_id );
+			return  apply_filters( 'progenitor_get_custom_logo', $html, $blog_id );
 }
