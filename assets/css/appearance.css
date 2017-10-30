@@ -7,10 +7,6 @@
 /*====================================================
 1. classed, grouped, & container colours
 ======================================================*/
-#page .site-branding {
-	border-radius: 0;
-}
-
 .primary-color,
 .bp-navs {
 	background: #3d629c;

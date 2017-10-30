@@ -50,6 +50,7 @@ body {
 .site-wrap,
 .site,
 .site-content,
+.site-branding,
 .meta-bar,
 .content-area,
 .box-align,
@@ -150,7 +151,15 @@ Header aka .site-banner includes primary nav
 }
 
 @media screen and (min-width: 46.8em) {
-	.site-content .widget-area {
+	body.home.site-nav-horizontal .site-content .widget-area {
+		padding: 0 0.5em 0 1em;
+		float: right;
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	body.home.site-nav-vertical .site-content .widget-area {
 		padding: 0 0.5em 0 1em;
 		float: right;
 		width: 25%;
@@ -185,6 +194,22 @@ body.home.site-nav-vertical .site-content {
 	body.page-sbar-active:not(.page-template-page-fullwidth) .content-area .site-main {
 		margin: 0 25% 0 0;
 		padding-right: 1em;
+	}
+}
+
+body.site-nav-vertical.main-sidebar .site-content .content-area,
+body.site-nav-vertical.main-sidebar .site-content .site-main, body.site-nav-vertical.post-sbar-active .site-content .content-area,
+body.site-nav-vertical.post-sbar-active .site-content .site-main, body.site-nav-vertical.page-sbar-active .site-content .content-area,
+body.site-nav-vertical.page-sbar-active .site-content .site-main {
+	margin: 0;
+}
+
+@media screen and (min-width: 75em) {
+	body.site-nav-vertical.main-sidebar .site-content .content-area, body.site-nav-vertical.post-sbar-active .site-content .content-area, body.site-nav-vertical.page-sbar-active .site-content .content-area {
+		margin: 0 -25% 0 0;
+	}
+	body.site-nav-vertical.main-sidebar .site-content .site-main, body.site-nav-vertical.post-sbar-active .site-content .site-main, body.site-nav-vertical.page-sbar-active .site-content .site-main {
+		margin: 0 25% 0 0;
 	}
 }
 
@@ -249,11 +274,11 @@ Primary header/menu positioning vertical
 		-webkit-box-shadow: invert 0 0 7px #cdcdcd;
 		-moz-box-shadow: invert 0 0 7px #cdcdcd;
 		box-shadow: invert 0 0 7px #cdcdcd;
-		-webkit-flex: 2 1 20%;
-		-moz-flex: 2 1 20%;
-		-ms-flex: 2 1 20%;
-		-o-flex: 2 1 20%;
-		flex: 2 1 20%;
+		-webkit-flex: 1 1 25%;
+		-moz-flex: 1 1 25%;
+		-ms-flex: 1 1 25%;
+		-o-flex: 1 1 25%;
+		flex: 1 1 25%;
 		width: 20%;
 	}
 	.site-nav-vertical .site-header .nav-menu > li {
@@ -261,15 +286,19 @@ Primary header/menu positioning vertical
 	}
 	.site-nav-vertical .site-content {
 		border-left: 1px solid #ddd;
-		-webkit-flex: 2 1 80%;
-		-moz-flex: 2 1 80%;
-		-ms-flex: 2 1 80%;
-		-o-flex: 2 1 80%;
-		flex: 2 1 80%;
+		-webkit-flex: 1 1 75%;
+		-moz-flex: 1 1 75%;
+		-ms-flex: 1 1 75%;
+		-o-flex: 1 1 75%;
+		flex: 1 1 75%;
 		margin-left: -1px;
 	}
-	.site-nav-vertical .site-content .content-area {
-		padding-left: 1em;
+	.site-nav-vertical .footer-widgets-wrap {
+		-webkit-flex: 1 0 100%;
+		-moz-flex: 1 0 100%;
+		-ms-flex: 1 0 100%;
+		-o-flex: 1 0 100%;
+		flex: 1 0 100%;
 	}
 }
 
@@ -314,13 +343,18 @@ Primary header elements
 .site-header {
 	/*
 	Manage elements if background image set &
-	use as background selected to render the background wrapper el
+	use as background selected to render the background wrapper element
 	*/
 }
 
 .site-header .header-background .custom-logo-link {
 	display: block;
 	width: 20%;
+}
+
+.site-header .custom-logo-link,
+.site-header .custom-logo-link img {
+	display: block;
 }
 
 .site-header .custom-logo-link.width-20 {
@@ -353,6 +387,12 @@ Primary header elements
 
 .site-header .custom-logo-link.width-100 {
 	width: 100%;
+}
+
+@media screen and (min-width: 46.8em) {
+	.site-nav-vertical .site-branding .custom-logo-link {
+		width: 100%;
+	}
 }
 
 /*==============================================================
@@ -495,24 +535,6 @@ Internal widgets structural
 
 .widget-area .widget ul {
 	margin-left: 0;
-}
-
-.widget_bp_groups_widget .item-options,
-.widget_bp_groups_widget .item-list,
-.widget_bp_blogs_widget .item-options,
-.widget_bp_blogs_widget .item-list,
-.widget_bp_core_members_widget .item-options,
-.widget_bp_core_members_widget .item-list {
-	font-size: 13px;
-	font-size: 0.8125rem;
-}
-
-.widget_bp_groups_widget ul,
-.widget_bp_blogs_widget ul,
-.widget_bp_core_members_widget ul {
-	list-style: none;
-	margin-left: 0;
-	padding: 0;
 }
 
 .home-page .widget-title {

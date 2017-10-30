@@ -4464,9 +4464,11 @@ aside .buddypress.widget .avatar-block .item-avatar img,
 }
 
 aside .buddypress.widget .item-options,
-.footer-widgets-wrap .buddypress.widget .item-options {
-	font-size: 14px;
-	font-size: 0.875rem;
+aside .buddypress.widget .item-list,
+.footer-widgets-wrap .buddypress.widget .item-options,
+.footer-widgets-wrap .buddypress.widget .item-list {
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 aside .buddypress.widget ul.item-list,
@@ -4484,6 +4486,7 @@ aside .buddypress.widget ul.item-list,
 	list-style: none;
 	margin: 10px -2%;
 	overflow: hidden;
+	padding-left: 0;
 }
 
 @media screen and (min-width: 46.8em) {
@@ -4622,17 +4625,26 @@ aside.widget-area .buddypress.widget ul#blog-post-list li p {
 	}
 }
 
-aside.widget-area .buddypress.widget.bp-latest-activities li .activity-header {
+aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item {
+	padding: 0.5em 0.5em 0 0.5em;
+}
+
+aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .activity-header {
 	font-size: 12px;
 	font-size: 0.75rem;
 	margin: 0;
 }
 
-aside.widget-area .buddypress.widget.bp-latest-activities li .activity-header img {
+aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .activity-header img {
 	width: 20px;
 }
 
-aside.widget-area .buddypress.widget.bp-latest-activities li .activity-inner {
+aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .activity-header .time-since {
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .activity-inner {
 	clear: both;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -4662,8 +4674,13 @@ aside.widget-area .buddypress.widget.bp-latest-activities li .activity-inner {
 		-o-flex: 1 1 100%;
 		flex: 1 1 100%;
 		margin: 10px 0 1%;
-		padding: 0 0.5em;
 		width: auto;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	aside.widget-area .buddypress.widget.bp-latest-activities .item-avatar {
+		width: 30%;
 	}
 }
 

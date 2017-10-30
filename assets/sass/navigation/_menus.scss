@@ -126,9 +126,9 @@
 Main menu vertical option - elements adjustments.
 */
 
-@include medium-up() {
+.site-nav-vertical {
 
-	.site-nav-vertical {
+	@include medium-up() {
 
 		.main-navigation {
 
@@ -144,7 +144,11 @@ Main menu vertical option - elements adjustments.
 
 					&:hover > ul,
 					&.focus > ul {
-						left: 96%;
+						left: 90%;
+
+						@include xlarge-up() {
+							left: 55%;
+						}
 						top: 2px;
 					}
 
@@ -160,12 +164,15 @@ Main menu vertical option - elements adjustments.
 /*
 Small menu display.
 */
+.main-navigation ul {
+	display: none;
+}
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include medium-up() {
 
 	.menu-toggle {
 		display: none;

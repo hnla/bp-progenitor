@@ -122,6 +122,14 @@
 	}
 }
 
+@mixin xlarge-up {
+
+	@media screen and (min-width: 84em) {
+
+		@content;
+	}
+}
+
 // 'clearfix-element' allows us to pass an element, class or id to the mixin.
 // Use where we need to have float containment and where getting to
 // the physical element to add a class of 'clearfix' is problematic.

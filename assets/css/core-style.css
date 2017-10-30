@@ -737,20 +737,31 @@ Main menu vertical option - elements adjustments.
 	}
 	.site-nav-vertical .main-navigation ul li:hover > ul,
 	.site-nav-vertical .main-navigation ul li.focus > ul {
-		left: 96%;
+		left: 90%;
 		top: 2px;
+	}
+}
+
+@media screen and (min-width: 46.8em) and (min-width: 84em) {
+	.site-nav-vertical .main-navigation ul li:hover > ul,
+	.site-nav-vertical .main-navigation ul li.focus > ul {
+		left: 55%;
 	}
 }
 
 /*
 Small menu display.
 */
+.main-navigation ul {
+	display: none;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 46.8em) {
 	.menu-toggle {
 		display: none;
 	}

@@ -16,26 +16,6 @@
 	}
 }
 
-// Widget specific styles
-
-// BP Widgets
-.widget_bp_groups_widget,
-.widget_bp_blogs_widget,
-.widget_bp_core_members_widget {
-
-	.item-options,
-	.item-list {
-
-		@include font-size(13);
-	}
-
-	ul {
-		list-style: none;
-		margin-left: 0;
-		padding: 0;
-	}
-}
-
 .home-page {
 
 	.widget-title {

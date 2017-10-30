@@ -4,13 +4,13 @@ Primary header elements
 
 .site-header {
 
-	// header background element available only if
+	// header background element '.header-background' available only if
 	// custom header is set and progenitor option
-	// use as background is selected
+	// use as background is selected.
 
 	/*
 	Manage elements if background image set &
-	use as background selected to render the background wrapper el
+	use as background selected to render the background wrapper element
 	*/
 	.header-background {
 
@@ -20,7 +20,12 @@ Primary header elements
 		}
 	}
 
-	//set custom widths - outside .header-background so available if logo only
+	.custom-logo-link,
+	.custom-logo-link img {
+		display: block;
+	}
+
+	//set custom widths - outside .header-background so available if logo only selected
 	.custom-logo-link {
 
 		&.width-20 {
@@ -46,6 +51,25 @@ Primary header elements
 		}
 		&.width-100 {
 			width: 100%;
+		}
+
+	}
+}
+
+// If vertical nav menu selected user can select a width for custom logo
+// this benefits the layout when header area breaks to the top column full width;
+// however when at medium up width the header is a left vert column, width narrow.
+// In the vert nav it's best to display custom logo full width '100%'.
+// The ruleset is delibretely over specified to ensure previous widths reset/overloaded.
+
+@include medium-up() {
+	.site-nav-vertical {
+
+		.site-branding {
+
+			.custom-logo-link {
+				width: 100%;
+			}
 		}
 	}
 }

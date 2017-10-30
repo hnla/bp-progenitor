@@ -25,6 +25,7 @@ body {
 .site-wrap,
 .site,
 .site-content,
+.site-branding,
 .meta-bar,
 .content-area,
 .box-align,
@@ -148,13 +149,27 @@ Header aka .site-banner includes primary nav
 	}
 }
 
-@include medium-up() {
+body.home.site-nav-horizontal {
+	@include medium-up() {
 
-	.site-content .widget-area {
-		padding: 0 $pad-sml 0 $pad-med;
+		.site-content .widget-area {
+			padding: 0 $pad-sml 0 $pad-med;
 
-		float: right;
-		width: $size__site-sidebar;
+			float: right;
+			width: $size__site-sidebar;
+		}
+	}
+}
+
+body.home.site-nav-vertical {
+	@include large-up() {
+
+		.site-content .widget-area {
+			padding: 0 $pad-sml 0 $pad-med;
+
+			float: right;
+			width: $size__site-sidebar;
+		}
 	}
 }
 
@@ -163,7 +178,7 @@ Header aka .site-banner includes primary nav
 =================================================*/
 
 // If vertical main menu & is static home page
-// We've remove the meta-bar so need padding on the content area
+// We've removed the meta-bar so need padding on the content area
 
 body.home.site-nav-vertical {
 	.site-content {
@@ -201,6 +216,37 @@ body.home.site-nav-vertical {
 	}
 
 }
+
+// With the vertical main nav we need to remove the site-content margins earlier.
+// Sidebar will wrap under content at medium up so only set content right margin
+// at large up.
+body.site-nav-vertical {
+
+	&.main-sidebar,
+	&.post-sbar-active,
+	&.page-sbar-active {
+
+		.site-content { // for specificity
+
+			.content-area,
+			.site-main {
+				margin: 0;
+			}
+
+			@include large-up() {
+
+				.content-area {
+					margin: 0 (-$size__site-sidebar) 0 0;
+				}
+
+				.site-main {
+					margin: 0 $size__site-sidebar 0 0;
+				}
+			}
+		}
+	}
+}
+
 
 /*===============================================
 1.5.0 - Footer widget wrap
@@ -245,7 +291,6 @@ body.home.site-nav-vertical {
 1.7.0 - user site layout options
 =================================================*/
 
-
 /*
 Primary header/menu positioning vertical
 */
@@ -258,7 +303,7 @@ Primary header/menu positioning vertical
 
 		#page {
 
-			@include flex-box-dir(row, wrap);
+			@include flex-box-dir($flex-dir: row, $flex-wrap: wrap);
 			min-height: 96vh;
 		}
 
@@ -266,7 +311,7 @@ Primary header/menu positioning vertical
 			border-right: 1px solid #ddd;
 
 			@include box-shadow( invert 0 0 7px #cdcdcd);
-			@include box-item-size(2, 1, 20%);
+			@include box-item-size(1, 1, 25%);
 
 			//float: left;
 			//min-height: 90vh;
@@ -283,14 +328,15 @@ Primary header/menu positioning vertical
 		.site-content {
 			border-left: 1px solid #ddd;
 
-			@include box-item-size(2, 1, 80%);
+			@include box-item-size(1, 1, 75%);
 			//float: left;
 			margin-left: -1px;
 			//width: calc( 100% - #{$size__site-header-width-vert});
+		}
 
-			.content-area {
-				padding-left: $pad-med;
-			}
+		.footer-widgets-wrap {
+
+			@include box-item-size(1, 0, 100%);
 		}
 	}
 }
