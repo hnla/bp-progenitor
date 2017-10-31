@@ -348,9 +348,13 @@
 // Renders links in a horizontal layout as a
 // tab effect on the current selected links.
 
-@mixin tabbed-links() {
+// !important needs to be used to ensure the complex nav rules
+// don't clash/inherit on vital properties
 
-	.tabbed-links {
+@mixin tabbed-links($class: null) {
+
+	.tabbed-links#{$class} {
+		background: none !important;
 
 		ul {
 			border-bottom: 1px solid $bp-border-dark;
@@ -381,18 +385,22 @@
 			}
 
 			li.current {
-				border-color: $bp-border-dark $bp-border-dark #fff;
+				border-color: $bp-border-dark $bp-border-dark #fff !important;
 				border-style: solid;
 				border-top-left-radius: 4px;
 				border-top-right-radius: 4px;
 				border-width: 1px;
-				margin-bottom: -1px;
+				margin-bottom: -1px !important;
 				padding: 0 $pad-sml;
 
 				a {
 					background: none;
 					color: $black;
 				}
+			}
+
+			li:not(.current) {
+					border: 0 !important;
 			}
 		}
 	}

@@ -113,7 +113,6 @@
 .site-nav-vertical {
 
 	.site-header {
-	//	background: $off-white;
 
 		@include medium-up() {
 			@include background-gradient-3d-hori($color: $color__main-nav, $depth: med);
@@ -451,7 +450,7 @@
 			}
 		}
 
-		// BP user & group navs set as verticle while main site menu
+		// BP user & group navs set as vertical while main site menu
 		// is horizontal - main user/group object navs.
 		.bp-navs.vertical {
 
@@ -488,10 +487,25 @@
 
 			.item-body:not(#group-create-body) {
 
-				#subnav:not(.tabbed-links) {
+				#subnav {
 
 					@include background-gradient-3d-hori($color: $color__main-nav );
 					margin-left: 0;
+
+					> ul.subnav > li  {
+						border-right: 1px solid darken($color__main-nav, 15%);
+						border-left: 1px solid lighten($color__main-nav, 5%);
+						margin: 0 ;
+
+						> a {
+							border: 0;
+							padding: $pad-sml;
+						}
+					}
+
+					> ul.subnav > li:last-child {
+						border-right: 0;
+					}
 
 					li.selected {
 
@@ -503,24 +517,16 @@
 			}
 		}
 
-		// Remove the item link seperator & manage highlight
-		// styles for tabs.
+		// Manage the link colors
+
 		@include medium-up {
 
 			#subnav.tabbed-links {
 
 				li:not(.selected) {
-					border: 0;
 
 					a {
 						color: $light-text;
-					}
-				}
-
-				li.selected {
-
-					a {
-						color: $black;
 					}
 				}
 			}
@@ -531,12 +537,19 @@
 		@include medium-max() {
 
 			#subnav {
-
+ul.subnav {
 				li {
 
 					a {
-						color: $white;
+						color: $white !important;
 						opacity: 0.9;
+
+						&:focus,
+						&:hover {
+
+							@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+							opacity: 1;
+						}
 					}
 				}
 
@@ -549,13 +562,15 @@
 						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
 						opacity: 1;
 					}
+}
 				}
 			}
 		}
 
 
 	} // close buddypress-wrap
-} // close site-nav-horizontal
+} // close site-nav-horizontal/site-nav-horizontal
+
 
 /*========================================
 4. Footer Widgets

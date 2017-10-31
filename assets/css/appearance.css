@@ -385,8 +385,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#517abb", endColorstr="#3d629c", GradientType=0);
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links),
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav {
 	background: #3d629c;
 	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
@@ -395,38 +395,58 @@
 	margin-left: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li {
+	border-right: 1px solid #273f65;
+	border-left: 1px solid #446eae;
+	margin: 0;
+}
+
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li > a,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li > a {
+	border: 0;
+	padding: 0.5em;
+}
+
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li:last-child,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li:last-child {
+	border-right: 0;
+}
+
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav li.selected a,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav li.selected a {
 	color: #ff9751;
 }
 
 @media screen and (min-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected),
-	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li:not(.selected) {
-		border: 0;
-	}
 	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li:not(.selected) a,
 	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li:not(.selected) a {
 		color: #767676;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav.tabbed-links li.selected a,
-	.site-nav-vertical .buddypress-wrap #subnav.tabbed-links li.selected a {
-		color: #333;
-	}
 }
 
 @media screen and (max-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap #subnav li a,
-	.site-nav-vertical .buddypress-wrap #subnav li a {
-		color: #fff;
+	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a {
+		color: #fff !important;
 		opacity: 0.9;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav li.selected a,
-	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:focus,
-	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:hover,
-	.site-nav-vertical .buddypress-wrap #subnav li.selected a,
-	.site-nav-vertical .buddypress-wrap #subnav li.selected a:focus,
-	.site-nav-vertical .buddypress-wrap #subnav li.selected a:hover {
+	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a:focus, .site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a:hover,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a:focus,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a:hover {
+		background: #517abb;
+		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
+		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
+		background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#517abb", endColorstr="#3d629c", GradientType=0);
+		opacity: 1;
+	}
+	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a,
+	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a:focus,
+	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a:hover,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a:focus,
+	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a:hover {
 		background: #517abb;
 		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
