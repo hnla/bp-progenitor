@@ -347,8 +347,15 @@ Primary header elements
 	*/
 }
 
-.site-header .header-background .custom-logo-link {
+.site-header .custom-logo-link {
 	display: block;
+}
+
+.site-header .custom-logo-link img {
+	margin: 0;
+}
+
+.site-header .header-background .custom-logo-link {
 	width: 20%;
 }
 

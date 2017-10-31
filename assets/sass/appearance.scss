@@ -110,9 +110,15 @@
 2. Header elements
 ======================================================*/
 
-.site-header {
-//	background: $off-white;
-@include background-gradient-3d-hori($color: $color__main-nav, $depth: med);
+.site-nav-vertical {
+
+	.site-header {
+	//	background: $off-white;
+
+		@include medium-up() {
+			@include background-gradient-3d-hori($color: $color__main-nav, $depth: med);
+		}
+	}
 }
 
 .meta-bar {

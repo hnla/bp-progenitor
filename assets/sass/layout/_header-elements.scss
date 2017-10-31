@@ -8,6 +8,13 @@ Primary header elements
 	// custom header is set and progenitor option
 	// use as background is selected.
 
+		.custom-logo-link {
+			display: block;
+
+			img {
+				margin: 0;
+			}
+		}
 	/*
 	Manage elements if background image set &
 	use as background selected to render the background wrapper element
@@ -15,7 +22,6 @@ Primary header elements
 	.header-background {
 
 		.custom-logo-link {
-			display: block;
 			width: 20%;
 		}
 	}

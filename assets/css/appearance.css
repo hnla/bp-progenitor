@@ -90,12 +90,14 @@
 /*====================================================
 2. Header elements
 ======================================================*/
-.site-header {
-	background: #3d629c;
-	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
-	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
-	background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
+@media screen and (min-width: 46.8em) {
+	.site-nav-vertical .site-header {
+		background: #3d629c;
+		background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+		background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+		background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
+	}
 }
 
 .meta-bar {
