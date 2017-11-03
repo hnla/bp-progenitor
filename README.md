@@ -34,7 +34,7 @@ add_action( 'bp_register_theme_packages', function() {
 	
 This is an aspect to be tackled later rather than hold up development.
 	
-## Early look screenies
+## Early look screenies ( somewhat adhoc )
 
 ![screenshot-2017-10-3 members bp template packs](https://user-images.githubusercontent.com/499419/31141148-71f94a7c-a86e-11e7-9c29-0af933202182.png)
 
@@ -49,3 +49,15 @@ This is an aspect to be tackled later rather than hold up development.
 
 ### Archive view with sidebar - grid boxes displaying in reduced area width, also as displayed for mediun width, tablet devices
 ![screenshot-2017-10-6 uncategorised bp template packs](https://user-images.githubusercontent.com/499419/31270783-a46d6b30-aa7d-11e7-8eeb-3ac9986111c7.png)
+
+### Various layout options for menus & primary site blocks
+
+1. Vertical main menu plus vertical user/group menus in main header:
+![layout-vert-menus-main-object-navs](https://user-images.githubusercontent.com/499419/32379855-95174266-c0a6-11e7-991c-33ee7e95c576.png)
+
+2. Vertical main menu with user/group menu in default position inside the item-body element & horizontal:
+![layout-vert-menu-object-menu-in-item-body](https://user-images.githubusercontent.com/499419/32380265-8b84899c-c0a7-11e7-9ca3-25c818894fde.png)
+
+3. Vertical main menu, user/group menu in item body but vertical:
+![layout vert-menu-object-nav-in-item-body-vert](https://user-images.githubusercontent.com/499419/32380607-5e72425e-c0a8-11e7-9a03-3daee460d964.png)
+
