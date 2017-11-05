@@ -7,6 +7,37 @@
  * @version 0.1.0 Pre-alpha
  */
 
+/**
+ * Create an MU file to register BP Progenitor theme package with BP
+ *
+ * First  check if 'mu-plugins' exists if not create (returns 'true' if does exist )
+ * then initialise the WP filesystem api and write a new file to the directory.
+ *
+ * The file created runs an include to load the register_theme_package function file
+ * located in our themes directory root /inc/ dir
+ * et voilá an automated system... I think, & hope.
+ *
+ * @since 0.1.0
+ */
+if ( ! is_file( ABSPATH . 'wp-content/mu-plugins/load-register-bp-progenitor.php') ) {
+
+	function create_progenitor_register_file() {
+		if ( wp_mkdir_p( ABSPATH . 'wp-content/mu-plugins/') ) {
+
+			if ( WP_Filesystem() ) {
+				global $wp_filesystem;
+
+				$wp_filesystem->put_contents(
+					'../../wp-content/mu-plugins/load-register-bp-progenitor.php',
+					"<?php \n/* \n* BP Progenitor registration.\n* Locate and include the plugin file.\n*/\n include( get_template_directory() . '/inc/register-bp-progenitor.php');"
+				);
+			}
+		}
+	}
+
+	add_action('admin_init', 'create_progenitor_register_file');
+}
+
 if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -81,7 +112,7 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
+			'height'      => 350,
 			'width'       => 500,
 			'flex-width'  => true,
 			'flex-height' => true,
@@ -381,6 +412,10 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'site-nav-horizontal';
 	endif;
 
+	if ( progenitor_opts( 'object_nav_main_header') ) {
+		$classes[] = 'object-nav-site-nav-vert';
+	}
+
 	if ( 1 === progenitor_opts('post_loops_grid') && is_home() ) {
 		$classes[] = 'post-list-grid';
 	}
@@ -407,8 +442,14 @@ function progenitor_body_classes( $classes ) {
 		$classes[] = 'static-posts-home';
 	}
 
+	if ( bp_is_group() && 'home' == bp_current_action() ) {
+		unset( $classes[5] );
+	}
+
+//var_dump($classes);
 	return $classes;
 }
 add_filter('body_class', 'progenitor_body_classes', 15);
+
 
 
