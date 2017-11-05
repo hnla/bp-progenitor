@@ -33,6 +33,17 @@
 
 /*__ Email notifications __*/
 
+.notification-settings { // table element
+
+	tbody {
+
+		tr {
+			border: 1px solid $bp-border-color;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}
 
 // Profile visibility
 

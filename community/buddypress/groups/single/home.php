@@ -19,7 +19,13 @@
 
 		<div class="bp-wrap">
 
-			<?php if ( ! bp_progenitor_is_object_nav_in_sidebar() ) : ?>
+		<?php
+		/*
+	  * If the object selection is not display in main header & not using the widget menu
+	  * we display menu here as vert or hori, else we move the nav into the header.php file.
+		 */
+		?>
+		<?php if ( ! bp_progenitor_is_object_nav_in_sidebar() && ! progenitor_opts( 'object_nav_main_header') ) : ?>
 
 				<?php bp_get_template_part( 'groups/single/parts/item-nav' ); ?>
 

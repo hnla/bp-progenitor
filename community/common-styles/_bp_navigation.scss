@@ -168,6 +168,24 @@
 	}
 } // close .buddypress-wrap - current & selected states.
 
+// Style the dl elements used to hold the object nav when displayed in
+// the main site header region
+
+.object-nav-site-nav-vert {
+
+	.site-header {
+
+		dl.bp-object-nav {
+			clear: both;
+			margin-top: $marg-lrg;
+
+			dt {
+				text-align: center;
+			}
+		}
+	}
+}
+
 // visual styling of default single navs - adds background/padding to
 // the parent elements if vertical nav not selected
 .buddypress-wrap:not(.bp-single-vert-nav) {

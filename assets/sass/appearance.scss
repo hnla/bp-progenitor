@@ -27,13 +27,18 @@
 // if its in vertical rendering to create column illusion.
 // Run on the background wrapper element & restricted to a equal width
 // of the nav, similar to old school faux columns.
+
+// If user selected group/user object nav in the main site header then
+// don't render this.
 @include medium-up() {
+	body:not(.object-nav-site-nav-vert) {
 
-	.bp-single-vert-nav {
+		.bp-single-vert-nav {
 
-		.bp-wrap {
+			.bp-wrap {
 
-			@include background-gradient-3d-hori($color: $color__main-nav, $width: "25%");
+				@include background-gradient-3d-hori($color: $color__main-nav, $width: "25%");
+			}
 		}
 	}
 }
@@ -322,6 +327,88 @@
 3.5 BP navigation
 ==========================================*/
 
+// we need to isolate these rules to the site header to allow
+// BP object nav to be styled without effecting other usesin item-body.
+
+.site-nav-vertical.object-nav-site-nav-vert {
+
+	.site-header {
+
+		dl.bp-object-nav {
+			border-top: 25px solid darken($color__main-nav, 5%);
+
+			dt {
+
+				@include background-gradient-3d-hori($color: $color__main-nav);
+				color: $white;
+				font-weight: 700;
+				padding-top: $pad-sml;
+			}
+
+			dd {
+				margin: 0;
+			}
+
+			ul {
+
+				> li {
+
+					> a {
+
+						@include background-gradient-3d-hori($color: $color__main-nav);
+						color: $white;
+						opacity: 0.9;
+						padding-right: $pad-med;
+
+						&:focus,
+						&:hover {
+
+							@include background-gradient-3d($color: lighten($color__main-nav,5%));
+							opacity: 1;
+						}
+					}
+				}
+
+				li {
+					border-bottom: 1px solid lighten($color__main-nav, 2%);
+
+					&:last-child {
+						border-bottom: 0;
+					}
+				}
+
+				li.selected {
+					a {
+
+						@include background-gradient-3d($color: lighten($color__main-nav,5%));
+						opacity: 1;
+					}
+				}
+			}
+		} // .bp-object-nav
+
+		@include medium-up() {
+
+			dl.bp-object-nav {
+				border-top: 25px solid darken($color__main-nav, 5%);
+
+				dt {
+					background: none;
+				}
+
+
+				ul {
+
+					> li {
+						text-align: right;
+					}
+				}
+			} // .bp-object-nav
+		}
+	}
+}
+
+
 // Small device menu styling.
 // dir navs set as horizontal adjustments for
 // narrow widths.
@@ -384,6 +471,8 @@
 	}
 }
 
+
+
 .site-nav-horizontal,
 .site-nav-vertical { // @todo both these aren't required, check if a parent class needed
 
@@ -439,19 +528,21 @@
 			}
 		} // close .bp-navs:not(.tabbed-links)
 
-		.bp-navs.single-screen-navs,
-		.bp-subnavs {
+		@include medium-up() {
+			.bp-navs.single-screen-navs,
+			.bp-subnavs {
 
-			> ul > li:first-child {
+				> ul > li:first-child {
 
-				a {
-					padding-left: $pad-sml;
+					a {
+						padding-left: $pad-sml;
+					}
 				}
 			}
 		}
 
 		// BP user & group navs set as vertical while main site menu
-		// is horizontal - main user/group object navs.
+		// is horizontal or vertical - main user/group object navs.
 		.bp-navs.vertical {
 
 			ul {
@@ -476,6 +567,8 @@
 					a {
 
 						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+						color: $white;
+						opacity: 1;
 					}
 				}
 			}
@@ -517,7 +610,7 @@
 			}
 		}
 
-		// Manage the link colors
+		// Manage the link colors for tabbed-links
 
 		@include medium-up {
 
@@ -537,7 +630,7 @@
 		@include medium-max() {
 
 			#subnav {
-ul.subnav {
+
 				li {
 
 					a {
@@ -562,7 +655,6 @@ ul.subnav {
 						@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
 						opacity: 1;
 					}
-}
 				}
 			}
 		}

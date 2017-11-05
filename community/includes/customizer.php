@@ -120,6 +120,13 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'transport'         => 'refresh',
 			'type'              => 'option',
 		),
+		'bp_progenitor_appearance[object_nav_main_header]' => array(
+			'index'             => 'object_nav_main_header',
+			'capability'        => 'bp_moderate',
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+			'type'              => 'option',
+		),
 		'bp_progenitor_appearance[bp_dir_sbar]' => array(
 			'index'             => 'bp_dir_sbar',
 			'capability'        => 'bp_moderate',
@@ -313,6 +320,12 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 					'horizontal' => __( 'Horizontal / Top' ),
 					'vertical'   => __( 'Vertical / Left' )
 				),
+		),
+		'object_nav_main_header' => array(
+			'label'      => __( 'Display User & group primary navs in the header - under the main site nav.', 'buddypress' ),
+			'section'    => 'bp_progenitor_site_settings',
+			'settings'   => 'bp_progenitor_appearance[object_nav_main_header]',
+			'type'       => 'checkbox',
 		),
 		'post_loops_grid' => array(
 			'label'      => __( 'Display the post lists, index loop, as grid boxes', 'buddypress' ),

@@ -385,6 +385,15 @@ body.buddypress article.page > .entry-header .entry-title {
 	font-weight: 600;
 }
 
+.object-nav-site-nav-vert .site-header dl.bp-object-nav {
+	clear: both;
+	margin-top: 20px;
+}
+
+.object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
+	text-align: center;
+}
+
 @media screen and (max-width: 46.8em) {
 	.buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li {
 		border-bottom: 1px solid #333;
@@ -3375,6 +3384,12 @@ div.bp-navs#subsubnav.bp-messages-filters .user-messages-bulk-actions {
 
 /*__ General __*/
 /*__ Email notifications __*/
+.notification-settings tbody tr {
+	border: 1px solid #eee;
+	border-left: 0;
+	border-right: 0;
+}
+
 /*__ Profile visibility __*/
 /*__ Group Invites __*/
 /**
@@ -5260,6 +5275,12 @@ aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .acti
 	}
 	.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li:last-child a {
 		border: none;
+	}
+	body.object-nav-site-nav-vert .item-body:not(#group-create-body) {
+		border-left: 0;
+		float: none;
+		padding: 0;
+		width: auto;
 	}
 	.bp-dir-vert-nav .dir-navs {
 		float: left;

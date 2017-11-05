@@ -6,26 +6,43 @@
  */
 ?>
 
-	<?php bp_progenitor_member_hook( 'before', 'home_content' ); ?>
+<?php if ( 'vertical' == progenitor_menu_style() ) { ?>
+	<?php //bp_get_template_part( 'members/single/parts/item-nav' ); ?>
+	<div class="flex-wrap">
+<?php } ?>
 
-	<div id="item-header" role="complementary" data-bp-item-id="<?php echo esc_attr( bp_displayed_user_id() ); ?>" data-bp-item-component="members" class="users-header single-headers">
+<?php bp_progenitor_member_hook( 'before', 'home_content' ); ?>
 
-		<?php bp_progenitor_member_header_template_part(); ?>
 
-	</div><!-- #item-header -->
+<div id="item-header" role="complementary" data-bp-item-id="<?php echo esc_attr( bp_displayed_user_id() ); ?>" data-bp-item-component="members" class="users-header single-headers">
 
-	<div class="bp-wrap">
-		<?php if ( ! bp_progenitor_is_object_nav_in_sidebar() ) : ?>
+	<?php bp_progenitor_member_header_template_part(); ?>
 
-			<?php bp_get_template_part( 'members/single/parts/item-nav' ); ?>
+</div><!-- #item-header -->
 
-		<?php endif; ?>
+<div class="bp-wrap">
 
-		<div id="item-body" class="item-body">
+	<?php
+	/*
+	 * If the object selection is not display in main header & not using the widget menu
+	 * we display menu here as vert or hori, else we move the nav into the header.php file.
+		*/
+	?>
+	<?php if ( ! bp_progenitor_is_object_nav_in_sidebar()  && ! progenitor_opts( 'object_nav_main_header') ) : ?>
 
-			<?php bp_progenitor_member_template_part(); ?>
+		<?php bp_get_template_part( 'members/single/parts/item-nav' ); ?>
 
-		</div><!-- #item-body -->
-	</div><!-- // .bp-wrap -->
+	<?php endif; ?>
 
-	<?php bp_progenitor_member_hook( 'after', 'home_content' ); ?>
+	<div id="item-body" class="item-body">
+
+		<?php bp_progenitor_member_template_part(); ?>
+
+	</div><!-- #item-body -->
+</div><!-- // .bp-wrap -->
+
+<?php bp_progenitor_member_hook( 'after', 'home_content' ); ?>
+
+<?php if ( 'site-nav-vertical' == progenitor_menu_style() ) { ?>
+	</div>
+<?php } ?>

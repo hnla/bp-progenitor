@@ -171,6 +171,18 @@ function progenitor_logo_size() {
 }
 
 /**
+ * Check whether object nav user/groups is set to vertical (1)
+ *
+ * @since 0.1.0
+ *
+ * @return bool
+ */
+function progenitor_object_nav_is_vertical( $option = '' ) {
+	return  progenitor_opts( $option );
+
+}
+
+/**
  * Set footer widgets class on parent wrapper
  * Builds a class for widget container to report number of widgets being used
  * enables styling based on the known number of active foot widgets.
@@ -388,10 +400,10 @@ function progenitor_site_search( $args ) {
 	$display_classes = implode(' ', $parent_classes);
 
 	/*
-	* Look for a searchform hardcoded file in theme or child theme
-	*	This is similar to the WP function 'get_search_form()' approach
-	*	& allows simple overriding of form if required
-	*/
+	 * Look for a searchform hardcoded file in theme or child theme
+	 *	This is similar to the WP function 'get_search_form()' approach
+	 *	& allows simple overriding of form if required
+	 */
 	$search_form_template = locate_template( 'searchform.php' );
 		if ( '' != $search_form_template ) {
 

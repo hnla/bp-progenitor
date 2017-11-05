@@ -17,7 +17,7 @@
 }
 
 @media screen and (min-width: 46.8em) {
-	.bp-single-vert-nav .bp-wrap {
+	body:not(.object-nav-site-nav-vert) .bp-single-vert-nav .bp-wrap {
 		background: #3d629c;
 		background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 25%);
 		background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 25%);
@@ -257,6 +257,74 @@
 /*========================================
 3.5 BP navigation
 ==========================================*/
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
+	border-top: 25px solid #36568a;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
+	background: #3d629c;
+	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
+	color: #fff;
+	font-weight: 700;
+	padding-top: 0.5em;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dd {
+	margin: 0;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li > a {
+	background: #3d629c;
+	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
+	background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
+	color: #fff;
+	opacity: 0.9;
+	padding-right: 1em;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li > a:focus, .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li > a:hover {
+	background: #446eae;
+	background: -moz-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: -webkit-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: linear-gradient(to bottom, #446eae 0%, #36568a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#446eae", endColorstr="#36568a", GradientType=0);
+	opacity: 1;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul li {
+	border-bottom: 1px solid #4067a3;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul li:last-child {
+	border-bottom: 0;
+}
+
+.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul li.selected a {
+	background: #446eae;
+	background: -moz-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: -webkit-linear-gradient(top, #446eae 0%, #36568a 100%);
+	background: linear-gradient(to bottom, #446eae 0%, #36568a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#446eae", endColorstr="#36568a", GradientType=0);
+	opacity: 1;
+}
+
+@media screen and (min-width: 46.8em) {
+	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
+		border-top: 25px solid #36568a;
+	}
+	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
+		background: none;
+	}
+	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li {
+		text-align: right;
+	}
+}
+
 .buddypress-wrap .bp-navs:not(.tabbed-links) > ul > li {
 	border-right: 1px solid #273f65;
 	border-left: 1px solid #446eae;
@@ -346,11 +414,13 @@
 	opacity: 1;
 }
 
-.site-nav-horizontal .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
-.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a,
-.site-nav-vertical .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
-.site-nav-vertical .buddypress-wrap .bp-subnavs > ul > li:first-child a {
-	padding-left: 0.5em;
+@media screen and (min-width: 46.8em) {
+	.site-nav-horizontal .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
+	.site-nav-horizontal .buddypress-wrap .bp-subnavs > ul > li:first-child a,
+	.site-nav-vertical .buddypress-wrap .bp-navs.single-screen-navs > ul > li:first-child a,
+	.site-nav-vertical .buddypress-wrap .bp-subnavs > ul > li:first-child a {
+		padding-left: 0.5em;
+	}
 }
 
 .site-nav-horizontal .buddypress-wrap .bp-navs.vertical ul li,
@@ -383,6 +453,8 @@
 	background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
 	background: linear-gradient(to bottom, #517abb 0%, #3d629c 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#517abb", endColorstr="#3d629c", GradientType=0);
+	color: #fff;
+	opacity: 1;
 }
 
 .site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav,
@@ -426,14 +498,14 @@
 }
 
 @media screen and (max-width: 46.8em) {
-	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a {
+	.site-nav-horizontal .buddypress-wrap #subnav li a,
+	.site-nav-vertical .buddypress-wrap #subnav li a {
 		color: #fff !important;
 		opacity: 0.9;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a:focus, .site-nav-horizontal .buddypress-wrap #subnav ul.subnav li a:hover,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a:focus,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li a:hover {
+	.site-nav-horizontal .buddypress-wrap #subnav li a:focus, .site-nav-horizontal .buddypress-wrap #subnav li a:hover,
+	.site-nav-vertical .buddypress-wrap #subnav li a:focus,
+	.site-nav-vertical .buddypress-wrap #subnav li a:hover {
 		background: #517abb;
 		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);
@@ -441,12 +513,12 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#517abb", endColorstr="#3d629c", GradientType=0);
 		opacity: 1;
 	}
-	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a,
-	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a:focus,
-	.site-nav-horizontal .buddypress-wrap #subnav ul.subnav li.selected a:hover,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a:focus,
-	.site-nav-vertical .buddypress-wrap #subnav ul.subnav li.selected a:hover {
+	.site-nav-horizontal .buddypress-wrap #subnav li.selected a,
+	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:focus,
+	.site-nav-horizontal .buddypress-wrap #subnav li.selected a:hover,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a:focus,
+	.site-nav-vertical .buddypress-wrap #subnav li.selected a:hover {
 		background: #517abb;
 		background: -moz-linear-gradient(top, #517abb 0%, #3d629c 100%);
 		background: -webkit-linear-gradient(top, #517abb 0%, #3d629c 100%);

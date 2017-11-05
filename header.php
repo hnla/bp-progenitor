@@ -73,6 +73,36 @@
 						) );
 					?>
 				</nav><!-- #site-navigation -->
+
+				<?php
+
+				/*
+					* We display the user & group single object navs within the
+					* header region under the main nav if main nav vertical & user/group
+					* navs also set as vert otherwise they appear in home.php
+					*/
+				?>
+				<?php if ( is_buddypress() && 'vertical' == progenitor_menu_style() && progenitor_opts( 'object_nav_main_header' ) ) { ?>
+					<dl class="bp-object-nav" aria-role="navigation">
+						<dt class="nav-screen-title">
+							<?php
+							if ( bp_is_user() ) {
+								esc_html_e( 'User Navigation', 'progenitor' );
+							} elseif ( bp_is_group() ) {
+								esc_html_e( 'Group Navigation', 'progenitor' );
+							}
+							?>
+						</dt>
+						<dd>
+						<?php if ( bp_is_user() ) {
+							bp_get_template_part( 'members/single/parts/item-nav' );
+						} elseif ( bp_is_group() ) {
+							bp_get_template_part( 'groups/single/parts/item-nav' );
+						} ?>
+						</dd>
+					</dl>
+				 <?php } ?>
+
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
@@ -131,3 +161,4 @@
 				<?php }; ?>
 				</div>
 			<?php endif; ?>
+

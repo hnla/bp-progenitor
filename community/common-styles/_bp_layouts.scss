@@ -440,6 +440,9 @@
 // parent object navigation in a vertical column & sub navs
 // horizontally across the item-body
 
+// If the user/group nav set to display in main site header
+// we'll revert these rules for floating the item-body after this block
+
 @include medium-up() {
 
 	.bp-single-vert-nav { // described for the #buddypress element
@@ -548,6 +551,20 @@
 			} // close #subnav
 		}
 	}
+
+	// If the user/group navs are displayed in the header under main menu links
+	// re-factor the rules above to not float the item body
+
+	body.object-nav-site-nav-vert {
+
+		.item-body:not(#group-create-body) {
+			border-left: 0;
+			float: none;
+			padding: 0;
+			width: auto;
+		}
+	}
+
 
 	// Set the directory screens main navs as vertical aligned
 	// medium breakpoint up only
