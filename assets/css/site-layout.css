@@ -169,7 +169,7 @@ Header aka .site-banner includes primary nav
 /*===============================================
 1.4.0 - Content
 =================================================*/
-body.home.site-nav-vertical .site-content {
+body.home.site-nav-vertical:not(.group-home) .site-content {
 	padding-top: 1em;
 }
 

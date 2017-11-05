@@ -180,7 +180,7 @@ body.home.site-nav-vertical {
 // If vertical main menu & is static home page
 // We've removed the meta-bar so need padding on the content area
 
-body.home.site-nav-vertical {
+body.home.site-nav-vertical:not(.group-home) {
 	.site-content {
 		padding-top: $pad-med;
 	}
