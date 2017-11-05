@@ -23,7 +23,7 @@ Currently the theme is in very early development but does mainly function fully 
 
 ~~One caveat though at present the necessary BP theme registration has to be performed by hacking the `bp-core-theme-compatibility.php` file to add:~~
 ~~This is an aspect to be tackled later rather than hold up development.~~
-Now the registration of the BP theme package is an automated process. Regsitration is performed from  `mu-plugins` until such time as the BP core function can be updated to run on a leter priority. The mu file is located in the themes `/inc/` folder, in functions.php we create an mu-plugins dir if checks show it doesn't exist then we instantiate the WP filesystem and write a new file to it that has simply an `include()` to fetch our plugin file in theme dir, this is hooked on `admin_init` and will only run if we have no existing file. This is still considered a temp workaround but improves on having to manually create dir and add functions.
+Now the registration of the BP theme package is an automated process. Regsitration is performed from  `mu-plugins` until such time as the BP core function can be updated to run on a later priority. The mu file is located in the themes `/inc/` folder, in functions.php we create an mu-plugins dir if checks show it doesn't exist then we instantiate the WP filesystem and write a new file to it that has simply an `include()` to fetch our plugin file in theme dir, this is hooked on `admin_init` and will only run if we have no existing file. This is still considered a temp workaround but improves on having to manually create dir and add functions.
 
 ```php
 add_action( 'bp_register_theme_packages', function() {
