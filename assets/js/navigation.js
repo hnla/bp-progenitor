@@ -10,8 +10,9 @@
 	function browserSize() {
 
 		// Set a class of mobile-menu on browser resize & load if browser
-		// width less than 760px
-		viewportWidth = window.innerWidth;
+		// width less than 760px.
+		// Remove classes 'mobile-menu' & 'toggled' if greater than 750px
+		viewportWidth = ( window.innerWidth || document.documentElement.clientWidth);
 
 		if(viewportWidth <= '750') {
 			jQuery('#site-navigation').addClass('mobile-menu');
@@ -19,6 +20,10 @@
 
 		if(viewportWidth >= '750' && jQuery('#site-navigation').hasClass('mobile-menu') ) {
 			jQuery('#site-navigation').removeClass('mobile-menu');
+		}
+
+		if(viewportWidth >= '750' && jQuery('#site-navigation').hasClass('toggled') ) {
+			jQuery('#site-navigation').removeClass('toggled');
 		}
 	}
 	window.addEventListener('resize', browserSize);
