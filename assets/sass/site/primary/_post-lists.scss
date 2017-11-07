@@ -74,7 +74,7 @@ Site post lists layouts - as boxes
 
 					@include large-up() {
 
-						@include font-size(18);
+					@include font-size(16);
 					}
 					margin: 0 0 $marg-sml;
 				}
