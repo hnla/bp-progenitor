@@ -5,7 +5,24 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, button, menu, links, i, len, viewportWidth;
+
+	function browserSize() {
+
+		// Set a class of mobile-menu on browser resize & load if browser
+		// width less than 760px
+		viewportWidth = window.innerWidth;
+
+		if(viewportWidth <= '750') {
+			jQuery('#site-navigation').addClass('mobile-menu');
+		}
+
+		if(viewportWidth >= '750' && jQuery('#site-navigation').hasClass('mobile-menu') ) {
+			jQuery('#site-navigation').removeClass('mobile-menu');
+		}
+	}
+	window.addEventListener('resize', browserSize);
+	window.addEventListener('load', browserSize);
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {

@@ -289,7 +289,8 @@
 				padding-left: 10px;
 			}
 
-			> a:hover:after {
+			> a:hover:after,
+			> a:active:after {
 				content: " \f0d7";
 			}
 		}
@@ -305,7 +306,9 @@
 
 			> a {
 
-				@include background-gradient-3d-hori($color: darken($color__main-nav, 5%), $depth: high);
+				@include background-gradient-3d-hori($color: darken($color__main-nav, 1%), $depth: high);
+				color: $white;
+				opacity: 1;
 			}
 		}
 
@@ -324,7 +327,50 @@
 }
 
 /*========================================
-3.5 BP navigation
+3.5 Mobile menu stylings
+==========================================*/
+
+.main-navigation.mobile-menu {
+
+	button {
+		background: none;
+		border: 0;
+		color: $white;
+
+		&:focus,
+		&:active {
+			background: $color-secondary-2-0;
+		}
+	}
+
+	.menu-main-menu-container {
+		border-top: 1px solid $black;
+	}
+
+	.nav-menu {
+
+		> li {
+
+			> a {
+				background: none;
+			}
+		}
+
+		li {
+			&.menu-item-has-children a:after {
+				content: "";
+			}
+
+			&:hover a {
+				background: none;
+			}
+		}
+
+	}
+}
+
+/*========================================
+3.6 BP navigation
 ==========================================*/
 
 // we need to isolate these rules to the site header to allow

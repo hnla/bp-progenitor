@@ -632,32 +632,32 @@ a:hover, a:active {
 	border-radius: 0;
 }
 
-.main-navigation {
+.main-navigation:not(.toggled) {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
 }
 
-.main-navigation ul {
+.main-navigation:not(.toggled) ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
 
-.main-navigation ul li {
+.main-navigation:not(.toggled) ul li {
 	border-radius: 0;
 	float: left;
 	margin-right: 1em;
 	position: relative;
 }
 
-.main-navigation ul li a {
+.main-navigation:not(.toggled) ul li a {
 	display: block;
 	text-decoration: none;
 }
 
-.main-navigation ul ul {
+.main-navigation:not(.toggled) ul ul {
 	background: #fff;
 	border: 1px solid #b7b7b7;
 	box-shadow: 0 0 7px rgba(214, 214, 214, 0.9);
@@ -668,46 +668,47 @@ a:hover, a:active {
 	z-index: 99999;
 }
 
-.main-navigation ul ul ul {
+.main-navigation:not(.toggled) ul ul ul {
 	left: -999em;
 	top: 0;
 }
 
-.main-navigation ul ul li {
+.main-navigation:not(.toggled) ul ul li {
 	margin-right: 0;
 }
 
-.main-navigation ul ul li:focus > ul,
-.main-navigation ul ul li:hover > ul
-.main-navigation ul ul li.focus > ul {
+.main-navigation:not(.toggled) ul ul li:focus > ul,
+.main-navigation:not(.toggled) ul ul li:hover > ul
+.main-navigation:not(.toggled) ul ul li.focus > ul {
 	left: 100%;
 	opacity: 1;
 }
 
-.main-navigation ul ul a,
-.main-navigation ul ul a:visited,
-.main-navigation ul ul a:active {
+.main-navigation:not(.toggled) ul ul a,
+.main-navigation:not(.toggled) ul ul a:visited,
+.main-navigation:not(.toggled) ul ul a:active {
 	color: #404040;
 }
 
-.main-navigation ul ul a {
+.main-navigation:not(.toggled) ul ul a {
 	padding: 0.5em 0 0.5em 0.5em;
 	width: 200px;
 }
 
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
+.main-navigation:not(.toggled) ul ul :hover > a,
+.main-navigation:not(.toggled) ul ul .focus > a {
 	opacity: 1;
+	color: #fff;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation:not(.toggled) ul li:hover > ul,
+.main-navigation:not(.toggled) ul li.focus > ul {
 	left: auto;
 	opacity: 1;
 }
 
-.main-navigation ul li:hover > ul ul,
-.main-navigation ul li.focus > ul ul {
+.main-navigation:not(.toggled) ul li:hover > ul ul,
+.main-navigation:not(.toggled) ul li.focus > ul ul {
 	left: 10px;
 }
 
@@ -728,23 +729,23 @@ a:hover, a:active {
 Main menu vertical option - elements adjustments.
 */
 @media screen and (min-width: 46.8em) {
-	.site-nav-vertical .main-navigation ul li {
+	.site-nav-vertical .main-navigation:not(.toggled) ul li {
 		margin: 0;
 		padding: 0;
 	}
-	.site-nav-vertical .main-navigation ul li a {
+	.site-nav-vertical .main-navigation:not(.toggled) ul li a {
 		padding: 0.5em 0 0.5em 0.5em;
 	}
-	.site-nav-vertical .main-navigation ul li:hover > ul,
-	.site-nav-vertical .main-navigation ul li.focus > ul {
+	.site-nav-vertical .main-navigation:not(.toggled) ul li:hover > ul,
+	.site-nav-vertical .main-navigation:not(.toggled) ul li.focus > ul {
 		left: 90%;
 		top: 2px;
 	}
 }
 
 @media screen and (min-width: 46.8em) and (min-width: 84em) {
-	.site-nav-vertical .main-navigation ul li:hover > ul,
-	.site-nav-vertical .main-navigation ul li.focus > ul {
+	.site-nav-vertical .main-navigation:not(.toggled) ul li:hover > ul,
+	.site-nav-vertical .main-navigation:not(.toggled) ul li.focus > ul {
 		left: 55%;
 	}
 }
@@ -752,13 +753,35 @@ Main menu vertical option - elements adjustments.
 /*
 Small menu display.
 */
-.main-navigation ul {
-	display: none;
+.main-navigation.mobile-menu ul {
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity .2s ease-in-out .1s;
 }
 
-.menu-toggle,
+.main-navigation.mobile-menu .menu-toggle {
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0;
+}
+
+.main-navigation.mobile-menu .menu-toggle span.menu-icon {
+	padding: 0.2em 0.5em;
+}
+
 .main-navigation.toggled ul {
 	display: block;
+	font-size: inherit;
+	height: auto;
+	line-height: inherit;
+	list-style: none;
+	margin: 0;
+	opacity: 1;
+	overflow: visible;
+	padding: 1em 0 1em 0.5em;
 }
 
 @media screen and (min-width: 46.8em) {
@@ -1264,8 +1287,8 @@ Site post lists layouts - as boxes
 
 @media screen and (min-width: 75em) {
 	.post-list-grid.archive .box-align article .entry-title, .post-list-grid.category .box-align article .entry-title, .post-list-grid.blog .box-align article .entry-title, .post-list-grid.search .box-align article .entry-title {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 

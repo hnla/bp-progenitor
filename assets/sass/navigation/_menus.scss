@@ -12,7 +12,7 @@
 	}
 }
 
-.main-navigation {
+.main-navigation:not(.toggled) {
 	clear: both;
 	display: block;
 	float: left;
@@ -74,11 +74,7 @@
 
 			:hover > a,
 			.focus > a {
-				opacity: 1;
-			}
-
-			a:hover,
-			a.focus {
+				opacity: 1; color: $white;
 			}
 		}
 
@@ -130,7 +126,7 @@ Main menu vertical option - elements adjustments.
 
 	@include medium-up() {
 
-		.main-navigation {
+		.main-navigation:not(.toggled) {
 
 			ul {
 
@@ -164,13 +160,43 @@ Main menu vertical option - elements adjustments.
 /*
 Small menu display.
 */
-.main-navigation ul {
-	display: none;
+.main-navigation.mobile-menu {
+
+	ul {
+		height: 0;
+		line-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity .2s ease-in-out .1s;
+	}
+
+	.menu-toggle {
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0;
+
+		span.menu-icon {
+			padding: 0.2em 0.5em;
+		}
+	}
 }
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+
+.main-navigation.toggled {
+
+	ul {
+		display: block;
+		font-size: inherit;
+		height: auto;
+		line-height: inherit;
+		list-style: none;
+		margin: 0;
+		opacity: 1;
+		overflow: visible;
+		padding: $pad-med 0 $pad-med $pad-sml;
+	}
 }
+
 
 @include medium-up() {
 

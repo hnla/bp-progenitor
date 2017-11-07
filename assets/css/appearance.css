@@ -227,7 +227,8 @@
 	padding-left: 10px;
 }
 
-.site-nav-vertical .main-navigation li.menu-item-has-children > a:hover:after {
+.site-nav-vertical .main-navigation li.menu-item-has-children > a:hover:after,
+.site-nav-vertical .main-navigation li.menu-item-has-children > a:active:after {
 	content: " \f0d7";
 }
 
@@ -236,11 +237,13 @@
 }
 
 .site-nav-vertical .main-navigation li.current_page_item > a {
-	background: #36568a;
-	background: -moz-linear-gradient(left, #36568a 0%, #192840 100%);
-	background: -webkit-linear-gradient(left, #36568a 0%, #192840 100%);
-	background: linear-gradient(to right, #36568a 0%, #192840 100% 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#36568a", endColorstr="#192840", GradientType=1);
+	background: #3c6098;
+	background: -moz-linear-gradient(left, #3c6098 0%, #1f324f 100%);
+	background: -webkit-linear-gradient(left, #3c6098 0%, #1f324f 100%);
+	background: linear-gradient(to right, #3c6098 0%, #1f324f 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c6098", endColorstr="#1f324f", GradientType=1);
+	color: #fff;
+	opacity: 1;
 }
 
 .site-nav-vertical .main-navigation li:focus > a,
@@ -255,7 +258,36 @@
 }
 
 /*========================================
-3.5 BP navigation
+3.5 Mobile menu stylings
+==========================================*/
+.main-navigation.mobile-menu button {
+	background: none;
+	border: 0;
+	color: #fff;
+}
+
+.main-navigation.mobile-menu button:focus, .main-navigation.mobile-menu button:active {
+	background: #ff9751;
+}
+
+.main-navigation.mobile-menu .menu-main-menu-container {
+	border-top: 1px solid #333;
+}
+
+.main-navigation.mobile-menu .nav-menu > li > a {
+	background: none;
+}
+
+.main-navigation.mobile-menu .nav-menu li.menu-item-has-children a:after {
+	content: "";
+}
+
+.main-navigation.mobile-menu .nav-menu li:hover a {
+	background: none;
+}
+
+/*========================================
+3.6 BP navigation
 ==========================================*/
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
 	border-top: 25px solid #36568a;
