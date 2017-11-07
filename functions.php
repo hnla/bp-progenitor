@@ -18,7 +18,14 @@
  * et voilá an automated system... I think, & hope.
  *
  * @since 0.1.0
+ *
+ * @todo Site owner can set custom dir & url for mu location so check if
+	*       constants are defined and use for path if so. Problem is abspath
+	*       required & user defined likely to be relative, as WP overwrites the constant
+	*       with abspath to default; checking if user set isn't possible? as now the
+	*       constant always returns true.
  */
+
 if ( ! is_file( ABSPATH . 'wp-content/mu-plugins/load-register-bp-progenitor.php') ) {
 
 	function create_progenitor_register_file() {
@@ -28,7 +35,7 @@ if ( ! is_file( ABSPATH . 'wp-content/mu-plugins/load-register-bp-progenitor.php
 				global $wp_filesystem;
 
 				$wp_filesystem->put_contents(
-					'../../wp-content/mu-plugins/load-register-bp-progenitor.php',
+					ABSPATH . 'wp-content/mu-plugins/load-register-bp-progenitor.php',
 					"<?php \n/* \n* BP Progenitor registration.\n* Locate and include the plugin file.\n*/\n include( get_template_directory() . '/inc/register-bp-progenitor.php');"
 				);
 			}
@@ -48,11 +55,13 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 	 */
 	function bp_progenitor_setup() {
 
-		/**
+		/*
 		 * @todo: Lets setup something for managing adminbar and users
 		 *
 		 */
+		if ( ! current_user_can('activate_plugins') ) {
 //		add_filter('show_admin_bar', '__return_false');
+		}
 
 		/*
 		 * Make theme available for translation.
@@ -365,6 +374,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function progenitor_body_classes( $classes ) {
 
+if ( ! is_admin_bar_showing() ) {
+	$classes[] = 'no-adminbar';
+}
+
 	if( function_exists( 'bp_is_active' ) ) :
 		$bp_is_directory = bp_is_directory();
 	else:
@@ -443,7 +456,7 @@ function progenitor_body_classes( $classes ) {
 	}
 
 	if ( bp_is_group() && 'home' == bp_current_action() ) {
-		unset( $classes[5] );
+		unset( $classes[6] );
 	}
 
 //var_dump($classes);

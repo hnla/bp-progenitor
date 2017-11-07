@@ -43,6 +43,10 @@ body:not(.customize-partial-edit-shortcuts-shown) {
 	}
 }
 
+body.no-adminbar {
+	padding-top: 0;
+}
+
 body {
 	height: 100%;
 }
