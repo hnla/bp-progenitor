@@ -1,12 +1,5 @@
 // Content inner elements structural positioning
 
-.meta-bar {
-
-	.group-status {
-		margin-bottom: 0.5em;
-	}
-}
-
 .home-page.logged-in {
 
 	.site-main {
@@ -23,6 +16,11 @@
 			@include large-up() {
 
 				justify-content: flex-start; // default to reset.
+			}
+
+			.block-top {
+
+				@include box-item-size($grow: 1, $basis: 100%);
 			}
 
 			.block-1,

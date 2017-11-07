@@ -409,10 +409,6 @@ Primary header elements
 /*==============================================================
 3.0 Main content
 ================================================================*/
-.meta-bar .group-status {
-	margin-bottom: 0.5em;
-}
-
 .home-page.logged-in .site-main {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -446,6 +442,14 @@ Primary header elements
 	.home-page.logged-in .site-main {
 		justify-content: flex-start;
 	}
+}
+
+.home-page.logged-in .site-main .block-top {
+	-webkit-flex: 1 1 100%;
+	-moz-flex: 1 1 100%;
+	-ms-flex: 1 1 100%;
+	-o-flex: 1 1 100%;
+	flex: 1 1 100%;
 }
 
 .home-page.logged-in .site-main .block-1,

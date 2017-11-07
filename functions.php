@@ -206,9 +206,18 @@ function bp_progenitor_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'Homepage Block Top Logged-in', 'bp-progenitor' ),
+		'id'            => 'homepage-block-top-loggedin',
+		'description'   => esc_html__( 'Provides a region on homepage spanning the full width of homepage at the top. Block only visible if widgets added here.', 'bp-progenitor' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Homepage Block 1 Logged-in', 'bp-progenitor' ),
 		'id'            => 'homepage-block-1-loggedin',
-		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'description'   => esc_html__( 'block 1 left empty will allow block 2 to span full width giving layout a columnar appearance.', 'bp-progenitor' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -217,7 +226,7 @@ function bp_progenitor_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Homepage Block 2 Logged-in', 'bp-progenitor' ),
 		'id'            => 'homepage-block-2-loggedin',
-		'description'   => esc_html__( 'Add widgets here.', 'bp-progenitor' ),
+		'description'   => esc_html__( 'if both blocks 1 & 2 active layout of blocks will be side by side', 'bp-progenitor' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
