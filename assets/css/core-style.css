@@ -697,8 +697,8 @@ a:hover, a:active {
 
 .main-navigation:not(.toggled) ul ul :hover > a,
 .main-navigation:not(.toggled) ul ul .focus > a {
-	opacity: 1;
 	color: #fff;
+	opacity: 1;
 }
 
 .main-navigation:not(.toggled) ul li:hover > ul,
@@ -723,6 +723,16 @@ a:hover, a:active {
 
 .site-nav-horizontal .main-navigation ul ul {
 	top: 100%;
+}
+
+.site-nav-horizontal .main-navigation ul ul li:hover > ul,
+.site-nav-horizontal .main-navigation ul ul li.focus > ul {
+	left: 90%;
+}
+
+.site-nav-horizontal .main-navigation ul ul li:hover > ul ul,
+.site-nav-horizontal .main-navigation ul ul li.focus > ul ul {
+	left: 10px;
 }
 
 /*
@@ -753,6 +763,10 @@ Main menu vertical option - elements adjustments.
 /*
 Small menu display.
 */
+.site-nav-horizontal .site-navs.main-navigation.mobile-menu {
+	padding: 0;
+}
+
 .main-navigation.mobile-menu ul {
 	height: 0;
 	line-height: 0;

@@ -74,7 +74,8 @@
 
 			:hover > a,
 			.focus > a {
-				opacity: 1; color: $white;
+				color: $white;
+				opacity: 1;
 			}
 		}
 
@@ -113,6 +114,15 @@
 
 			ul {
 				top: 100%;
+
+				li:hover > ul,
+				li.focus > ul {
+					left: 90%;
+
+					ul {
+						left: 10px;
+					}
+				}
 			}
 		}
 	}
@@ -160,7 +170,15 @@ Main menu vertical option - elements adjustments.
 /*
 Small menu display.
 */
+.site-nav-horizontal {
+
+	.site-navs.main-navigation.mobile-menu {
+		padding: 0;
+	}
+}
+
 .main-navigation.mobile-menu {
+
 
 	ul {
 		height: 0;
