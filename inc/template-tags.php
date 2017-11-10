@@ -6,6 +6,15 @@
  * @package BP_Progenitor
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Include the mobile_detect class & create a new instance
+ */
+require_once get_template_directory() .'/assets/vendor/Mobile_Detect.php';
+$mobile_detect = new Mobile_Detect;
+//var_dump($mobile_detect);
 
 /**
  * Check whether post loops are set as grid layout
@@ -178,8 +187,7 @@ function progenitor_logo_size() {
  * @return bool
  */
 function progenitor_object_nav_is_vertical( $option = '' ) {
-	return  progenitor_opts( $option );
-
+	return progenitor_opts( $option );
 }
 
 /**
