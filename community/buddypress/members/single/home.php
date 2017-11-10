@@ -28,9 +28,20 @@
 	 * we display menu here as vert or hori, else we move the nav into the header.php file.
 		*/
 	?>
-	<?php if ( ! bp_progenitor_is_object_nav_in_sidebar()  && ! progenitor_opts( 'object_nav_main_header') ) : ?>
+	<?php if ( ! bp_progenitor_is_object_nav_in_sidebar() ) : ?>
+
+	<?php if( progenitor_opts( 'object_nav_main_header') ) :
+	// This element is controled via scripting to show menu if
+	// the script removes the display property
+	?>
+		<div class="manage-object-nav-visibility" style="display: none">
+	<?php endif; ?>
 
 		<?php bp_get_template_part( 'members/single/parts/item-nav' ); ?>
+
+	<?php if( progenitor_opts( 'object_nav_main_header') ) : ?>
+		</div>
+	<?php endif; ?>
 
 	<?php endif; ?>
 
