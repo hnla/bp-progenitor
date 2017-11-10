@@ -176,7 +176,7 @@
 
 .site-nav-horizontal {
 
-	.main-navigation {
+	.main-navigation:not(.toggled) {
 
 		.nav-menu > li {
 			border-right: 1px solid darken($color__main-nav, 15%);
@@ -212,18 +212,27 @@
 
 			> a:after {
 				content: " \f0d7";
-				padding-left: 4px;
+				padding-left: 6px;
 			}
 
 			> a:hover:after {
 				content: " \f0d8";
 			}
+
+			//	nested child items adjusts arrow to the right
+			.menu-item-has-children {
+
+				> a:after {
+					content: " \f0da";
+				}
+			}
+
 		}
 
 		li.active.menu-item-has-children {
 
 			> a:after {
-				content: " \f0d8";
+				content: " \f0d7";
 			}
 		}
 

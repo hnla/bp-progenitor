@@ -138,25 +138,25 @@
 /*========================================
 3.1 Static horizontal primary navigation
 ==========================================*/
-.site-nav-horizontal .main-navigation .nav-menu > li {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li {
 	border-right: 1px solid #273f65;
 	border-left: 1px solid #446eae;
 	margin-right: 0;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li:first-child > a {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li:first-child > a {
 	padding-left: 0;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li:first-child {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li:first-child {
 	border-left: 0;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li:last-child {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li:last-child {
 	border-right: 0;
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li.current-menu-item > a {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li.current-menu-item > a {
 	background: #2f4b77;
 	background: -moz-linear-gradient(top, #2f4b77 0%, #203453 100%);
 	background: -webkit-linear-gradient(top, #2f4b77 0%, #203453 100%);
@@ -164,30 +164,34 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f4b77", endColorstr="#203453", GradientType=0);
 }
 
-.site-nav-horizontal .main-navigation .nav-menu > li > a {
+.site-nav-horizontal .main-navigation:not(.toggled) .nav-menu > li > a {
 	padding: 5px 10px;
 }
 
-.site-nav-horizontal .main-navigation li.menu-item-has-children > a:after {
+.site-nav-horizontal .main-navigation:not(.toggled) li.menu-item-has-children > a:after {
 	content: " \f0d7";
-	padding-left: 4px;
+	padding-left: 6px;
 }
 
-.site-nav-horizontal .main-navigation li.menu-item-has-children > a:hover:after {
+.site-nav-horizontal .main-navigation:not(.toggled) li.menu-item-has-children > a:hover:after {
 	content: " \f0d8";
 }
 
-.site-nav-horizontal .main-navigation li.active.menu-item-has-children > a:after {
-	content: " \f0d8";
+.site-nav-horizontal .main-navigation:not(.toggled) li.menu-item-has-children .menu-item-has-children > a:after {
+	content: " \f0da";
 }
 
-.site-nav-horizontal .main-navigation ul ul a:link,
-.site-nav-horizontal .main-navigation ul ul a:visited {
+.site-nav-horizontal .main-navigation:not(.toggled) li.active.menu-item-has-children > a:after {
+	content: " \f0d7";
+}
+
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul a:link,
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul a:visited {
 	color: #404040;
 }
 
-.site-nav-horizontal .main-navigation ul ul li:focus,
-.site-nav-horizontal .main-navigation ul ul li:hover {
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul li:focus,
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul li:hover {
 	background: #3d629c;
 	background: -moz-linear-gradient(top, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(top, #3d629c 0%, #2f4b77 100%);
@@ -195,8 +199,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=0);
 }
 
-.site-nav-horizontal .main-navigation ul ul li:focus > a,
-.site-nav-horizontal .main-navigation ul ul li:hover > a {
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul li:focus > a,
+.site-nav-horizontal .main-navigation:not(.toggled) ul ul li:hover > a {
 	color: #fff;
 }
 
