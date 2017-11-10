@@ -59,8 +59,8 @@ if ( ! function_exists( 'bp_progenitor_setup' ) ) :
 		 * @todo: Lets setup something for managing adminbar and users
 		 *
 		 */
-		if ( ! current_user_can('activate_plugins') ) {
-//		add_filter('show_admin_bar', '__return_false');
+		if ( ! current_user_can('activate_plugins') && ! is_user_logged_in() ) {
+			add_filter('show_admin_bar', '__return_false');
 		}
 
 		/*
