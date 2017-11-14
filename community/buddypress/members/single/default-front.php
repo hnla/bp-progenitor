@@ -1,12 +1,15 @@
 <?php
 /**
  * BP Progenitor Default user's front template.
+ * This template is called if admin selects to use the users default front page.
+ * The home.php template calls `bp_progenitor_member_template_part()` which will
+ * locate this file to use.
  *
  * @since 1.0.0
  */
 ?>
 
-<div class="member-front-page">
+<div class="member-front-page single-custom-front-page">
 
 	<?php if ( ! is_customize_preview() && bp_current_user_can( 'bp_moderate' ) && ! is_active_sidebar( 'sidebar-buddypress-members' ) ) : ?>
 

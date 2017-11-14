@@ -1,12 +1,15 @@
 <?php
 /**
  * BP progenitor Default group's front template.
+ * This template is called if admin selects to use the users default front page.
+ * The home.php template calls `bp_progenitor_member_template_part()` which will
+ * locate this file to use.
  *
  * @since 1.0.0
  */
 ?>
 
-<div class="group-front-page">
+<div class="group-front-page single-custom-front-page">
 
 	<?php if ( ! is_active_sidebar( 'sidebar-buddypress-groups' ) || ! bp_progenitor_groups_do_group_boxes() ) : ?>
 		<?php if ( ! is_customize_preview() && bp_current_user_can( 'bp_moderate' ) ) : ?>
