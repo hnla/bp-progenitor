@@ -5,38 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len, viewportWidth;
-
-	function browserSize() {
-
-		// Set a class of mobile-menu on browser resize & load if browser
-		// width less than 760px.
-		// Remove classes 'mobile-menu' & 'toggled' if greater than 750px.
-		// Hide & show user/group nav in main nav header or in item-body.
-		viewportWidth = ( window.innerWidth || document.documentElement.clientWidth);
-
-		if(viewportWidth <= '750') {
-			jQuery('#site-navigation').addClass('mobile-menu');
-			jQuery('.site-header .bp-object-nav').addClass('hidden').hide();
-			jQuery('.manage-object-nav-visibility').show();
-		}
-
-		if(viewportWidth >= '750' && jQuery('#site-navigation').hasClass('mobile-menu') ) {
-			jQuery('#site-navigation').removeClass('mobile-menu');
-
-		}
-
-		if(viewportWidth >= '750' && jQuery('#site-navigation').hasClass('toggled') ) {
-			jQuery('#site-navigation').removeClass('toggled');
-		}
-
-		if(viewportWidth >= '750' && jQuery('.site-header .bp-object-nav').hasClass('hidden') ) {
-			jQuery('.site-header .bp-object-nav').show();
-			jQuery('.manage-object-nav-visibility').hide();
-		}
-	}
-	window.addEventListener('resize', browserSize);
-	window.addEventListener('load', browserSize);
+	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
