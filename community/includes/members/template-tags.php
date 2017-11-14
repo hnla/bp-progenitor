@@ -779,7 +779,7 @@ function bp_progenitor_member_description_edit_link() {
 		add_filter( 'edit_profile_url', 'bp_members_edit_profile_url', 10, 3 );
 		$link .= '#description';
 
-		return sprintf( '<a href="%1$s">%2$s</a>', esc_url( $link ), esc_html__( 'Edit your bio', 'buddypress' ) );
+		return sprintf( '<a class="edit-wp-profile" href="%1$s"><span class="fa fa-edit" aria-hidden="true"></span> %2$s</a>', esc_url( $link ), esc_html__( 'Edit your bio', 'buddypress' ) );
 	}
 
 
