@@ -6,13 +6,7 @@
  */
 ?>
 
-<?php if ( 'vertical' == progenitor_menu_style() ) { ?>
-	<?php //bp_get_template_part( 'members/single/parts/item-nav' ); ?>
-	<div class="flex-wrap">
-<?php } ?>
-
 <?php bp_progenitor_member_hook( 'before', 'home_content' ); ?>
-
 
 <div id="item-header" role="complementary" data-bp-item-id="<?php echo esc_attr( bp_displayed_user_id() ); ?>" data-bp-item-component="members" class="users-header single-headers">
 
@@ -53,7 +47,3 @@
 </div><!-- // .bp-wrap -->
 
 <?php bp_progenitor_member_hook( 'after', 'home_content' ); ?>
-
-<?php if ( 'site-nav-vertical' == progenitor_menu_style() ) { ?>
-	</div>
-<?php } ?>
