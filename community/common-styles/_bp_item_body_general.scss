@@ -16,5 +16,25 @@
 			margin: $marg-xlrg 0 $marg-med;
 		}
 
+		//group & user default-front page
+
+		.single-custom-front-page {
+
+			.member-description {
+
+				blockquote {
+					border: 1px solid $bp-border-color;
+					margin: 0;
+				}
+
+				.edit-wp-profile {
+					@include font-size(12);
+
+					span.fa {
+						color: $black;
+					}
+				}
+			}
+		}
 	}
 }

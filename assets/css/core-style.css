@@ -742,6 +742,7 @@ Main menu vertical option - elements adjustments.
 	.site-nav-vertical .main-navigation:not(.toggled) ul li {
 		margin: 0;
 		padding: 0;
+		float: none;
 	}
 	.site-nav-vertical .main-navigation:not(.toggled) ul li a {
 		padding: 0.5em 0 0.5em 0.5em;

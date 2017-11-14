@@ -246,7 +246,7 @@
 	background: -webkit-linear-gradient(left, #3c6098 0%, #1f324f 100%);
 	background: linear-gradient(to right, #3c6098 0%, #1f324f 100% 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c6098", endColorstr="#1f324f", GradientType=1);
-	color: #fff;
+	color: #fff !important;
 	opacity: 1;
 }
 
@@ -294,7 +294,8 @@
 3.6 BP navigation
 ==========================================*/
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
-	border-top: 25px solid #36568a;
+	margin: 0;
+	padding-top: 1em;
 }
 
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
@@ -305,7 +306,6 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
 	color: #fff;
 	font-weight: 700;
-	padding-top: 0.5em;
 }
 
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dd {
@@ -320,7 +320,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
 	color: #fff;
 	opacity: 0.9;
-	padding-right: 1em;
+	padding-right: 0.5em;
 }
 
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li > a:focus, .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li > a:hover {
@@ -342,22 +342,28 @@
 
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul li.selected a {
 	background: #446eae;
-	background: -moz-linear-gradient(top, #446eae 0%, #36568a 100%);
-	background: -webkit-linear-gradient(top, #446eae 0%, #36568a 100%);
-	background: linear-gradient(to bottom, #446eae 0%, #36568a 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#446eae", endColorstr="#36568a", GradientType=0);
+	background: -moz-linear-gradient(left, #446eae 0%, #36568a 100%);
+	background: -webkit-linear-gradient(left, #446eae 0%, #36568a 100%);
+	background: linear-gradient(to right, #446eae 0%, #36568a 100% 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#446eae", endColorstr="#36568a", GradientType=1);
 	opacity: 1;
 }
 
 @media screen and (min-width: 46.8em) {
+	.site-nav-vertical.object-nav-site-nav-vert .site-header .main-navigation {
+		border-bottom: 1px solid #4772b6;
+	}
 	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
-		border-top: 25px solid #36568a;
+		border-top: 1px solid #273f65;
 	}
 	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
 		background: none;
 	}
 	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li {
 		text-align: right;
+	}
+	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li a {
+		padding-right: 2em;
 	}
 }
 

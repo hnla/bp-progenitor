@@ -13,14 +13,6 @@ body {
 			}
 		} // close * the kitchen sink of elements
 
-		// Some themes have a negative left margin on the blockquote element??
-		#item-body,
-		.bp-lists {
-
-			blockquote {
-				margin-left: $marg-sml;
-			}
-		}
 
 		// CSS Box Model - some themes will set all blocks to border box
 		// some will cherry pick - we will set elements as we need to,

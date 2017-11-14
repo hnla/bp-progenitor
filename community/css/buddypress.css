@@ -55,11 +55,6 @@ body #buddypress * a {
 	text-decoration: none;
 }
 
-body #buddypress #item-body blockquote,
-body #buddypress .bp-lists blockquote {
-	margin-left: 10px;
-}
-
 body #buddypress .bp-list .action {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -387,10 +382,10 @@ body.buddypress article.page > .entry-header .entry-title {
 
 .object-nav-site-nav-vert .site-header dl.bp-object-nav {
 	clear: both;
-	margin-top: 20px;
 }
 
 .object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
+	line-height: 1.8;
 	text-align: center;
 }
 
@@ -2466,6 +2461,20 @@ body.no-js .single-item-header .js-self-profile-button {
 
 .buddypress-wrap .item-body .button-tabs {
 	margin: 30px 0 15px;
+}
+
+.buddypress-wrap .item-body .single-custom-front-page .member-description blockquote {
+	border: 1px solid #eee;
+	margin: 0;
+}
+
+.buddypress-wrap .item-body .single-custom-front-page .member-description .edit-wp-profile {
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+.buddypress-wrap .item-body .single-custom-front-page .member-description .edit-wp-profile span.fa {
+	color: #333;
 }
 
 /**
