@@ -45,6 +45,7 @@ class BP_Progenitor_Groups {
 		require $this->dir . 'functions.php';
 		require $this->dir . 'classes.php';
 		require $this->dir . 'template-tags.php';
+		require $this->dir . 'widgets.php';
 
 		// Test suite requires the AJAX functions early.
 		if ( function_exists( 'tests_add_filter' ) ) {
