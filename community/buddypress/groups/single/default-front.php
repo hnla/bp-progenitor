@@ -5,7 +5,7 @@
  * The home.php template calls `bp_progenitor_member_template_part()` which will
  * locate this file to use.
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 ?>
 

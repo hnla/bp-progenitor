@@ -5,7 +5,7 @@
  * The home.php template calls `bp_progenitor_member_template_part()` which will
  * locate this file to use.
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 ?>
 
@@ -29,13 +29,20 @@
 
 		<div class="member-description">
 
-			<?php if ( get_the_author_meta( 'description', bp_displayed_user_id() ) ) : ?>
+			<?php if ( user_has_wp_author_description() ) : ?>
 				<blockquote class="member-bio">
 					<?php bp_progenitor_member_description( bp_displayed_user_id() ); ?>
 				</blockquote><!-- .member-bio -->
 			<?php endif ; ?>
 
 			<?php if ( bp_is_my_profile() || bp_current_user_can( 'bp_moderate' ) ) :
+
+				if ( ! user_has_wp_author_description() && bp_progenitor_members_wp_bio_info() ) { ?>
+					<div class="info bp-feedback">
+						<span class="bp-icon" aria-hidden="true"></span>
+						<p class="text"><?php _e('You may display your WordPress author description here, you will need to add your description by visiting the link below.', 'progenitor'); ?></p>
+					</div>
+			<?php	};
 
 				bp_progenitor_member_description_edit_link();
 

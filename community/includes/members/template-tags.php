@@ -711,6 +711,17 @@ function bp_progenitor_members_get_customizer_widgets_link() {
 }
 
 /**
+ * Check whether user has a WP author meta description
+ *
+ * @since 0.1.0
+ *
+ * @returns bool
+ */
+function user_has_wp_author_description() {
+	return (bool) get_the_author_meta( 'description', bp_displayed_user_id() );
+}
+
+/**
  * Display the Member description making sure linefeeds are taking in account
  *
  * @since 1.0.0
