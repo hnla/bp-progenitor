@@ -560,15 +560,8 @@ function bp_progenitor_member_meta() {
 		}
 
 		if ( empty( $member->template_meta ) ) {
-			// It's a single user's header
-			if ( ! $is_loop ) {
-				$meta['last_activity'] = sprintf(
-					'<span class="activity">%s</span>',
-					esc_html( bp_get_last_activity( bp_displayed_user_id() ) )
-				);
 
-			// We're in the members loop
-			} else {
+			if ( $is_loop ) {
 				$meta = array(
 					'last_activity' => sprintf( '%s', bp_get_member_last_active() ),
 				);
@@ -595,6 +588,29 @@ function bp_progenitor_member_meta() {
 
 		return $member->template_meta;
 	}
+
+/**
+ *  Member last activity meta
+ *
+ * Split from general meta function above to work as a standalone object
+ * we can move around the template for users account
+ *
+ * @since 0.1.0
+ *
+ * @return html
+ */
+function progenitor_member_last_active() {
+
+	if ( ! bp_is_user() )
+		return;
+
+	$last_active = sprintf(
+				'<p class="last-active">%s</p>',
+					esc_html( bp_get_last_activity( bp_displayed_user_id() ) )
+				);
+
+	echo apply_filters('progenitor_member_last_active', $last_active);
+}
 
 /**
  * Load the appropriate content for the single member pages

@@ -139,6 +139,7 @@
 						<?php if ( bp_is_user() ) : ?>
 							<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
 								<span class="user-nicename" aria-role="hidden">@<?php bp_displayed_user_mentionname(); ?></span>
+								<?php progenitor_member_last_active(); ?>
 							<?php endif; ?>
 						<?php endif; ?>
 
