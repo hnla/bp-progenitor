@@ -590,10 +590,10 @@ function bp_progenitor_member_meta() {
 	}
 
 /**
- *  Member last activity meta
+ *  Member last active meta
  *
  * Split from general meta function above to work as a standalone object
- * we can move around the template for users account
+ * we can move around the template for users account.
  *
  * @since 0.1.0
  *
