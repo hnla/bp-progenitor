@@ -17,7 +17,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content-parts/content', get_post_type() );
 
-			bp_progenitor_post_navigation( array( 'icons' => true ) );
+			bp_progenitor_post_navigation( array( 'icons' => true, 'class' => 'bottom' ) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

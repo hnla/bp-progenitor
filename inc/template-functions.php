@@ -79,12 +79,16 @@ function progenitor_get_post_navi( $args ) {
 		'excluded_terms'     => '',
 		'taxonomy'           => 'category',
 		'screen_reader_text' => __( 'Post navigation' ),
+		'class'              => '',
 	) );
 
-	$navigation = '';
+	$display_nav = '';
+	$screen_reader = sanitize_text_field( $args['screen_reader_text'] );
+	$additional_classes = ( ! empty( $args['class'] ) )? ' ' . sanitize_text_field( $args['class'] ): '';
 
 	$icon_left  = '';
 	$icon_right = '';
+
 	if ( true === $args['icons'] ) {
 		$icon_left  = '<span class="fa fa-angle-double-left"  aria-hidden="true"></span>';
 		$icon_right = '<span class="fa fa-angle-double-right" aria-hidden="true"></span>';
@@ -106,11 +110,16 @@ function progenitor_get_post_navi( $args ) {
 		$args['taxonomy']
 	);
 
-			// Only add markup if there's somewhere to navigate to.
-			if ( $previous || $next ) {
-							$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
-			}
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$display_nav = '
+		<nav class="post-navigation' . $additional_classes . '" >
+		<h2 class="screen-reader-text">' . $screen_reader . '</h2>'
+		. $previous . $next . '
+		</nav>
+		';
+	}
 
-				return $navigation;
-
+	return $display_nav; //$navigation;
 }
+
