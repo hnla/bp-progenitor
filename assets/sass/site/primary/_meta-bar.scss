@@ -1,6 +1,9 @@
 // Site Meta Bar
 .meta-bar {
 
+	@include center-vert();
+
+	header {width: 100%;}
 	.group-status {
 		margin-bottom: 0.5em;
 	}

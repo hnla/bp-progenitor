@@ -2,10 +2,19 @@
 
 .bp-user {
 
+	.meta-bar {
+
+		.last-active {
+			margin: $marg-sml 0 ;
+		}
+	}
+
 	.users-header {
 
 		.user-nicename {
 			margin-bottom: $marg-xsml;
 		}
+
+
 	}
 }

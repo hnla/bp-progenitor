@@ -56,6 +56,7 @@
 .page {
 
 	.entry-content:not(.bp-entry-content) {
+
 		@include font-size(18);
 	}
 
@@ -84,8 +85,7 @@
 		article.page,
 		.post-navigation,
 		.comments-area {
-				margin: 0 auto;
-				max-width: 56em;
+				@include content-max-width();
 			}
 	}
 }

@@ -105,7 +105,13 @@ body.buddypress { // add weight
 
 @include clearfix-element(".bp-wrap");
 
+// Avatars
 // General site avatars round or square ?
+
+.avatar {
+	border: 1px solid $bp-border-dark;
+}
+
 // User set
 .buddypress-wrap.round-avatars {
 

@@ -101,11 +101,13 @@
 
 .footer-widgets-wrap {
 	.avatar {
+
 		border: 1px solid $med-light-grey;
 
 		@include box-shadow(0 0 5px 0 $dark-grey)
 	}
 }
+
 #item-header-cover-image {
 	.avatar {
 		@include box-shadow(0 0 5px 0 $dark-grey );
@@ -117,10 +119,17 @@
 
 .site-nav-vertical {
 
-	.site-header {
-
 		@include medium-up() {
+
+		.site-header {
+
 			@include background-gradient-3d-hori($color: $color__main-nav, $depth: med);
+			border-right: 0;
+		}
+
+		.site-content {
+			border-left: 0;
+			margin-left: 0;
 		}
 	}
 }
@@ -381,9 +390,24 @@
 /*========================================
 3.6 BP navigation
 ==========================================*/
+.buddypress {
+	.bp-navs {
+
+		li {
+
+			span {
+				background: $color-primary-4;
+				border-radius: 0;
+				border-color: $color-primary-2;
+				color: $off-white;
+				margin-left: 10px;
+			}
+		}
+	}
+}
 
 // we need to isolate these rules to the site header to allow
-// BP object nav to be styled without effecting other usesin item-body.
+// BP object nav to be styled without effecting other uses in item-body.
 
 .site-nav-vertical.object-nav-site-nav-vert {
 
@@ -454,7 +478,6 @@
 			}
 
 			dl.bp-object-nav {
-//				border-top: 25px solid darken($color__main-nav, 5%);
 
 				dt {
 					background: none;
@@ -468,7 +491,10 @@
 
 					> li {
 						text-align: right;
-						a { padding-right: $pad-lrg; }
+
+						a {
+							//padding-right: $pad-lrg;
+						}
 					}
 				}
 			} // .bp-object-nav

@@ -107,6 +107,10 @@ body.buddypress .buddypress-wrap h6 {
 	clear: both;
 }
 
+.avatar {
+	border: 1px solid #b7b7b7;
+}
+
 .buddypress-wrap.round-avatars .avatar {
 	border-radius: 50%;
 }
@@ -2440,6 +2444,10 @@ body.no-js .single-item-header .js-self-profile-button {
 * User Accounts Specific Item Header
 *-----------------------------------------------------
 */
+.bp-user .meta-bar .last-active {
+	margin: 10px 0;
+}
+
 .bp-user .users-header .user-nicename {
 	margin-bottom: 5px;
 }

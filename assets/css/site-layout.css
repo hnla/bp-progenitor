@@ -79,6 +79,7 @@ body {
 
 .meta-bar {
 	margin: 0 -0.5em 10px;
+	min-height: 120px;
 }
 
 .site-content {

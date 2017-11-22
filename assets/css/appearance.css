@@ -97,6 +97,11 @@
 		background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
 		background: linear-gradient(to right, #3d629c 0%, #2f4b77 100% 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d629c", endColorstr="#2f4b77", GradientType=1);
+		border-right: 0;
+	}
+	.site-nav-vertical .site-content {
+		border-left: 0;
+		margin-left: 0;
 	}
 }
 
@@ -293,6 +298,14 @@
 /*========================================
 3.6 BP navigation
 ==========================================*/
+.buddypress .bp-navs li span {
+	background: #3d629c;
+	border-radius: 0;
+	border-color: #598ee1;
+	color: #fafafa;
+	margin-left: 10px;
+}
+
 .site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav {
 	margin: 0;
 	padding-top: 1em;
@@ -361,9 +374,6 @@
 	}
 	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li {
 		text-align: right;
-	}
-	.site-nav-vertical.object-nav-site-nav-vert .site-header dl.bp-object-nav ul > li a {
-		padding-right: 2em;
 	}
 }
 

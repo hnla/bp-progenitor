@@ -348,8 +348,8 @@
 // Renders links in a horizontal layout as a
 // tab effect on the current selected links.
 
-// !important needs to be used to ensure the complex nav rules
-// don't clash/inherit on vital properties
+// !important needs to be used to ensure some complex nav rules
+// don't override  vital properties.
 
 @mixin tabbed-links($class: null) {
 
@@ -534,6 +534,14 @@
 	}
 
 	border-color: $border;
+}
+
+// Content max width
+// provides max-width & auto margins for typically post page article
+// areas
+@mixin content-max-width($margTopBott: 0) {
+	margin: $margTopBott auto;
+	max-width: $size__content-max-width;
 }
 
 // BP Tooltips
