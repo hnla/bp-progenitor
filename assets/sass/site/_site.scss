@@ -1,14 +1,24 @@
 /*--------------------------------------------------------------
-## Site Meta Bar
+10.1 - Site Meta Bar
 
 Inner elements
 ---------------------------------------------------------------*/
 @import "primary/meta-bar";
 
 /*--------------------------------------------------------------
-## Header elements
-Visual styles
+10.2 Header elements
+
+Visual styles child elements
 --------------------------------------------------------------*/
+
+.site-branding {
+	background-color: $black;
+
+	* {
+		color: $white;
+	}
+}
+
 h1.site-title {
 	font-family: $font__main;
 }
@@ -26,12 +36,14 @@ h1.site-title {
 }
 
 /*--------------------------------------------------------------
-## Posts and pages
+10.3 -  Posts and pages
+
+All templates, incl archive, search, 404, list layouts
 --------------------------------------------------------------*/
 @import "primary/posts-and-pages";
 @import "primary/_post-lists";
 
 /*--------------------------------------------------------------
-## Comments
+10.4 Comments
 --------------------------------------------------------------*/
 @import "primary/comments";

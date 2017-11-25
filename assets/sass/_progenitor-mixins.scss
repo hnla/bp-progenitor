@@ -233,6 +233,15 @@
 	background-clip: padding-box;
 }
 
+// if it's been set we may need a means to remove easily?
+
+@mixin border-radius-none() {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+}
+
 // very basic box-shadow mixin  - this needs to be
 // updated & improved
 

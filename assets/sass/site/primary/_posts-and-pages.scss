@@ -57,7 +57,7 @@
 
 	.entry-content:not(.bp-entry-content) {
 
-		@include font-size(18);
+		@include responsive-font(20);
 	}
 
 	blockquote {

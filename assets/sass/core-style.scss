@@ -14,29 +14,32 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. Normalize
-2 Typography
-3 Elements
-4 Forms
-5. Navigation
-5.1 Links
-5.2 Menus
-6. Accessibility
-7. Alignments
-8. Clearings
-9. Widgets
-10. Content
-10.1 Meta  Bar
-10.2 Posts and pages
-10.3 Comments
-11. Infinite scroll
-12. Media
-12.1 Captions
-12.2 Galleries
-13. Animations
-14. Buttons
+	TABLE OF CONTENTS:
+	This file provides the main core site styles - structural styles
+	are managed fron site-styles.
+
+1.0 - Normalize
+2 0 - Typography
+3 0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Accessibility
+7.0 - Alignments
+8.0 - Clearings
+9.0 - Widgets
+10.0 - Content (site)
+		10.1 - Meta  Bar
+		10.2 - Header elements
+		10.3 - Posts and pages
+		10.4 - Comments
+11.0 - Infinite scroll
+12.0 - Media
+		12.1 - Captions
+		12.2 - Galleries
+13.0 - Animations
+14.0 - Buttons
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "_progenitor-variables";
@@ -44,73 +47,76 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-1. Normalize
+1.0 Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
 /*--------------------------------------------------------------
-2. Typography
+2.0 Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
 
 /*--------------------------------------------------------------
-3. Elements
+3.0 Elements
 --------------------------------------------------------------*/
 @import "elements/elements";
 
 /*--------------------------------------------------------------
-4. Forms
+4.0 Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
 
 /*--------------------------------------------------------------
-5. Navigation
+5.0 Navigation
 --------------------------------------------------------------*/
 @import "navigation/links";
 @import "navigation/menus";
 
 /*--------------------------------------------------------------
-6. Accessibility
+6.0 Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
 
 /*--------------------------------------------------------------
-7. Alignments
+7.0 Alignments
 --------------------------------------------------------------*/
 @import "modules/alignments";
 
 /*--------------------------------------------------------------
-8. Clearings
+8.0 Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-9. Widgets
+9.0 Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
-10. Content
+10.0 Content
+
+Styling for inner child elements, header, main cintent area,
+post & pages content, comments.
 --------------------------------------------------------------*/
 @import "site/site";
 
 /*--------------------------------------------------------------
-11. Infinite scroll
+11.0 Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
-12. Media
+12.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
 
 /*--------------------------------------------------------------
-13. Animations & Transitions
+13.0 Animations & Transitions
 --------------------------------------------------------------*/
 @import "modules/animations";
 
 /*--------------------------------------------------------------
-14. Buttons
+14.0 Buttons
 --------------------------------------------------------------*/
 @import "modules/buttons";
 

@@ -350,16 +350,48 @@ body.no-js {
 		}
 	}
 
+	.notifications-options-nav {
+		border: 1px solid $form-border-color;
+		@include responsive-font(14);
+
+
+		.select-wrap {
+			border: none;
+		}
+
+		input[type="submit"] {
+			background: none;
+			border: 0;
+			border-top: 1px solid $form-border-color;
+			@include border-radius-none();
+			display: inline-block;
+			font-size: inherit;
+			line-height: 1.6;
+			padding: 6px;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
 	// Manage select wrap for notification actions, wide screens
 	// ensures a shrink wrap width.
 
 	@include medium-small-up() {
 
 		.notifications-options-nav {
+			float: left;
 
 			.select-wrap {
 				float: left;
+				width: 12em;
+			}
+
+			input[type="submit"] {
+				border: 0;
+				border-left: 1px solid $form-border-color;
+				width: auto;
 			}
 		}
 	}
+
 }

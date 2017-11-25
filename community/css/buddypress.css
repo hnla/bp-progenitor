@@ -3399,16 +3399,12 @@ div.bp-navs#subsubnav.bp-messages-filters .user-messages-bulk-actions {
 	width: 100%;
 }
 
-/*__ General __*/
-/*__ Email notifications __*/
 .notification-settings tbody tr {
 	border: 1px solid #eee;
 	border-left: 0;
 	border-right: 0;
 }
 
-/*__ Profile visibility __*/
-/*__ Group Invites __*/
 /**
 *-------------------------------------------------------------------------------
 * @section 6.0 - Forms  - General
@@ -3685,9 +3681,49 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	box-shadow: inset 0 0 3px #eee;
 }
 
+.buddypress-wrap .notifications-options-nav {
+	border: 1px solid #d6d6d6;
+	font-size: 12px;
+}
+
+@media screen and (min-width: 46.8em) {
+	.buddypress-wrap .notifications-options-nav {
+		font-size: 14px;
+	}
+}
+
+.buddypress-wrap .notifications-options-nav .select-wrap {
+	border: none;
+}
+
+.buddypress-wrap .notifications-options-nav input[type="submit"] {
+	background: none;
+	border: 0;
+	border-top: 1px solid #d6d6d6;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+	display: inline-block;
+	font-size: inherit;
+	line-height: 1.6;
+	padding: 6px;
+	text-align: center;
+	width: 100%;
+}
+
 @media screen and (min-width: 32em) {
+	.buddypress-wrap .notifications-options-nav {
+		float: left;
+	}
 	.buddypress-wrap .notifications-options-nav .select-wrap {
 		float: left;
+		width: 12em;
+	}
+	.buddypress-wrap .notifications-options-nav input[type="submit"] {
+		border: 0;
+		border-left: 1px solid #d6d6d6;
+		width: auto;
 	}
 }
 
@@ -3895,6 +3931,10 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap table.profile-fields tr:last-child {
 	border-bottom: none;
+}
+
+.buddypress-wrap table.notifications th {
+	text-align: left;
 }
 
 .buddypress-wrap table.notifications td {
