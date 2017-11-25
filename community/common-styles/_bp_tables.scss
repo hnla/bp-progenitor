@@ -85,6 +85,10 @@
 		// Increase the cell padding to give better seperation of lines
 		// when some text lines wrap
 
+		th {
+			text-align: left;
+		}
+
 		td {
 			padding: $pad-med $pad-sml;
 		}
