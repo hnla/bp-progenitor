@@ -113,9 +113,21 @@
 		@include box-shadow(0 0 5px 0 $dark-grey );
 	}
 }
+
 /*====================================================
 2. Header elements
 ======================================================*/
+
+.site-nav-vertical {
+
+	.site-branding {
+		background-color: $black;
+
+		* {
+			color: $white;
+		}
+	}
+}
 
 .site-nav-vertical {
 
@@ -674,7 +686,7 @@
 
 			.item-body:not(#group-create-body) {
 
-				#subnav {
+				#subnav:not(.tabbed-links) {
 
 					@include background-gradient-3d-hori($color: $color__main-nav );
 					margin-left: 0;
