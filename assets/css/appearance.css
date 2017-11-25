@@ -90,6 +90,14 @@
 /*====================================================
 2. Header elements
 ======================================================*/
+.site-nav-vertical .site-branding {
+	background-color: #333;
+}
+
+.site-nav-vertical .site-branding * {
+	color: #fff;
+}
+
 @media screen and (min-width: 46.8em) {
 	.site-nav-vertical .site-header {
 		background: #3d629c;
@@ -509,8 +517,8 @@
 	opacity: 1;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links),
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
 	background: #3d629c;
 	background: -moz-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
 	background: -webkit-linear-gradient(left, #3d629c 0%, #2f4b77 100%);
@@ -519,26 +527,26 @@
 	margin-left: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li {
 	border-right: 1px solid #273f65;
 	border-left: 1px solid #446eae;
 	margin: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li > a,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li > a {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li > a,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li > a {
 	border: 0;
 	padding: 0.5em;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li:last-child,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav > ul.subnav > li:last-child {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li:last-child,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) > ul.subnav > li:last-child {
 	border-right: 0;
 }
 
-.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav li.selected a,
-.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav li.selected a {
+.site-nav-horizontal .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a,
+.site-nav-vertical .buddypress-wrap.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.selected a {
 	color: #ff9751;
 }
 
