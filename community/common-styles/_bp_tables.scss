@@ -82,17 +82,26 @@
 	// Set various tables th/td cell sizes
 	table.notifications {
 
-		// Increase the cell padding to give better seperation of lines
-		// when some text lines wrap
-
 		th {
 			text-align: left;
 		}
 
+		// Increase the cell padding to give better seperation of lines
+		// when some text lines wrap
 		td {
 			padding: $pad-med $pad-sml;
 		}
 
+		tbody {
+
+			tr {
+				border-bottom: 1px solid $bp-border-color;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
 		.bulk-select-all,
 		.bulk-select-check {
 			width: 7%;
