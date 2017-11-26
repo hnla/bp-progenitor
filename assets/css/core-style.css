@@ -1685,3 +1685,140 @@ input:disabled:hover, input:disabled:focus {
 #site-wrap .text-links-list a.button:last-child {
 	border-right: none;
 }
+
+/*--------------------------------------------------------------
+15.0 Icons
+
+Describe unicode characters for sitewide element icons.
+--------------------------------------------------------------*/
+.filter label:before,
+.feed a:before,
+span.select-arrow,
+span.bp-icon,
+.bp-invites-filters .invite-button span.icons:before,
+.bp-messages-filters li a.messages-button:before,
+.bp-invites-content li .invite-button span.icons:before,
+.message-action-star:before,
+.message-action-unstar:before,
+.message-action-star span.icon:before,
+.message-action-unstar span.icon:before,
+.message-action-view:before,
+.message-action-delete:before,
+.bp-navs ul li#compose-personal-li a#compose:before {
+	font-family: FontAwesome;
+	font-size: 18px;
+}
+
+.bp-invites-content .item-list li .invite-button span.icons:before {
+	font-size: 27px;
+}
+
+@media screen and (min-width: 46.8em) {
+	.bp-invites-content .item-list li .invite-button span.icons:before {
+		font-size: 32px;
+	}
+}
+
+span.bp-icon {
+	color: #fff;
+	display: block;
+	left: 0;
+	margin-right: 10px;
+	position: relative;
+	padding: 0  0.5em;
+}
+
+.bp-list a.button.invite-button:focus, .bp-list a.button.invite-button:hover {
+	background: none;
+}
+
+.filter label:before {
+	content: "\f536";
+}
+
+div.feed a:before,
+li.feed a:before {
+	content: "\f09e";
+}
+
+ul.item-list li .invite-button:not(.group-remove-invite-button) span.icons:before {
+	content: "\f055";
+}
+
+ul.item-list li.selected .invite-button span.icons:before,
+ul.item-list li .group-remove-invite-button span.icons:before {
+	content: "\f056";
+}
+
+.bp-invites-filters ul li #bp-invites-next-page:before,
+.bp-messages-filters ul li #bp-messages-next-page:before {
+	content: "\f345";
+}
+
+.bp-invites-filters ul li #bp-invites-prev-page:before,
+.bp-messages-filters ul li #bp-messages-prev-page:before {
+	content: "\f341";
+}
+
+.bp-navs ul li#compose-personal-li a#compose:before {
+	font-size: 20px;
+}
+
+.message-action-star:before {
+	color: #aaa;
+	content: "\f006";
+}
+
+.message-action-unstar:before {
+	color: #fcdd77;
+	content: "\f005";
+}
+
+.message-action-view:before {
+	content: "\f06e";
+}
+
+.message-action-delete:before {
+	content: "\f014";
+}
+
+.message-action-delete:hover:before {
+	color: #a00;
+}
+
+.preview-content .actions a {
+	text-decoration: none;
+}
+
+li#compose-personal-li.last {
+	margin-top: 0;
+}
+
+li#compose-personal-li a#compose {
+	display: inline-block;
+	padding: 1px 6px;
+}
+
+li#compose-personal-li a#compose:before {
+	content: "\f044";
+}
+
+li#compose-personal-li a#compose:focus,
+li#compose-personal-li a#compose:hover {
+	background: #eee;
+	color: #e8861e;
+}
+
+#site-wrap button.bp-icons, #site-wrap button.ac-reply-cancel {
+	background: none;
+	border: 0;
+}
+
+#site-wrap button.bp-icons:focus, #site-wrap button.bp-icons:hover {
+	background: none;
+}
+
+#site-wrap button.ac-reply-cancel:focus, #site-wrap button.ac-reply-cancel:hover {
+	background: none;
+	text-decoration: underline;
+}

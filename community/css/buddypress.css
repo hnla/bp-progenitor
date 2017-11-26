@@ -2976,64 +2976,6 @@ body.register .buddypress-wrap .page ul {
 * @subsection 5.2.2.5 - Private Messaging
 *-------------------------------------------
 */
-.message-action-star:before,
-.message-action-unstar:before,
-.bp-navs ul li#compose-personal-li a#compose:before,
-.message-action-view:before,
-.message-action-delete:before {
-	font-family: dashicons;
-	font-size: 18px;
-}
-
-.bp-navs ul li#compose-personal-li a#compose:before {
-	font-size: 22px;
-}
-
-.message-action-star:before {
-	color: #aaa;
-	content: "\f154";
-}
-
-.message-action-unstar:before {
-	color: #fcdd77;
-	content: "\f155";
-}
-
-.message-action-view:before {
-	content: "\f473";
-}
-
-.message-action-delete:before {
-	content: "\f153";
-}
-
-.message-action-delete:hover:before {
-	color: #a00;
-}
-
-.preview-content .actions a {
-	text-decoration: none;
-}
-
-li#compose-personal-li.last {
-	margin-top: 0;
-}
-
-li#compose-personal-li a#compose {
-	display: inline-block;
-	padding: 1px 6px;
-}
-
-li#compose-personal-li a#compose:before {
-	content: "\f464";
-}
-
-li#compose-personal-li a#compose:focus,
-li#compose-personal-li a#compose:hover {
-	background: #eee;
-	color: #e8861e;
-}
-
 .bp-messages-content {
 	margin: 15px 0;
 }
@@ -3667,7 +3609,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .select-wrap span.select-arrow:before {
 	color: #ccc;
-	content: "\25BC";
+	content: "\f0d7";
 }
 
 .buddypress-wrap .select-wrap:focus .select-arrow:before, .buddypress-wrap .select-wrap:hover .select-arrow:before {
@@ -3941,6 +3883,14 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	padding: 1em 0.5em;
 }
 
+.buddypress-wrap table.notifications tbody tr {
+	border-bottom: 1px solid #eee;
+}
+
+.buddypress-wrap table.notifications tbody tr:last-child {
+	border-bottom: 0;
+}
+
 .buddypress-wrap table.notifications .bulk-select-all,
 .buddypress-wrap table.notifications .bulk-select-check {
 	width: 7%;
@@ -4208,71 +4158,6 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	}
 }
 
-.buddypress-wrap button.bp-icons, .buddypress-wrap button.ac-reply-cancel {
-	background: none;
-	border: 0;
-}
-
-.buddypress-wrap button.bp-icons:focus, .buddypress-wrap button.bp-icons:hover {
-	background: none;
-}
-
-.buddypress-wrap button.ac-reply-cancel:focus, .buddypress-wrap button.ac-reply-cancel:hover {
-	background: none;
-	text-decoration: underline;
-}
-
-.buddypress-wrap .filter label:before,
-.buddypress-wrap .feed a:before,
-.buddypress-wrap .bp-invites-filters .invite-button span.icons:before,
-.buddypress-wrap .bp-messages-filters li a.messages-button:before,
-.buddypress-wrap .bp-invites-content li .invite-button span.icons:before {
-	font-family: dashicons;
-	font-size: 18px;
-}
-
-.buddypress-wrap .bp-invites-content .item-list li .invite-button span.icons:before {
-	font-size: 27px;
-}
-
-@media screen and (min-width: 46.8em) {
-	.buddypress-wrap .bp-invites-content .item-list li .invite-button span.icons:before {
-		font-size: 32px;
-	}
-}
-
-.buddypress-wrap .bp-list a.button.invite-button:focus, .buddypress-wrap .bp-list a.button.invite-button:hover {
-	background: none;
-}
-
-.buddypress-wrap .filter label:before {
-	content: "\f536";
-}
-
-.buddypress-wrap div.feed a:before,
-.buddypress-wrap li.feed a:before {
-	content: "\f303";
-}
-
-.buddypress-wrap ul.item-list li .invite-button:not(.group-remove-invite-button) span.icons:before {
-	content: "\f502";
-}
-
-.buddypress-wrap ul.item-list li.selected .invite-button span.icons:before,
-.buddypress-wrap ul.item-list li .group-remove-invite-button span.icons:before {
-	content: "\f153";
-}
-
-.buddypress-wrap .bp-invites-filters ul li #bp-invites-next-page:before,
-.buddypress-wrap .bp-messages-filters ul li #bp-messages-next-page:before {
-	content: "\f345";
-}
-
-.buddypress-wrap .bp-invites-filters ul li #bp-invites-prev-page:before,
-.buddypress-wrap .bp-messages-filters ul li #bp-messages-prev-page:before {
-	content: "\f341";
-}
-
 .buddypress-wrap .warn {
 	color: #b71717;
 }
@@ -4341,16 +4226,6 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .bp-feedback p {
 	margin: 0;
-}
-
-.buddypress-wrap .bp-feedback span.bp-icon {
-	color: #fff;
-	display: block;
-	font-family: dashicons;
-	left: 0;
-	margin-right: 10px;
-	position: relative;
-	padding: 0  0.5em;
 }
 
 .buddypress-wrap .bp-feedback .bp-help-text {

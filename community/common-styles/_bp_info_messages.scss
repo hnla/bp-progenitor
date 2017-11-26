@@ -28,12 +28,8 @@
 		}
 
 		// Error message boxes
-		&.error {
-
-			p {
-				// oh linter you're too boringly pedantic, there will be properties!
-			}
-		}
+//		&.error {
+//		}
 
 		// Warning boxes
 		//		&.warning {
@@ -93,16 +89,6 @@
 
 		p {
 			margin: 0;
-		}
-
-		span.bp-icon {
-			color: $white;
-			display: block;
-			font-family: dashicons;
-			left: 0;
-			margin-right: $marg-sml;
-			position: relative;
-			padding: 0  0.5em;
 		}
 
 		.bp-help-text {

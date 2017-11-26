@@ -1,0 +1,193 @@
+// Site wide icons
+// See also _bp-info-messages & _bp-forms for additional
+// icon rulesets.
+
+// Grouped font-family declaration.
+	.filter label:before,
+	.feed a:before,
+	span.select-arrow,
+	span.bp-icon,
+	.bp-invites-filters  .invite-button span.icons:before,
+	.bp-messages-filters li a.messages-button:before,
+	.bp-invites-content li .invite-button span.icons:before,
+	.message-action-star:before,
+	.message-action-unstar:before,
+	.message-action-star span.icon:before,
+	.message-action-unstar span.icon:before,
+	.message-action-view:before,
+	.message-action-delete:before,
+	.bp-navs ul li#compose-personal-li a#compose:before, {
+		font-family: FontAwesome;
+//		font-family: dashicons; // WP dashicon use
+		font-size: 18px;
+	}
+
+// BP elements
+.bp-invites-content .item-list li .invite-button span.icons:before {
+
+	@include responsive-font(32);
+}
+
+span.bp-icon {
+	color: $white;
+	display: block;
+	left: 0;
+	margin-right: $marg-sml;
+	position: relative;
+	padding: 0  0.5em;
+}
+
+// If icons are required for anchors e.g '<a class="button"'
+// then we may have .button background hovers being inherited
+// Use this grouped selector ruleset to add elements that need
+// no change. As we need weight this is specific to bp-lists
+
+// This is probably a less than optimal solution & a better one will exist to
+// implemented when time allows.
+.bp-list {
+
+	a.button.invite-button {
+
+		&:focus,
+		&:hover {
+			background: none;
+		}
+	}
+}
+
+.filter label:before {
+	content: "\f536";
+}
+
+div.feed a:before,
+li.feed a:before {
+	content: "\f09e";
+}
+
+ul.item-list {
+
+	li {
+
+		.invite-button:not(.group-remove-invite-button) {
+
+			span.icons:before {
+				content: "\f055";
+			}
+		}
+	}
+
+	li.selected .invite-button,
+	li .group-remove-invite-button {
+
+		span.icons:before {
+			content: "\f056";
+		}
+	}
+} // close ul.item-list
+
+.bp-invites-filters ul li #bp-invites-next-page:before,
+.bp-messages-filters ul li #bp-messages-next-page:before {
+	content: "\f345";
+}
+
+.bp-invites-filters ul li #bp-invites-prev-page:before,
+.bp-messages-filters ul li #bp-messages-prev-page:before {
+	content: "\f341";
+}
+
+// Icon additions to default action star
+
+.bp-navs ul li#compose-personal-li a#compose:before {
+	font-size: 20px;
+}
+
+.message-action-star:before {
+	color: #aaa;
+	content: "\f006";
+}
+
+.message-action-unstar:before {
+	color: #fcdd77;
+	content: "\f005";
+}
+
+.message-action-view:before {
+	content: "\f06e";
+}
+
+.message-action-delete:before {
+	content: "\f014";
+}
+
+.message-action-delete:hover:before {
+	color: #a00;
+}
+
+.preview-content {
+
+	.actions {
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+// Compose Icon
+li#compose-personal-li {
+
+	&.last {
+		margin-top: 0;
+	}
+
+	a#compose {
+		display: inline-block;
+		padding: 1px 6px;
+	}
+
+	a#compose:before {
+		content: "\f044";
+	}
+
+	a#compose:focus,
+	a#compose:hover {
+		background: #eee;
+		color: #e8861e;
+	}
+
+} // close li#compose-personal-li
+
+
+// buttons that are visually rendering as icons only won't
+// want the general button styles.
+// We'll use a class hook to identify those elements.
+
+#site-wrap {
+
+	button {
+
+		&.bp-icons,
+		&.ac-reply-cancel {
+
+			background: none;
+			border: 0;
+		}
+
+		&.bp-icons {
+
+			&:focus,
+			&:hover {
+				background: none;
+			}
+		}
+
+		&.ac-reply-cancel {
+
+			&:focus,
+			&:hover {
+				background: none;
+				text-decoration: underline;
+			}
+		}
+	}
+}
