@@ -81,7 +81,7 @@
 	.bp-feedback {
 
 		@include message-box($border: none);
-		@include box-shadow( 0 1px 1px 1px rgba(0, 0, 0, 0.1) );
+		@include box-shadow( 0 0 6px 0 rgba(0, 0, 0, 0.1) );
 		color: $light-text-plus;
 
 		margin: 10px 0;
@@ -156,10 +156,12 @@
 	.bp-feedback.warning,
 	.bp-feedback.loading,
 	.bp-feedback.success {
+		border: 1px solid $bp-border-dark;
 
 		.bp-icon {
 
 			@include center-vert();
+			padding: 0 6px;
 		}
 	}
 
@@ -170,7 +172,7 @@
 			background-color: $informational;
 
 			&:before {
-				content: "\f348";
+				content: "\f05a";
 			}
 		}
 	}
@@ -182,7 +184,7 @@
 			background-color: $warnings;
 
 			&:before {
-				content: "\f534";
+				content: "\f06a";
 			}
 		}
 	}
@@ -193,7 +195,8 @@
 			background-color: $loading;
 
 			&:before {
-				content: "\f469";
+				content: "\f110";
+				@include bp-pulse();
 			}
 		}
 	}
@@ -204,17 +207,7 @@
 			background-color: $update-success;
 
 			&:before {
-				content: "\f147";
-			}
-		}
-	}
-
-	.bp-feedback.help {
-
-		.bp-icon {
-
-			&:before {
-				content: "\f468";
+				content: "\f00c";
 			}
 		}
 	}

@@ -4216,9 +4216,9 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 .buddypress-wrap .bp-feedback {
 	background: #fff;
 	color: #807f7f;
-	-webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
 	color: #737373;
 	margin: 10px 0;
 	position: relative;
@@ -4280,6 +4280,15 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	padding: 0 2px;
 }
 
+.buddypress-wrap .bp-feedback.info,
+.buddypress-wrap .bp-feedback.help,
+.buddypress-wrap .bp-feedback.error,
+.buddypress-wrap .bp-feedback.warning,
+.buddypress-wrap .bp-feedback.loading,
+.buddypress-wrap .bp-feedback.success {
+	border: 1px solid #b7b7b7;
+}
+
 .buddypress-wrap .bp-feedback.info .bp-icon,
 .buddypress-wrap .bp-feedback.help .bp-icon,
 .buddypress-wrap .bp-feedback.error .bp-icon,
@@ -4294,6 +4303,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	align-items: center;
+	padding: 0 6px;
 }
 
 .buddypress-wrap .bp-feedback.info .bp-icon,
@@ -4303,7 +4313,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .bp-feedback.info .bp-icon:before,
 .buddypress-wrap .bp-feedback.help .bp-icon:before {
-	content: "\f348";
+	content: "\f05a";
 }
 
 .buddypress-wrap .bp-feedback.error .bp-icon,
@@ -4313,7 +4323,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 
 .buddypress-wrap .bp-feedback.error .bp-icon:before,
 .buddypress-wrap .bp-feedback.warning .bp-icon:before {
-	content: "\f534";
+	content: "\f06a";
 }
 
 .buddypress-wrap .bp-feedback.loading .bp-icon {
@@ -4321,7 +4331,9 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .buddypress-wrap .bp-feedback.loading .bp-icon:before {
-	content: "\f469";
+	content: "\f110";
+	-webkit-animation: fa-spin 1s infinite steps(8);
+	animation: fa-spin 1s infinite steps(8);
 }
 
 .buddypress-wrap .bp-feedback.success .bp-icon {
@@ -4329,11 +4341,7 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 }
 
 .buddypress-wrap .bp-feedback.success .bp-icon:before {
-	content: "\f147";
-}
-
-.buddypress-wrap .bp-feedback.help .bp-icon:before {
-	content: "\f468";
+	content: "\f00c";
 }
 
 .buddypress-wrap #pass-strength-result {

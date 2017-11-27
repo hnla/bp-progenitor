@@ -337,7 +337,6 @@
 	align-items: center; // current specs
 }
 
-
 // Layout elements / lists as grids
 // A combined mixin to set flex-flow & flex
 // This mixin must be called on the parent i.e 'ul' or 'div'
@@ -551,6 +550,16 @@
 @mixin content-max-width($margTopBott: 0) {
 	margin: $margTopBott auto;
 	max-width: $size__content-max-width;
+}
+
+@mixin bp-spin() {
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+
+@mixin bp-pulse() {
+	-webkit-animation: fa-spin 1s infinite steps(8);
+	animation: fa-spin 1s infinite steps(8);
 }
 
 // BP Tooltips
