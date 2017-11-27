@@ -16,10 +16,10 @@
 
 					<li id="<?php bp_progenitor_nav_id(); ?>" class="<?php bp_progenitor_nav_classes(); ?>">
 						<a href="<?php bp_progenitor_nav_link(); ?>" id="<?php bp_progenitor_nav_link_id(); ?>">
-							<?php bp_progenitor_nav_link_text(); ?>
+							<span class="link-text"><?php bp_progenitor_nav_link_text(); ?></span>
 
 							<?php if ( bp_progenitor_nav_has_count() ) : ?>
-								<span><?php bp_progenitor_nav_count(); ?></span>
+								<span class="link-item-counts"><?php bp_progenitor_nav_count(); ?></span>
 							<?php endif; ?>
 						</a>
 					</li>

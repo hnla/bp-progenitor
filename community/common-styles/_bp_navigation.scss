@@ -25,14 +25,14 @@
 		li {
 
 			a,
-			span {
+			span.link-item-counts {
 				border: 0;
 				display: block;
 				padding: 5px 10px;
 				text-decoration: none;
 			}
 
-			span {
+			span.link-item-counts {
 				background: $light-grey;
 				border: 1px solid $bp-border-dark;
 				border-radius: 50%;
@@ -43,7 +43,6 @@
 				margin-left: 2px;
 				padding: 3px 6px;
 				text-align: center;
-				vertical-align: middle;
 			}
 		}
 
@@ -181,6 +180,27 @@
 			dt {
 				line-height: 1.8;
 				text-align: center;
+			}
+
+			dd {
+
+				li {
+
+					span.link-item-counts {
+						margin-left: 0;
+					}
+
+					span.link-text {
+						margin-right: 58px;
+					}
+				}
+
+				li.item-has-count {
+					span.link-text {
+						margin-right: 30px;
+					}
+				}
+
 			}
 		}
 	}

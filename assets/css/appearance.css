@@ -306,7 +306,7 @@
 /*========================================
 3.6 BP navigation
 ==========================================*/
-.buddypress .bp-navs li span {
+.buddypress .bp-navs li span.link-item-counts {
 	background: #3d629c;
 	border-radius: 0;
 	border-color: #598ee1;

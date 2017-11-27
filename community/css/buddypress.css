@@ -293,14 +293,14 @@ body.buddypress article.page > .entry-header .entry-title {
 }
 
 .bp-navs ul li a,
-.bp-navs ul li span {
+.bp-navs ul li span.link-item-counts {
 	border: 0;
 	display: block;
 	padding: 5px 10px;
 	text-decoration: none;
 }
 
-.bp-navs ul li span {
+.bp-navs ul li span.link-item-counts {
 	background: #eaeaea;
 	border: 1px solid #b7b7b7;
 	border-radius: 50%;
@@ -311,7 +311,6 @@ body.buddypress article.page > .entry-header .entry-title {
 	margin-left: 2px;
 	padding: 3px 6px;
 	text-align: center;
-	vertical-align: middle;
 }
 
 .bp-navs ul li.selected a,
@@ -391,6 +390,18 @@ body.buddypress article.page > .entry-header .entry-title {
 .object-nav-site-nav-vert .site-header dl.bp-object-nav dt {
 	line-height: 1.8;
 	text-align: center;
+}
+
+.object-nav-site-nav-vert .site-header dl.bp-object-nav dd li span.link-item-counts {
+	margin-left: 0;
+}
+
+.object-nav-site-nav-vert .site-header dl.bp-object-nav dd li span.link-text {
+	margin-right: 58px;
+}
+
+.object-nav-site-nav-vert .site-header dl.bp-object-nav dd li.item-has-count span.link-text {
+	margin-right: 30px;
 }
 
 @media screen and (max-width: 46.8em) {

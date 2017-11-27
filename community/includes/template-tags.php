@@ -861,7 +861,14 @@ function bp_progenitor_nav_classes() {
 		if ( 'directory' === $bp_progenitor->displayed_nav && ! empty( $nav_item->li_class ) ) {
 			$classes = (array) $nav_item->li_class;
 		} elseif ( 'groups' === $bp_progenitor->displayed_nav || 'personal' === $bp_progenitor->displayed_nav ) {
-			$classes  = array( 'bp-' . $bp_progenitor->displayed_nav . '-tab' );
+
+			// If the link has a item count add a class stating so.
+			$has_count = '';
+			if ( bp_progenitor_nav_has_count() ) {
+				$has_count = ' item-has-count';
+			}
+
+			$classes  = array( 'bp-' . $bp_progenitor->displayed_nav . '-tab',$has_count );
 			$selected = bp_current_action();
 
 			// User's primary nav
