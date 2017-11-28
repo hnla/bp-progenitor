@@ -403,6 +403,7 @@
 3.6 BP navigation
 ==========================================*/
 .buddypress {
+
 	.bp-navs {
 
 		li {
@@ -606,7 +607,7 @@
 				&.selected a,
 				a {
 
-					span {
+					span.link-item-counts {
 						background: darken($color__main-nav, 20%);
 						border: none;
 						color: lighten($color__main-nav, 50%);
@@ -709,7 +710,9 @@
 					li.selected {
 
 						a {
-							color: $color-secondary-2-0;
+							@include background-gradient-3d($color: lighten( $color__main-nav, 10%) );
+							color: $white;
+							text-decoration: none;
 						}
 					}
 				}

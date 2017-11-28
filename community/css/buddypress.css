@@ -328,9 +328,9 @@ body.buddypress article.page > .entry-header .entry-title {
 	margin-bottom: 20px;
 }
 
-.buddypress-wrap .bp-navs li.selected a span,
-.buddypress-wrap .bp-navs li.current a span,
-.buddypress-wrap .bp-navs li a:hover a span {
+.buddypress-wrap .bp-navs li.selected a span.link-item-counts,
+.buddypress-wrap .bp-navs li.current a span.link-item-counts,
+.buddypress-wrap .bp-navs li a:hover a span.link-item-counts {
 	background-color: #ccc;
 }
 
@@ -352,12 +352,12 @@ body.buddypress article.page > .entry-header .entry-title {
 	color: #fafafa;
 }
 
-.buddypress-wrap .bp-navs li.selected a span,
-.buddypress-wrap .bp-navs li.selected a:focus span,
-.buddypress-wrap .bp-navs li.selected a:hover span,
-.buddypress-wrap .bp-navs li.current a span,
-.buddypress-wrap .bp-navs li.current a:focus span,
-.buddypress-wrap .bp-navs li.current a:hover span {
+.buddypress-wrap .bp-navs li.selected a span.link-item-counts,
+.buddypress-wrap .bp-navs li.selected a:focus span.link-item-counts,
+.buddypress-wrap .bp-navs li.selected a:hover span.link-item-counts,
+.buddypress-wrap .bp-navs li.current a span.link-item-counts,
+.buddypress-wrap .bp-navs li.current a:focus span.link-item-counts,
+.buddypress-wrap .bp-navs li.current a:hover span.link-item-counts {
 	border-color: #fafafa;
 }
 
@@ -489,26 +489,26 @@ body.buddypress article.page > .entry-header .entry-title {
 	}
 }
 
-.buddypress_object_nav .bp-navs li.selected a span,
-.buddypress_object_nav .bp-navs li.current a span,
-.buddypress-wrap .bp-navs li.selected a span,
-.buddypress-wrap .bp-navs li.current a span {
+.buddypress_object_nav .bp-navs li.selected a span.link-item-counts,
+.buddypress_object_nav .bp-navs li.current a span.link-item-counts,
+.buddypress-wrap .bp-navs li.selected a span.link-item-counts,
+.buddypress-wrap .bp-navs li.current a span.link-item-counts {
 	background-color: #fff;
 }
 
-.buddypress_object_nav .bp-navs li.dynamic a span,
-.buddypress_object_nav .bp-navs li.dynamic.selected a span,
-.buddypress_object_nav .bp-navs li.dynamic.current a span,
-.buddypress-wrap .bp-navs li.dynamic a span,
-.buddypress-wrap .bp-navs li.dynamic.selected a span,
-.buddypress-wrap .bp-navs li.dynamic.current a span {
+.buddypress_object_nav .bp-navs li.dynamic a span.link-item-counts,
+.buddypress_object_nav .bp-navs li.dynamic.selected a span.link-item-counts,
+.buddypress_object_nav .bp-navs li.dynamic.current a span.link-item-counts,
+.buddypress-wrap .bp-navs li.dynamic a span.link-item-counts,
+.buddypress-wrap .bp-navs li.dynamic.selected a span.link-item-counts,
+.buddypress-wrap .bp-navs li.dynamic.current a span.link-item-counts {
 	background-color: color-primary-0;
 	border: 0;
 	color: #fafafa;
 }
 
-.buddypress_object_nav .bp-navs li.dynamic a:hover span,
-.buddypress-wrap .bp-navs li.dynamic a:hover span {
+.buddypress_object_nav .bp-navs li.dynamic a:hover span.link-item-counts,
+.buddypress-wrap .bp-navs li.dynamic a:hover span.link-item-counts {
 	background-color: color-primary-0;
 	border: 0;
 	color: #fff;
@@ -566,7 +566,7 @@ body.buddypress article.page > .entry-header .entry-title {
 	}
 }
 
-.buddypress_object_nav .bp-navs li a span {
+.buddypress_object_nav .bp-navs li a span.link-item-counts {
 	display: inline-block;
 	float: right;
 }
@@ -575,7 +575,7 @@ body.buddypress article.page > .entry-header .entry-title {
 	.bp-dir-vert-nav .bp-navs.dir-navs {
 		background: none;
 	}
-	.bp-dir-vert-nav .bp-navs.dir-navs a span {
+	.bp-dir-vert-nav .bp-navs.dir-navs a span.link-item-counts {
 		float: right;
 	}
 }

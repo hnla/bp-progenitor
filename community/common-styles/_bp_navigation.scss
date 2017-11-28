@@ -91,7 +91,7 @@
 
 			a {
 
-				span {
+				span.link-item-counts {
 					background-color: $grey;
 				}
 			}
@@ -116,7 +116,7 @@
 				background: $dark-grey;
 				color: $off-white;
 
-				span {
+				span.link-item-counts {
 					border-color: $off-white;
 				}
 			}
@@ -371,7 +371,7 @@
 
 			a {
 
-				span {
+				span.link-item-counts {
 					background-color: $white;
 				}
 			}
@@ -383,7 +383,7 @@
 
 			a {
 
-				span {
+				span.link-item-counts {
 					background-color: $highlight;
 					border: 0;
 					color: $off-white;
@@ -395,7 +395,7 @@
 
 			a:hover {
 
-				span {
+				span.link-item-counts {
 					background-color: $highlight;
 					border: 0;
 					color: $white;
@@ -505,7 +505,7 @@
 
 			a {
 
-				span {
+				span.link-item-counts {
 					display: inline-block;
 					float: right;
 				}
@@ -527,7 +527,7 @@
 
 			a {
 
-				span {
+				span.link-item-counts {
 					float: right;
 				}
 			}

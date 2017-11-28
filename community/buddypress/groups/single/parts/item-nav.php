@@ -19,7 +19,7 @@
 							<span class="link-text"><?php bp_progenitor_nav_link_text(); ?></span>
 
 							<?php if ( bp_progenitor_nav_has_count() ) : ?>
-								<span class="link-item-count"><?php bp_progenitor_nav_count(); ?></span>
+								<span class="link-item-counts"><?php bp_progenitor_nav_count(); ?></span>
 							<?php endif; ?>
 						</a>
 					</li>

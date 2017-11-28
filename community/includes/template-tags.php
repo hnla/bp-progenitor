@@ -868,7 +868,7 @@ function bp_progenitor_nav_classes() {
 				$has_count = ' item-has-count';
 			}
 
-			$classes  = array( 'bp-' . $bp_progenitor->displayed_nav . '-tab',$has_count );
+			$classes  = array( 'bp-' . $bp_progenitor->displayed_nav . '-tab', $has_count );
 			$selected = bp_current_action();
 
 			// User's primary nav
