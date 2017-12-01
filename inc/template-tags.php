@@ -71,13 +71,19 @@ function post_loops_wrap_class() {
  *
  * @return string
  * @since 0.1.0
+ *
+ * @todo This could be simply checked on is_buddypress() ?
  */
 function entry_content_class() {
 	if ( ! function_exists( 'bp_loaded' ) ) {
 		return;
 	}
 
-	if ( bp_is_directory() || bp_is_user() || bp_is_group() ) {
+	if ( bp_is_directory()
+		   || bp_is_user()
+		    || bp_is_group()
+		     || bp_is_register_page()
+		      || bp_is_activation_page() ) {
 		return ' bp-entry-content';
 	} else {
 		return false;
