@@ -122,11 +122,16 @@ function progenitor_display_metabar() {
 	$menu = progenitor_opts('main_site_menu');
 	$retval = true;
 
+	if ( is_front_page() && is_home() ) {
+		$retval = false;
+	}
+
 	if ( is_front_page() ) {
 		if ('vertical' === $menu ) {
 			$retval = false;
 		}
 	}
+
 	return $retval;
 }
 
