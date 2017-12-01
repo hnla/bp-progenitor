@@ -101,7 +101,7 @@ body.footer-widgets-active .footer-widgets-wrap {
 Header aka .site-banner includes primary nav
 =================================================*/
 .site-nav-horizontal .site-header .site-branding {
-	padding: 0.5em 1em;
+	padding: 0 1em;
 }
 
 .site-nav-horizontal .site-header .main-navigation {
@@ -211,6 +211,15 @@ body.site-nav-vertical.page-sbar-active .site-content .site-main {
 	}
 	body.site-nav-vertical.main-sidebar .site-content .site-main, body.site-nav-vertical.post-sbar-active .site-content .site-main, body.site-nav-vertical.page-sbar-active .site-content .site-main {
 		margin: 0 25% 0 0;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	html body.buddypress.register .content-area {
+		margin: 0;
+	}
+	html body.buddypress.register .content-area .site-main {
+		margin: 0;
 	}
 }
 

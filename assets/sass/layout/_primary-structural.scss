@@ -80,7 +80,7 @@ Header aka .site-banner includes primary nav
 	.site-header {
 
 		.site-branding {
-			padding: $pad-sml $pad-med;
+			padding: 0 $pad-med;
 		}
 
 
@@ -251,6 +251,22 @@ body.site-nav-vertical {
 	}
 }
 
+html body.buddypress {
+
+	&.register {
+
+		@include large-up() {
+
+			.content-area {
+				margin: 0;
+
+				.site-main {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
 
 /*===============================================
 1.5.0 - Footer widget wrap
