@@ -21,3 +21,47 @@
 	}
 }
 
+// See primary mixins file for mixin animations.
+
+// keyframe named animations.
+
+// Background color fade in/out
+
+
+@-webkit-keyframes prog-background {
+		0%   {background: #8f8f8f;}
+		20%  {background: #888;}
+		40%  {background: #7f7f7f;}
+		60%  {background: #666;}
+		80%  {background: #4c4c4c;}
+		100% {background: #333;}
+}
+
+@keyframes prog-background {
+		0%   {background: #8f8f8f;}
+		20%  {background: #888;}
+		40%  {background: #7f7f7f;}
+		60%  {background: #666;}
+		80%  {background: #4c4c4c;}
+		100% {background: #333;}
+}
+
+// Opacity fade in/out
+
+@-webkit-keyframes prog-opacity {
+		0%   {opacity: 0.4; color: red;}
+		20%  {opacity: 0.5;}
+		40%  {opacity: 0.6;}
+		60%  {opacity: 0.7;}
+		80%  {opacity: 0.8;}
+		100% {opacity: 1; color: $white;}
+}
+
+@keyframes prog-opacity {
+		0%   {opacity: 0.4; color: red;}
+		20%  {opacity: 0.5;}
+		40%  {opacity: 0.6;}
+		60%  {opacity: 0.7;}
+		80%  {opacity: 0.8;}
+		100% {opacity: 1; color: $white;}
+}

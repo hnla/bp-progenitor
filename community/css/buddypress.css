@@ -2013,9 +2013,7 @@ form.ac-form .ac-reply-content input {
 }
 
 .register-page .signup-form .editfield {
-	border: 1px solid #eee;
-	margin: 20px 0;
-	padding: 5px;
+	margin: 15px 0;
 }
 
 .register-page .signup-form .editfield fieldset {
@@ -2024,6 +2022,7 @@ form.ac-form .ac-reply-content input {
 }
 
 .register-page .signup-form .editfield fieldset legend {
+	margin: 0 0 5px;
 	text-indent: 0;
 }
 
@@ -2037,6 +2036,17 @@ form.ac-form .ac-reply-content input {
 
 .register-page .signup-form #signup-avatar img {
 	margin: 0 15px 10px 0;
+}
+
+.register-page .signup-form .password-entry,
+.register-page .signup-form .password-entry-confirm {
+	border: 1px solid #eee;
+}
+
+.register-page .signup-form .mismatch {
+	position: relative;
+	-webkit-animation: prog-opacity 2s alternate infinite steps(6);
+	animation: prog-opacity 2s alternate infinite steps(6);
 }
 
 @media screen and (min-width: 46.8em) {
@@ -2069,6 +2079,17 @@ form.ac-form .ac-reply-content input {
 	}
 	.buddypress-wrap.extended-default-reg .register-page .blog-details {
 		flex: 1 100%;
+		padding-left: 0;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.buddypress-wrap.extended-default-reg .register-page .extended-profile {
+		padding: 0 1em;
+	}
+	.buddypress-wrap.extended-default-reg .register-page .blog-details {
+		flex: 1;
+		padding-left: 1em;
 	}
 }
 
@@ -4367,22 +4388,32 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	width: auto;
 }
 
+.buddypress-wrap #pass-strength-result.show {
+	display: block;
+}
+
+.buddypress-wrap #pass-strength-result.mismatch {
+	background-color: #000;
+	border-color: transparent;
+	color: #fff;
+}
+
 .buddypress-wrap #pass-strength-result.error, .buddypress-wrap #pass-strength-result.bad {
 	background-color: #ffb78c;
 	border-color: #ff853c;
-	display: block;
+	color: inherit;
 }
 
 .buddypress-wrap #pass-strength-result.short {
 	background-color: #ffa0a0;
 	border-color: #f04040;
-	display: block;
+	color: inherit;
 }
 
 .buddypress-wrap #pass-strength-result.strong {
 	background-color: #66d66e;
 	border-color: #438c48;
-	display: block;
+	color: inherit;
 }
 
 .buddypress-wrap .standard-form#signup_form div div.error {

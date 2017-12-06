@@ -223,23 +223,29 @@
 		text-align: center;
 		width: auto;
 
+		// Show the feedback pws message
+		&.show {
+			display: block;
+		}
+
+		&.mismatch {
+			@include pwd-bad-colors($color: #fff, $background: #000, $border: transparent)
+		}
+
 		&.error,
 		&.bad {
 
 			@include pwd-bad-colors();
-			display: block;
 		}
 
 		&.short {
 
 			@include pwd-short-colors();
-			display: block;
 		}
 
 		&.strong {
 
 			@include pwd-good-colors();
-			display: block;
 		}
 
 	} // close #pass-strength-result

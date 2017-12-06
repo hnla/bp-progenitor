@@ -487,7 +487,7 @@
 
 // Password warn colors
 
-@mixin pwd-bad-colors($background: null, $border: null) {
+@mixin pwd-bad-colors($color: inherit, $background: null, $border: null) {
 
 	@if $background {
 		$background: $background;
@@ -504,9 +504,11 @@
 	}
 
 	border-color: $border;
+
+	color: $color;
 }
 
-@mixin pwd-short-colors($background: null, $border: null) {
+@mixin pwd-short-colors($color: inherit, $background: null, $border: null) {
 
 	@if $background {
 		$background: $background;
@@ -523,9 +525,11 @@
 	}
 
 	border-color: $border;
+
+	color: $color;
 }
 
-@mixin pwd-good-colors($background: null, $border: null) {
+@mixin pwd-good-colors($color: inherit, $background: null, $border: null) {
 
 	@if $background {
 		$background: $background;
@@ -542,6 +546,8 @@
 	}
 
 	border-color: $border;
+
+	color: $color;
 }
 
 // Content max width
@@ -560,6 +566,16 @@
 @mixin bp-pulse() {
 	-webkit-animation: fa-spin 1s infinite steps(8);
 	animation: fa-spin 1s infinite steps(8);
+}
+
+
+
+
+// Animation mixins
+
+@mixin animation($keyframes: null) {
+	-webkit-animation: $keyframes 2s alternate infinite steps(6);
+		animation: $keyframes 2s alternate infinite steps(6);
 }
 
 // BP Tooltips

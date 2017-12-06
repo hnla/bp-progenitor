@@ -253,7 +253,8 @@ body.site-nav-vertical {
 
 html body.buddypress {
 
-	&.register {
+	&.register,
+	&.activate {
 
 		@include large-up() {
 

@@ -215,10 +215,10 @@ body.site-nav-vertical.page-sbar-active .site-content .site-main {
 }
 
 @media screen and (min-width: 75em) {
-	html body.buddypress.register .content-area {
+	html body.buddypress.register .content-area, html body.buddypress.activate .content-area {
 		margin: 0;
 	}
-	html body.buddypress.register .content-area .site-main {
+	html body.buddypress.register .content-area .site-main, html body.buddypress.activate .content-area .site-main {
 		margin: 0;
 	}
 }
