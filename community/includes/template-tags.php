@@ -2075,6 +2075,7 @@ function bp_progenitor_activation_hook( $when = '', $suffix = '' ) {
  *                        Default: 'account_details'.
  */
 function bp_progenitor_signup_form( $section = 'account_details' ) {
+	$bp = buddypress();
 	$fields = bp_progenitor_get_signup_fields( $section );
 	if ( ! $fields ) {
 		return;
@@ -2145,14 +2146,18 @@ function bp_progenitor_signup_form( $section = 'account_details' ) {
 			$class = ' class="' . esc_attr( join( ' ', array_map( 'sanitize_html_class', $classes ) ) ) . '"';
 		}
 
-		// Do not fire the do_action to display errors for the private radio.
+		// Do not display errors for the private radio.
 		if ( 'private' !== $value ) {
+
 			/**
-			 * Fires and displays any member registration field errors.
+			 * Display any signup registration field errors.
 			 *
-			 * @since 1.1.0 (BuddyPress)
+			 * @since 0.1.0 (progenitor)
 			 */
-			do_action( "bp_{$name}_errors" );
+			if ( isset( $bp->signup->errors[$name] ) ) {
+				progenitor_error_template( $bp->signup->errors[$name], 'error' );
+			}
+
 		}
 
 		// Set the input.
@@ -2237,4 +2242,25 @@ function bp_progenitor_submit_button( $action ) {
 	if ( ! empty( $submit_data['after'] ) ) {
 		do_action( $submit_data['after'] );
 	}
+}
+
+/**
+ * BP Progenitor error notices template.
+ *
+ * This template handles in page error messages e.g signup fields
+ * User Name in use etc
+ *
+ * This is a temp solution that needs to be re-thought.
+ *
+ * @since 0.1.0
+ */
+function progenitor_error_template($string = null, $type = null) { ?>
+
+<div class="bp-messages bp-feedback <?php echo esc_attr( $type ); ?>">
+	<span class="bp-icon" aria-hidden="true"></span>
+	<?php echo esc_html( $string ); ?>
+</div>
+
+<?php
+return;
 }
