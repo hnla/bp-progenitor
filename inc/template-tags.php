@@ -83,7 +83,8 @@ function entry_content_class() {
 		   || bp_is_user()
 		    || bp_is_group()
 		     || bp_is_register_page()
-		      || bp_is_activation_page() ) {
+		      || bp_is_activation_page()
+		       || is_buddypress() ) {
 		return ' bp-entry-content';
 	} else {
 		return false;
@@ -455,4 +456,62 @@ function progenitor_site_search( $args ) {
 <?php	}
 
 	return;
+}
+
+/**
+* Login form ( copy borrowed from WP & enhanced ).
+*
+* Specifically log users in from the BP activation screen
+*
+* @since 1.0.0
+*/
+
+function progenitor_login_form( $args = null ) {
+
+/*
+* Default args for login form
+*/
+$defaults = array(
+	'remember'       => 'false',
+	'redirect'       =>  ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+	'form_id'        => 'login-form',
+	'form_class'     => 'prog-login-form',
+	'label_username' => __( 'Username or Email Address', 'progenitor' ),
+	'label_password' => __( 'Password', 'progenitor' ),
+	'id_username'    => 'user-login',
+	'id_password'    => 'user-pass',
+	'label_remember' => __( 'Remember Me', 'progenitor' ),
+	'label_log_in'   => __( 'Log In', 'progenitor' ),
+	'id_submit'      => 'wp-submit',
+	);
+$args = wp_parse_args( $args, $defaults );
+?>
+
+<form name="loginform" id="<?php echo esc_attr( $args['form_id'] ); ?>" class="<?php echo esc_attr( $args[ 'form_class' ] ); ?>" action="<?php echo esc_url( $args['redirect'] ); ?>" method="post">
+
+	<p class="login-username">
+		<label for="user_login"><?php echo esc_attr( $args[ 'label_username' ] ); ?></label>
+		<input name="log" id="<?php esc_attr( $args['id_username'] ); ?>" class="input" value="" size="20" type="text">
+	</p>
+	<p class="login-password">
+		<label for="user_pass"><?php echo esc_attr( $args[ 'label_password' ] ); ?></label>
+		<input name="pwd" id="<?php echo esc_attr( $args['id_password'] ); ?>" class="input" value="" size="20" type="password">
+	</p>
+
+	<p class="login-remember">
+		<label for="rememberme">
+			<input name="rememberme" id="rememberme" value="forever" type="checkbox">
+			<span class="bp-screen-reader-text"><?php echo esc_html( $args['label_remember'] ) ?></span>
+			<span class="bp-icon fa fa-remember" aria-hidden="true"></span>
+		</label>
+	</p>
+
+	<p class="login-submit">
+		<input name="wp-submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="button button-primary" value="<?php echo esc_attr( $args['label_log_in'] ); ?>" type="submit">
+		<input name="redirect_to" value="<?php echo esc_url( $args['redirect'] ); ?>" type="hidden">
+	</p>
+
+		</form>
+<?php
+return;
 }

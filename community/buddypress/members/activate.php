@@ -13,17 +13,26 @@
 
 		<?php bp_progenitor_activation_hook( 'before', 'content' ); ?>
 
-		<?php if ( bp_account_was_activated() ) : ?>
+		<?php if ( !bp_account_was_activated() ) : ?>
 
 			<?php if ( isset( $_GET['e'] ) ) : ?>
 				<p><?php _e( 'Your account was activated successfully! Your account details have been sent to you in a separate email.', 'buddypress' ); ?></p>
 			<?php else : ?>
-				<p><?php printf( __( 'Your account was activated successfully! You can now <a href="%s">log in</a> with the username and password you provided when you signed up.', 'buddypress' ), wp_login_url( bp_get_root_domain() ) ); ?></p>
+
+			<div class="bp-message bp-feedback success">
+				<span class="bp-icon" aria-hidden="true"></span>
+				<p><?php _e( 'Your account was activated successfully! You can now login with the username and password you provided when you signed up.', 'buddypress' ); ?></p>
+			</div>
+
+				<?php progenitor_login_form( array('form_class' => 'blooper') ); //wp_login_form( array('redirect' => bp_get_root_domain() ) ); ?>
 			<?php endif; ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'Please provide a valid activation key.', 'buddypress' ); ?></p>
+			<div class="bp-message bp-feedback info">
+				<span class="bp-icon fa fa-info" aria-hidden="true"></span>
+				<p><?php _e( 'Please provide a valid activation key.', 'buddypress' ); ?></p>
+			</div>
 
 			<form action="" method="get" class="standard-form" id="activation-form">
 
