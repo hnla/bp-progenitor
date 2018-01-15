@@ -24,7 +24,8 @@
 				<p><?php _e( 'Your account was activated successfully! You can now login with the username and password you provided when you signed up.', 'buddypress' ); ?></p>
 			</div>
 
-				<?php progenitor_login_form( array('form_class' => 'blooper') ); //wp_login_form( array('redirect' => bp_get_root_domain() ) ); ?>
+				<?php progenitor_login_form( array( 'redirect' => bp_get_root_domain() ) );  ?>
+
 			<?php endif; ?>
 
 		<?php else : ?>
