@@ -491,7 +491,7 @@ $args = wp_parse_args( $args, $defaults );
 
 	<p class="login-username">
 		<label for="user_login"><?php echo esc_attr( $args[ 'label_username' ] ); ?></label>
-		<input name="log" id="<?php esc_attr( $args['id_username'] ); ?>" class="input" value="" size="20" type="text">
+		<input name="log" id="<?php echo esc_attr( $args['id_username'] ); ?>" class="input" value="" size="20" type="text">
 	</p>
 	<p class="login-password">
 		<label for="user_pass"><?php echo esc_attr( $args[ 'label_password' ] ); ?></label>
@@ -501,13 +501,12 @@ $args = wp_parse_args( $args, $defaults );
 	<p class="login-remember">
 		<label for="rememberme">
 			<input name="rememberme" id="rememberme" value="forever" type="checkbox">
-			<span class="bp-screen-reader-text"><?php echo esc_html( $args['label_remember'] ) ?></span>
-			<span class="bp-icon fa fa-remember" aria-hidden="true"></span>
+			<span class=""><?php echo esc_html( $args['label_remember'] ) ?></span>
 		</label>
 	</p>
 
 	<p class="login-submit">
-		<input name="wp-submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="button button-primary" value="<?php echo esc_attr( $args['label_log_in'] ); ?>" type="submit">
+		<input name="wp-submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="bp-submit" value="<?php echo esc_attr( $args['label_log_in'] ); ?>" type="submit">
 		<input name="redirect_to" value="<?php echo esc_url( $args['redirect'] ); ?>" type="hidden">
 	</p>
 
