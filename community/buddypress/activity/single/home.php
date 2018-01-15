@@ -7,7 +7,7 @@
 
 	<?php bp_progenitor_template_notices(); ?>
 
-	<div class="activity" data-bp-single="<?php echo esc_attr( bp_current_action() ); ?>">
+	<div class="activity single-activity" data-bp-single="<?php echo esc_attr( bp_current_action() ); ?>">
 
 		<ul id="activity-stream" class="activity-list item-list bp-list" data-bp-list="activity">
 
