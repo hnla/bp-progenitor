@@ -15,9 +15,11 @@
 
 	// User/group accounts filters .subnav-filters
 
+	@include clearfix-element('.subnav-filters');
+
 	.subnav-filters {
 		background: none;
-		overflow: hidden;
+//		overflow: hidden;
 		list-style: none;
 		margin: $marg-med 0;
 		padding: 0;

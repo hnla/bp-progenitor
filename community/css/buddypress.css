@@ -690,9 +690,18 @@ body.buddypress article.page > .entry-header .entry-title {
 	display: inline;
 }
 
+.buddypress-wrap .subnav-filters:before,
+.buddypress-wrap .subnav-filters:after {
+	content: " ";
+	display: table;
+}
+
+.buddypress-wrap .subnav-filters:after {
+	clear: both;
+}
+
 .buddypress-wrap .subnav-filters {
 	background: none;
-	overflow: hidden;
 	list-style: none;
 	margin: 15px 0;
 	padding: 0;
@@ -4901,7 +4910,8 @@ aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .acti
 
 .activity-meta-action .bp-tooltip:after,
 .notification-actions .bp-tooltip:after,
-.participants-list .bp-tooltip:after {
+.participants-list .bp-tooltip:after,
+.subnav-filters .feed .bp-tooltip:after {
 	left: 0;
 	-webkit-transform: translate(0, 0);
 	-ms-transform: translate(0, 0);
