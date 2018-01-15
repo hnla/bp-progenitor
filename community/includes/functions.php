@@ -1330,7 +1330,7 @@ function bp_progenitor_get_user_feedback( $feedback_id = '' ) {
 		$feedback_messages['member-blogs-loading']['message'] = __( 'Loading the blogs you are a contributor of, please wait.', 'buddypress' );
 	} elseif ( 'member-friends-loading' === $feedback_id && bp_is_my_profile() ) {
 		$feedback_messages['member-friends-loading']['message'] = __( 'Loading your friends, please wait.', 'buddypress' );
-	}  elseif ( 'member-groups-loading' === $feedback_id && bp_is_my_profile() ) {
+	} elseif ( 'member-groups-loading' === $feedback_id && bp_is_my_profile() ) {
 		$feedback_messages['member-groups-loading']['message'] = __( 'Loading the groups you are a member of, please wait.', 'buddypress' );
 	}
 

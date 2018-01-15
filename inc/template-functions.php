@@ -63,8 +63,8 @@ function bp_progenitor_post_navigation( $args = array() ) {
 }
 
 /**
-* The post navi with custom args - this is a copy
-* of the WP 'get_the_post_navigation'
+* The post navi with custom args
+* This is a custom build using WP get & next post_link functions
 *
 * @since 0.1.0
 *
@@ -122,4 +122,32 @@ function progenitor_get_post_navi( $args ) {
 
 	return $display_nav; //$navigation;
 }
+
+/**
+* Add a responsive wrapper element for media embeds in posts/pages
+*
+* See supporting styles in stylesheet.
+*
+* @since 1.0.0
+*/
+function progenitor_wrap_embeds_html( $html, $url, $attr, $post_ID ) {
+
+	$respon_oembed = '<div class="video-wrap">' . $html . '</div>';
+	return $respon_oembed;
+}
+add_filter('embed_oembed_html', 'progenitor_wrap_embeds_html', 10, 4);
+
+function filter_act_stream( $retval ) {
+
+// We want to run this pre filter only on the main activity directory
+// so return early if not dir & activity not true.
+	if (  ! bp_is_directory() && ! bp_is_activity_directory() ) {
+		return $retval;
+	}
+
+	$retval['action'] = 'new_blog_post, activity_update';
+
+return $retval;
+}
+add_filter('bp_before_has_activities_parse_args', 'filter_act_stream', 10);
 
