@@ -71,6 +71,14 @@ textarea {
 					border-width: 1px;
 				}
 			}
+
+			// Class set when BP global signup errors exist.
+			// This needs to be stated after the  pseudo :valid
+			// as technically the input has a valid value.
+			&.invalid[required] {
+				border-color: $warn;
+			}
 		}
+
 	}
 }

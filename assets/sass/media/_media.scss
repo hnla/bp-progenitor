@@ -21,12 +21,53 @@ object {
 
 #content {
 
-	.mejs-container {
+	.mejs-container,
+	.wp-video {
 		max-width: 100%;
 		width: 100% !important;
 	}
 }
 
+
+// Responsive embed wrapper supporting styles
+
+// These styles require '!important' to ensure they override inline styles
+// As hurtful as it is to use them :(
+
+// These rulesets support the filter in the template-functions.php file adding a parent div wrapper
+// 'video-wrap'.
+
+.video-wrap {
+	height: 0;
+	position: relative;
+	margin: 1.25rem 0;
+	overflow: hidden;
+	padding: 30px 0 56.25%;
+}
+
+.video-wrap iframe,
+.video-wrap embed,
+.video-wrap object {
+	height: 100% !important;
+	left: 0 !important;
+	max-width: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	width: 100% !important;
+}
+
+// Buddypress activity stream embeds
+
+.buddypress-wrap {
+
+	.activity-inner {
+
+		iframe {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

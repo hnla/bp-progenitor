@@ -569,6 +569,12 @@ textarea {
 	border-width: 1px;
 }
 
+#site-wrap form input.invalid[required],
+#site-wrap form textarea.invalid[required],
+#site-wrap form select.invalid[required] {
+	border-color: #b71717;
+}
+
 .site-search .site-search-form {
 	border: 1px solid #d6d6d6;
 	display: inline-block;
@@ -1053,11 +1059,11 @@ Inner elements
 
 Visual styles child elements
 --------------------------------------------------------------*/
-.site-branding {
+.site-nav-vertical .site-branding {
 	background-color: #333;
 }
 
-.site-branding * {
+.site-nav-vertical .site-branding * {
 	color: #fff;
 }
 
@@ -1490,9 +1496,34 @@ object {
 	display: inline-block;
 }
 
-#content .mejs-container {
+#content .mejs-container,
+#content .wp-video {
 	max-width: 100%;
 	width: 100% !important;
+}
+
+.video-wrap {
+	height: 0;
+	position: relative;
+	margin: 1.25rem 0;
+	overflow: hidden;
+	padding: 30px 0 56.25%;
+}
+
+.video-wrap iframe,
+.video-wrap embed,
+.video-wrap object {
+	height: 100% !important;
+	left: 0 !important;
+	max-width: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	width: 100% !important;
+}
+
+.buddypress-wrap .activity-inner iframe {
+	max-width: 100%;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------

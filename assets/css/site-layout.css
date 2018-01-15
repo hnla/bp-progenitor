@@ -365,6 +365,16 @@ Primary header elements
 	margin: 0;
 }
 
+.site-header .site-branding:before,
+.site-header .site-branding:after {
+	content: " ";
+	display: table;
+}
+
+.site-header .site-branding:after {
+	clear: both;
+}
+
 .site-header .header-background .custom-logo-link {
 	width: 20%;
 }

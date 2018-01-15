@@ -395,3 +395,39 @@ body.no-js {
 	}
 
 }
+
+.buddypress-wrap {
+
+	.prog-login-form {
+
+		margin-top: $marg-med;
+
+		@include medium-up() {
+			@include build-flex-layout( $grow: 1, $align: center);
+
+			p {
+				margin: 0;
+				padding: 0 $pad-sml;
+			}
+
+			.login-remember {
+				text-align: right;
+			}
+		}
+
+
+
+			input[type="text"],
+			input[type="password"] {
+				display: block;
+				width: 100%;
+			}
+
+		.login-submit {
+
+			input.bp-submit {
+				width: 100%;
+			}
+		}
+	}
+}

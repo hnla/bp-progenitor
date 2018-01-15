@@ -90,7 +90,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
-@import "site/secondary/widgets";
+@import "site-elements/secondary/widgets";
 
 /*--------------------------------------------------------------
 10.0 Content
@@ -98,7 +98,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 Styling for inner child elements, header, main cintent area,
 post & pages content, comments.
 --------------------------------------------------------------*/
-@import "site/site";
+@import "site-elements/site";
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll

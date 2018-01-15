@@ -1401,29 +1401,30 @@ body.buddypress article.page > .entry-header .entry-title {
 
 .activity-list .activity-item .activity-meta.action .button:before,
 .activity-list .activity-item .activity-meta.action .icons:before {
-	font-family: dashicons;
+	font-family: FontAwesome;
 	font-size: 18px;
 	vertical-align: middle;
 }
 
 .activity-list .activity-item .activity-meta.action .acomment-reply.button:before {
-	content: "\f101";
+	content: "\f0e5";
 }
 
 .activity-list .activity-item .activity-meta.action .view:before {
-	content: "\f125";
+	content: "\f06e";
 }
 
 .activity-list .activity-item .activity-meta.action .fav:before {
-	content: "\f154";
+	content: "\f08a";
 }
 
 .activity-list .activity-item .activity-meta.action .unfav:before {
-	content: "\f155";
+	color: #edbb34;
+	content: "\f004";
 }
 
 .activity-list .activity-item .activity-meta.action .delete-activity:before {
-	content: "\f153";
+	content: "\f014";
 }
 
 .activity-list .activity-item .activity-meta.action .delete-activity:hover {
@@ -1496,11 +1497,6 @@ body.buddypress article.page > .entry-header .entry-title {
 
 body.activity-permalink .activity-list li {
 	border-width: 1px;
-	padding: 1em 0 0 0;
-}
-
-body.activity-permalink .activity-list li:first-child {
-	padding-top: 0;
 }
 
 body.activity-permalink .activity-list li.has-comments {
@@ -1508,15 +1504,7 @@ body.activity-permalink .activity-list li.has-comments {
 }
 
 body.activity-permalink .activity-list .activity-avatar {
-	width: auto;
-}
-
-body.activity-permalink .activity-list .activity-avatar a {
-	display: block;
-}
-
-body.activity-permalink .activity-list .activity-avatar img {
-	max-width: 100%;
+	display: none;
 }
 
 body.activity-permalink .activity-list .activity-content {
@@ -1544,16 +1532,20 @@ body.activity-permalink .activity-list .activity-meta {
 }
 
 body.activity-permalink .activity-list .activity-comments {
-	margin-bottom: 10px;
+	margin: 15px 15px 10px;
+}
+
+body.activity-permalink .activity-list .activity-comments > ul {
+	padding-left: 0;
+}
+
+body.activity-permalink .activity-list .activity-comments > ul > li {
+	border: 1px solid #eee;
+	margin: 10px 0;
+	padding: 0.5em;
 }
 
 @media screen and (min-width: 46.8em) {
-	body.activity-permalink .activity-list .activity-avatar {
-		left: -20px;
-		margin-right: 0;
-		position: relative;
-		top: -20px;
-	}
 	body.activity-permalink .activity-list .activity-content {
 		margin-right: 10px;
 	}
@@ -3699,6 +3691,53 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 		border-left: 1px solid #d6d6d6;
 		width: auto;
 	}
+}
+
+.buddypress-wrap .prog-login-form {
+	margin-top: 15px;
+}
+
+@media screen and (min-width: 46.8em) {
+	.buddypress-wrap .prog-login-form {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-webkit-box-align: center;
+		align-items: center;
+	}
+	.buddypress-wrap .prog-login-form > * {
+		-webkit-flex: 1 1 auto;
+		-moz-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		-o-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+	.buddypress-wrap .prog-login-form p {
+		margin: 0;
+		padding: 0 0.5em;
+	}
+	.buddypress-wrap .prog-login-form .login-remember {
+		text-align: right;
+	}
+}
+
+.buddypress-wrap .prog-login-form input[type="text"],
+.buddypress-wrap .prog-login-form input[type="password"] {
+	display: block;
+	width: 100%;
+}
+
+.buddypress-wrap .prog-login-form .login-submit input.bp-submit {
+	width: 100%;
 }
 
 /**

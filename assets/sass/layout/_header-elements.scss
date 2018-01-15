@@ -15,6 +15,11 @@ Primary header elements
 				margin: 0;
 			}
 		}
+
+
+@include clearfix-element('.site-branding');
+
+
 	/*
 	Manage elements if background image set &
 	use as background selected to render the background wrapper element
