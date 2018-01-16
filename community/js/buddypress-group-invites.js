@@ -355,6 +355,7 @@ window.bp = window.bp || {};
 
 	bp.Views.invitesNav = bp.Progenitor.GroupInvites.View.extend( {
 		tagName: 'ul',
+		className : 'subnav',
 
 		events: {
 			'click .bp-invites-nav-item' : 'toggleView'
