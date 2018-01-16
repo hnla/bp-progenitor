@@ -120,10 +120,10 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 			'transport'         => 'refresh',
 			'type'              => 'option',
 		),
-		'bp_progenitor_appearance[object_nav_main_header]' => array(
-			'index'             => 'object_nav_main_header',
+		'bp_progenitor_appearance[object_nav_menu_position]' => array(
+			'index'             => 'object_nav_menu_position',
 			'capability'        => 'bp_moderate',
-			'sanitize_callback' => 'absint',
+			'sanitize_callback' => 'sanitize_text_field',
 			'transport'         => 'refresh',
 			'type'              => 'option',
 		),
@@ -321,11 +321,15 @@ function bp_progenitor_customize_register( WP_Customize_Manager $wp_customize ) 
 					'vertical'   => __( 'Vertical / Left' )
 				),
 		),
-		'object_nav_main_header' => array(
-			'label'      => __( 'Display User & group primary navs in the header - under the main site nav.', 'buddypress' ),
+		'object_nav_menu_position' => array(
+			'label'      => __( 'Select user/group menu position - default is in main item body, vert main menu only available if main vert nav selected.', 'buddypress' ),
 			'section'    => 'bp_progenitor_site_settings',
-			'settings'   => 'bp_progenitor_appearance[object_nav_main_header]',
-			'type'       => 'checkbox',
+			'settings'   => 'bp_progenitor_appearance[object_nav_menu_position]',
+			'type'       => 'radio',
+			'choices'    => array (
+					'main_vert_menu' => 'Main menu vertical',
+					'item_body'      =>  'In the main screen body'
+					),
 		),
 		'post_loops_grid' => array(
 			'label'      => __( 'Display the post lists, index loop, as grid boxes', 'buddypress' ),

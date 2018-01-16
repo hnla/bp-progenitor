@@ -836,7 +836,7 @@ function bp_progenitor_get_appearance_settings( $option = '' ) {
 		'members_layout'            => 1,
 		'members_dir_tabs'          => 0,
 		'members_dir_layout'        => 0,
-		'object_nav_main_header'    => 0,
+		'object_nav_menu_position'  => 'item_body',
 	);
 
 	if ( bp_is_active( 'friends' ) ) {

@@ -28,7 +28,7 @@
 	<?php if ( ! bp_progenitor_is_object_nav_in_sidebar() ) : ?>
 
 
-		<?php if( progenitor_opts( 'object_nav_main_header') && 'vertical' == progenitor_menu_style() ) :
+		<?php if( 'main_vert_menu' == progenitor_opts( 'object_nav_menu_position') && 'vertical' == progenitor_menu_style() ) :
 		// This element is controled via scripting to show menu if
 		// the script removes the display property.
 		?>
@@ -37,7 +37,7 @@
 
 			<?php bp_get_template_part( 'groups/single/parts/item-nav' ); ?>
 
-		<?php if( progenitor_opts( 'object_nav_main_header') && 'vertical' == progenitor_menu_style() ) : ?>
+		<?php if( 'main_vert_menu' == progenitor_opts( 'object_nav_menu_position') && 'vertical' == progenitor_menu_style() ) : ?>
 			</div>
 		<?php endif; ?>
 
