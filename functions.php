@@ -436,7 +436,7 @@ if ( ! is_admin_bar_showing() ) {
 		$classes[] = 'site-nav-horizontal';
 	endif;
 
-	if ( progenitor_opts( 'object_nav_main_header') ) {
+	if ( progenitor_opts( 'object_nav_main_header') && ! progenitor_opts( 'object_nav_item-body') ) {
 		$classes[] = 'object-nav-site-nav-vert';
 	}
 

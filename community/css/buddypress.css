@@ -5255,7 +5255,7 @@ aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .acti
 	.bp-single-vert-nav .vertical li:focus, .bp-single-vert-nav .vertical li:hover {
 		background: #ccc;
 	}
-	.bp-single-vert-nav .vertical li span {
+	.bp-single-vert-nav .vertical li span.link-item-counts {
 		background: #d6d6d6;
 		border-radius: 10%;
 		float: right;
