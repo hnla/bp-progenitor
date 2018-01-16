@@ -10,4 +10,53 @@
 	.avatar-nav-items {
 		margin-top: $marg-med;
 	}
+
+	img.avatar {
+		display: block;
+		margin: $marg-sml auto;
+		width: 30%;
+	}
+
+	#previous-next {
+		@include flex-box-dir($flex-dir: "row", $flex-wrap: "wrap")
+
+		input {
+
+			@include box-model();
+			margin: $marg-med 0;
+			width: 100%;
+		}
+	}
+
+	@include medium-up() {
+
+		//See _bp-forms.scss for column rules under standard for parents.
+		// this adds real width to override the shrinkwrap default
+		.left-menu {
+			width: 25%;
+			max-width: 250px;
+		}
+
+		img.avatar {
+			width: 100%;
+		}
+
+	#previous-next {
+
+		input {
+
+			@include box-item-size($basis: 49%);
+
+			&:first-child {
+				margin-right: 1%;
+			}
+
+			&:last-child {
+				margin-left: 1%;
+			}
+		}
+	}
+
+	}
+
 }

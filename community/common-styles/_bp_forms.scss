@@ -200,8 +200,10 @@
 		@include medium-up() {
 
 			// The Group invites form lists (not required if Ajax templates in use)
+			// Also handles the Group create steps layout
 			.left-menu {
 				float: left;
+				margin-right: $marg-lrg;
 			}
 
 			#invite-list ul {
@@ -214,7 +216,8 @@
 			}
 
 			.main-column {
-				margin-left: 190px;
+				overflow: hidden;
+				padding-left: $pad-sml;
 
 				ul#friend-list {
 					clear: none;
@@ -415,13 +418,11 @@ body.no-js {
 			}
 		}
 
-
-
-			input[type="text"],
-			input[type="password"] {
-				display: block;
-				width: 100%;
-			}
+		input[type="text"],
+		input[type="password"] {
+			display: block;
+			width: 100%;
+		}
 
 		.login-submit {
 
