@@ -645,6 +645,13 @@
 						padding-left: $pad-sml;
 					}
 				}
+
+				li.selected {
+
+					a {
+//						background: none;
+					}
+				}
 			}
 		}
 
@@ -768,6 +775,31 @@
 			}
 		}
 
+		.group-create-links {
+			background: transparent;
+
+			ul {
+
+				li{
+					opacity: 0.7;
+
+					&.current {
+						opacity: 1;
+						text-align: left;
+
+						:before {
+							font-family: FontAwesome;
+							content: '\f178';
+						}
+
+						a {
+							background: none;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
 
 	} // close buddypress-wrap
 } // close site-nav-horizontal/site-nav-horizontal

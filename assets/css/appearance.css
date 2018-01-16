@@ -594,6 +594,34 @@
 	}
 }
 
+.site-nav-horizontal .buddypress-wrap .group-create-links,
+.site-nav-vertical .buddypress-wrap .group-create-links {
+	background: transparent;
+}
+
+.site-nav-horizontal .buddypress-wrap .group-create-links ul li,
+.site-nav-vertical .buddypress-wrap .group-create-links ul li {
+	opacity: 0.7;
+}
+
+.site-nav-horizontal .buddypress-wrap .group-create-links ul li.current,
+.site-nav-vertical .buddypress-wrap .group-create-links ul li.current {
+	opacity: 1;
+	text-align: left;
+}
+
+.site-nav-horizontal .buddypress-wrap .group-create-links ul li.current :before,
+.site-nav-vertical .buddypress-wrap .group-create-links ul li.current :before {
+	font-family: FontAwesome;
+	content: '\f178';
+}
+
+.site-nav-horizontal .buddypress-wrap .group-create-links ul li.current a,
+.site-nav-vertical .buddypress-wrap .group-create-links ul li.current a {
+	background: none;
+	color: #333;
+}
+
 /*========================================
 4. Footer Widgets
 ==========================================*/

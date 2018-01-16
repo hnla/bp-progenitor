@@ -444,6 +444,10 @@
 
 				a {
 					text-align: center;
+
+					&:before {
+						content: '';
+					}
 				}
 			}
 		}
