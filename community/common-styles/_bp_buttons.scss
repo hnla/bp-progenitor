@@ -6,6 +6,18 @@
 
 .buddypress-wrap {
 
+	// In BP lists action buttons in ul/li themselves may inherit
+	// gen li values - ensure thse are leveled.
+
+	.bp-list {
+		ul.action {
+
+			li {
+				padding: 0;
+			}
+		}
+	}
+
 	// In grids style the basic action button a little differently
 
 	.bp-list.grid {
@@ -20,7 +32,7 @@
 
 				&:focus,
 				&:hover {
-					background: $buttons-background;
+//					background: $buttons-background;
 				}
 			}
 		} // .action

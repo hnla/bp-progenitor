@@ -4224,17 +4224,15 @@ body.no-js .buddypress #messages-bulk-management #select-all-messages {
 	margin-top: 0;
 }
 
+.buddypress-wrap .bp-list ul.action li {
+	padding: 0;
+}
+
 .buddypress-wrap .bp-list.grid .action a,
 .buddypress-wrap .bp-list.grid .action button {
 	border: 1px solid #b7b7b7;
 	display: block;
 	margin: 0;
-}
-
-.buddypress-wrap .bp-list.grid .action a:focus, .buddypress-wrap .bp-list.grid .action a:hover,
-.buddypress-wrap .bp-list.grid .action button:focus,
-.buddypress-wrap .bp-list.grid .action button:hover {
-	background: #ededed;
 }
 
 .buddypress-wrap .activity-list a.button {
@@ -5087,6 +5085,16 @@ aside.widget-area .buddypress.widget.bp-latest-activities li.activity-item .acti
 	.grid.two > li {
 		padding-bottom: 20px;
 	}
+}
+
+@media screen and (min-width: 24em) and (min-width: 75em) {
+	.grid.two > li .list-wrap {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 24em) {
 	.grid.two > li, .grid.three > li {
 		width: 50%;
 	}

@@ -83,17 +83,23 @@
 
 	.button,
 	.bp-submit {
-		@include background-gradient-3d($color: $white, $depth: low);
 
 		&:focus,
 		&:hover {
 
-			@include background-gradient-3d($color: $white, $depth: medium);
+			@include background-gradient-3d($color: $white, $depth: low);
 			@include box-shadow(0 0 1px 0 $light-box-shadow);
-//				color: $white;
 		}
 	}
+
+	button.pending,
+	button.leave-group {
+		background: $informational;
+		border-color: $black;
+		color: $white;
+	}
 }
+
 
 .avatar {
 	@include box-shadow(0 0 9px 0 $light-box-shadow);
@@ -776,7 +782,7 @@
 		}
 
 		.group-create-links {
-			background: transparent;
+			background: none;
 
 			ul {
 
