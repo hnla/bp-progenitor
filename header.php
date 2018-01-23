@@ -155,14 +155,25 @@
 						</header>
 
 					<?php } elseif ( is_search() ) { ?>
+
 						<header class="page-header">
 							<h1 class="page-title"><?php _e('Search Results', 'bp-progenitor'); ?></h1>
 						</header>
+
 					<?php } elseif ( is_home() && ! is_front_page() ) { ?>
+
 						<header>
 							<h1 class="page-title"><?php  single_post_title() . _e(': Index', 'bp-progenitor'); ?></h1>
 						</header>
-				<?php }; ?>
+
+					<?php } elseif( is_404() ) { ?>
+
+						<header class="page-header">
+							<h1 class="page-title"><?php _e( 'Page not found', 'bp-progenitor' ); ?></h1>
+						</header>
+
+					<?php		} ?>
+
 				</div>
 			<?php endif; ?>
 
