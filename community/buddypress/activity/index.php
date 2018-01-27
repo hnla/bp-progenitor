@@ -2,7 +2,7 @@
 /**
  * BuddyPress Progenitor Activity templates
  *
- * @since 2.3.0
+ * @since 1.0.0
  */
 ?>
 
@@ -28,13 +28,9 @@
 
 		<?php bp_progenitor_activity_hook( 'before_directory', 'list' ); ?>
 
-		<div class="activity">
+		<div id="activity-stream" class="activity" data-bp-list="activity">
 
-			<ul id="activity-stream" class="activity-list item-list bp-list" data-bp-list="activity">
-
-			 	<li id="bp-ajax-loader"><?php bp_progenitor_user_feedback( 'directory-activity-loading' ); ?></li>
-
-			</ul>
+			<div id="bp-ajax-loader"><?php bp_progenitor_user_feedback( 'directory-activity-loading' ); ?></div>
 
 		</div><!-- .activity -->
 
